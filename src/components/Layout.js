@@ -7,7 +7,6 @@ import Footer from './Footer'
 
 import 'modern-normalize/modern-normalize.css'
 import './globalStyles.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import '../scss/style.scss'
 
 export default ({ children, meta, title }) => {
@@ -55,7 +54,7 @@ export default ({ children, meta, title }) => {
           <Fragment>
             <Helmet
               defaultTitle={siteTitle}
-              titleTemplate={`%s | ${siteTitle}`}
+              titleTemplate={siteTitle}
             >
               {title}
               <link href="https://ucarecdn.com" rel="preconnect" crossorigin />
