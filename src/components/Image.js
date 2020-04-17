@@ -139,7 +139,9 @@ class Image extends React.Component {
               <div
                 className={`BackgroundImage absolute ${className}`}
                 style={style}
-              />
+              >
+                {this.props.children}
+              </div>
             )}
             {!background && (
               <img

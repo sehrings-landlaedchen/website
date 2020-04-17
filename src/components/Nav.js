@@ -70,11 +70,9 @@ export const Navigation = (props) => {
               <div className="main-menu d-none d-lg-block">
                 <nav>
                   <ul className="mein_menu_list" id="navigation">
+                    <li><Link to="/products/">Produkte</Link></li>
                     <li>
-                      <Link to="/components/">Components</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog/">Blog</Link>
+                      <Link to="/about/">Über uns</Link>
                       <ul className="submenu">
                         <li>
                           <Link to="/post-categories/news/">News</Link>
@@ -91,10 +89,10 @@ export const Navigation = (props) => {
                       </Link>
                     </div>
                     <li>
-                      <Link to="/default/">Default</Link>
+                      <Link to="/contact/">Contact</Link>
                     </li>
                     <li>
-                      <Link to="/contact/">Contact</Link>
+                      <Link to="/components/">Components</Link>
                     </li>
                   </ul>
                 </nav>

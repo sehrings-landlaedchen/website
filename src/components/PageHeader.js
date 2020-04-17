@@ -10,10 +10,12 @@ const PageHeader = ({
   subtitle,
   backgroundImage,
   large,
-  className = ''
+  className = '',
+  slider
 }) => {
   if (large) className += ' PageHeader-large'
   return (
+    slider ?
     <div className="slider_area zigzag_bg_2">
       <div className="slider_sctive owl-carousel owl-loaded owl-drag">
         <div className="owl-stage-outer">
@@ -31,24 +33,15 @@ const PageHeader = ({
           </div>
         </div>
       </div>
-    </div>
-    // <div className={`PageHeader relative ${className}`}>
-    //   {backgroundImage && (
-    //     <Image
-    //       background
-    //       resolutions="large"
-    //       src={backgroundImage}
-    //       alt={title}
-    //       size="cover"
-    //     />
-    //   )}
-    //   <div className="container relative">
-    //     <h1 className="PageHeader--Title">{title}</h1>
-    //     {subtitle && (
-    //       <Content className="PageHeader--Subtitle" src={subtitle} />
-    //     )}
-    //   </div>
-    // </div>
+    </div> :
+    <Image background lazy={false} src={backgroundImage} className="breadcam_area breadcam_bg_1 zigzag_bg_2">
+      <div className="breadcam_inner">
+        <div className="breadcam_text">
+          <h3>{title}</h3>
+          <p>{subtitle}</p>
+        </div>
+      </div>
+    </Image>
   )
 }
 

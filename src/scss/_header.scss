@@ -86,6 +86,9 @@
                             transform: scaleX(0);
                             @include transition(.3s);
                         }
+                        &:hover {
+                            text-decoration: none;
+                        }
                         &:hover::before{
                             opacity: 1;
                             transform: scaleX(1);

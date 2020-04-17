@@ -10,6 +10,7 @@
         .order_thumb{
             position: relative;
             img{
+                border-radius: 3%;
                 width: 100%;
             }
             .order_prise {
@@ -18,7 +19,7 @@
                 bottom: 10px;
                 background: #fff;
                 color: #78b454;
-                padding: 17px 21px 13px 24px;
+                padding: 17px 18px 13px 18px;
                 border-radius: 5px;
                 font-weight: 600;
                 font-size: 18px;
@@ -26,13 +27,9 @@
                 line-height: 18px;
                 span{
                     position: relative;
-                    &::before{
-                        position: absolute;
-                        content: "$";
-                        left: -5px;
-                        top: -1px;
+                    &::after{
+                        content: "€";
                         color: $theme-color;
-                        font-size: 10px;
                     }
                 }
             }

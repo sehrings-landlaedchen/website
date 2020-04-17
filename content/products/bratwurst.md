@@ -1,7 +1,7 @@
 ---
 template: DefaultPage
-title: Kartoffel
-description: Beste Kartoffeln aus der Umgebung
+title: Bratwurst
+description: Beste Bratwurst aus der Umgebung
 price: 1.01
 featuredImage: /img/340x370.png
 ---

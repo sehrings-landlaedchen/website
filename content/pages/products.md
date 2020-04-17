@@ -1,9 +1,12 @@
 ---
 template: ProductsPage
-title: Produkte
 slug: products
-featuredImage: /img/1920x1048.png
+title: Produkte
+featuredImage: /img/1250x500.png
 Untertitel: Unsere Produkte
-section1: asdasdf
-section2: asdfqrewerwer
+subtitle: Unsere Produkte
 ---
+### Popular Orders
+
+inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards\
+especially in the workplace. That’s why it’s crucial that, as women.
