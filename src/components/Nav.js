@@ -3,27 +3,24 @@ import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import { Menu, X } from 'react-feather'
 import Logo from './Logo'
-
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faBars } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 import './Nav.css'
-
-// library.add(faBars);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 export const Navigation = (props) => {
   const [active, setActive] = useState(false);
-  const [activeSubNav, setActiveSubNav] = useState('');
+  // const [activeSubNav, setActiveSubNav] = useState('');
   const [currentPath, setCurrentPath] = useState('');
   const [mobileNavigation, setMobileNavigation] = useState(false);
 
   useEffect(() => {
     setCurrentPath(props.location.pathname);
-    window.addEventListener("scroll", () => handleScroll());
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [])
 
   const [sticky, setSticky] = useState(false);
+  const [subNavActive, setSubNavActive] = useState(false);
 
   const handleScroll = () => {
     const scroll = window.scrollY;
@@ -39,27 +36,27 @@ export const Navigation = (props) => {
   // Only close nav if it is open
   const handleLinkClick = () => active && handleMenuToggle();
 
-  const toggleSubNav = subNav => {
-    console.log(subNav);
+  // const toggleSubNav = subNav => {
+  //   console.log(subNav);
     
-    setActiveSubNav(
-        activeSubNav === subNav ? '' : subNav
-    )
-  }
+  //   setActiveSubNav(
+  //       activeSubNav === subNav ? '' : subNav
+  //   )
+  // }
   
-  const { subNav } = props,
-    NavLink = ({ to, className, children, ...props }) => (
-      <Link
-        to={to}
-        className={`NavLink ${
-          to === currentPath ? 'active' : ''
-        } ${className}`}
-        onClick={handleLinkClick}
-        {...props}
-      >
-        {children}
-      </Link>
-    )
+  // const { subNav } = props,
+  //   NavLink = ({ to, className, children, ...props }) => (
+  //     <Link
+  //       to={to}
+  //       className={`NavLink ${
+  //         to === currentPath ? 'active' : ''
+  //       } ${className}`}
+  //       onClick={handleLinkClick}
+  //       {...props}
+  //     >
+  //       {children}
+  //     </Link>
+  //   )
 
   return (
     <div className="header-area ">
@@ -72,24 +69,23 @@ export const Navigation = (props) => {
                   <ul className="mein_menu_list" id="navigation">
                     <li><Link to="/products/">Produkte</Link></li>
                     <li>
-                      <Link to="/about/">Über uns</Link>
+                      <a>Über uns</a>
                       <ul className="submenu">
                         <li>
-                          <Link to="/post-categories/news/">News</Link>
+                          <Link to="/post-categories/news/">Landwirtschaft</Link>
                         </li>
                         <li>
-                          <Link to="/post-categories/updates/">Updates</Link>
+                          <Link to="/post-categories/updates/">Landlädchen</Link>
                         </li>
                       </ul>
                     </li>
                     <div className="logo-img d-none d-lg-block">
                       <Link to="/" onClick={handleLinkClick}>
-                        {/* <Logo /> */}
                         <img src="/img/logo.png" alt="" />
                       </Link>
                     </div>
                     <li>
-                      <Link to="/contact/">Contact</Link>
+                      <Link to="/contact/">Kontakt</Link>
                     </li>
                     <li>
                       <Link to="/components/">Components</Link>
@@ -101,21 +97,21 @@ export const Navigation = (props) => {
             <div className="col-12">
               <div className="mobile_menu d-block d-lg-none">
                 <div className="slicknav_menu">
-                  <button class={`hamburger hamburger--squeeze ${mobileNavigation && "is-active"}`} type="button" onClick={() => setMobileNavigation(!mobileNavigation)} aria-label="Menu" aria-controls="navigation">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
+                  <button className={`hamburger hamburger--squeeze ${mobileNavigation && "is-active"}`} type="button" onClick={() => setMobileNavigation(!mobileNavigation)} aria-label="Menu" aria-controls="navigation">
+                    <span className="hamburger-box">
+                      <span className="hamburger-inner"></span>
                     </span>
                   </button>
                   <ul className={`slicknav_nav ${mobileNavigation || "slicknav_hidden"}`} aria-hidden="true" role="menu">
                     <li><Link to="/">Startseite</Link></li>
                     <li><Link to="/products/">Produkte</Link></li>
                     <li className="slicknav_collapsed slicknav_parent">
-                      <a href="#" role="menuitem" aria-haspopup="true" tabindex="-1" className="slicknav_item slicknav_row">
-                        <span tabindex="-1">Über uns <i className="ti-angle-down"></i></span>
-                        <span className="slicknav_arrow">+</span>
+                      <a href="#" role="menuitem" aria-haspopup="true" tabIndex="-1" className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
+                        <span tabIndex="-1">Über uns <i className="ti-angle-down"></i></span>
+                        <span className="slicknav_arrow">{!subNavActive ? <FontAwesomeIcon icon={faPlus} size="xs" /> : <FontAwesomeIcon icon={faMinus} size="xs" /> }</span>
                       </a>
 
-                      <ul className="submenu slicknav_hidden" role="menu" aria-hidden="true">
+                      <ul className={`submenu ${!subNavActive && "slicknav_hidden"}`} role="menu" aria-hidden="true">
                         <li><Link role="menuitem" to="/">Landwirtschaft</Link></li>
                         <li><Link role="menuitem" to="/">Landlädchen</Link></li>
                       </ul>
@@ -134,58 +130,6 @@ export const Navigation = (props) => {
         </div>
       </div>
     </div>
-
-    // <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
-    //   <div className="Nav--Container container">
-    //     <Link to="/" onClick={handleLinkClick}>
-    //       <Logo />
-    //     </Link>
-    //     <div className="Nav--Links">
-    //       <NavLink to="/">Home</NavLink>
-    //       <NavLink to="/components/">Components</NavLink>
-    //       <div
-    //         className={`Nav--Group ${
-    //           activeSubNav === 'posts' ? 'active' : ''
-    //         }`}
-    //       >
-    //         <span
-    //           className={`NavLink Nav--GroupParent ${
-    //             props.location.pathname.includes('posts') ||
-    //             props.location.pathname.includes('blog') ||
-    //             props.location.pathname.includes('post-categories')
-    //               ? 'active'
-    //               : ''
-    //           }`}
-    //           onClick={() => toggleSubNav('posts')}
-    //         >
-    //           Blog
-    //           <div className="Nav--GroupLinks">
-    //             <NavLink to="/blog/" className="Nav--GroupLink">
-    //               All Posts
-    //             </NavLink>
-    //             {subNav.posts.map((link, index) => (
-    //               <NavLink
-    //                 to={link.slug}
-    //                 key={'posts-subnav-link-' + index}
-    //                 className="Nav--GroupLink"
-    //               >
-    //                 {link.title}
-    //               </NavLink>
-    //             ))}
-    //           </div>
-    //         </span>
-    //       </div>
-    //       <NavLink to="/default/">Default</NavLink>
-    //       <NavLink to="/contact/">Contact</NavLink>
-    //     </div>
-    //     <button
-    //       className="Button-blank Nav--MenuButton"
-    //       onClick={handleMenuToggle}
-    //     >
-    //       {active ? <X /> : <Menu />}
-    //     </button>
-    //   </div>
-    // </nav>
   )
 }
 
