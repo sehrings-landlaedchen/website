@@ -1,15 +1,15 @@
 ---
 template: ContactPage
 slug: contact
-title: Contact Page
+title: Kontakt
 featuredImage: /img/1250x500.png
-subtitle: This is the contact page subtitle.
-address: '404 James St, Burleigh Heads QLD 4220'
-phone: 0987 123 456
+subtitle: Lorem magna ea dolore incididunt excepteur irure voluptate id dolore occaecat id.
+address: Sehrings Landlädchen, Rheinstraße 6, Dreieich
+phone: +49 6013 86875
 email: example@example.com
 locations:
-  - lat: '-27.9654732'
-    lng: '153.2432449'
+  - lat: 49.99753
+    lng: 8.73405
     mapLink: ''
 meta:
   description: This is a meta description.

@@ -26,7 +26,7 @@ const Product = ({
     <div className="order_info">
       {title &&
         <h3>
-          <a href>
+          <a>
             {title}
           </a>
         </h3>

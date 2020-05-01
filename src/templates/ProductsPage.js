@@ -25,7 +25,7 @@ export const ProductsPageTemplate = ({
     <section className="section order_area">
       <div className="container">
         <div className="row">
-        <div class="col-xl-12">
+        <div className="col-xl-12">
           <div className="section_title mb-70">
             {/* <h3>{section1}</h3> */}
             <Content source={body} />
@@ -35,7 +35,7 @@ export const ProductsPageTemplate = ({
         </div>
         <div className="row">
           {products.map(product => (
-            <div className="col-xl-4 col-md-6">
+            <div className="col-xl-4 col-md-6" key={product.fields.slug}>
               <Product {...product.frontmatter} />
             </div>
           ))}

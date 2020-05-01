@@ -34,7 +34,7 @@ const PageHeader = ({
         </div>
       </div>
     </div> :
-    <Image background lazy={false} src={backgroundImage} className="breadcam_area breadcam_bg_1 zigzag_bg_2">
+    <Image background lazy={false} src={backgroundImage} className="breadcam_area breadcam_bg_1 zigzag_bg_2" alt="background">
       <div className="breadcam_inner">
         <div className="breadcam_text">
           <h3>{title}</h3>
