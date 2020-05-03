@@ -16,7 +16,7 @@ meta:
   title: Contact Page
 ---
 
-# Example contact form
+# Kontakt
 
 This form is setup to use Netlify's form handling:
 

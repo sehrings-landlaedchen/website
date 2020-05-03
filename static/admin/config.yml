@@ -151,45 +151,6 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/blog.md'
-        label: 'Blog Page'
-        name: 'blog-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: BlogIndex,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: 'blog' }
-          - { label: Titel, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Titel, name: title, widget: string, required: false }
-              - {
-                  label: Beschreibung,
-                  name: description,
-                  widget: text,
-                  required: false,
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
       - file: 'content/pages/components.md'
         label: 'Components Page'
         name: 'components-page'
@@ -300,6 +261,52 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
+      - file: 'content/pages/impressum.md'
+        label: 'Impressum'
+        name: 'impressum'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: DefaultPage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Titel, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image, required: false }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Accordion'
+            name: 'accordion'
+            widget: 'list'
+            required: false
+            fields:
+              - { label: 'Titel', name: 'title', widget: 'string' }
+              - { label: Content, name: content, widget: text }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string, required: false }
+              - {
+                  label: Beschreibung,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
   - name: infoPages
     label: Info Page
     editor:
@@ -393,11 +400,11 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
-  - name: postCategories
-    label: Post Category
+  - name: productCategories
+    label: Produkt Kategorien
     editor:
       preview: false
-    folder: content/postCategories
+    folder: content/productCategories
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
@@ -449,6 +456,17 @@ collections: # A list of collections the CMS should be able to edit
           widget: image,
           required: false,
         }
+      - label: 'Categories'
+        name: 'categories'
+        widget: 'list'
+        required: false
+        fields:
+          - label: 'Category'
+            name: 'category'
+            widget: 'relation'
+            collection: 'productCategories'
+            searchFields: ['title']
+            valueField: 'title'
       - label: 'Meta'
         required: false
         name: 'meta'
@@ -470,13 +488,13 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: 'settings'
-    label: 'Settings'
+    label: 'Einstellungen'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
       - file: 'content/settings/global.yml'
-        label: 'Global Settings'
+        label: 'Einstellungen'
         name: 'global-settings'
         fields:
           - { label: Site Titel, name: siteTitle, widget: string }
@@ -498,3 +516,4 @@ collections: # A list of collections the CMS should be able to edit
               widget: string,
               required: false,
             }
+          - { label: Produkt Preise, name: showPrices, widget: boolean }

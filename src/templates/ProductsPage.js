@@ -13,7 +13,8 @@ export const ProductsPageTemplate = ({
   subtitle,
   featuredImage,
   body,
-  products = []
+  products = [],
+  showPrices
 }) => (
   <main className="ProductsPage">
     <PageHeader
@@ -36,7 +37,7 @@ export const ProductsPageTemplate = ({
         <div className="row">
           {products.map(product => (
             <div className="col-xl-4 col-md-6" key={product.fields.slug}>
-              <Product {...product.frontmatter} />
+              <Product {...product.frontmatter} showPrice={showPrices} />
             </div>
           ))}
 
@@ -46,7 +47,7 @@ export const ProductsPageTemplate = ({
   </main>
 )
 
-const ProductsPage = ({ data: { page, products } }) => (
+const ProductsPage = ({ data: { page, products, settingsYaml } }) => (
   <Layout
     meta={page.frontmatter.meta || false}
     title={page.frontmatter.title || false}
@@ -59,6 +60,7 @@ const ProductsPage = ({ data: { page, products } }) => (
         ...product.frontmatter,
         ...product.fields
       }))}
+      showPrices={settingsYaml.showPrices}
     />
   </Layout>
 )
@@ -93,6 +95,9 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+    settingsYaml {
+      showPrices
     }
   }
 `

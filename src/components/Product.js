@@ -12,6 +12,7 @@ const Product = ({
   slug,
   categories = [],
   className = '',
+  showPrice,
   ...props
 }) => (
   <div className="single_order">
@@ -19,9 +20,11 @@ const Product = ({
       {featuredImage &&
         <Image src={featuredImage} alt={title} />
       }
-      <div className="order_prise">
-        <span>{price}</span>
-      </div>
+      {showPrice && price &&
+        <div className="order_prise">
+          <span>{price}</span>
+        </div>
+      }
     </div>
     <div className="order_info">
       {title &&
