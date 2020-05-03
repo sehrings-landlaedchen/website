@@ -12,6 +12,10 @@
     @media #{$mobile_device} {
         height: 400px;
     }
+    &.no-image {
+        height: 200px;
+        background-color: $header_bg;
+    }
     .breadcam_inner{
         display: table-cell;
         vertical-align: middle;

@@ -87,9 +87,6 @@ export const Navigation = (props) => {
                     <li>
                       <Link to="/contact/">Kontakt</Link>
                     </li>
-                    <li>
-                      <Link to="/components/">Components</Link>
-                    </li>
                   </ul>
                 </nav>
               </div>

@@ -72,28 +72,6 @@ class Form extends React.Component {
           {this.state.alert && (
             <div className="Form--Alert">{this.state.alert}</div>
           )}
-          <div className="Form--Group">
-            <label className="Form--Label">
-              <input
-                className="Form--Input Form--InputText"
-                type="text"
-                placeholder="Firstname"
-                name="firstname"
-                required
-              />
-              <span>Firstname</span>
-            </label>
-            <label className="Form--Label">
-              <input
-                className="Form--Input Form--InputText"
-                type="text"
-                placeholder="Lastname"
-                name="lastname"
-                required
-              />
-              <span>Lastname</span>
-            </label>
-          </div>
           <fieldset>
             <label className="Form--Label Form--Radio">
               <input
@@ -103,7 +81,7 @@ class Form extends React.Component {
                 value="male"
                 defaultChecked
               />
-              <span>Male</span>
+              <span>Herr</span>
             </label>
             <label className="Form--Label Form--Radio">
               <input
@@ -112,9 +90,31 @@ class Form extends React.Component {
                 name="gender"
                 value="female"
               />
-              <span>Female</span>
+              <span>Frau</span>
             </label>
           </fieldset>
+          <div className="Form--Group">
+            <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="text"
+                placeholder="Vorname"
+                name="firstname"
+                required
+              />
+              <span>Vorname</span>
+            </label>
+            <label className="Form--Label">
+              <input
+                className="Form--Input Form--InputText"
+                type="text"
+                placeholder="Nachname"
+                name="lastname"
+                required
+              />
+              <span>Nachname</span>
+            </label>
+          </div>
           <label className="Form--Label">
             <input
               className="Form--Input Form--InputText"
@@ -123,7 +123,7 @@ class Form extends React.Component {
               name="emailAddress"
               required
             />
-            <span>Email address</span>
+            <span>Email</span>
           </label>
           <label className="Form--Label has-arrow">
             <select
@@ -133,7 +133,7 @@ class Form extends React.Component {
               required
             >
               <option disabled hidden>
-                Type of Enquiry
+                Kontaktgrund
               </option>
               <option>Need to know more</option>
               <option>Found a bug</option>
@@ -148,7 +148,7 @@ class Form extends React.Component {
               rows="10"
               required
             />
-            <span>Message</span>
+            <span>Nachricht</span>
           </label>
           <label className="Form--Label Form-Checkbox">
             <input
@@ -156,7 +156,7 @@ class Form extends React.Component {
               name="newsletter"
               type="checkbox"
             />
-            <span>Get news updates</span>
+            <span>Newsletter</span>
           </label>
           <div
             className="g-recaptcha"
