@@ -77,8 +77,7 @@
             }
         }
     }
-    .footer-bottom{
-        padding-top: 75px;
+    .footer-top {
         .copyright{
             .footer-text{
                 font-size: 16px;
@@ -127,6 +126,10 @@
                 }
             }
         }
+    }
+    .footer-bottom{
+        @extend .footer-top;
+        padding-top: 75px;
     }
 
 }
