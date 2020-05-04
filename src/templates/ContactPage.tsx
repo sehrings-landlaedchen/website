@@ -80,7 +80,7 @@ export const ContactPageTemplate: FC<{
 const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
   return (
     <Layout
-      meta={page.frontmatter.meta || false}
+      meta={page.frontmatter.meta}
       title={page.frontmatter.title || ""}
     >
       <ContactPageTemplate

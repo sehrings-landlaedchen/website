@@ -54,8 +54,6 @@ exports.createPages = async ({ graphql, actions }) => {
       _.get(page, 'node.frontmatter.template')
       )
       if (!pagesToCreate.length) return console.log(`Skipping ${contentType}`)
-
-      console.log(`Creating ${pagesToCreate.length} ${contentType}`)
       
       pagesToCreate.forEach((page, index) => {
         const id = page.node.id

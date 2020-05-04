@@ -47,15 +47,12 @@ const Layout: FC<LayoutProps> = ({ children, meta, title = "" }) => {
       </Helmet>
 
       <Meta
-        title={meta.title}
-        description={meta.description}
+        {...meta}
         absoluteImageUrl={
           socialMediaCard &&
           socialMediaCard.image &&
           socialMediaCard.image
         }
-        noindex={meta.noindex}
-        canonicalLink={meta.canonicalLink}
         siteTitle={data.settingsYaml.siteTitle}
         siteDescription={data.settingsYaml.siteDescription}
         googleTrackingId={googleTrackingId}
