@@ -1,20 +1,19 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
-import { Menu, X } from 'react-feather'
-import Logo from './Logo'
 import './Nav.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
-export const Navigation = (props) => {
+interface NavigationProps {
+  location: any;
+}
+
+export const Navigation: FC<NavigationProps> = (props) => {
   const [active, setActive] = useState(false);
-  // const [activeSubNav, setActiveSubNav] = useState('');
-  const [currentPath, setCurrentPath] = useState('');
   const [mobileNavigation, setMobileNavigation] = useState(false);
 
   useEffect(() => {
-    setCurrentPath(props.location.pathname);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [])
@@ -72,10 +71,10 @@ export const Navigation = (props) => {
                       <a>Über uns</a>
                       <ul className="submenu">
                         <li>
-                          <Link to="/post-categories/news/">Landwirtschaft</Link>
+                          <Link to="/">Landwirtschaft</Link>
                         </li>
                         <li>
-                          <Link to="/post-categories/updates/">Landlädchen</Link>
+                          <Link to="/">Landlädchen</Link>
                         </li>
                       </ul>
                     </li>
@@ -103,8 +102,8 @@ export const Navigation = (props) => {
                     <li><Link to="/">Startseite</Link></li>
                     <li><Link to="/products/">Produkte</Link></li>
                     <li className="slicknav_collapsed slicknav_parent">
-                      <a href="#" role="menuitem" aria-haspopup="true" tabIndex="-1" className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
-                        <span tabIndex="-1">Über uns <i className="ti-angle-down"></i></span>
+                      <a href="#" role="menuitem" aria-haspopup="true" tabIndex={-1} className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
+                        <span tabIndex={-1}>Über uns <i className="ti-angle-down"></i></span>
                         <span className="slicknav_arrow">{!subNavActive ? <FontAwesomeIcon icon={faPlus} size="xs" /> : <FontAwesomeIcon icon={faMinus} size="xs" /> }</span>
                       </a>
 
@@ -130,6 +129,6 @@ export const Navigation = (props) => {
   )
 }
 
-export default ({ subNav }) => (
-  <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
+export default () => (
+  <Location>{route => <Navigation {...route} />}</Location>
 )

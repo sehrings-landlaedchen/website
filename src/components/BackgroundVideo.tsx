@@ -4,8 +4,14 @@ import Image from './Image'
 
 import './BackgroundVideo.css'
 
-class BackgroundVideo extends Component {
-  constructor(props) {
+interface BackgroundVideoProps {
+  poster: string;
+  videoTitle: string;
+}
+
+class BackgroundVideo extends Component<BackgroundVideoProps> {
+  ref: any;
+  constructor(props: BackgroundVideoProps) {
     super(props)
     this.ref = React.createRef()
   }
@@ -29,17 +35,17 @@ class BackgroundVideo extends Component {
   componentDidMount() {
     this.updateDimensions()
     window.addEventListener('resize', () => this.updateDimensions())
-    ReactDOM.findDOMNode(this.ref.current).addEventListener('playing', e =>
-      this.handelPlay(e)
+    ReactDOM.findDOMNode(this.ref.current).addEventListener('playing', () =>
+      this.handelPlay()
     )
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions)
   }
-
+  
   render() {
-    const { poster, videoTitle, children } = this.props
+    const { poster, videoTitle, children } = this.props;
     return (
       <Fragment>
         {!this.state.mobileWidth && (

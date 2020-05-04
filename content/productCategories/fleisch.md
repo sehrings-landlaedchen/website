@@ -1,4 +1,4 @@
 ---
-template: BlogIndex
+template: DefaultPage
 title: Fleisch
 ---

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
 
@@ -8,9 +8,19 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 import LeafletMap from '../components/LeafletMap'
+import { ContactPageQuery } from '../graphql'
 
 // Export Template for use in CMS preview
-export const ContactPageTemplate = ({
+export const ContactPageTemplate: FC<{
+  body: string,
+  title?: string,
+  subtitle: string,
+  featuredImage: string,
+  address: string,
+  phone: string,
+  email: string,
+  locations: any[]
+}> = ({
   body,
   title,
   subtitle,
@@ -67,36 +77,46 @@ export const ContactPageTemplate = ({
   </main>
 )
 
-const ContactPage = ({ data: { page } }) => (
-  <Layout
-    meta={page.frontmatter.meta || false}
-    title={page.frontmatter.title || false}
-  >
-    <ContactPageTemplate {...page.frontmatter} body={page.html} />
-  </Layout>
-)
+const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
+  return (
+    <Layout
+      meta={page.frontmatter.meta || false}
+      title={page.frontmatter.title || ""}
+    >
+      <ContactPageTemplate
+        title={page.frontmatter.title}
+        subtitle={page.frontmatter.title}
+        featuredImage={page.frontmatter.featuredImage}
+        address={page.frontmatter.address}
+        phone={page.frontmatter.phone}
+        email={page.frontmatter.email}
+        locations={page.frontmatter.locations}
+        body={page.html} />
+    </Layout>
+  )
+}
 
 export default ContactPage
 
 export const pageQuery = graphql`
-  query ContactPage($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
-      ...Meta
-      html
-      frontmatter {
-        title
-        template
-        subtitle
-        featuredImage
-        address
-        phone
-        email
-        locations {
-          mapLink
-          lat
-          lng
-        }
+query ContactPage($id: String!) {
+  page: markdownRemark(id: { eq: $id }) {
+    ...Meta
+    html
+    frontmatter {
+      title
+      template
+      subtitle
+      featuredImage
+      address
+      phone
+      email
+      locations {
+        mapLink
+        lat
+        lng
       }
     }
   }
+}
 `

@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
-import Content from '../components/Content.js'
-import Layout from '../components/Layout.js'
+import Content from '../components/Content'
+import Layout from '../components/Layout'
 import Accordion from '../components/Accordion'
 import BackgroundVideo from '../components/BackgroundVideo'
 import Gallery from '../components/Gallery'
 import Popup from '../components/Popup'
+import { ComponentsPageQuery, MarkdownRemarkFrontmatterAccordion, MarkdownRemarkFrontmatterGallery } from '../graphql'
+
+interface ComponentsPageProps {
+  title: string,
+  subtitle: string,
+  featuredImage: string,
+  section1: string,
+  section2: string,
+  video: string,
+  videoPoster: string,
+  videoTitle: string,
+  accordion: MarkdownRemarkFrontmatterAccordion[],
+  body: string,
+  gallery: MarkdownRemarkFrontmatterGallery[]
+}
 
 // Export Template for use in CMS preview
-export const ComponentsPageTemplate = ({
+export const ComponentsPageTemplate: FC<ComponentsPageProps> = ({
   title,
   subtitle,
   featuredImage,
@@ -70,38 +85,49 @@ export const ComponentsPageTemplate = ({
   </main>
 )
 
-const ComponentsPage = ({ data: { page } }) => (
+const ComponentsPage: FC<{ data: ComponentsPageQuery}> = ({ data: { page } }) => (
   <Layout
-    meta={page.frontmatter.meta || false}
-    title={page.frontmatter.title || false}
+    meta={page.frontmatter.meta}
+    title={page.frontmatter.title}
   >
-    <ComponentsPageTemplate {...page} {...page.frontmatter} body={page.html} />
+    <ComponentsPageTemplate
+      title={page.frontmatter.title}
+      subtitle={page.frontmatter.subtitle}
+      featuredImage={page.frontmatter.featuredImage}
+      section1={page.frontmatter.section1}
+      section2={page.frontmatter.section2}
+      video={page.frontmatter.video}
+      videoPoster={page.frontmatter.videoPoster}
+      videoTitle={page.frontmatter.videoTitle}
+      accordion={page.frontmatter.accordion}
+      gallery={page.frontmatter.gallery}
+      body={page.html} />
   </Layout>
 )
 
 export default ComponentsPage
 
 export const pageQuery = graphql`
-  query ComponentsPage($id: String!) {
-    page: markdownRemark(id: { eq: $id }) {
-      ...Meta
-      ...Gallery
-      html
-      frontmatter {
-        title
-        template
-        subtitle
-        featuredImage
-        section1
-        section2
-        video
-        videoPoster
-        videoTitle
-        accordion {
+    query ComponentsPage($id: String!) {
+      page: markdownRemark(id: { eq: $id }) {
+        ...Meta
+        ...Gallery
+        html
+        frontmatter {
           title
-          description
+          template
+          subtitle
+          featuredImage
+          section1
+          section2
+          video
+          videoPoster
+          videoTitle
+          accordion {
+            title
+            description
+          }
         }
       }
     }
-  }
-`
+  `

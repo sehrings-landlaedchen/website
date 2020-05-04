@@ -61,7 +61,7 @@ exports.createPages = async ({ graphql, actions }) => {
         const id = page.node.id
         createPage({
           path: page.node.fields.slug,
-          component: path.resolve(`src/templates/${String(page.node.frontmatter.template)}.js`),
+          component: path.resolve(`src/templates/${String(page.node.frontmatter.template)}.tsx`),
           context: {
             id
           }

@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   plugins: [
+    'gatsby-plugin-typescript',
     `gatsby-plugin-react-helmet`,
     'gatsby-transformer-yaml',
     {
@@ -82,6 +83,6 @@ module.exports = {
     // `gatsby-plugin-offline`,
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
-    'gatsby-plugin-react-leaflet'
+    'gatsby-plugin-react-leaflet',
   ],
 }

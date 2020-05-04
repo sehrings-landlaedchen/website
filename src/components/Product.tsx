@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import Image from './Image'
-import { Link } from 'gatsby'
+import { MarkdownRemarkFrontmatterCategories } from '../graphql'
 
-const Product = ({
+interface ProductProps {
+  featuredImage: string;
+  title: string;
+  price: string;
+  description: string;
+  excerpt: string;
+  slug: string;
+  categories: MarkdownRemarkFrontmatterCategories[],
+  className: string;
+  showPrice: boolean;
+}
+
+const Product: FC<ProductProps> = ({
   featuredImage,
   title,
   price,
@@ -12,8 +24,7 @@ const Product = ({
   slug,
   categories = [],
   className = '',
-  showPrice,
-  ...props
+  showPrice
 }) => (
   <div className="single_order">
     <div className="order_thumb">

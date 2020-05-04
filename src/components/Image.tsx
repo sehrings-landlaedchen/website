@@ -1,11 +1,27 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
+import React, { Fragment, LegacyRef } from 'react'
 import Observer from './Observer'
 
 import './Image.css'
 
-class Image extends React.Component {
-  constructor(props) {
+interface ImageProps {
+  background?: boolean;
+  backgroundSize?: string;
+  resolutions?: string;
+  className?: string;
+  src: string;
+  secSet?: string;
+  fullSrc?: string;
+  smallSrc?: string;
+  onClick?: any;
+  title?: string;
+  alt?: string;
+  lazy?: boolean;
+}
+
+
+class Image extends React.Component<ImageProps, any> {
+  ref: LegacyRef<HTMLDivElement>
+  constructor(props: ImageProps) {
     super(props)
     this.ref = React.createRef()
   }
@@ -28,17 +44,17 @@ class Image extends React.Component {
     isIntersecting: false
   }
 
-  handleIntersection = e => {
+  handleIntersection = (e: any) => {
     if (e.isIntersecting) {
       this.setState({ isIntersecting: true })
     }
   }
 
-  checkIsUploadcare(src) {
+  checkIsUploadcare(src: string) {
     return typeof src === 'string' && src.includes('ucarecdn.com')
   }
 
-  getResolutionString(res) {
+  getResolutionString(res: string) {
     /* add resolutions options for inline images */
     if (res === 'small') {
       res = '800x'
@@ -73,7 +89,7 @@ class Image extends React.Component {
     if (isUploadcare) {
       secSet = this.imageSizes.map(size => {
         return `${src}-/progressive/yes/-/format/auto/-/preview/${size}x${size}/-/quality/lightest/${size}.jpg ${size}w`
-      })
+      }).toString();
     }
 
     fullSrc = `${src}${
@@ -159,10 +175,6 @@ class Image extends React.Component {
       </Fragment>
     )
   }
-}
-
-Image.propTypes = {
-  alt: PropTypes.string.isRequired
 }
 
 export default Image

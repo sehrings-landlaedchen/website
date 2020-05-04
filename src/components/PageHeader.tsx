@@ -9,9 +9,9 @@ const PageHeader = ({
   title,
   subtitle,
   backgroundImage,
-  large,
+  large = false,
   className = '',
-  slider
+  slider = false
 }) => {
   if (large) className += ' PageHeader-large'
   return (

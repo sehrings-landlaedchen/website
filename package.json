@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "sehrings-landlaedchen",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Sehrings Landlädchen Website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Malte Arzt",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/malteA/sehrings_landlaedchen/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "@types/react-dom": "^16.9.7",
     "bootstrap": "^4.4.1",
     "dom-form-serializer": "^1.0.7",
     "gatsby": "^2.21.9",
@@ -26,6 +27,7 @@
     "gatsby-plugin-react-leaflet": "^2.0.13",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-plugin-sharp": "^2.6.0",
+    "gatsby-plugin-typescript": "^2.4.0",
     "gatsby-plugin-typography": "^2.5.0",
     "gatsby-remark-copy-linked-files": "^2.3.1",
     "gatsby-remark-images": "^3.3.0",
@@ -47,14 +49,22 @@
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
     "react-helmet": "^5.2.1",
+    "react-image-gallery": "^1.0.7",
+    "react-images": "^1.1.7",
     "react-leaflet": "^2.6.3",
     "react-markdown": "^4.3.1",
     "react-photoswipe": "^1.3.0"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.13.5",
+    "@graphql-codegen/introspection": "^1.13.5",
+    "@graphql-codegen/typescript": "^1.13.5",
+    "@graphql-codegen/typescript-operations": "^1.13.5",
+    "@types/react-helmet": "^5.0.15",
+    "concurrently": "^5.2.0",
     "prettier": "^2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/malteA/sehrings_landlaedchen#readme",
   "keywords": [
     "gatsby"
   ],
@@ -62,15 +72,16 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+github.com/malteA/sehrings_landlaedchen.git"
   },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,tsx}\"",
+    "start": "concurrently \"yarn develop\" \"yarn codegen\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "codegen": "graphql-codegen --config graphql-codegen.yml"
   }
 }
