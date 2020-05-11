@@ -4,17 +4,19 @@ import { graphql } from 'gatsby'
 import PageHeader from '../components/PageHeader'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
-import { DefaultPageQuery } from '../graphql'
+import { DefaultPageQuery, MarkdownRemarkFrontmatterAccordion } from '../graphql'
+import Accordion from '../components/Accordion'
 
 interface DefaultPageProps {
     title: string;
     subtitle: string
     featuredImage: string;
     body: string;
+    accordion: MarkdownRemarkFrontmatterAccordion[];
 }
 
 // Export Template for use in CMS preview
-export const DefaultPageTemplate: FC<DefaultPageProps> = ({title, subtitle, featuredImage, body}) => (
+export const DefaultPageTemplate: FC<DefaultPageProps> = ({title, subtitle, featuredImage, body, accordion}) => (
   <main className="DefaultPage">
     <PageHeader
       title={title}
@@ -25,6 +27,12 @@ export const DefaultPageTemplate: FC<DefaultPageProps> = ({title, subtitle, feat
     <section className="section">
       <div className="container">
         <Content source={body} />
+      </div>
+    </section>
+
+    <section className="section">
+      <div className="container">
+        <Accordion items={accordion} />
       </div>
     </section>
   </main>
@@ -40,7 +48,8 @@ const DefaultPage: FC<{ data: DefaultPageQuery }> = ({ data: { page } }) => {
       title={page.frontmatter.title}
       subtitle={page.frontmatter.subtitle}
       featuredImage={page.frontmatter.featuredImage}
-      body={page.html} />
+      body={page.html}
+      accordion={page.frontmatter.accordion} />
   </Layout>
   )
 }
@@ -56,6 +65,10 @@ export const pageQuery =
           title
           subtitle
           featuredImage
+          accordion {
+            title
+            description
+          }
         }
       }
     }

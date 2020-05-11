@@ -692,16 +692,20 @@ export enum FileFieldsEnum {
   InternalType = 'internal___type',
   ChildMarkdownRemarkId = 'childMarkdownRemark___id',
   ChildMarkdownRemarkFrontmatterTitle = 'childMarkdownRemark___frontmatter___title',
+  ChildMarkdownRemarkFrontmatterTemplate = 'childMarkdownRemark___frontmatter___template',
+  ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
+  ChildMarkdownRemarkFrontmatterPrice = 'childMarkdownRemark___frontmatter___price',
+  ChildMarkdownRemarkFrontmatterFeaturedImage = 'childMarkdownRemark___frontmatter___featuredImage',
+  ChildMarkdownRemarkFrontmatterCategories = 'childMarkdownRemark___frontmatter___categories',
+  ChildMarkdownRemarkFrontmatterCategoriesCategory = 'childMarkdownRemark___frontmatter___categories___category',
   ChildMarkdownRemarkFrontmatterMetaCanonicalLink = 'childMarkdownRemark___frontmatter___meta___canonicalLink',
   ChildMarkdownRemarkFrontmatterMetaDescription = 'childMarkdownRemark___frontmatter___meta___description',
   ChildMarkdownRemarkFrontmatterMetaNoindex = 'childMarkdownRemark___frontmatter___meta___noindex',
   ChildMarkdownRemarkFrontmatterMetaTitle = 'childMarkdownRemark___frontmatter___meta___title',
-  ChildMarkdownRemarkFrontmatterFeaturedImage = 'childMarkdownRemark___frontmatter___featuredImage',
   ChildMarkdownRemarkFrontmatterGallery = 'childMarkdownRemark___frontmatter___gallery',
   ChildMarkdownRemarkFrontmatterGalleryAlt = 'childMarkdownRemark___frontmatter___gallery___alt',
   ChildMarkdownRemarkFrontmatterGalleryImage = 'childMarkdownRemark___frontmatter___gallery___image',
   ChildMarkdownRemarkFrontmatterGalleryTitle = 'childMarkdownRemark___frontmatter___gallery___title',
-  ChildMarkdownRemarkFrontmatterTemplate = 'childMarkdownRemark___frontmatter___template',
   ChildMarkdownRemarkFrontmatterSlug = 'childMarkdownRemark___frontmatter___slug',
   ChildMarkdownRemarkFrontmatterSubtitle = 'childMarkdownRemark___frontmatter___subtitle',
   ChildMarkdownRemarkFrontmatterAddress = 'childMarkdownRemark___frontmatter___address',
@@ -719,13 +723,6 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterAccordion = 'childMarkdownRemark___frontmatter___accordion',
   ChildMarkdownRemarkFrontmatterAccordionDescription = 'childMarkdownRemark___frontmatter___accordion___description',
   ChildMarkdownRemarkFrontmatterAccordionTitle = 'childMarkdownRemark___frontmatter___accordion___title',
-  ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
-  ChildMarkdownRemarkFrontmatterPrice = 'childMarkdownRemark___frontmatter___price',
-  ChildMarkdownRemarkFrontmatterCategories = 'childMarkdownRemark___frontmatter___categories',
-  ChildMarkdownRemarkFrontmatterCategoriesCategory = 'childMarkdownRemark___frontmatter___categories___category',
-  ChildMarkdownRemarkFrontmatterStatus = 'childMarkdownRemark___frontmatter___status',
-  ChildMarkdownRemarkFrontmatterDate = 'childMarkdownRemark___frontmatter___date',
-  ChildMarkdownRemarkFrontmatterExcerpt = 'childMarkdownRemark___frontmatter___excerpt',
   ChildMarkdownRemarkExcerpt = 'childMarkdownRemark___excerpt',
   ChildMarkdownRemarkRawMarkdownBody = 'childMarkdownRemark___rawMarkdownBody',
   ChildMarkdownRemarkFileAbsolutePath = 'childMarkdownRemark___fileAbsolutePath',
@@ -1564,16 +1561,20 @@ export type MarkdownRemarkFields = {
 export enum MarkdownRemarkFieldsEnum {
   Id = 'id',
   FrontmatterTitle = 'frontmatter___title',
+  FrontmatterTemplate = 'frontmatter___template',
+  FrontmatterDescription = 'frontmatter___description',
+  FrontmatterPrice = 'frontmatter___price',
+  FrontmatterFeaturedImage = 'frontmatter___featuredImage',
+  FrontmatterCategories = 'frontmatter___categories',
+  FrontmatterCategoriesCategory = 'frontmatter___categories___category',
   FrontmatterMetaCanonicalLink = 'frontmatter___meta___canonicalLink',
   FrontmatterMetaDescription = 'frontmatter___meta___description',
   FrontmatterMetaNoindex = 'frontmatter___meta___noindex',
   FrontmatterMetaTitle = 'frontmatter___meta___title',
-  FrontmatterFeaturedImage = 'frontmatter___featuredImage',
   FrontmatterGallery = 'frontmatter___gallery',
   FrontmatterGalleryAlt = 'frontmatter___gallery___alt',
   FrontmatterGalleryImage = 'frontmatter___gallery___image',
   FrontmatterGalleryTitle = 'frontmatter___gallery___title',
-  FrontmatterTemplate = 'frontmatter___template',
   FrontmatterSlug = 'frontmatter___slug',
   FrontmatterSubtitle = 'frontmatter___subtitle',
   FrontmatterAddress = 'frontmatter___address',
@@ -1591,13 +1592,6 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterAccordion = 'frontmatter___accordion',
   FrontmatterAccordionDescription = 'frontmatter___accordion___description',
   FrontmatterAccordionTitle = 'frontmatter___accordion___title',
-  FrontmatterDescription = 'frontmatter___description',
-  FrontmatterPrice = 'frontmatter___price',
-  FrontmatterCategories = 'frontmatter___categories',
-  FrontmatterCategoriesCategory = 'frontmatter___categories___category',
-  FrontmatterStatus = 'frontmatter___status',
-  FrontmatterDate = 'frontmatter___date',
-  FrontmatterExcerpt = 'frontmatter___excerpt',
   Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
@@ -1728,10 +1722,13 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
    __typename?: 'MarkdownRemarkFrontmatter';
   title?: Maybe<Scalars['String']>;
-  meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
-  featuredImage?: Maybe<Scalars['String']>;
-  gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
   template?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  price?: Maybe<Scalars['Float']>;
+  featuredImage?: Maybe<Scalars['String']>;
+  categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
+  meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
+  gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
   slug?: Maybe<Scalars['String']>;
   subtitle?: Maybe<Scalars['String']>;
   address?: Maybe<Scalars['String']>;
@@ -1744,20 +1741,6 @@ export type MarkdownRemarkFrontmatter = {
   videoPoster?: Maybe<Scalars['String']>;
   videoTitle?: Maybe<Scalars['String']>;
   accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
-  description?: Maybe<Scalars['String']>;
-  price?: Maybe<Scalars['Float']>;
-  categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
-  status?: Maybe<Scalars['String']>;
-  date?: Maybe<Scalars['Date']>;
-  excerpt?: Maybe<Scalars['String']>;
-};
-
-
-export type MarkdownRemarkFrontmatterDateArgs = {
-  formatString?: Maybe<Scalars['String']>;
-  fromNow?: Maybe<Scalars['Boolean']>;
-  difference?: Maybe<Scalars['String']>;
-  locale?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterAccordion = {
@@ -1790,10 +1773,13 @@ export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
-  meta?: Maybe<MarkdownRemarkFrontmatterMetaFilterInput>;
-  featuredImage?: Maybe<StringQueryOperatorInput>;
-  gallery?: Maybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
   template?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  price?: Maybe<FloatQueryOperatorInput>;
+  featuredImage?: Maybe<StringQueryOperatorInput>;
+  categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
+  meta?: Maybe<MarkdownRemarkFrontmatterMetaFilterInput>;
+  gallery?: Maybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   subtitle?: Maybe<StringQueryOperatorInput>;
   address?: Maybe<StringQueryOperatorInput>;
@@ -1806,12 +1792,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   videoPoster?: Maybe<StringQueryOperatorInput>;
   videoTitle?: Maybe<StringQueryOperatorInput>;
   accordion?: Maybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  price?: Maybe<FloatQueryOperatorInput>;
-  categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
-  status?: Maybe<StringQueryOperatorInput>;
-  date?: Maybe<DateQueryOperatorInput>;
-  excerpt?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterGallery = {
@@ -2936,7 +2916,18 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsPath = 'pluginCreator___pluginOptions___path',
   PluginCreatorPluginOptionsName = 'pluginCreator___pluginOptions___name',
   PluginCreatorPluginOptionsMaxWidth = 'pluginCreator___pluginOptions___maxWidth',
+  PluginCreatorPluginOptionsPathPrefix = 'pluginCreator___pluginOptions___pathPrefix',
   PluginCreatorPluginOptionsWrapperStyle = 'pluginCreator___pluginOptions___wrapperStyle',
+  PluginCreatorPluginOptionsBackgroundColor = 'pluginCreator___pluginOptions___backgroundColor',
+  PluginCreatorPluginOptionsLinkImagesToOriginal = 'pluginCreator___pluginOptions___linkImagesToOriginal',
+  PluginCreatorPluginOptionsShowCaptions = 'pluginCreator___pluginOptions___showCaptions',
+  PluginCreatorPluginOptionsMarkdownCaptions = 'pluginCreator___pluginOptions___markdownCaptions',
+  PluginCreatorPluginOptionsWithWebp = 'pluginCreator___pluginOptions___withWebp',
+  PluginCreatorPluginOptionsTracedSvg = 'pluginCreator___pluginOptions___tracedSVG',
+  PluginCreatorPluginOptionsLoading = 'pluginCreator___pluginOptions___loading',
+  PluginCreatorPluginOptionsDisableBgImageOnAlpha = 'pluginCreator___pluginOptions___disableBgImageOnAlpha',
+  PluginCreatorPluginOptionsDisableBgImage = 'pluginCreator___pluginOptions___disableBgImage',
+  PluginCreatorPluginOptionsIgnoreFileExtensions = 'pluginCreator___pluginOptions___ignoreFileExtensions',
   PluginCreatorPluginOptionsShortName = 'pluginCreator___pluginOptions___short_name',
   PluginCreatorPluginOptionsStartUrl = 'pluginCreator___pluginOptions___start_url',
   PluginCreatorPluginOptionsBackgroundColor = 'pluginCreator___pluginOptions___background_color',
@@ -3142,13 +3133,35 @@ export enum SitePluginFieldsEnum {
   PluginOptionsPluginsName = 'pluginOptions___plugins___name',
   PluginOptionsPluginsVersion = 'pluginOptions___plugins___version',
   PluginOptionsPluginsPluginOptionsMaxWidth = 'pluginOptions___plugins___pluginOptions___maxWidth',
+  PluginOptionsPluginsPluginOptionsPathPrefix = 'pluginOptions___plugins___pluginOptions___pathPrefix',
   PluginOptionsPluginsPluginOptionsWrapperStyle = 'pluginOptions___plugins___pluginOptions___wrapperStyle',
+  PluginOptionsPluginsPluginOptionsBackgroundColor = 'pluginOptions___plugins___pluginOptions___backgroundColor',
+  PluginOptionsPluginsPluginOptionsLinkImagesToOriginal = 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal',
+  PluginOptionsPluginsPluginOptionsShowCaptions = 'pluginOptions___plugins___pluginOptions___showCaptions',
+  PluginOptionsPluginsPluginOptionsMarkdownCaptions = 'pluginOptions___plugins___pluginOptions___markdownCaptions',
+  PluginOptionsPluginsPluginOptionsWithWebp = 'pluginOptions___plugins___pluginOptions___withWebp',
+  PluginOptionsPluginsPluginOptionsTracedSvg = 'pluginOptions___plugins___pluginOptions___tracedSVG',
+  PluginOptionsPluginsPluginOptionsLoading = 'pluginOptions___plugins___pluginOptions___loading',
+  PluginOptionsPluginsPluginOptionsDisableBgImageOnAlpha = 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha',
+  PluginOptionsPluginsPluginOptionsDisableBgImage = 'pluginOptions___plugins___pluginOptions___disableBgImage',
+  PluginOptionsPluginsPluginOptionsIgnoreFileExtensions = 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions',
   PluginOptionsPluginsBrowserApIs = 'pluginOptions___plugins___browserAPIs',
   PluginOptionsPluginsPluginFilepath = 'pluginOptions___plugins___pluginFilepath',
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsMaxWidth = 'pluginOptions___maxWidth',
+  PluginOptionsPathPrefix = 'pluginOptions___pathPrefix',
   PluginOptionsWrapperStyle = 'pluginOptions___wrapperStyle',
+  PluginOptionsBackgroundColor = 'pluginOptions___backgroundColor',
+  PluginOptionsLinkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  PluginOptionsShowCaptions = 'pluginOptions___showCaptions',
+  PluginOptionsMarkdownCaptions = 'pluginOptions___markdownCaptions',
+  PluginOptionsWithWebp = 'pluginOptions___withWebp',
+  PluginOptionsTracedSvg = 'pluginOptions___tracedSVG',
+  PluginOptionsLoading = 'pluginOptions___loading',
+  PluginOptionsDisableBgImageOnAlpha = 'pluginOptions___disableBgImageOnAlpha',
+  PluginOptionsDisableBgImage = 'pluginOptions___disableBgImage',
+  PluginOptionsIgnoreFileExtensions = 'pluginOptions___ignoreFileExtensions',
   PluginOptionsShortName = 'pluginOptions___short_name',
   PluginOptionsStartUrl = 'pluginOptions___start_url',
   PluginOptionsBackgroundColor = 'pluginOptions___background_color',
@@ -3282,7 +3295,18 @@ export type SitePluginPluginOptions = {
   path?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   maxWidth?: Maybe<Scalars['Int']>;
+  pathPrefix?: Maybe<Scalars['String']>;
   wrapperStyle?: Maybe<Scalars['String']>;
+  backgroundColor?: Maybe<Scalars['String']>;
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
+  showCaptions?: Maybe<Scalars['Boolean']>;
+  markdownCaptions?: Maybe<Scalars['Boolean']>;
+  withWebp?: Maybe<Scalars['Boolean']>;
+  tracedSVG?: Maybe<Scalars['Boolean']>;
+  loading?: Maybe<Scalars['String']>;
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
+  disableBgImage?: Maybe<Scalars['Boolean']>;
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   short_name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
   background_color?: Maybe<Scalars['String']>;
@@ -3297,7 +3321,18 @@ export type SitePluginPluginOptionsFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
   maxWidth?: Maybe<IntQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  backgroundColor?: Maybe<StringQueryOperatorInput>;
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
+  showCaptions?: Maybe<BooleanQueryOperatorInput>;
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
+  withWebp?: Maybe<BooleanQueryOperatorInput>;
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
+  loading?: Maybe<StringQueryOperatorInput>;
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
   background_color?: Maybe<StringQueryOperatorInput>;
@@ -3335,12 +3370,34 @@ export type SitePluginPluginOptionsPluginsFilterListInput = {
 export type SitePluginPluginOptionsPluginsPluginOptions = {
    __typename?: 'SitePluginPluginOptionsPluginsPluginOptions';
   maxWidth?: Maybe<Scalars['Int']>;
+  pathPrefix?: Maybe<Scalars['String']>;
   wrapperStyle?: Maybe<Scalars['String']>;
+  backgroundColor?: Maybe<Scalars['String']>;
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
+  showCaptions?: Maybe<Scalars['Boolean']>;
+  markdownCaptions?: Maybe<Scalars['Boolean']>;
+  withWebp?: Maybe<Scalars['Boolean']>;
+  tracedSVG?: Maybe<Scalars['Boolean']>;
+  loading?: Maybe<Scalars['String']>;
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
+  disableBgImage?: Maybe<Scalars['Boolean']>;
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  backgroundColor?: Maybe<StringQueryOperatorInput>;
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
+  showCaptions?: Maybe<BooleanQueryOperatorInput>;
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
+  withWebp?: Maybe<BooleanQueryOperatorInput>;
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>;
+  loading?: Maybe<StringQueryOperatorInput>;
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginSortInput = {
@@ -3427,22 +3484,7 @@ export type IndexLayoutQueryQuery = (
       { __typename?: 'SettingsYamlSocialMediaCard' }
       & Pick<SettingsYamlSocialMediaCard, 'image'>
     )> }
-  )>, allPosts: (
-    { __typename?: 'MarkdownRemarkConnection' }
-    & { edges: Array<(
-      { __typename?: 'MarkdownRemarkEdge' }
-      & { node: (
-        { __typename?: 'MarkdownRemark' }
-        & { fields?: Maybe<(
-          { __typename?: 'MarkdownRemarkFields' }
-          & Pick<MarkdownRemarkFields, 'slug'>
-        )>, frontmatter?: Maybe<(
-          { __typename?: 'MarkdownRemarkFrontmatter' }
-          & Pick<MarkdownRemarkFrontmatter, 'title'>
-        )> }
-      ) }
-    )> }
-  ) }
+  )> }
 );
 
 export type MetaFragment = (
@@ -3453,84 +3495,6 @@ export type MetaFragment = (
       { __typename?: 'MarkdownRemarkFrontmatterMeta' }
       & Pick<MarkdownRemarkFrontmatterMeta, 'title' | 'description' | 'noindex' | 'canonicalLink'>
     )> }
-  )> }
-);
-
-export type BlogIndexQueryVariables = {
-  id: Scalars['String'];
-};
-
-
-export type BlogIndexQuery = (
-  { __typename?: 'Query' }
-  & { page?: Maybe<(
-    { __typename?: 'MarkdownRemark' }
-    & { fields?: Maybe<(
-      { __typename?: 'MarkdownRemarkFields' }
-      & Pick<MarkdownRemarkFields, 'contentType'>
-    )>, frontmatter?: Maybe<(
-      { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title' | 'excerpt' | 'template' | 'subtitle' | 'featuredImage'>
-    )> }
-    & MetaFragment
-  )>, posts: (
-    { __typename?: 'MarkdownRemarkConnection' }
-    & { edges: Array<(
-      { __typename?: 'MarkdownRemarkEdge' }
-      & { node: (
-        { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'excerpt'>
-        & { fields?: Maybe<(
-          { __typename?: 'MarkdownRemarkFields' }
-          & Pick<MarkdownRemarkFields, 'slug'>
-        )>, frontmatter?: Maybe<(
-          { __typename?: 'MarkdownRemarkFrontmatter' }
-          & Pick<MarkdownRemarkFrontmatter, 'title' | 'date' | 'featuredImage'>
-          & { categories?: Maybe<Array<Maybe<(
-            { __typename?: 'MarkdownRemarkFrontmatterCategories' }
-            & Pick<MarkdownRemarkFrontmatterCategories, 'category'>
-          )>>> }
-        )> }
-      ) }
-    )> }
-  ), postCategories: (
-    { __typename?: 'MarkdownRemarkConnection' }
-    & { edges: Array<(
-      { __typename?: 'MarkdownRemarkEdge' }
-      & { node: (
-        { __typename?: 'MarkdownRemark' }
-        & { fields?: Maybe<(
-          { __typename?: 'MarkdownRemarkFields' }
-          & Pick<MarkdownRemarkFields, 'slug'>
-        )>, frontmatter?: Maybe<(
-          { __typename?: 'MarkdownRemarkFrontmatter' }
-          & Pick<MarkdownRemarkFrontmatter, 'title'>
-        )> }
-      ) }
-    )> }
-  ) }
-);
-
-export type ComponentsPageQueryVariables = {
-  id: Scalars['String'];
-};
-
-
-export type ComponentsPageQuery = (
-  { __typename?: 'Query' }
-  & { page?: Maybe<(
-    { __typename?: 'MarkdownRemark' }
-    & Pick<MarkdownRemark, 'html'>
-    & { frontmatter?: Maybe<(
-      { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'featuredImage' | 'section1' | 'section2' | 'video' | 'videoPoster' | 'videoTitle'>
-      & { accordion?: Maybe<Array<Maybe<(
-        { __typename?: 'MarkdownRemarkFrontmatterAccordion' }
-        & Pick<MarkdownRemarkFrontmatterAccordion, 'title' | 'description'>
-      )>>> }
-    )> }
-    & MetaFragment
-    & GalleryFragment
   )> }
 );
 
@@ -3569,6 +3533,10 @@ export type DefaultPageQuery = (
     & { frontmatter?: Maybe<(
       { __typename?: 'MarkdownRemarkFrontmatter' }
       & Pick<MarkdownRemarkFrontmatter, 'title' | 'subtitle' | 'featuredImage'>
+      & { accordion?: Maybe<Array<Maybe<(
+        { __typename?: 'MarkdownRemarkFrontmatterAccordion' }
+        & Pick<MarkdownRemarkFrontmatterAccordion, 'title' | 'description'>
+      )>>> }
     )> }
     & MetaFragment
   )> }
@@ -3589,6 +3557,29 @@ export type HomePageQuery = (
       & Pick<MarkdownRemarkFrontmatter, 'title' | 'subtitle' | 'featuredImage'>
     )> }
     & MetaFragment
+  )> }
+);
+
+export type InfoPageQueryVariables = {
+  id: Scalars['String'];
+};
+
+
+export type InfoPageQuery = (
+  { __typename?: 'Query' }
+  & { page?: Maybe<(
+    { __typename?: 'MarkdownRemark' }
+    & Pick<MarkdownRemark, 'html'>
+    & { frontmatter?: Maybe<(
+      { __typename?: 'MarkdownRemarkFrontmatter' }
+      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'featuredImage' | 'section1' | 'section2' | 'video' | 'videoPoster' | 'videoTitle'>
+      & { accordion?: Maybe<Array<Maybe<(
+        { __typename?: 'MarkdownRemarkFrontmatterAccordion' }
+        & Pick<MarkdownRemarkFrontmatterAccordion, 'title' | 'description'>
+      )>>> }
+    )> }
+    & MetaFragment
+    & GalleryFragment
   )> }
 );
 
@@ -3631,55 +3622,6 @@ export type ProductsPageQuery = (
     { __typename?: 'SettingsYaml' }
     & Pick<SettingsYaml, 'showPrices'>
   )> }
-);
-
-export type SinglePostQueryVariables = {
-  id: Scalars['String'];
-};
-
-
-export type SinglePostQuery = (
-  { __typename?: 'Query' }
-  & { post?: Maybe<(
-    { __typename?: 'MarkdownRemark' }
-    & Pick<MarkdownRemark, 'html' | 'id'>
-    & { frontmatter?: Maybe<(
-      { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'date'>
-      & { categories?: Maybe<Array<Maybe<(
-        { __typename?: 'MarkdownRemarkFrontmatterCategories' }
-        & Pick<MarkdownRemarkFrontmatterCategories, 'category'>
-      )>>> }
-    )> }
-    & MetaFragment
-  )>, allPosts: (
-    { __typename?: 'MarkdownRemarkConnection' }
-    & { edges: Array<(
-      { __typename?: 'MarkdownRemarkEdge' }
-      & { node: (
-        { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'id'>
-      ), next?: Maybe<(
-        { __typename?: 'MarkdownRemark' }
-        & { fields?: Maybe<(
-          { __typename?: 'MarkdownRemarkFields' }
-          & Pick<MarkdownRemarkFields, 'slug'>
-        )>, frontmatter?: Maybe<(
-          { __typename?: 'MarkdownRemarkFrontmatter' }
-          & Pick<MarkdownRemarkFrontmatter, 'title'>
-        )> }
-      )>, previous?: Maybe<(
-        { __typename?: 'MarkdownRemark' }
-        & { fields?: Maybe<(
-          { __typename?: 'MarkdownRemarkFields' }
-          & Pick<MarkdownRemarkFields, 'slug'>
-        )>, frontmatter?: Maybe<(
-          { __typename?: 'MarkdownRemarkFrontmatter' }
-          & Pick<MarkdownRemarkFrontmatter, 'title'>
-        )> }
-      )> }
-    )> }
-  ) }
 );
 
 export type GatsbyImageSharpFixedFragment = (

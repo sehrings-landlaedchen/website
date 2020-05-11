@@ -364,43 +364,53 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
-  - name: infoPages
-    label: Info Page
-    editor:
-      preview: true
-    folder: content/infoPages
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    create: true # Allow users to create new documents in this collection
-    fields:
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: DefaultPage,
-        }
-      - { label: Slug, name: slug, widget: string }
-      - { label: Titel, name: title, widget: string }
-      - { label: Featured Image, name: featuredImage, widget: image }
-      - { label: Body, name: body, widget: markdown }
-      - label: 'Meta'
-        required: false
-        name: 'meta'
-        widget: 'object'
+                
+      - file: 'content/pages/datenschutz.md'
+        label: 'Datenschutz'
+        name: 'datenschutz'
         fields:
-          - { label: Titel, name: title, widget: string, required: false }
           - {
-              label: Beschreibung,
-              name: description,
-              widget: text,
-              required: false,
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: DefaultPage,
             }
-          - {
-              label: Canonical Link,
-              name: canonicalLink,
-              widget: string,
-              required: false,
-            }
-          - { label: Noindex, name: noindex, widget: boolean, required: false }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Titel, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image, required: false }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Accordion'
+            name: 'accordion'
+            widget: 'list'
+            required: false
+            fields:
+              - { name: title, label: title, widget: string, default: '' }
+              - { name: description, label: description, widget: string }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string, required: false }
+              - {
+                  label: Beschreibung,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
 
   - name: posts
     label: Post

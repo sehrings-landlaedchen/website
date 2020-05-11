@@ -13,7 +13,7 @@ export default () => (
           <div className="col-xl-4 col-md-12 col-lg-8">
             <div className="copyright">
               <p className="footer-text">
-                <Link to="/impressum">Impressum</Link> | <Link to="/impressum">Datenschutz</Link>
+                <Link to="/impressum">Impressum</Link> | <Link to="/datenschutz">Datenschutz</Link>
               </p>
             </div>
           </div>
