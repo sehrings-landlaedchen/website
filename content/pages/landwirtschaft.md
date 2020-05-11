@@ -1,7 +1,7 @@
 ---
-template: ComponentsPage
-slug: components
-title: Components Page
+template: InfoPage
+slug: landwirtschaft
+title: Landwirtschaft
 featuredImage: /img/1250x500.png
 subtitle: This is the components page subtitle.
 section1: >-
@@ -48,4 +48,6 @@ gallery:
 meta:
   description: This is a meta description.
   title: Components Page
+---
+
 ---

@@ -3,12 +3,12 @@ import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
-import FormSimpleAjax from '../components/FormSimpleAjax'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 import LeafletMap from '../components/LeafletMap'
 import { ContactPageQuery } from '../graphql'
+import FormSimpleAjax from '../components/FormSimpleAjax'
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate: FC<{

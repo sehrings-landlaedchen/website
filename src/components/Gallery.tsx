@@ -35,7 +35,7 @@ const Gallery: FC<GalleryProps> = props => {
   }
 
   useEffect(() => {
-    setSliderImages(props.images.map(image => ({
+    props.images && setSliderImages(props.images.map(image => ({
       source: image.image
     })))
   }, [])
@@ -43,27 +43,26 @@ const Gallery: FC<GalleryProps> = props => {
   const { images } = props;
   return (
     <>
-      {images &&
-        images.length > 0 && (
-          <div className="row gallery-item">
-            {images.map((image, index) => (
-              <div
-                className="col-md-4"
-                key={_kebabCase(image.alt) + '-' + index}
-                >
-                <a href={image.image} onClick={evt => handleOpen(evt, true, index)}>
-                  <Image
-                    resolutions="small"
-                    src={image.image}
-                    alt={image.alt}
-                    lazy={false}
-                    className="single-gallery-image"
-                  />
-                </a>
-              </div>
-            ))}
-          </div>
-        )}
+      {images && images.length > 0 && (
+        <div className="row gallery-item">
+          {images.map((image, index) => (
+            <div
+              className="col-md-4"
+              key={_kebabCase(image.alt) + '-' + index}
+            >
+              <a href={image.image} onClick={evt => handleOpen(evt, true, index)}>
+                <Image
+                  resolutions="small"
+                  src={image.image}
+                  alt={image.alt}
+                  lazy={false}
+                  className="single-gallery-image"
+                />
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
       {sliderImages.length > 0 && (
         <ModalGateway>
           {isOpen &&

@@ -71,10 +71,10 @@ export const Navigation: FC<NavigationProps> = (props) => {
                       <a>Über uns</a>
                       <ul className="submenu">
                         <li>
-                          <Link to="/">Landwirtschaft</Link>
+                          <Link to="/landwirtschaft">Landwirtschaft</Link>
                         </li>
                         <li>
-                          <Link to="/">Landlädchen</Link>
+                          <Link to="/landlaedchen">Landlädchen</Link>
                         </li>
                       </ul>
                     </li>
@@ -84,7 +84,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
                       </Link>
                     </div>
                     <li>
-                      <Link to="/contact/">Kontakt</Link>
+                      <Link to="/contact">Kontakt</Link>
                     </li>
                   </ul>
                 </nav>
@@ -108,11 +108,11 @@ export const Navigation: FC<NavigationProps> = (props) => {
                       </a>
 
                       <ul className={`submenu ${!subNavActive && "slicknav_hidden"}`} role="menu" aria-hidden="true">
-                        <li><Link role="menuitem" to="/">Landwirtschaft</Link></li>
-                        <li><Link role="menuitem" to="/">Landlädchen</Link></li>
+                        <li><Link role="menuitem" to="/landwirtschaft">Landwirtschaft</Link></li>
+                        <li><Link role="menuitem" to="/landlaedchen">Landlädchen</Link></li>
                       </ul>
                     </li>
-                    <li><Link to="/contact/">Kontakt</Link></li>
+                    <li><Link to="/contact">Kontakt</Link></li>
                   </ul>
                 </div>
               </div>

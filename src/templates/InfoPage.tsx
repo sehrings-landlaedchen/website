@@ -25,7 +25,7 @@ interface ComponentsPageProps {
 }
 
 // Export Template for use in CMS preview
-export const ComponentsPageTemplate: FC<ComponentsPageProps> = ({
+export const InfoPageTemplate: FC<ComponentsPageProps> = ({
   title,
   subtitle,
   featuredImage,
@@ -85,12 +85,12 @@ export const ComponentsPageTemplate: FC<ComponentsPageProps> = ({
   </main>
 )
 
-const ComponentsPage: FC<{ data: ComponentsPageQuery}> = ({ data: { page } }) => (
+const InfoPage: FC<{ data: ComponentsPageQuery}> = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta}
     title={page.frontmatter.title}
   >
-    <ComponentsPageTemplate
+    <InfoPageTemplate
       title={page.frontmatter.title}
       subtitle={page.frontmatter.subtitle}
       featuredImage={page.frontmatter.featuredImage}
@@ -105,10 +105,10 @@ const ComponentsPage: FC<{ data: ComponentsPageQuery}> = ({ data: { page } }) =>
   </Layout>
 )
 
-export default ComponentsPage
+export default InfoPage
 
 export const pageQuery = graphql`
-    query ComponentsPage($id: String!) {
+    query InfoPage($id: String!) {
       page: markdownRemark(id: { eq: $id }) {
         ...Meta
         ...Gallery

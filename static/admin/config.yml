@@ -23,13 +23,13 @@ public_folder: /img
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
-    label: 'Page'
+    label: 'Seiten'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
     files:
       - file: 'content/pages/home.md'
-        label: 'Home Page'
+        label: 'Startseite'
         name: 'home-page'
         fields:
           - {
@@ -76,7 +76,7 @@ collections: # A list of collections the CMS should be able to edit
                 }
 
       - file: 'content/pages/contact.md'
-        label: 'Contact Page'
+        label: 'Kontakt'
         name: 'contact-page'
         fields:
           - {
@@ -151,25 +151,82 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/components.md'
-        label: 'Components Page'
-        name: 'components-page'
+      - file: 'content/pages/landlaedchen.md'
+        label: 'Landlädchen'
+        name: 'landlaedchen-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: ComponentsPage,
+              default: InfoPage,
             }
-          - { label: Slug, name: slug, widget: hidden, default: 'components' }
+          - { label: Slug, name: slug, widget: hidden, default: 'ladlaedchen' }
           - { label: Titel, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
           - { label: Section 1, name: section1, widget: markdown }
           - { label: Section 2, name: section2, widget: markdown }
-          - { name: video, label: video, widget: file }
-          - { name: videoPoster, label: videoPoster, widget: image }
-          - { label: videoTitle, name: videoTitle, widget: string }
+          - { name: video, label: video, widget: file, required: false }
+          - { name: videoPoster, label: videoPoster, widget: image, required: false }
+          - { label: videoTitle, name: videoTitle, widget: string, required: false }
+          - label: 'accordion'
+            name: 'accordion'
+            widget: 'list'
+            fields:
+              - { name: title, label: title, widget: string, default: '' }
+              - { name: description, label: description, widget: string }
+          - label: 'Gallery'
+            name: 'gallery'
+            widget: 'list'
+            fields:
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: Alt, widget: string }
+              - { name: title, label: Titel, widget: string, required: false }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Titel, name: title, widget: string, required: false }
+              - {
+                  label: Beschreibung,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
+      - file: 'content/pages/landwirtschaft.md'
+        label: 'Landwirtschaft'
+        name: 'landwirtschaft-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: InfoPage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: 'landwirtschaft' }
+          - { label: Titel, name: title, widget: string }
+          - { label: Featured Images, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Section 1, name: section1, widget: markdown }
+          - { label: Section 2, name: section2, widget: markdown }
+          - { name: video, label: video, widget: file, required: false }
+          - { name: videoPoster, label: videoPoster, widget: image, required: false }
+          - { label: videoTitle, name: videoTitle, widget: string, required: false }
           - label: 'accordion'
             name: 'accordion'
             widget: 'list'
@@ -209,7 +266,7 @@ collections: # A list of collections the CMS should be able to edit
                 }
 
       - file: 'content/pages/products.md'
-        label: 'Products Page'
+        label: 'Produkte'
         name: 'products-page'
         fields:
           - {

@@ -7,13 +7,13 @@ import './Form.css'
 
 interface FormProps {
   name: string;
-  subject: string;
-  action: string;
-  successMessage: string;
-  errorMessage: string;
+  subject?: string;
+  action?: string;
+  successMessage?: string;
+  errorMessage?: string;
 }
 
-const Form: FC<FormProps> = ({ name = "", subject = "", action = "", successMessage = "Thanks for your enquiry, we will get back to you soon", errorMessage = "There is a problem, your message has not been sent, please try contacting us via email" }) => {
+const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", successMessage = "Thanks for your enquiry, we will get back to you soon", errorMessage = "There is a problem, your message has not been sent, please try contacting us via email" }) => {
   const [alert, setAlert] = useState('');
   const [disabled, setDisabled] = useState(false);
 
@@ -144,4 +144,4 @@ const Form: FC<FormProps> = ({ name = "", subject = "", action = "", successMess
   )
 }
 
-export default Form
+export default FormSimpleAjax
