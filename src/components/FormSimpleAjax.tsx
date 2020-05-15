@@ -47,12 +47,12 @@ const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", s
   }
 
   return (
-    <Fragment>
+    <>
       <Helmet>
         <script src="https://www.google.com/recaptcha/api.js" />
       </Helmet>
       <form
-        className="Form"
+        className="form-contact contact_form"
         name={name}
         action={action}
         onSubmit={handleSubmit}
@@ -62,85 +62,78 @@ const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", s
         {alert && (
           <div className="Form--Alert">{alert}</div>
         )}
-        <div className="Form--Group">
-          <label className="Form--Label">
-            <input
-              className="Form--Input Form--InputText"
-              type="text"
-              placeholder="Vorname"
-              name="firstname"
-              required
-            />
-            <span>Vorname</span>
-          </label>
-          <label className="Form--Label">
-            <input
-              className="Form--Input Form--InputText"
-              type="text"
-              placeholder="Nachname"
-              name="lastname"
-              required
-            />
-            <span>Nachname</span>
-          </label>
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="form-group">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Vorname"
+                name="firstname"
+                required
+              />
+            </div>
+          </div>
+          <div className="col-sm-6">
+            <div className="form-group">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Nachname"
+                name="lastname"
+                required
+              />
+            </div>
+          </div>
         </div>
-        <label className="Form--Label">
-          <input
-            className="Form--Input Form--InputText"
-            type="email"
-            placeholder="Email"
-            name="emailAddress"
-            required
-          />
-          <span>Email</span>
-        </label>
-        <label className="Form--Label has-arrow">
-          <select
-            className="Form--Input Form--Select"
-            name="type"
-            defaultValue="Type of Enquiry"
-            required
-          >
-            <option disabled hidden>
-              Kontaktgrund
-              </option>
-            <option>Need to know more</option>
-            <option>Found a bug</option>
-            <option>Want to say hello</option>
-          </select>
-        </label>
-        <label className="Form--Label">
-          <textarea
-            className="Form--Input Form--Textarea Form--InputText"
-            placeholder="Message"
-            name="message"
-            rows={10}
-            required
-          />
-          <span>Nachricht</span>
-        </label>
-        <label className="Form--Label Form-Checkbox">
-          <input
-            className="Form--Input Form--Textarea Form--CheckboxInput"
-            name="newsletter"
-            type="checkbox"
-          />
-          <span>Newsletter</span>
-        </label>
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="form-group">
+              <input
+                className="form-control"
+                type="email"
+                placeholder="Email"
+                name="email"
+                required
+              />
+            </div>
+          </div>
+          <div className="col-sm-6">
+            <div className="form-group">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Kontaktgrund"
+                name="type"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-12">
+            <textarea
+              className="form-control w-100"
+              placeholder="Message"
+              name="message"
+              rows={10}
+              cols={30}
+              required
+            />
+          </div>
+        </div>
         <div
           className="g-recaptcha"
           data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
         />
         {!!subject && <input type="hidden" name="subject" value={subject} />}
         <input type="hidden" name="form-name" value={name} />
-        <input
-          className="Button Form--SubmitButton"
-          type="submit"
-          value="Enquire"
-          disabled={disabled}
-        />
+        
+        <div className="form-group mt-3">
+          <button type="submit" className="button button-contactForm boxed-btn">Send</button>
+        </div>
       </form>
-    </Fragment>
+    </>
   )
 }
 

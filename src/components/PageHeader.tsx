@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { FC } from 'react'
 import PropTypes from 'prop-types'
 
 import Image from './Image'
 import Content from './Content'
 import './PageHeader.css'
 
-const PageHeader = ({
+interface PageHeaderProps {
+  title: string;
+  subtitle: string;
+  backgroundImage: string;
+  large?: boolean;
+  className?: string;
+  slider?: boolean;
+}
+
+const PageHeader: FC<PageHeaderProps> = ({
   title,
   subtitle,
   backgroundImage,
@@ -21,7 +30,7 @@ const PageHeader = ({
         <div className="owl-stage-outer">
           <div className="owl-stage">
             <div className="owl-item active">
-              <div className="single_slider slider_img_1">
+              <div className="single_slider slider_img_1" style={{backgroundImage: `url(${backgroundImage}`}}>
                 <div className="single_slider-iner">
                   <div className="slider_contant text-center">
                     <h3>{title}</h3>

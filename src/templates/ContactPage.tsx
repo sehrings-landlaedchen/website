@@ -30,52 +30,68 @@ export const ContactPageTemplate: FC<{
   email,
   locations
 }) => (
-  <main className="Contact">
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
-    <section className="section Contact--Section1">
-      <div className="container Contact--Section1--Container">
-        <div>
-          <Content source={body} />
-          <div className="Contact--Details">
-            {address && (
-              <a
-                className="Contact--Details--Item"
-                href={`https://www.google.de/maps/search/${encodeURI(
-                  address
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MapPin /> {address}
-              </a>
-            )}
-            {phone && (
-              <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <Smartphone /> {phone}
-              </a>
-            )}
-            {email && (
-              <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail /> {email}
-              </a>
-            )}
-          </div>
-        </div>
+      <main className="Contact">
+        <PageHeader
+          title={title}
+          subtitle={subtitle}
+          backgroundImage={featuredImage}
+        />
+        <section className="contact-section">
+          <div className="container">
+            <div className="d-none d-sm-block mb-5 pb-4">
+              {locations && locations.length > 0 &&
+                <LeafletMap location={locations[0]} />
+              }
+              <div id="map" >
 
-        <div>
-          <FormSimpleAjax name="Simple Form Ajax" />
-        </div>
-      </div>
-    </section>
-    {locations && locations.length > 0 &&
-      <LeafletMap location={locations[0]} />
-    }
-  </main>
-)
+              </div>
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="contact-title"></h2>
+                </div>
+                <div className="col-lg-8">
+                  <FormSimpleAjax name="Simple Form Ajax" />
+                </div>
+                <div className="col-lg-3 offset-lg-1">
+
+
+                  {address &&
+                    <div className="media contact-info">
+                      <span className="contact-info__icon"><i className="ti-home"></i></span>
+                      <div className="media-body">
+                        <h3>{address}</h3>
+                      </div>
+                    </div>
+                  }
+                  {phone &&
+                    <div className="media contact-info">
+                      <span className="contact-info__icon"><i className="ti-tablet"></i></span>
+                      <div className="media-body">
+                        <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ paddingBottom: 0 }}>
+                          <h3>{phone}</h3>
+                        </a>
+                        <p>Mon to Fri 9am to 6pm</p>
+                      </div>
+                    </div>
+                  }
+                  {email &&
+                    <div className="media contact-info">
+                      <span className="contact-info__icon"><i className="ti-email"></i></span>
+                      <div className="media-body">
+                        <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ paddingBottom: 0 }}>
+                          <h3>{email}</h3>
+                        </a>
+                        <p>Send us your query anytime!</p>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    )
 
 const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
   return (
@@ -100,8 +116,8 @@ export default ContactPage
 
 export const pageQuery = graphql`
 query ContactPage($id: String!) {
-  page: markdownRemark(id: { eq: $id }) {
-    ...Meta
+  page: markdownRemark(id: {eq: $id }) {
+  ...Meta
     html
     frontmatter {
       title

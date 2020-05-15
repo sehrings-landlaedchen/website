@@ -2,7 +2,7 @@
     padding-top: 150px;
     padding-bottom: 210px;
     background-size: cover;
-background-position: center;
+    background-position: center;
     @media #{$mobile_device} {
         padding-top: 60px;
         padding-bottom: 160px;
@@ -68,6 +68,9 @@ background-position: center;
                 }
             }
         }
+    }
+    .white {
+        background-color: initial;
     }
 }
 

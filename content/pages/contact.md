@@ -3,14 +3,15 @@ template: ContactPage
 slug: contact
 title: Kontakt
 featuredImage: /img/1250x500.png
-subtitle: Lorem magna ea dolore incididunt excepteur irure voluptate id dolore occaecat id.
-address: Sehrings Landlädchen, Rheinstraße 6, Dreieich
-phone: +49 6013 86875
+subtitle: Lorem magna ea dolore incididunt excepteur irure voluptate id dolore
+  occaecat id.
+address: Sehrings Landlädchen, Rheinstraße 6, 63303 Dreieich
+phone: +49 6103 86875
 email: example@example.com
 locations:
   - lat: 49.99753
     lng: 8.73405
-    mapLink: ''
+    mapLink: ""
 meta:
   description: This is a meta description.
   title: Contact Page

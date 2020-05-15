@@ -11,9 +11,8 @@ import '../scss/style.scss'
 import { IndexLayoutQueryQuery, MarkdownRemarkFrontmatterMeta } from '../graphql'
 
 interface LayoutProps {
-  children: any;
   meta: MarkdownRemarkFrontmatterMeta;
-  title: string;
+  title?: string;
 }
 
 const Layout: FC<LayoutProps> = ({ children, meta, title = "" }) => {
