@@ -27,6 +27,9 @@ const Layout: FC<LayoutProps> = ({ children, meta, title = "" }) => {
           socialMediaCard {
             image
           }
+          socialMediaLinks {
+            url
+          }
         }
       }
     `)
@@ -62,7 +65,7 @@ const Layout: FC<LayoutProps> = ({ children, meta, title = "" }) => {
 
       <Fragment>{children}</Fragment>
 
-      <Footer />
+      <Footer socialMediaLinks={data.settingsYaml.socialMediaLinks} />
     </>
   )
 }

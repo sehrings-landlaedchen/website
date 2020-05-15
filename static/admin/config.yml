@@ -584,3 +584,8 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
           - { label: Produkt Preise, name: showPrices, widget: boolean }
+          - label: 'Social Media Links'
+            name: 'socialMediaLinks'
+            widget: 'list'
+            fields:
+              - { name: url, label: URL, widget: string, default: '' }

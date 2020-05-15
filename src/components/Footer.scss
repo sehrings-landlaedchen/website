@@ -1,0 +1,21 @@
+footer {
+  .links p {
+    color: #fafffe;
+
+    a {
+      color: #fafffe;
+      text-decoration: none;
+    }
+  }
+  .copyright p {
+    text-align: right;
+  }
+}
+
+@media(max-width: 991px) {
+  footer {
+    .copyright p {
+      text-align: left;
+    }
+  }
+}

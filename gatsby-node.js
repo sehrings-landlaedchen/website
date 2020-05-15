@@ -50,25 +50,25 @@ exports.createPages = async ({ graphql, actions }) => {
   // }, {})
 
   _.each(contentTypes, (pages, contentType) => {
-    const pagesToCreate = pages.filter(page => 
+    const pagesToCreate = pages.filter(page =>
       _.get(page, 'node.frontmatter.template')
-      )
-      if (!pagesToCreate.length) return console.log(`Skipping ${contentType}`)
-      
-      pagesToCreate.forEach((page, index) => {
-        const id = page.node.id
-        createPage({
-          path: page.node.fields.slug,
-          component: path.resolve(`src/templates/${String(page.node.frontmatter.template)}.tsx`),
-          context: {
-            id
-          }
-        })
+    )
+    if (!pagesToCreate.length) return console.log(`Skipping ${contentType}`)
+
+    pagesToCreate.forEach((page, index) => {
+      const id = page.node.id
+      createPage({
+        path: page.node.fields.slug,
+        component: path.resolve(`src/templates/${String(page.node.frontmatter.template)}.tsx`),
+        context: {
+          id
+        }
       })
+    })
   })
   // contentTypes.forEach((contentType, index) => {
   //   console.log(contentType);
-    
+
   // })
 
   // // Create blog posts pages.
@@ -137,3 +137,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 }
 
 module.exports.resolvableExtensions = () => ['.json']
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    schema.buildObjectType({
+    name: "SocialMediaLinks",
+    fields: {
+      url: 'String!',
+    },
+    interfaces: ["Node"],
+  }),
+    schema.buildObjectType({
+      name: 'SettingsYaml',
+      fields: {
+        socialMediaLinks: {
+          type: ['SocialMediaLinks']
+        }
+      },
+      interfaces: ['Node']
+    })
+  ]
+  createTypes(typeDefs)
+}
