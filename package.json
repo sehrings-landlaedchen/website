@@ -76,7 +76,7 @@
     "url": "git+github.com/malteA/sehrings_landlaedchen.git"
   },
   "scripts": {
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md,tsx}\"",
     "start": "concurrently \"yarn develop\" \"yarn codegen\"",
