@@ -1,14 +1,14 @@
 import React, { FC } from 'react'
-import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 import LeafletMap from '../components/LeafletMap'
 import { ContactPageQuery } from '../graphql'
 import FormSimpleAjax from '../components/FormSimpleAjax'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMap, faIdCard, faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate: FC<{
@@ -21,7 +21,6 @@ export const ContactPageTemplate: FC<{
   email: string,
   locations: any[]
 }> = ({
-  body,
   title,
   subtitle,
   featuredImage,
@@ -38,7 +37,7 @@ export const ContactPageTemplate: FC<{
         />
         <section className="contact-section">
           <div className="container">
-            <div className="d-none d-sm-block mb-5 pb-4">
+            <div className="d-sm-block mb-5 pb-4">
               {locations && locations.length > 0 &&
                 <LeafletMap location={locations[0]} />
               }
@@ -57,7 +56,9 @@ export const ContactPageTemplate: FC<{
 
                   {address &&
                     <div className="media contact-info">
-                      <span className="contact-info__icon"><i className="ti-home"></i></span>
+                      <span className="contact-info__icon">
+                        <FontAwesomeIcon icon={faMap} style={{ fontSize: '27px' }} />
+                      </span>
                       <div className="media-body">
                         <h3>{address}</h3>
                       </div>
@@ -65,9 +66,11 @@ export const ContactPageTemplate: FC<{
                   }
                   {phone &&
                     <div className="media contact-info">
-                      <span className="contact-info__icon"><i className="ti-tablet"></i></span>
+                      <span className="contact-info__icon">
+                        <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
+                      </span>
                       <div className="media-body">
-                        <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ paddingBottom: 0 }}>
+                        <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
                           <h3>{phone}</h3>
                         </a>
                         <p>Mon to Fri 9am to 6pm</p>
@@ -76,9 +79,11 @@ export const ContactPageTemplate: FC<{
                   }
                   {email &&
                     <div className="media contact-info">
-                      <span className="contact-info__icon"><i className="ti-email"></i></span>
+                      <span className="contact-info__icon">
+                        <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
+                      </span>
                       <div className="media-body">
-                        <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ paddingBottom: 0 }}>
+                        <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
                           <h3>{email}</h3>
                         </a>
                         <p>Send us your query anytime!</p>
