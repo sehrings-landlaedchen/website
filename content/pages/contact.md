@@ -7,7 +7,14 @@ subtitle: Lorem magna ea dolore incididunt excepteur irure voluptate id dolore
   occaecat id.
 address: Sehrings Landlädchen, Rheinstraße 6, 63303 Dreieich
 phone: +49 6103 86875
-email: example@example.com
+openingHours: |-
+  |   |   |
+  |---|---|
+  |Dienstag - Samstag|09.00 - 13.00|
+  |Dienstag + Donnerstag|17.00 - 18.30|
+  |Freitag|15.00 - 18.30|
+  Mittwochnachmittag + Montag geschlossen
+email: info@sehrings-landlaedchen.de
 locations:
   - lat: 49.99753
     lng: 8.73405

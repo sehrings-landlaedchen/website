@@ -94,11 +94,12 @@ collections: # A list of collections the CMS should be able to edit
               options:
                 { media_library: { config: { imageShrink: 2600x2600 } } },
             }
-          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Untertitel, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
-          - { label: Address, name: address, widget: text }
-          - { label: Phone, name: phone, widget: string }
-          - { label: Email Address, name: email, widget: string }
+          - { label: Adresse, name: address, widget: text }
+          - { label: Telefon, name: phone, widget: string }
+          - { label: Öffnugszeiten, name: openingHours, widget: markdown }
+          - { label: Email Adresse, name: email, widget: string }
           - name: locations
             label: locations
             widget: list

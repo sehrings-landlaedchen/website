@@ -8,7 +8,7 @@ import Accordion from '../components/Accordion'
 import BackgroundVideo from '../components/BackgroundVideo'
 import Gallery from '../components/Gallery'
 import Popup from '../components/Popup'
-import { ComponentsPageQuery, MarkdownRemarkFrontmatterAccordion, MarkdownRemarkFrontmatterGallery } from '../graphql'
+import { MarkdownRemarkFrontmatterAccordion, MarkdownRemarkFrontmatterGallery, InfoPageQuery } from '../graphql'
 
 interface ComponentsPageProps {
   title: string,
@@ -85,7 +85,7 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
   </main>
 )
 
-const InfoPage: FC<{ data: ComponentsPageQuery}> = ({ data: { page } }) => (
+const InfoPage: FC<{ data: InfoPageQuery}> = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta}
     title={page.frontmatter.title}

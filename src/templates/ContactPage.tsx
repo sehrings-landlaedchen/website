@@ -9,94 +9,99 @@ import { ContactPageQuery } from '../graphql'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap, faIdCard, faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import Content from '../components/Content'
 
-// Export Template for use in CMS preview
-export const ContactPageTemplate: FC<{
+interface ContactPageProps {
   body: string,
   title?: string,
   subtitle: string,
   featuredImage: string,
   address: string,
   phone: string,
+  openingHours: string,
   email: string,
   locations: any[]
-}> = ({
+}
+
+// Export Template for use in CMS preview
+export const ContactPageTemplate: FC<ContactPageProps> = ({
   title,
   subtitle,
   featuredImage,
   address,
   phone,
+  openingHours,
   email,
   locations
 }) => (
-      <main className="Contact">
-        <PageHeader
-          title={title}
-          subtitle={subtitle}
-          backgroundImage={featuredImage}
-        />
-        <section className="contact-section">
-          <div className="container">
-            <div className="d-sm-block mb-5 pb-4">
-              {locations && locations.length > 0 &&
-                <LeafletMap location={locations[0]} />
-              }
-              <div id="map" >
+    <main className="Contact">
+      <PageHeader
+        title={title}
+        subtitle={subtitle}
+        backgroundImage={featuredImage}
+      />
+      <section className="contact-section">
+        <div className="container">
+          <div className="d-sm-block mb-5 pb-4">
+            {locations && locations.length > 0 &&
+              <LeafletMap location={locations[0]} />
+            }
+            <div id="map" >
 
+            </div>
+            <div className="row">
+              <div className="col-12">
+                <h2 className="contact-title"></h2>
               </div>
-              <div className="row">
-                <div className="col-12">
-                  <h2 className="contact-title"></h2>
-                </div>
-                <div className="col-lg-8">
-                  <FormSimpleAjax name="Simple Form Ajax" />
-                </div>
-                <div className="col-lg-3 offset-lg-1">
+              <div className="col-lg-8">
+                <FormSimpleAjax name="Simple Form Ajax" />
+              </div>
+              <div className="col-lg-4">
 
 
-                  {address &&
-                    <div className="media contact-info">
-                      <span className="contact-info__icon">
-                        <FontAwesomeIcon icon={faMap} style={{ fontSize: '27px' }} />
-                      </span>
-                      <div className="media-body">
-                        <h3>{address}</h3>
-                      </div>
+                {address &&
+                  <div className="media contact-info">
+                    <span className="contact-info__icon">
+                      <FontAwesomeIcon icon={faMap} style={{ fontSize: '27px' }} />
+                    </span>
+                    <div className="media-body">
+                      <h3>{address}</h3>
                     </div>
-                  }
-                  {phone &&
-                    <div className="media contact-info">
-                      <span className="contact-info__icon">
-                        <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
-                      </span>
-                      <div className="media-body">
-                        <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
-                          <h3>{phone}</h3>
-                        </a>
-                        <p>Mon to Fri 9am to 6pm</p>
-                      </div>
+                  </div>
+                }
+                {phone &&
+                  <div className="media contact-info">
+                    <span className="contact-info__icon">
+                      <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
+                    </span>
+                    <div className="media-body">
+                      <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
+                        <h3>{phone}</h3>
+                      </a>
+                      <Content source={openingHours} />
                     </div>
-                  }
-                  {email &&
-                    <div className="media contact-info">
-                      <span className="contact-info__icon">
-                        <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
-                      </span>
-                      <div className="media-body">
-                        <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
-                          <h3>{email}</h3>
-                        </a>
-                        <p>Send us your query anytime!</p>
-                      </div>
+                  </div>
+                }
+                {email &&
+                  <div className="media contact-info">
+                    <span className="contact-info__icon">
+                      <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
+                    </span>
+                    <div className="media-body">
+                      <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
+                        <h3>{email}</h3>
+                      </a>
+                      <p>Send us your query anytime!</p>
                     </div>
-                  }
-                </div>
+                  </div>
+                }
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    )
+        </div>
+      </section>
+    </main>
+  )
 
 const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
   return (
@@ -110,6 +115,7 @@ const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
         featuredImage={page.frontmatter.featuredImage}
         address={page.frontmatter.address}
         phone={page.frontmatter.phone}
+        openingHours={page.frontmatter.openingHours}
         email={page.frontmatter.email}
         locations={page.frontmatter.locations}
         body={page.html} />
@@ -131,6 +137,7 @@ query ContactPage($id: String!) {
       featuredImage
       address
       phone
+      openingHours
       email
       locations {
         mapLink

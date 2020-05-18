@@ -389,8 +389,8 @@ export type File = Node & {
   parent?: Maybe<Node>;
   children: Array<Node>;
   internal: Internal;
-  childSettingsYaml?: Maybe<SettingsYaml>;
   childMarkdownRemark?: Maybe<MarkdownRemark>;
+  childSettingsYaml?: Maybe<SettingsYaml>;
 };
 
 
@@ -690,55 +690,13 @@ export enum FileFieldsEnum {
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
   InternalType = 'internal___type',
-  ChildSettingsYamlId = 'childSettingsYaml___id',
-  ChildSettingsYamlParentId = 'childSettingsYaml___parent___id',
-  ChildSettingsYamlParentParentId = 'childSettingsYaml___parent___parent___id',
-  ChildSettingsYamlParentParentChildren = 'childSettingsYaml___parent___parent___children',
-  ChildSettingsYamlParentChildren = 'childSettingsYaml___parent___children',
-  ChildSettingsYamlParentChildrenId = 'childSettingsYaml___parent___children___id',
-  ChildSettingsYamlParentChildrenChildren = 'childSettingsYaml___parent___children___children',
-  ChildSettingsYamlParentInternalContent = 'childSettingsYaml___parent___internal___content',
-  ChildSettingsYamlParentInternalContentDigest = 'childSettingsYaml___parent___internal___contentDigest',
-  ChildSettingsYamlParentInternalDescription = 'childSettingsYaml___parent___internal___description',
-  ChildSettingsYamlParentInternalFieldOwners = 'childSettingsYaml___parent___internal___fieldOwners',
-  ChildSettingsYamlParentInternalIgnoreType = 'childSettingsYaml___parent___internal___ignoreType',
-  ChildSettingsYamlParentInternalMediaType = 'childSettingsYaml___parent___internal___mediaType',
-  ChildSettingsYamlParentInternalOwner = 'childSettingsYaml___parent___internal___owner',
-  ChildSettingsYamlParentInternalType = 'childSettingsYaml___parent___internal___type',
-  ChildSettingsYamlChildren = 'childSettingsYaml___children',
-  ChildSettingsYamlChildrenId = 'childSettingsYaml___children___id',
-  ChildSettingsYamlChildrenParentId = 'childSettingsYaml___children___parent___id',
-  ChildSettingsYamlChildrenParentChildren = 'childSettingsYaml___children___parent___children',
-  ChildSettingsYamlChildrenChildren = 'childSettingsYaml___children___children',
-  ChildSettingsYamlChildrenChildrenId = 'childSettingsYaml___children___children___id',
-  ChildSettingsYamlChildrenChildrenChildren = 'childSettingsYaml___children___children___children',
-  ChildSettingsYamlChildrenInternalContent = 'childSettingsYaml___children___internal___content',
-  ChildSettingsYamlChildrenInternalContentDigest = 'childSettingsYaml___children___internal___contentDigest',
-  ChildSettingsYamlChildrenInternalDescription = 'childSettingsYaml___children___internal___description',
-  ChildSettingsYamlChildrenInternalFieldOwners = 'childSettingsYaml___children___internal___fieldOwners',
-  ChildSettingsYamlChildrenInternalIgnoreType = 'childSettingsYaml___children___internal___ignoreType',
-  ChildSettingsYamlChildrenInternalMediaType = 'childSettingsYaml___children___internal___mediaType',
-  ChildSettingsYamlChildrenInternalOwner = 'childSettingsYaml___children___internal___owner',
-  ChildSettingsYamlChildrenInternalType = 'childSettingsYaml___children___internal___type',
-  ChildSettingsYamlInternalContent = 'childSettingsYaml___internal___content',
-  ChildSettingsYamlInternalContentDigest = 'childSettingsYaml___internal___contentDigest',
-  ChildSettingsYamlInternalDescription = 'childSettingsYaml___internal___description',
-  ChildSettingsYamlInternalFieldOwners = 'childSettingsYaml___internal___fieldOwners',
-  ChildSettingsYamlInternalIgnoreType = 'childSettingsYaml___internal___ignoreType',
-  ChildSettingsYamlInternalMediaType = 'childSettingsYaml___internal___mediaType',
-  ChildSettingsYamlInternalOwner = 'childSettingsYaml___internal___owner',
-  ChildSettingsYamlInternalType = 'childSettingsYaml___internal___type',
-  ChildSettingsYamlSiteTitle = 'childSettingsYaml___siteTitle',
-  ChildSettingsYamlSiteUrl = 'childSettingsYaml___siteUrl',
-  ChildSettingsYamlSiteDescription = 'childSettingsYaml___siteDescription',
-  ChildSettingsYamlSocialMediaCardImage = 'childSettingsYaml___socialMediaCard___image',
-  ChildSettingsYamlGoogleTrackingId = 'childSettingsYaml___googleTrackingId',
-  ChildSettingsYamlShowPrices = 'childSettingsYaml___showPrices',
-  ChildSettingsYamlSocialMediaLinks = 'childSettingsYaml___socialMediaLinks',
-  ChildSettingsYamlSocialMediaLinksUrl = 'childSettingsYaml___socialMediaLinks___url',
-  ChildSettingsYamlSocialMediaLinksIcon = 'childSettingsYaml___socialMediaLinks___icon',
   ChildMarkdownRemarkId = 'childMarkdownRemark___id',
   ChildMarkdownRemarkFrontmatterTitle = 'childMarkdownRemark___frontmatter___title',
+  ChildMarkdownRemarkFrontmatterTemplate = 'childMarkdownRemark___frontmatter___template',
+  ChildMarkdownRemarkFrontmatterSlug = 'childMarkdownRemark___frontmatter___slug',
+  ChildMarkdownRemarkFrontmatterAccordion = 'childMarkdownRemark___frontmatter___accordion',
+  ChildMarkdownRemarkFrontmatterAccordionTitle = 'childMarkdownRemark___frontmatter___accordion___title',
+  ChildMarkdownRemarkFrontmatterAccordionDescription = 'childMarkdownRemark___frontmatter___accordion___description',
   ChildMarkdownRemarkFrontmatterMetaCanonicalLink = 'childMarkdownRemark___frontmatter___meta___canonicalLink',
   ChildMarkdownRemarkFrontmatterMetaDescription = 'childMarkdownRemark___frontmatter___meta___description',
   ChildMarkdownRemarkFrontmatterMetaNoindex = 'childMarkdownRemark___frontmatter___meta___noindex',
@@ -748,17 +706,16 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterGalleryAlt = 'childMarkdownRemark___frontmatter___gallery___alt',
   ChildMarkdownRemarkFrontmatterGalleryImage = 'childMarkdownRemark___frontmatter___gallery___image',
   ChildMarkdownRemarkFrontmatterGalleryTitle = 'childMarkdownRemark___frontmatter___gallery___title',
-  ChildMarkdownRemarkFrontmatterTemplate = 'childMarkdownRemark___frontmatter___template',
-  ChildMarkdownRemarkFrontmatterSlug = 'childMarkdownRemark___frontmatter___slug',
   ChildMarkdownRemarkFrontmatterSubtitle = 'childMarkdownRemark___frontmatter___subtitle',
-  ChildMarkdownRemarkFrontmatterAccordion = 'childMarkdownRemark___frontmatter___accordion',
-  ChildMarkdownRemarkFrontmatterAccordionTitle = 'childMarkdownRemark___frontmatter___accordion___title',
-  ChildMarkdownRemarkFrontmatterAccordionDescription = 'childMarkdownRemark___frontmatter___accordion___description',
   ChildMarkdownRemarkFrontmatterSection1 = 'childMarkdownRemark___frontmatter___section1',
   ChildMarkdownRemarkFrontmatterSection2 = 'childMarkdownRemark___frontmatter___section2',
   ChildMarkdownRemarkFrontmatterVideo = 'childMarkdownRemark___frontmatter___video',
   ChildMarkdownRemarkFrontmatterVideoPoster = 'childMarkdownRemark___frontmatter___videoPoster',
   ChildMarkdownRemarkFrontmatterVideoTitle = 'childMarkdownRemark___frontmatter___videoTitle',
+  ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
+  ChildMarkdownRemarkFrontmatterPrice = 'childMarkdownRemark___frontmatter___price',
+  ChildMarkdownRemarkFrontmatterCategories = 'childMarkdownRemark___frontmatter___categories',
+  ChildMarkdownRemarkFrontmatterCategoriesCategory = 'childMarkdownRemark___frontmatter___categories___category',
   ChildMarkdownRemarkFrontmatterAddress = 'childMarkdownRemark___frontmatter___address',
   ChildMarkdownRemarkFrontmatterPhone = 'childMarkdownRemark___frontmatter___phone',
   ChildMarkdownRemarkFrontmatterEmail = 'childMarkdownRemark___frontmatter___email',
@@ -766,10 +723,7 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterLocationsLat = 'childMarkdownRemark___frontmatter___locations___lat',
   ChildMarkdownRemarkFrontmatterLocationsLng = 'childMarkdownRemark___frontmatter___locations___lng',
   ChildMarkdownRemarkFrontmatterLocationsMapLink = 'childMarkdownRemark___frontmatter___locations___mapLink',
-  ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
-  ChildMarkdownRemarkFrontmatterPrice = 'childMarkdownRemark___frontmatter___price',
-  ChildMarkdownRemarkFrontmatterCategories = 'childMarkdownRemark___frontmatter___categories',
-  ChildMarkdownRemarkFrontmatterCategoriesCategory = 'childMarkdownRemark___frontmatter___categories___category',
+  ChildMarkdownRemarkFrontmatterOpeningHours = 'childMarkdownRemark___frontmatter___openingHours',
   ChildMarkdownRemarkExcerpt = 'childMarkdownRemark___excerpt',
   ChildMarkdownRemarkRawMarkdownBody = 'childMarkdownRemark___rawMarkdownBody',
   ChildMarkdownRemarkFileAbsolutePath = 'childMarkdownRemark___fileAbsolutePath',
@@ -823,7 +777,67 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkInternalIgnoreType = 'childMarkdownRemark___internal___ignoreType',
   ChildMarkdownRemarkInternalMediaType = 'childMarkdownRemark___internal___mediaType',
   ChildMarkdownRemarkInternalOwner = 'childMarkdownRemark___internal___owner',
-  ChildMarkdownRemarkInternalType = 'childMarkdownRemark___internal___type'
+  ChildMarkdownRemarkInternalType = 'childMarkdownRemark___internal___type',
+  ChildSettingsYamlSocialMediaLinks = 'childSettingsYaml___socialMediaLinks',
+  ChildSettingsYamlSocialMediaLinksUrl = 'childSettingsYaml___socialMediaLinks___url',
+  ChildSettingsYamlSocialMediaLinksId = 'childSettingsYaml___socialMediaLinks___id',
+  ChildSettingsYamlSocialMediaLinksParentId = 'childSettingsYaml___socialMediaLinks___parent___id',
+  ChildSettingsYamlSocialMediaLinksParentChildren = 'childSettingsYaml___socialMediaLinks___parent___children',
+  ChildSettingsYamlSocialMediaLinksChildren = 'childSettingsYaml___socialMediaLinks___children',
+  ChildSettingsYamlSocialMediaLinksChildrenId = 'childSettingsYaml___socialMediaLinks___children___id',
+  ChildSettingsYamlSocialMediaLinksChildrenChildren = 'childSettingsYaml___socialMediaLinks___children___children',
+  ChildSettingsYamlSocialMediaLinksInternalContent = 'childSettingsYaml___socialMediaLinks___internal___content',
+  ChildSettingsYamlSocialMediaLinksInternalContentDigest = 'childSettingsYaml___socialMediaLinks___internal___contentDigest',
+  ChildSettingsYamlSocialMediaLinksInternalDescription = 'childSettingsYaml___socialMediaLinks___internal___description',
+  ChildSettingsYamlSocialMediaLinksInternalFieldOwners = 'childSettingsYaml___socialMediaLinks___internal___fieldOwners',
+  ChildSettingsYamlSocialMediaLinksInternalIgnoreType = 'childSettingsYaml___socialMediaLinks___internal___ignoreType',
+  ChildSettingsYamlSocialMediaLinksInternalMediaType = 'childSettingsYaml___socialMediaLinks___internal___mediaType',
+  ChildSettingsYamlSocialMediaLinksInternalOwner = 'childSettingsYaml___socialMediaLinks___internal___owner',
+  ChildSettingsYamlSocialMediaLinksInternalType = 'childSettingsYaml___socialMediaLinks___internal___type',
+  ChildSettingsYamlSiteTitle = 'childSettingsYaml___siteTitle',
+  ChildSettingsYamlSiteUrl = 'childSettingsYaml___siteUrl',
+  ChildSettingsYamlSiteDescription = 'childSettingsYaml___siteDescription',
+  ChildSettingsYamlSocialMediaCardImage = 'childSettingsYaml___socialMediaCard___image',
+  ChildSettingsYamlGoogleTrackingId = 'childSettingsYaml___googleTrackingId',
+  ChildSettingsYamlShowPrices = 'childSettingsYaml___showPrices',
+  ChildSettingsYamlId = 'childSettingsYaml___id',
+  ChildSettingsYamlParentId = 'childSettingsYaml___parent___id',
+  ChildSettingsYamlParentParentId = 'childSettingsYaml___parent___parent___id',
+  ChildSettingsYamlParentParentChildren = 'childSettingsYaml___parent___parent___children',
+  ChildSettingsYamlParentChildren = 'childSettingsYaml___parent___children',
+  ChildSettingsYamlParentChildrenId = 'childSettingsYaml___parent___children___id',
+  ChildSettingsYamlParentChildrenChildren = 'childSettingsYaml___parent___children___children',
+  ChildSettingsYamlParentInternalContent = 'childSettingsYaml___parent___internal___content',
+  ChildSettingsYamlParentInternalContentDigest = 'childSettingsYaml___parent___internal___contentDigest',
+  ChildSettingsYamlParentInternalDescription = 'childSettingsYaml___parent___internal___description',
+  ChildSettingsYamlParentInternalFieldOwners = 'childSettingsYaml___parent___internal___fieldOwners',
+  ChildSettingsYamlParentInternalIgnoreType = 'childSettingsYaml___parent___internal___ignoreType',
+  ChildSettingsYamlParentInternalMediaType = 'childSettingsYaml___parent___internal___mediaType',
+  ChildSettingsYamlParentInternalOwner = 'childSettingsYaml___parent___internal___owner',
+  ChildSettingsYamlParentInternalType = 'childSettingsYaml___parent___internal___type',
+  ChildSettingsYamlChildren = 'childSettingsYaml___children',
+  ChildSettingsYamlChildrenId = 'childSettingsYaml___children___id',
+  ChildSettingsYamlChildrenParentId = 'childSettingsYaml___children___parent___id',
+  ChildSettingsYamlChildrenParentChildren = 'childSettingsYaml___children___parent___children',
+  ChildSettingsYamlChildrenChildren = 'childSettingsYaml___children___children',
+  ChildSettingsYamlChildrenChildrenId = 'childSettingsYaml___children___children___id',
+  ChildSettingsYamlChildrenChildrenChildren = 'childSettingsYaml___children___children___children',
+  ChildSettingsYamlChildrenInternalContent = 'childSettingsYaml___children___internal___content',
+  ChildSettingsYamlChildrenInternalContentDigest = 'childSettingsYaml___children___internal___contentDigest',
+  ChildSettingsYamlChildrenInternalDescription = 'childSettingsYaml___children___internal___description',
+  ChildSettingsYamlChildrenInternalFieldOwners = 'childSettingsYaml___children___internal___fieldOwners',
+  ChildSettingsYamlChildrenInternalIgnoreType = 'childSettingsYaml___children___internal___ignoreType',
+  ChildSettingsYamlChildrenInternalMediaType = 'childSettingsYaml___children___internal___mediaType',
+  ChildSettingsYamlChildrenInternalOwner = 'childSettingsYaml___children___internal___owner',
+  ChildSettingsYamlChildrenInternalType = 'childSettingsYaml___children___internal___type',
+  ChildSettingsYamlInternalContent = 'childSettingsYaml___internal___content',
+  ChildSettingsYamlInternalContentDigest = 'childSettingsYaml___internal___contentDigest',
+  ChildSettingsYamlInternalDescription = 'childSettingsYaml___internal___description',
+  ChildSettingsYamlInternalFieldOwners = 'childSettingsYaml___internal___fieldOwners',
+  ChildSettingsYamlInternalIgnoreType = 'childSettingsYaml___internal___ignoreType',
+  ChildSettingsYamlInternalMediaType = 'childSettingsYaml___internal___mediaType',
+  ChildSettingsYamlInternalOwner = 'childSettingsYaml___internal___owner',
+  ChildSettingsYamlInternalType = 'childSettingsYaml___internal___type'
 }
 
 export type FileFilterInput = {
@@ -866,8 +880,8 @@ export type FileFilterInput = {
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
-  childSettingsYaml?: Maybe<SettingsYamlFilterInput>;
   childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+  childSettingsYaml?: Maybe<SettingsYamlFilterInput>;
 };
 
 export type FileGroupConnection = {
@@ -1567,6 +1581,11 @@ export type MarkdownRemarkFields = {
 export enum MarkdownRemarkFieldsEnum {
   Id = 'id',
   FrontmatterTitle = 'frontmatter___title',
+  FrontmatterTemplate = 'frontmatter___template',
+  FrontmatterSlug = 'frontmatter___slug',
+  FrontmatterAccordion = 'frontmatter___accordion',
+  FrontmatterAccordionTitle = 'frontmatter___accordion___title',
+  FrontmatterAccordionDescription = 'frontmatter___accordion___description',
   FrontmatterMetaCanonicalLink = 'frontmatter___meta___canonicalLink',
   FrontmatterMetaDescription = 'frontmatter___meta___description',
   FrontmatterMetaNoindex = 'frontmatter___meta___noindex',
@@ -1576,17 +1595,16 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterGalleryAlt = 'frontmatter___gallery___alt',
   FrontmatterGalleryImage = 'frontmatter___gallery___image',
   FrontmatterGalleryTitle = 'frontmatter___gallery___title',
-  FrontmatterTemplate = 'frontmatter___template',
-  FrontmatterSlug = 'frontmatter___slug',
   FrontmatterSubtitle = 'frontmatter___subtitle',
-  FrontmatterAccordion = 'frontmatter___accordion',
-  FrontmatterAccordionTitle = 'frontmatter___accordion___title',
-  FrontmatterAccordionDescription = 'frontmatter___accordion___description',
   FrontmatterSection1 = 'frontmatter___section1',
   FrontmatterSection2 = 'frontmatter___section2',
   FrontmatterVideo = 'frontmatter___video',
   FrontmatterVideoPoster = 'frontmatter___videoPoster',
   FrontmatterVideoTitle = 'frontmatter___videoTitle',
+  FrontmatterDescription = 'frontmatter___description',
+  FrontmatterPrice = 'frontmatter___price',
+  FrontmatterCategories = 'frontmatter___categories',
+  FrontmatterCategoriesCategory = 'frontmatter___categories___category',
   FrontmatterAddress = 'frontmatter___address',
   FrontmatterPhone = 'frontmatter___phone',
   FrontmatterEmail = 'frontmatter___email',
@@ -1594,10 +1612,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterLocationsLat = 'frontmatter___locations___lat',
   FrontmatterLocationsLng = 'frontmatter___locations___lng',
   FrontmatterLocationsMapLink = 'frontmatter___locations___mapLink',
-  FrontmatterDescription = 'frontmatter___description',
-  FrontmatterPrice = 'frontmatter___price',
-  FrontmatterCategories = 'frontmatter___categories',
-  FrontmatterCategoriesCategory = 'frontmatter___categories___category',
+  FrontmatterOpeningHours = 'frontmatter___openingHours',
   Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
@@ -1729,25 +1744,26 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
    __typename?: 'MarkdownRemarkFrontmatter';
   title?: Maybe<Scalars['String']>;
+  template?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
   meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
   featuredImage?: Maybe<Scalars['String']>;
   gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
-  template?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
   subtitle?: Maybe<Scalars['String']>;
-  accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
   section1?: Maybe<Scalars['String']>;
   section2?: Maybe<Scalars['String']>;
   video?: Maybe<Scalars['String']>;
   videoPoster?: Maybe<Scalars['String']>;
   videoTitle?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  price?: Maybe<Scalars['Float']>;
+  categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
   address?: Maybe<Scalars['String']>;
   phone?: Maybe<Scalars['String']>;
   email?: Maybe<Scalars['String']>;
   locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
-  description?: Maybe<Scalars['String']>;
-  price?: Maybe<Scalars['Float']>;
-  categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
+  openingHours?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterAccordion = {
@@ -1780,25 +1796,26 @@ export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
+  template?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  accordion?: Maybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
   meta?: Maybe<MarkdownRemarkFrontmatterMetaFilterInput>;
   featuredImage?: Maybe<StringQueryOperatorInput>;
   gallery?: Maybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
-  template?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
   subtitle?: Maybe<StringQueryOperatorInput>;
-  accordion?: Maybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
   section1?: Maybe<StringQueryOperatorInput>;
   section2?: Maybe<StringQueryOperatorInput>;
   video?: Maybe<StringQueryOperatorInput>;
   videoPoster?: Maybe<StringQueryOperatorInput>;
   videoTitle?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  price?: Maybe<FloatQueryOperatorInput>;
+  categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
   address?: Maybe<StringQueryOperatorInput>;
   phone?: Maybe<StringQueryOperatorInput>;
   email?: Maybe<StringQueryOperatorInput>;
   locations?: Maybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
-  description?: Maybe<StringQueryOperatorInput>;
-  price?: Maybe<FloatQueryOperatorInput>;
-  categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
+  openingHours?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterGallery = {
@@ -1943,6 +1960,8 @@ export type Query = {
   allMarkdownRemark: MarkdownRemarkConnection;
   imageSharp?: Maybe<ImageSharp>;
   allImageSharp: ImageSharpConnection;
+  socialMediaLinks?: Maybe<SocialMediaLinks>;
+  allSocialMediaLinks: SocialMediaLinksConnection;
   settingsYaml?: Maybe<SettingsYaml>;
   allSettingsYaml: SettingsYamlConnection;
   siteBuildMetadata?: Maybe<SiteBuildMetadata>;
@@ -1992,8 +2011,8 @@ export type QueryFileArgs = {
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
-  childSettingsYaml?: Maybe<SettingsYamlFilterInput>;
   childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+  childSettingsYaml?: Maybe<SettingsYamlFilterInput>;
 };
 
 
@@ -2152,18 +2171,35 @@ export type QueryAllImageSharpArgs = {
 };
 
 
-export type QuerySettingsYamlArgs = {
+export type QuerySocialMediaLinksArgs = {
+  url?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
+};
+
+
+export type QueryAllSocialMediaLinksArgs = {
+  filter?: Maybe<SocialMediaLinksFilterInput>;
+  sort?: Maybe<SocialMediaLinksSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QuerySettingsYamlArgs = {
+  socialMediaLinks?: Maybe<SocialMediaLinksFilterListInput>;
   siteTitle?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
   siteDescription?: Maybe<StringQueryOperatorInput>;
   socialMediaCard?: Maybe<SettingsYamlSocialMediaCardFilterInput>;
   googleTrackingId?: Maybe<StringQueryOperatorInput>;
   showPrices?: Maybe<BooleanQueryOperatorInput>;
-  socialMediaLinks?: Maybe<SettingsYamlSocialMediaLinksFilterListInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
 };
 
 
@@ -2218,17 +2254,17 @@ export type QueryAllSitePluginArgs = {
 
 export type SettingsYaml = Node & {
    __typename?: 'SettingsYaml';
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
+  socialMediaLinks?: Maybe<Array<Maybe<SocialMediaLinks>>>;
   siteTitle?: Maybe<Scalars['String']>;
   siteUrl?: Maybe<Scalars['String']>;
   siteDescription?: Maybe<Scalars['String']>;
   socialMediaCard?: Maybe<SettingsYamlSocialMediaCard>;
   googleTrackingId?: Maybe<Scalars['String']>;
   showPrices?: Maybe<Scalars['Boolean']>;
-  socialMediaLinks?: Maybe<Array<Maybe<SettingsYamlSocialMediaLinks>>>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
 };
 
 export type SettingsYamlConnection = {
@@ -2261,6 +2297,52 @@ export type SettingsYamlEdge = {
 };
 
 export enum SettingsYamlFieldsEnum {
+  SocialMediaLinks = 'socialMediaLinks',
+  SocialMediaLinksUrl = 'socialMediaLinks___url',
+  SocialMediaLinksId = 'socialMediaLinks___id',
+  SocialMediaLinksParentId = 'socialMediaLinks___parent___id',
+  SocialMediaLinksParentParentId = 'socialMediaLinks___parent___parent___id',
+  SocialMediaLinksParentParentChildren = 'socialMediaLinks___parent___parent___children',
+  SocialMediaLinksParentChildren = 'socialMediaLinks___parent___children',
+  SocialMediaLinksParentChildrenId = 'socialMediaLinks___parent___children___id',
+  SocialMediaLinksParentChildrenChildren = 'socialMediaLinks___parent___children___children',
+  SocialMediaLinksParentInternalContent = 'socialMediaLinks___parent___internal___content',
+  SocialMediaLinksParentInternalContentDigest = 'socialMediaLinks___parent___internal___contentDigest',
+  SocialMediaLinksParentInternalDescription = 'socialMediaLinks___parent___internal___description',
+  SocialMediaLinksParentInternalFieldOwners = 'socialMediaLinks___parent___internal___fieldOwners',
+  SocialMediaLinksParentInternalIgnoreType = 'socialMediaLinks___parent___internal___ignoreType',
+  SocialMediaLinksParentInternalMediaType = 'socialMediaLinks___parent___internal___mediaType',
+  SocialMediaLinksParentInternalOwner = 'socialMediaLinks___parent___internal___owner',
+  SocialMediaLinksParentInternalType = 'socialMediaLinks___parent___internal___type',
+  SocialMediaLinksChildren = 'socialMediaLinks___children',
+  SocialMediaLinksChildrenId = 'socialMediaLinks___children___id',
+  SocialMediaLinksChildrenParentId = 'socialMediaLinks___children___parent___id',
+  SocialMediaLinksChildrenParentChildren = 'socialMediaLinks___children___parent___children',
+  SocialMediaLinksChildrenChildren = 'socialMediaLinks___children___children',
+  SocialMediaLinksChildrenChildrenId = 'socialMediaLinks___children___children___id',
+  SocialMediaLinksChildrenChildrenChildren = 'socialMediaLinks___children___children___children',
+  SocialMediaLinksChildrenInternalContent = 'socialMediaLinks___children___internal___content',
+  SocialMediaLinksChildrenInternalContentDigest = 'socialMediaLinks___children___internal___contentDigest',
+  SocialMediaLinksChildrenInternalDescription = 'socialMediaLinks___children___internal___description',
+  SocialMediaLinksChildrenInternalFieldOwners = 'socialMediaLinks___children___internal___fieldOwners',
+  SocialMediaLinksChildrenInternalIgnoreType = 'socialMediaLinks___children___internal___ignoreType',
+  SocialMediaLinksChildrenInternalMediaType = 'socialMediaLinks___children___internal___mediaType',
+  SocialMediaLinksChildrenInternalOwner = 'socialMediaLinks___children___internal___owner',
+  SocialMediaLinksChildrenInternalType = 'socialMediaLinks___children___internal___type',
+  SocialMediaLinksInternalContent = 'socialMediaLinks___internal___content',
+  SocialMediaLinksInternalContentDigest = 'socialMediaLinks___internal___contentDigest',
+  SocialMediaLinksInternalDescription = 'socialMediaLinks___internal___description',
+  SocialMediaLinksInternalFieldOwners = 'socialMediaLinks___internal___fieldOwners',
+  SocialMediaLinksInternalIgnoreType = 'socialMediaLinks___internal___ignoreType',
+  SocialMediaLinksInternalMediaType = 'socialMediaLinks___internal___mediaType',
+  SocialMediaLinksInternalOwner = 'socialMediaLinks___internal___owner',
+  SocialMediaLinksInternalType = 'socialMediaLinks___internal___type',
+  SiteTitle = 'siteTitle',
+  SiteUrl = 'siteUrl',
+  SiteDescription = 'siteDescription',
+  SocialMediaCardImage = 'socialMediaCard___image',
+  GoogleTrackingId = 'googleTrackingId',
+  ShowPrices = 'showPrices',
   Id = 'id',
   ParentId = 'parent___id',
   ParentParentId = 'parent___parent___id',
@@ -2346,30 +2428,21 @@ export enum SettingsYamlFieldsEnum {
   InternalIgnoreType = 'internal___ignoreType',
   InternalMediaType = 'internal___mediaType',
   InternalOwner = 'internal___owner',
-  InternalType = 'internal___type',
-  SiteTitle = 'siteTitle',
-  SiteUrl = 'siteUrl',
-  SiteDescription = 'siteDescription',
-  SocialMediaCardImage = 'socialMediaCard___image',
-  GoogleTrackingId = 'googleTrackingId',
-  ShowPrices = 'showPrices',
-  SocialMediaLinks = 'socialMediaLinks',
-  SocialMediaLinksUrl = 'socialMediaLinks___url',
-  SocialMediaLinksIcon = 'socialMediaLinks___icon'
+  InternalType = 'internal___type'
 }
 
 export type SettingsYamlFilterInput = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
+  socialMediaLinks?: Maybe<SocialMediaLinksFilterListInput>;
   siteTitle?: Maybe<StringQueryOperatorInput>;
   siteUrl?: Maybe<StringQueryOperatorInput>;
   siteDescription?: Maybe<StringQueryOperatorInput>;
   socialMediaCard?: Maybe<SettingsYamlSocialMediaCardFilterInput>;
   googleTrackingId?: Maybe<StringQueryOperatorInput>;
   showPrices?: Maybe<BooleanQueryOperatorInput>;
-  socialMediaLinks?: Maybe<SettingsYamlSocialMediaLinksFilterListInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
 };
 
 export type SettingsYamlGroupConnection = {
@@ -2389,21 +2462,6 @@ export type SettingsYamlSocialMediaCard = {
 
 export type SettingsYamlSocialMediaCardFilterInput = {
   image?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SettingsYamlSocialMediaLinks = {
-   __typename?: 'SettingsYamlSocialMediaLinks';
-  url?: Maybe<Scalars['String']>;
-  icon?: Maybe<Scalars['String']>;
-};
-
-export type SettingsYamlSocialMediaLinksFilterInput = {
-  url?: Maybe<StringQueryOperatorInput>;
-  icon?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SettingsYamlSocialMediaLinksFilterListInput = {
-  elemMatch?: Maybe<SettingsYamlSocialMediaLinksFilterInput>;
 };
 
 export type SettingsYamlSortInput = {
@@ -3399,6 +3457,161 @@ export type SiteSortInput = {
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
 };
 
+export type SocialMediaLinks = Node & {
+   __typename?: 'SocialMediaLinks';
+  url: Scalars['String'];
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+};
+
+export type SocialMediaLinksConnection = {
+   __typename?: 'SocialMediaLinksConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<SocialMediaLinksEdge>;
+  nodes: Array<SocialMediaLinks>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<SocialMediaLinksGroupConnection>;
+};
+
+
+export type SocialMediaLinksConnectionDistinctArgs = {
+  field: SocialMediaLinksFieldsEnum;
+};
+
+
+export type SocialMediaLinksConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: SocialMediaLinksFieldsEnum;
+};
+
+export type SocialMediaLinksEdge = {
+   __typename?: 'SocialMediaLinksEdge';
+  next?: Maybe<SocialMediaLinks>;
+  node: SocialMediaLinks;
+  previous?: Maybe<SocialMediaLinks>;
+};
+
+export enum SocialMediaLinksFieldsEnum {
+  Url = 'url',
+  Id = 'id',
+  ParentId = 'parent___id',
+  ParentParentId = 'parent___parent___id',
+  ParentParentParentId = 'parent___parent___parent___id',
+  ParentParentParentChildren = 'parent___parent___parent___children',
+  ParentParentChildren = 'parent___parent___children',
+  ParentParentChildrenId = 'parent___parent___children___id',
+  ParentParentChildrenChildren = 'parent___parent___children___children',
+  ParentParentInternalContent = 'parent___parent___internal___content',
+  ParentParentInternalContentDigest = 'parent___parent___internal___contentDigest',
+  ParentParentInternalDescription = 'parent___parent___internal___description',
+  ParentParentInternalFieldOwners = 'parent___parent___internal___fieldOwners',
+  ParentParentInternalIgnoreType = 'parent___parent___internal___ignoreType',
+  ParentParentInternalMediaType = 'parent___parent___internal___mediaType',
+  ParentParentInternalOwner = 'parent___parent___internal___owner',
+  ParentParentInternalType = 'parent___parent___internal___type',
+  ParentChildren = 'parent___children',
+  ParentChildrenId = 'parent___children___id',
+  ParentChildrenParentId = 'parent___children___parent___id',
+  ParentChildrenParentChildren = 'parent___children___parent___children',
+  ParentChildrenChildren = 'parent___children___children',
+  ParentChildrenChildrenId = 'parent___children___children___id',
+  ParentChildrenChildrenChildren = 'parent___children___children___children',
+  ParentChildrenInternalContent = 'parent___children___internal___content',
+  ParentChildrenInternalContentDigest = 'parent___children___internal___contentDigest',
+  ParentChildrenInternalDescription = 'parent___children___internal___description',
+  ParentChildrenInternalFieldOwners = 'parent___children___internal___fieldOwners',
+  ParentChildrenInternalIgnoreType = 'parent___children___internal___ignoreType',
+  ParentChildrenInternalMediaType = 'parent___children___internal___mediaType',
+  ParentChildrenInternalOwner = 'parent___children___internal___owner',
+  ParentChildrenInternalType = 'parent___children___internal___type',
+  ParentInternalContent = 'parent___internal___content',
+  ParentInternalContentDigest = 'parent___internal___contentDigest',
+  ParentInternalDescription = 'parent___internal___description',
+  ParentInternalFieldOwners = 'parent___internal___fieldOwners',
+  ParentInternalIgnoreType = 'parent___internal___ignoreType',
+  ParentInternalMediaType = 'parent___internal___mediaType',
+  ParentInternalOwner = 'parent___internal___owner',
+  ParentInternalType = 'parent___internal___type',
+  Children = 'children',
+  ChildrenId = 'children___id',
+  ChildrenParentId = 'children___parent___id',
+  ChildrenParentParentId = 'children___parent___parent___id',
+  ChildrenParentParentChildren = 'children___parent___parent___children',
+  ChildrenParentChildren = 'children___parent___children',
+  ChildrenParentChildrenId = 'children___parent___children___id',
+  ChildrenParentChildrenChildren = 'children___parent___children___children',
+  ChildrenParentInternalContent = 'children___parent___internal___content',
+  ChildrenParentInternalContentDigest = 'children___parent___internal___contentDigest',
+  ChildrenParentInternalDescription = 'children___parent___internal___description',
+  ChildrenParentInternalFieldOwners = 'children___parent___internal___fieldOwners',
+  ChildrenParentInternalIgnoreType = 'children___parent___internal___ignoreType',
+  ChildrenParentInternalMediaType = 'children___parent___internal___mediaType',
+  ChildrenParentInternalOwner = 'children___parent___internal___owner',
+  ChildrenParentInternalType = 'children___parent___internal___type',
+  ChildrenChildren = 'children___children',
+  ChildrenChildrenId = 'children___children___id',
+  ChildrenChildrenParentId = 'children___children___parent___id',
+  ChildrenChildrenParentChildren = 'children___children___parent___children',
+  ChildrenChildrenChildren = 'children___children___children',
+  ChildrenChildrenChildrenId = 'children___children___children___id',
+  ChildrenChildrenChildrenChildren = 'children___children___children___children',
+  ChildrenChildrenInternalContent = 'children___children___internal___content',
+  ChildrenChildrenInternalContentDigest = 'children___children___internal___contentDigest',
+  ChildrenChildrenInternalDescription = 'children___children___internal___description',
+  ChildrenChildrenInternalFieldOwners = 'children___children___internal___fieldOwners',
+  ChildrenChildrenInternalIgnoreType = 'children___children___internal___ignoreType',
+  ChildrenChildrenInternalMediaType = 'children___children___internal___mediaType',
+  ChildrenChildrenInternalOwner = 'children___children___internal___owner',
+  ChildrenChildrenInternalType = 'children___children___internal___type',
+  ChildrenInternalContent = 'children___internal___content',
+  ChildrenInternalContentDigest = 'children___internal___contentDigest',
+  ChildrenInternalDescription = 'children___internal___description',
+  ChildrenInternalFieldOwners = 'children___internal___fieldOwners',
+  ChildrenInternalIgnoreType = 'children___internal___ignoreType',
+  ChildrenInternalMediaType = 'children___internal___mediaType',
+  ChildrenInternalOwner = 'children___internal___owner',
+  ChildrenInternalType = 'children___internal___type',
+  InternalContent = 'internal___content',
+  InternalContentDigest = 'internal___contentDigest',
+  InternalDescription = 'internal___description',
+  InternalFieldOwners = 'internal___fieldOwners',
+  InternalIgnoreType = 'internal___ignoreType',
+  InternalMediaType = 'internal___mediaType',
+  InternalOwner = 'internal___owner',
+  InternalType = 'internal___type'
+}
+
+export type SocialMediaLinksFilterInput = {
+  url?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+};
+
+export type SocialMediaLinksFilterListInput = {
+  elemMatch?: Maybe<SocialMediaLinksFilterInput>;
+};
+
+export type SocialMediaLinksGroupConnection = {
+   __typename?: 'SocialMediaLinksGroupConnection';
+  totalCount: Scalars['Int'];
+  edges: Array<SocialMediaLinksEdge>;
+  nodes: Array<SocialMediaLinks>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type SocialMediaLinksSortInput = {
+  fields?: Maybe<Array<Maybe<SocialMediaLinksFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
 export enum SortOrderEnum {
   Asc = 'ASC',
   Desc = 'DESC'
@@ -3436,8 +3649,8 @@ export type IndexLayoutQueryQuery = (
       { __typename?: 'SettingsYamlSocialMediaCard' }
       & Pick<SettingsYamlSocialMediaCard, 'image'>
     )>, socialMediaLinks?: Maybe<Array<Maybe<(
-      { __typename?: 'SettingsYamlSocialMediaLinks' }
-      & Pick<SettingsYamlSocialMediaLinks, 'url'>
+      { __typename?: 'SocialMediaLinks' }
+      & Pick<SocialMediaLinks, 'url'>
     )>>> }
   )> }
 );
@@ -3465,7 +3678,7 @@ export type ContactPageQuery = (
     & Pick<MarkdownRemark, 'html'>
     & { frontmatter?: Maybe<(
       { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'featuredImage' | 'address' | 'phone' | 'email'>
+      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'featuredImage' | 'address' | 'phone' | 'openingHours' | 'email'>
       & { locations?: Maybe<Array<Maybe<(
         { __typename?: 'MarkdownRemarkFrontmatterLocations' }
         & Pick<MarkdownRemarkFrontmatterLocations, 'mapLink' | 'lat' | 'lng'>
