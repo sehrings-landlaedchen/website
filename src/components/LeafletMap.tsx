@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Map, TileLayer, Popup, Marker } from 'react-leaflet'
-import { LatLngExpression, Icon } from 'leaflet';
+import { LatLngExpression } from 'leaflet';
 import "./LeafletMap.scss"
 
 interface LeafletMapProps {
@@ -19,10 +19,6 @@ const LeafletMap: FC<LeafletMapProps> = props => {
       ref.leafletElement.openPopup()
     }
   }
-
-  const icon = new Icon({
-
-  })
 
   return (
     <Map
