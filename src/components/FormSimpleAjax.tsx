@@ -114,7 +114,7 @@ const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", s
           <div className="col-sm-12">
             <textarea
               className="form-control w-100"
-              placeholder="Message"
+              placeholder="Nachricht"
               name="message"
               rows={10}
               cols={30}
