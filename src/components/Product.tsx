@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 
 import Image from './Image'
 import { MarkdownRemarkFrontmatterCategories } from '../graphql'
+import "./Product.scss";
 
 interface ProductProps {
   featuredImage: string;
@@ -26,7 +27,7 @@ const Product: FC<ProductProps> = ({
   className = '',
   showPrice
 }) => (
-  <div className="single_order">
+  <div className={`${className ? className : "single_order"}`}>
     <div className="order_thumb">
       {featuredImage &&
         <Image src={featuredImage} alt={title} />

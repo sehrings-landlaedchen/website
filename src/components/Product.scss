@@ -1,0 +1,18 @@
+.single_order--flat {
+  margin-bottom: 30px;
+
+  .order_thumb img {
+    width: 100%;
+  }
+
+  .order_info {
+    padding: 20px 25px 25px 25px;
+    box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
+
+    height: 160px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
