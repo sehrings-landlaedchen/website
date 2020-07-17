@@ -13,6 +13,7 @@ interface HomePageProps {
   featuredImage: string,
   body: string,
   products: any[],
+  categories: any[],
   showPrices: boolean
 }
 
@@ -23,19 +24,23 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
   featuredImage,
   body,
   products = [],
+  categories = [],
   showPrices
 }) => {
   const [filter, setFilter] = useState("");
   const productsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
-
+  const [filteredProducts, setFilteredProducts] = useState(products);
 
   const indexLastProduct = currentPage * productsPerPage;
   const indexFirstProduct = indexLastProduct - productsPerPage;
-  const pagedProducts = products.slice(indexFirstProduct, indexLastProduct);
-  const pages = [...Array(Math.ceil(products.length / productsPerPage))];
+  const pagedProducts = filteredProducts.slice(indexFirstProduct, indexLastProduct);
+  const pages = [...Array(Math.ceil(filteredProducts.length / productsPerPage))];
 
-  const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
+  console.log(categories.map(x => products.map(p => p.frontmatter.categories?.filter(c => c === x.title))));
+  console.log(categories.map(x => products.map(p => p.frontmatter.categories)));
+
+  const handleFilterChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setFilter(evt.target.value);
   }
 
@@ -49,6 +54,10 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
     currentPage !== pages.length && setCurrentPage(currentPage + 1)
   }
 
+  const handleFilter = () => {
+    setFilteredProducts(products.filter(x => x.title.toLowerCase().includes(filter.toLowerCase())));
+  }
+
   return (
     <main className="ProductsPage">
       <PageHeader
@@ -56,32 +65,6 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
         subtitle={subtitle}
         backgroundImage={featuredImage}
       />
-
-      {/*<section className="section order_area">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="section_title mb-70">
-                <Content source={body} />
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="section_title mb-70">
-                <input className="single-input" value={filter} onChange={handleChange} />
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            {pagedProducts.filter(x => x.title.toLowerCase().includes(filter.toLowerCase())).map(product => (
-              <div className="col-xl-4 col-md-6" key={product.fields.slug}>
-                <Product {...product.frontmatter} showPrice={showPrices} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>*/}
       <section className="blog_area section-padding">
         <div className="container">
           <div className="row">
@@ -89,7 +72,7 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
               <div className="blog_left_sidebar">
 
                 <div className="row">
-                  {pagedProducts.filter(x => x.title.toLowerCase().includes(filter.toLowerCase())).map(product => (
+                  {pagedProducts.map(product => (
                     <div className="col-xl-4 col-md-6" key={product.fields.slug}>
                       <Product {...product.frontmatter} showPrice={showPrices} className="single_order--flat" />
                     </div>
@@ -127,122 +110,25 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                   <form action="#">
                     <div className="form-group">
                       <div className="input-group mb-3">
-                        <input type="text" className="form-control" placeholder="Search Keyword" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Search Keyword'" />
-                        <div className="input-group-append">
-                          <button className="btn" type="button"><i className="ti-search"></i></button>
-                        </div>
+                        <input type="text" className="form-control" placeholder="Search Keyword" onChange={handleFilterChange} />
                       </div>
                     </div>
-                    <button className="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">Suchen</button>
+                    <button className="btn-primary text-white w-100 btn_1 boxed-btn" type="submit" onClick={handleFilter}>Suchen</button>
                   </form>
                 </aside>
                 <aside className="single_sidebar_widget post_category_widget">
                   <h4 className="widget_title">Kategorien</h4>
                   <ul className="list cat-list">
-                    <li>
-                      <a href="#" className="d-flex">
-                        <p>Resaurant food</p>
-                        <p>(37)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="d-flex">
-                        <p>Travel news</p>
-                        <p>(10)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="d-flex">
-                        <p>Modern technology</p>
-                        <p>(03)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="d-flex">
-                        <p>Product</p>
-                        <p>(11)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="d-flex">
-                        <p>Inspiration</p>
-                        <p>21</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="d-flex">
-                        <p>Health Care (21)</p>
-                        <p>09</p>
-                      </a>
-                    </li>
-                  </ul>
-                </aside>
-                <aside className="single_sidebar_widget popular_post_widget">
-                  <h3 className="widget_title">Recent Post</h3>
-                  <div className="media post_item">
-                    <img src="img/post/post_1.png" alt="post" />
-                    <div className="media-body">
-                      <a href="single-blog.html">
-                        <h3>From life was you fish...</h3>
-                      </a>
-                      <p>January 12, 2019</p>
-                    </div>
-                  </div>
-                  <div className="media post_item">
-                    <img src="img/post/post_2.png" alt="post" />
-                    <div className="media-body">
-                      <a href="single-blog.html">
-                        <h3>The Amazing Hubble</h3>
-                      </a>
-                      <p>02 Hours ago</p>
-                    </div>
-                  </div>
-                  <div className="media post_item">
-                    <img src="img/post/post_3.png" alt="post" />
-                    <div className="media-body">
-                      <a href="single-blog.html">
-                        <h3>Astronomy Or Astrology</h3>
-                      </a>
-                      <p>03 Hours ago</p>
-                    </div>
-                  </div>
-                  <div className="media post_item">
-                    <img src="img/post/post_4.png" alt="post" />
-                    <div className="media-body">
-                      <a href="single-blog.html">
-                        <h3>Asteroids telescope</h3>
-                      </a>
-                      <p>01 Hours ago</p>
-                    </div>
-                  </div>
-                </aside>
-                <aside className="single_sidebar_widget tag_cloud_widget">
-                  <h4 className="widget_title">Tag Clouds</h4>
-                  <ul className="list">
-                    <li>
-                      <a href="#">project</a>
-                    </li>
-                    <li>
-                      <a href="#">love</a>
-                    </li>
-                    <li>
-                      <a href="#">technology</a>
-                    </li>
-                    <li>
-                      <a href="#">travel</a>
-                    </li>
-                    <li>
-                      <a href="#">restaurant</a>
-                    </li>
-                    <li>
-                      <a href="#">life style</a>
-                    </li>
-                    <li>
-                      <a href="#">design</a>
-                    </li>
-                    <li>
-                      <a href="#">illustration</a>
-                    </li>
+                    {
+                      categories && categories.map(categorie =>
+                        <li key={categorie.id}>
+                          <a href="#" className="d-flex">
+                            <p>{categorie.title}</p>
+                            <p>(*)</p>
+                          </a>
+                        </li>
+                      )
+                    }
                   </ul>
                 </aside>
               </div>
@@ -254,7 +140,7 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
   )
 }
 
-const ProductsPage: FC<{ data: ProductsPageQuery }> = ({ data: { page, products, settingsYaml } }) => {
+const ProductsPage: FC<{ data: ProductsPageQuery }> = ({ data: { page, products, categories, settingsYaml } }) => {
   return (
     <Layout
       meta={page.frontmatter.meta}
@@ -269,6 +155,9 @@ const ProductsPage: FC<{ data: ProductsPageQuery }> = ({ data: { page, products,
           ...product.node,
           ...product.node.frontmatter,
           ...product.node.fields
+        }))}
+        categories={categories.edges.map(categorie => ({
+          ...categorie.node.frontmatter
         }))}
         showPrices={settingsYaml.showPrices}
       />
@@ -307,6 +196,24 @@ query productsPage($id: String!) {
         categories {
             category
           }
+        }
+      }
+    }
+  }
+  categories: allMarkdownRemark (
+    filter: {
+      fields: {
+        contentType: {
+          eq: "productCategories"
+        }
+      }
+    }
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          title
         }
       }
     }
