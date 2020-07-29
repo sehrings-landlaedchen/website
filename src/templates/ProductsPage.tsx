@@ -2,10 +2,11 @@ import React, { FC, useState, ChangeEvent, MouseEvent } from 'react'
 import { graphql } from 'gatsby'
 
 import PageHeader from '../components/PageHeader'
-import Content from '../components/Content'
 import Layout from '../components/Layout'
 import Product from '../components/Product'
 import { ProductsPageQuery } from '../graphql'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 interface HomePageProps {
   title: string,
@@ -28,6 +29,7 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
   showPrices
 }) => {
   const [filter, setFilter] = useState("");
+  const [filterCategory, setFilterCategory] = useState("");
   const productsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredProducts, setFilteredProducts] = useState(products);
@@ -36,9 +38,6 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
   const indexFirstProduct = indexLastProduct - productsPerPage;
   const pagedProducts = filteredProducts.slice(indexFirstProduct, indexLastProduct);
   const pages = [...Array(Math.ceil(filteredProducts.length / productsPerPage))];
-
-  console.log(categories.map(x => products.map(p => p.frontmatter.categories?.filter(c => c === x.title))));
-  console.log(categories.map(x => products.map(p => p.frontmatter.categories)));
 
   const handleFilterChange = (evt: ChangeEvent<HTMLInputElement>) => {
     setFilter(evt.target.value);
@@ -54,8 +53,16 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
     currentPage !== pages.length && setCurrentPage(currentPage + 1)
   }
 
-  const handleFilter = () => {
+  const handleFilter = (evt: MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
+    evt.preventDefault();
     setFilteredProducts(products.filter(x => x.title.toLowerCase().includes(filter.toLowerCase())));
+  }
+
+  const handleCategoryFilter = (evt: MouseEvent<HTMLAnchorElement>, category?: string) => {
+    evt.preventDefault();
+    setFilter("");
+    setFilterCategory(category);
+    setFilteredProducts(category ? products.filter(product => product.categories?.find((cat: any) => cat.category.includes(category))) : products);
   }
 
   return (
@@ -84,7 +91,7 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                     <ul className="pagination">
                       <li className="page-item">
                         <a href="" className="page-link" aria-label="Previous" onClick={handlePrevPage}>
-                          <i className="ti-angle-left"></i>
+                          <FontAwesomeIcon icon={faChevronLeft} />
                         </a>
                       </li>
                       {
@@ -96,7 +103,7 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                       }
                       <li className="page-item">
                         <a href="" className="page-link" aria-label="Next" onClick={handleNextPage}>
-                          <i className="ti-angle-right"></i>
+                          <FontAwesomeIcon icon={faChevronRight} />
                         </a>
                       </li>
                     </ul>
@@ -110,7 +117,12 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                   <form action="#">
                     <div className="form-group">
                       <div className="input-group mb-3">
-                        <input type="text" className="form-control" placeholder="Search Keyword" onChange={handleFilterChange} />
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Search Keyword"
+                          onChange={handleFilterChange}
+                          value={filter} />
                       </div>
                     </div>
                     <button className="btn-primary text-white w-100 btn_1 boxed-btn" type="submit" onClick={handleFilter}>Suchen</button>
@@ -119,12 +131,18 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                 <aside className="single_sidebar_widget post_category_widget">
                   <h4 className="widget_title">Kategorien</h4>
                   <ul className="list cat-list">
+                    <li>
+                      <a href="#" className="d-flex" onClick={handleCategoryFilter}>
+                        <p>Alle Produkte</p>
+                        <p>({products.length})</p>
+                      </a>
+                    </li>
                     {
-                      categories && categories.map(categorie =>
-                        <li key={categorie.id}>
-                          <a href="#" className="d-flex">
-                            <p>{categorie.title}</p>
-                            <p>(*)</p>
+                      categories && categories.map((category, i) =>
+                        <li key={i}>
+                          <a href="#" className="d-flex" onClick={(evt) => handleCategoryFilter(evt, category.title)}>
+                    <p>{category.title}{category.title === filterCategory && "active"}</p>
+                            <p>({products.filter(product => product.categories?.find((cat: any) => cat.category === category.title)).length})</p>
                           </a>
                         </li>
                       )
