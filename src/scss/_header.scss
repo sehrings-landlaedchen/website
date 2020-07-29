@@ -7,12 +7,11 @@
 
     }
     .logo-img-small {
-        position: absolute;
-        top: 0;
-        left: 25px;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 99999;
         img{
-            width: 60px;
+            width: 100px;
         }
     }
     .main-header-area{
@@ -24,7 +23,11 @@
             padding: 10px 0;
             height: 60px;
         }
+        background-color: $header_navigation_bg;
         .logo-img{
+            img {
+                width: 180px;
+            }
             @media #{$mobile_device} {
                 position: absolute;
                 display: inline-block;
@@ -35,8 +38,6 @@
                 left: 0;
                 right: 0;
             }
-        }
-        .logo-img{
             @media #{$tablet_device} {
                 position: absolute;
                 display: inline-block;
@@ -54,7 +55,7 @@
                     display: inline-block;
                     position: relative;
                     a{
-                        color: #fff;
+                        color: $heading-color;
                         font-size: 22px;
                         text-transform: capitalize;
                         font-weight: 400;
@@ -178,9 +179,6 @@
             }
             .logo-img{
                 display: inline-block;
-                img{
-                    width: 80px;
-                }
             }
             .main-menu{
                 ul{

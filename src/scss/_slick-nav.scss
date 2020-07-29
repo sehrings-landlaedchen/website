@@ -8,6 +8,12 @@
         width: 100%;
         z-index: 9;
     }
+    @media #{$tablet_device} {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        z-index: 9;
+    }
 }
 .sticky .slicknav_menu {
     .hamburger, .hamburger.is-active {
@@ -28,7 +34,7 @@
             &,
             &:before,
             &:after {
-                background-color: #fff;
+                background-color: #191d34;
             }
         }
     }
