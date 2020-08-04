@@ -74,14 +74,6 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
         <Accordion items={accordion} />
       </div>
     </section>
-
-    <section className="section">
-      <div className="container">
-        <Popup>
-          <Content source={section1} />
-        </Popup>
-      </div>
-    </section>
   </main>
 )
 
