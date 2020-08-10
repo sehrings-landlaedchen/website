@@ -1,9 +1,10 @@
 import React, { useState, useEffect, FC } from 'react'
 import { Location } from '@reach/router'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import './Nav.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+import { NavQueryQuery } from '../graphql'
 
 interface NavigationProps {
   location: any;
@@ -35,14 +36,36 @@ export const Navigation: FC<NavigationProps> = (props) => {
   // Only close nav if it is open
   const handleLinkClick = () => active && handleMenuToggle();
 
+
+  const data: NavQueryQuery = useStaticQuery(
+    graphql`
+      query NavQuery {
+        pages: allMarkdownRemark (
+          filter: {fields: {contentType: {eq: "pages" } } }
+        ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              hidePage
+            }
+          }
+        }
+      }
+    }
+    `)
+
+  const { pages } = data;
+
   // const toggleSubNav = subNav => {
   //   console.log(subNav);
-    
+
   //   setActiveSubNav(
   //       activeSubNav === subNav ? '' : subNav
   //   )
   // }
-  
+
   // const { subNav } = props,
   //   NavLink = ({ to, className, children, ...props }) => (
   //     <Link
@@ -66,18 +89,30 @@ export const Navigation: FC<NavigationProps> = (props) => {
               <div className="main-menu d-none d-lg-block">
                 <nav>
                   <ul className="mein_menu_list" id="navigation">
-                    <li><Link to="/products/">Produkte</Link></li>
-                    <li>
-                      <a>Über uns</a>
-                      <ul className="submenu">
-                        <li>
-                          <Link to="/landwirtschaft">Landwirtschaft</Link>
-                        </li>
-                        <li>
-                          <Link to="/landlaedchen">Landlädchen</Link>
-                        </li>
-                      </ul>
-                    </li>
+                    {!pages.edges?.find(x => x.node.frontmatter.title === "Produkte")?.node.frontmatter.hidePage &&
+                      <li>
+                        <Link to="/products/">Produkte</Link>
+                      </li>
+                    }
+                    {(!pages.edges?.find(x => x.node.frontmatter.title === "Landwirtschaft")?.node.frontmatter.hidePage ||
+                      !pages.edges?.find(x => x.node.frontmatter.title === "Landlädchen")?.node.frontmatter.hidePage) &&
+
+                      <li>
+                        <a>Über uns</a>
+                        <ul className="submenu">
+                          {!pages.edges?.find(x => x.node.frontmatter.title === "Landwirtschaft")?.node.frontmatter.hidePage &&
+                            <li>
+                              <Link to="/landwirtschaft">Landwirtschaft</Link>
+                            </li>
+                          }
+                          {!pages.edges?.find(x => x.node.frontmatter.title === "Landlädchen")?.node.frontmatter.hidePage &&
+                            <li>
+                              <Link to="/landlaedchen">Landlädchen</Link>
+                            </li>
+                          }
+                        </ul>
+                      </li>
+                    }
                     <div className="logo-img d-none d-lg-block">
                       <Link to="/" onClick={handleLinkClick}>
                         <img src="/img/logo.png" alt="" />
@@ -104,7 +139,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
                     <li className="slicknav_collapsed slicknav_parent">
                       <a href="#" role="menuitem" aria-haspopup="true" tabIndex={-1} className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
                         <span tabIndex={-1}>Über uns <i className="ti-angle-down"></i></span>
-                        <span className="slicknav_arrow">{!subNavActive ? <FontAwesomeIcon icon={faPlus} size="xs" /> : <FontAwesomeIcon icon={faMinus} size="xs" /> }</span>
+                        <span className="slicknav_arrow">{!subNavActive ? <FontAwesomeIcon icon={faPlus} size="xs" /> : <FontAwesomeIcon icon={faMinus} size="xs" />}</span>
                       </a>
 
                       <ul className={`submenu ${!subNavActive && "slicknav_hidden"}`} role="menu" aria-hidden="true">

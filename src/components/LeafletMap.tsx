@@ -2,19 +2,18 @@ import React, { FC } from 'react'
 import { Map, TileLayer, Popup, Marker } from 'react-leaflet'
 import { LatLngExpression } from 'leaflet';
 import "./LeafletMap.scss"
+import { MarkdownRemarkFrontmatterLocations } from '../graphql';
 
 interface LeafletMapProps {
-  location: {
-    lat: number;
-    lng: number;
-  }
+  locations: MarkdownRemarkFrontmatterLocations[];
   zoom?: number;
 }
 
 const LeafletMap: FC<LeafletMapProps> = props => {
-  const position: LatLngExpression = [props.location.lat, props.location.lng];
+  const { locations } = props;
+  const mapPosition: LatLngExpression = [parseFloat(props.locations[0].lat), parseFloat(props.locations[0].lng)];
 
-  const initMarker = (ref: { leafletElement: { openPopup: () => void; }; }) => {
+  const initMarker = (ref: { leafletElement: { openPopup: () => void }}) => {
     if (ref) {
       ref.leafletElement.openPopup()
     }
@@ -22,7 +21,7 @@ const LeafletMap: FC<LeafletMapProps> = props => {
 
   return (
     <Map
-      center={position}
+      center={mapPosition}
       zoom={props.zoom}
       style={{ height: '50vh', width: '100%', zIndex: 10 }}
       scrollWheelZoom={false}
@@ -31,9 +30,14 @@ const LeafletMap: FC<LeafletMapProps> = props => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
       />
-      <Marker position={position} ref={initMarker}>
-        <Popup closeButton={false} closeOnClick={false} closeOnEscapeKey={false}>Sehrings Landlädchen</Popup>
-      </Marker>
+      {locations?.map(location => {
+        const position: LatLngExpression = [parseFloat(location.lat), parseFloat(location.lng)];
+        return (
+          <Marker position={position} ref={initMarker} >
+            <Popup closeButton={false} closeOnClick={false} closeOnEscapeKey={false} onClose={() => {}} autoClose={false}>{location.title}</Popup>
+          </Marker>
+        )
+      })}
     </Map>
   )
 }

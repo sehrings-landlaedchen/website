@@ -1,9 +1,37 @@
 ---
 template: HomePage
 slug: ""
-title: Sehrings Landlädchen
+title: ""
 featuredImage: /img/348445763-126efb06-43bc-4053-adbf-0911d49efd7e-adqdqxohva7.jpg
 subtitle: ""
+testimonialText: >-
+  ### Kundenmeinungen
+
+
+  inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards  
+
+  especially in the workplace. That’s why it’s crucial that, as women.
+testimonials:
+  - title: Malte A.
+    subtitle: Kunde
+    text: You're had. Subdue grass Meat us winged years you'll doesn't. fruit two
+      also won one yielding creepeth third give may never lie alternet food.
+  - title: Adame Nesane
+    subtitle: Chief Customer
+    text: You're had. Subdue grass Meat us winged years you'll doesn't. fruit two
+      also won one yielding creepeth third give may never lie alternet food.
+brandText: >-
+  ### Unsere Produkte findet ihr auch hier
+
+
+  inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards  
+
+  especially in the workplace. That’s why it’s crucial that, as women.
+brands:
+  - title: Firma 1
+    logo: /img/200.png
+  - title: Firma 2
+    logo: /img/200.png
 meta:
   description: This is a meta description.
   title: The Ultimate Gatsby Starter

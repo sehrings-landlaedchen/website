@@ -120,7 +120,7 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Search Keyword"
+                          placeholder="Suchbegriff"
                           onChange={handleFilterChange}
                           value={filter} />
                       </div>
@@ -139,9 +139,9 @@ export const ProductsPageTemplate: FC<HomePageProps> = ({
                     </li>
                     {
                       categories && categories.map((category, i) =>
-                        <li key={i}>
+                        <li key={i} className={category.title === filterCategory ? "active" : undefined}>
                           <a href="#" className="d-flex" onClick={(evt) => handleCategoryFilter(evt, category.title)}>
-                    <p>{category.title}{category.title === filterCategory && "active"}</p>
+                            <p>{category.title}</p>
                             <p>({products.filter(product => product.categories?.find((cat: any) => cat.category === category.title)).length})</p>
                           </a>
                         </li>

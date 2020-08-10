@@ -1,9 +1,11 @@
 ---
 template: ProductsPage
 slug: products
+hidePage: true
 title: Produkte
 featuredImage: /img/1250x500.png
-subtitle: Proident consequat consequat ea est commodo aute voluptate ullamco dolor tempor est nostrud.
+subtitle: Proident consequat consequat ea est commodo aute voluptate ullamco
+  dolor tempor est nostrud.
 ---
 ### Unsere Produkte
 

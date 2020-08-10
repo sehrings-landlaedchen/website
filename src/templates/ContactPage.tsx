@@ -5,7 +5,7 @@ import PageHeader from '../components/PageHeader'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 import LeafletMap from '../components/LeafletMap'
-import { ContactPageQuery } from '../graphql'
+import { ContactPageQuery, MarkdownRemarkFrontmatterLocations } from '../graphql'
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMap, faIdCard, faEnvelope } from '@fortawesome/free-regular-svg-icons'
@@ -20,7 +20,7 @@ interface ContactPageProps {
   phone: string,
   openingHours: string,
   email: string,
-  locations: any[]
+  locations: MarkdownRemarkFrontmatterLocations[]
 }
 
 // Export Template for use in CMS preview
@@ -44,7 +44,7 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
         <div className="container">
           <div className="d-sm-block mb-5 pb-4">
             {locations && locations.length > 0 &&
-              <LeafletMap location={locations[0]} />
+              <LeafletMap locations={locations} />
             }
             <div id="map" >
 
@@ -65,7 +65,7 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
                       <FontAwesomeIcon icon={faMap} style={{ fontSize: '27px' }} />
                     </span>
                     <div className="media-body">
-                      <h3>{address}</h3>
+                      <Content source={address} />
                     </div>
                   </div>
                 }
@@ -91,7 +91,6 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
                       <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
                         <h3>{email}</h3>
                       </a>
-                      <p>Send us your query anytime!</p>
                     </div>
                   </div>
                 }
@@ -141,6 +140,7 @@ query ContactPage($id: String!) {
       email
       locations {
         mapLink
+        title
         lat
         lng
       }

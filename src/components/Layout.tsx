@@ -30,11 +30,23 @@ const Layout: FC<LayoutProps> = ({ children, meta, title = "" }) => {
             url
           }
         }
+        pages: allMarkdownRemark (
+          filter: {fields: {contentType: {eq: "pages" } } }
+        ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              hidePage
+            }
+          }
+        }
       }
+    }
     `)
 
-  const { siteTitle, socialMediaCard, googleTrackingId } =
-    data.settingsYaml || {}
+  const { siteTitle, socialMediaCard, googleTrackingId } = data.settingsYaml || {};
 
   return (
     <>

@@ -39,10 +39,58 @@ collections: # A list of collections the CMS should be able to edit
               default: HomePage,
             }
           - { label: Slug, name: slug, widget: hidden, default: '' }
-          - { label: Titel, name: title, widget: string }
+          - { label: Titel, name: title, widget: string, required: false }
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown }
+          - { label: Testimonial Text, name: testimonialText, widget: markdown, required: false }
+          - name: testimonials
+            label: Testimonials
+            widget: list
+            fields:
+              - {
+                  name: title,
+                  label: Titel,
+                  widget: string,
+                  required: false,
+                  delete: false,
+                  default: '',
+                }
+              - {
+                  name: subtitle,
+                  label: Subtitle,
+                  widget: string,
+                  required: false,
+                  delete: false,
+                  default: '',
+                }
+              - {
+                  name: text,
+                  label: Text,
+                  widget: text,
+                  required: false,
+                  default: '',
+                }
+          - { label: Brand Text, name: brandText, widget: markdown, required: false }
+          - name: brands
+            label: Brands
+            widget: list
+            fields:
+              - {
+                  name: title,
+                  label: Titel,
+                  widget: string,
+                  required: false,
+                  delete: false,
+                  default: '',
+                }
+              - {
+                  name: logo,
+                  label: Logo,
+                  widget: image,
+                  required: false,
+                  default: '',
+                }
           - label: 'Accordion'
             name: 'accordion'
             widget: 'list'
@@ -96,7 +144,7 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Untertitel, name: subtitle, widget: markdown }
           - { label: Body, name: body, widget: markdown }
-          - { label: Adresse, name: address, widget: text }
+          - { label: Adresse, name: address, widget: markdown }
           - { label: Telefon, name: phone, widget: string }
           - { label: Öffnugszeiten, name: openingHours, widget: markdown }
           - { label: Email Adresse, name: email, widget: string }
@@ -109,6 +157,14 @@ collections: # A list of collections the CMS should be able to edit
                   label: mapLink,
                   widget: string,
                   required: false,
+                  default: '',
+                }
+              - {
+                  name: title,
+                  label: Titel,
+                  widget: string,
+                  required: false,
+                  delete: false,
                   default: '',
                 }
               - {
@@ -163,6 +219,7 @@ collections: # A list of collections the CMS should be able to edit
               default: InfoPage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'ladlaedchen' }
+          - { label: Verstecken, name: hidePage, widget: boolean }
           - { label: Titel, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
@@ -220,6 +277,7 @@ collections: # A list of collections the CMS should be able to edit
               default: InfoPage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'landwirtschaft' }
+          - { label: Verstecken, name: hidePage, widget: boolean }
           - { label: Titel, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
@@ -277,6 +335,7 @@ collections: # A list of collections the CMS should be able to edit
               default: ProductsPage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'products' }
+          - { label: Verstecken, name: hidePage, widget: boolean }
           - { label: Titel, name: title, widget: string }
           - { label: Featured Images, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown }
@@ -412,61 +471,6 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
-
-  - name: posts
-    label: Post
-    editor:
-      preview: true
-    folder: content/posts
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: Template, name: template, widget: hidden, default: SinglePost }
-      - { label: Titel, name: title, widget: string }
-      - label: 'Status'
-        name: 'status'
-        widget: 'select'
-        options: ['Published', 'Featured', 'Draft']
-        default: 'Published'
-      - { label: Date / Order, name: date, widget: date }
-      - {
-          label: Featured Image,
-          name: featuredImage,
-          widget: image,
-          required: false,
-        }
-      - { label: Excerpt, name: excerpt, widget: text }
-      - { label: Content, name: body, widget: markdown }
-      - label: 'Categories'
-        name: 'categories'
-        widget: 'list'
-        required: false
-        fields:
-          - label: 'Category'
-            name: 'category'
-            widget: 'relation'
-            collection: 'postCategories'
-            searchFields: ['title']
-            valueField: 'title'
-      - label: 'Meta'
-        required: false
-        name: 'meta'
-        widget: 'object'
-        fields:
-          - { label: Titel, name: title, widget: string, required: false }
-          - {
-              label: Beschreibung,
-              name: description,
-              widget: text,
-              required: false,
-            }
-          - {
-              label: Canonical Link,
-              name: canonicalLink,
-              widget: string,
-              required: false,
-            }
-          - { label: Noindex, name: noindex, widget: boolean, required: false }
 
   - name: productCategories
     label: Produkt Kategorien
