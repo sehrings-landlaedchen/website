@@ -13,19 +13,32 @@ interface FormProps {
   errorMessage?: string;
 }
 
-const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", successMessage = "Thanks for your enquiry, we will get back to you soon", errorMessage = "There is a problem, your message has not been sent, please try contacting us via email" }) => {
+const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "/", successMessage = "Thanks for your enquiry, we will get back to you soon", errorMessage = "There is a problem, your message has not been sent, please try contacting us via email" }) => {
   const [alert, setAlert] = useState('');
   const [disabled, setDisabled] = useState(false);
 
   const handleSubmit = e => {
     e.preventDefault()
     if (disabled) return
+    
+    const encode = (data: any) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(data[key].name) + "=" + encodeURIComponent(data[key].value))
+        .join("&");
+    }
 
     const form = e.target
     const data = serialize(form)
+    const encoded = encode(form)
+
+
     setDisabled(true);
-    fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
+    fetch(form.action, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: encode(form)
     })
       .then(res => {
         if (res.ok) {
@@ -57,7 +70,8 @@ const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", s
         action={action}
         onSubmit={handleSubmit}
         data-netlify=""
-        netlify-recaptcha=""
+        netlify-recaptcha="true"
+        netlify-honeypot="bfield"
       >
         {alert && (
           <div className="Form--Alert">{alert}</div>
@@ -122,13 +136,10 @@ const FormSimpleAjax: FC<FormProps> = ({ name = "", subject = "", action = "", s
             />
           </div>
         </div>
-        <div
-          className="g-recaptcha"
-          data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
-        />
         {!!subject && <input type="hidden" name="subject" value={subject} />}
         <input type="hidden" name="form-name" value={name} />
-        
+        <input type="hidden" name="bfield" />
+
         <div className="form-group mt-3">
           <button type="submit" className="button button-contactForm boxed-btn">Send</button>
         </div>

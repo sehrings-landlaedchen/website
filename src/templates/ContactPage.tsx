@@ -54,7 +54,9 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
                 <h2 className="contact-title"></h2>
               </div>
               <div className="col-lg-8">
-                <FormSimpleAjax name="Simple Form Ajax" />
+                <FormSimpleAjax
+                  name="Kontaktanfrage"
+                  successMessage="Danke für Ihre Anfrage, wir werden uns schnellstmöglich bei Ihnen melden." />
               </div>
               <div className="col-lg-4">
 

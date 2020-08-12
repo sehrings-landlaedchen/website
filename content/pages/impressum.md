@@ -7,14 +7,16 @@ title: Impressum
 
 ## Angaben gemäß § 5 TMG
 
-\[Vorname] \[Nachname]\
-\[Straße]\
-\[Postleitzahl] \[Ort]
+Sehring's Landlädchen\
+Monica Sehring und Christian Sehring GbR\
+Höllgartenstraße 31\
+63303 Dreieich-Götzenhain
+
 
 ## Kontakt
 
-Telefon: \[Telefonnummer]\
-E-Mail: \[E-Mail-Adresse]
+Telefon: 06103 86875\
+E-Mail: info@sehrings-landlaedchen.de
 
 ## Verbraucherstreitbeilegung/Universalschlichtungsstelle
 
