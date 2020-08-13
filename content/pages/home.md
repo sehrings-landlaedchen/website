@@ -1,9 +1,23 @@
 ---
+meta:
+  description: This is a meta description.
+  title: The Ultimate Gatsby Starter
+linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
-featuredImage: /img/348445763-126efb06-43bc-4053-adbf-0911d49efd7e-adqdqxohva7.jpg
+featuredImage: /img/website_teaser_neu.jpg
 subtitle: ""
+aboutBody: |-
+  ### Unser neuer Regiomat
+
+  Wir freuen uns sehr, unser Regiomat steht set 05.08.2020 für Sie bereit.
+  Sie finden ihn in der Höllgartenstraße 31, 63303 Götzenhain.
+
+  Eine Karte mit dem Standort finden Sie auf unserer Kontakt Seite.
+aboutLink: contact
+aboutLinkText: Kontakt
+aboutImage: /img/regiomat.jpg
 testimonialText: >-
   ### Kundenmeinungen
 
@@ -32,11 +46,9 @@ brands:
     logo: /img/200.png
   - title: Firma 2
     logo: /img/200.png
-meta:
-  description: This is a meta description.
-  title: The Ultimate Gatsby Starter
+link: contact
 ---
-### Daily Food <br> Courses <br> with Drinks
+### Wilkommen bei Sehrings Ladlädchen
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 

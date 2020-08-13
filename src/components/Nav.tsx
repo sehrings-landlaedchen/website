@@ -58,27 +58,9 @@ export const Navigation: FC<NavigationProps> = (props) => {
 
   const { pages } = data;
 
-  // const toggleSubNav = subNav => {
-  //   console.log(subNav);
-
-  //   setActiveSubNav(
-  //       activeSubNav === subNav ? '' : subNav
-  //   )
-  // }
-
-  // const { subNav } = props,
-  //   NavLink = ({ to, className, children, ...props }) => (
-  //     <Link
-  //       to={to}
-  //       className={`NavLink ${
-  //         to === currentPath ? 'active' : ''
-  //       } ${className}`}
-  //       onClick={handleLinkClick}
-  //       {...props}
-  //     >
-  //       {children}
-  //     </Link>
-  //   )
+  const isShowPage = (title: string) => {
+    return !pages.edges?.find(x => x.node.frontmatter.title.toLowerCase() === title.toLowerCase())?.node.frontmatter.hidePage ?? false;
+  }
 
   return (
     <div className="header-area ">
@@ -89,23 +71,26 @@ export const Navigation: FC<NavigationProps> = (props) => {
               <div className="main-menu d-none d-lg-block">
                 <nav>
                   <ul className="mein_menu_list" id="navigation">
-                    {!pages.edges?.find(x => x.node.frontmatter.title === "Produkte")?.node.frontmatter.hidePage &&
+                    <div className="logo-img d-none d-lg-block">
+                      <Link to="/" onClick={handleLinkClick}>
+                        <img src="/img/logo.png" alt="" />
+                      </Link>
+                    </div>
+                    {isShowPage("Produkte") &&
                       <li>
                         <Link to="/products/">Produkte</Link>
                       </li>
                     }
-                    {(!pages.edges?.find(x => x.node.frontmatter.title === "Landwirtschaft")?.node.frontmatter.hidePage ||
-                      !pages.edges?.find(x => x.node.frontmatter.title === "Landlädchen")?.node.frontmatter.hidePage) &&
-
+                    {(isShowPage("Landwirtschaft") || isShowPage("Landlädchen")) &&
                       <li>
                         <a>Über uns</a>
                         <ul className="submenu">
-                          {!pages.edges?.find(x => x.node.frontmatter.title === "Landwirtschaft")?.node.frontmatter.hidePage &&
+                          {isShowPage("Landwirtschaft") &&
                             <li>
                               <Link to="/landwirtschaft">Landwirtschaft</Link>
                             </li>
                           }
-                          {!pages.edges?.find(x => x.node.frontmatter.title === "Landlädchen")?.node.frontmatter.hidePage &&
+                          {isShowPage("Landlädchen") &&
                             <li>
                               <Link to="/landlaedchen">Landlädchen</Link>
                             </li>
@@ -113,11 +98,6 @@ export const Navigation: FC<NavigationProps> = (props) => {
                         </ul>
                       </li>
                     }
-                    <div className="logo-img d-none d-lg-block">
-                      <Link to="/" onClick={handleLinkClick}>
-                        <img src="/img/logo.png" alt="" />
-                      </Link>
-                    </div>
                     <li>
                       <Link to="/contact">Kontakt</Link>
                     </li>
@@ -135,18 +115,27 @@ export const Navigation: FC<NavigationProps> = (props) => {
                   </button>
                   <ul className={`slicknav_nav ${mobileNavigation || "slicknav_hidden"}`} aria-hidden="true" role="menu">
                     <li><Link to="/">Startseite</Link></li>
-                    <li><Link to="/products/">Produkte</Link></li>
-                    <li className="slicknav_collapsed slicknav_parent">
-                      <a href="#" role="menuitem" aria-haspopup="true" tabIndex={-1} className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
-                        <span tabIndex={-1}>Über uns <i className="ti-angle-down"></i></span>
-                        <span className="slicknav_arrow">{!subNavActive ? <FontAwesomeIcon icon={faPlus} size="xs" /> : <FontAwesomeIcon icon={faMinus} size="xs" />}</span>
-                      </a>
+                    {isShowPage("Produkte") &&
+                      <li><Link to="/products/">Produkte</Link></li>
+                    }
 
-                      <ul className={`submenu ${!subNavActive && "slicknav_hidden"}`} role="menu" aria-hidden="true">
-                        <li><Link role="menuitem" to="/landwirtschaft">Landwirtschaft</Link></li>
-                        <li><Link role="menuitem" to="/landlaedchen">Landlädchen</Link></li>
-                      </ul>
-                    </li>
+                    {(isShowPage("Landwirtschaft") || isShowPage("Landlädchen")) &&
+                      <li className="slicknav_collapsed slicknav_parent">
+                        <a href="#" role="menuitem" aria-haspopup="true" tabIndex={-1} className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
+                          <span tabIndex={-1}>Über uns <i className="ti-angle-down"></i></span>
+                          <span className="slicknav_arrow">{!subNavActive ? <FontAwesomeIcon icon={faPlus} size="xs" /> : <FontAwesomeIcon icon={faMinus} size="xs" />}</span>
+                        </a>
+
+                        <ul className={`submenu ${!subNavActive && "slicknav_hidden"}`} role="menu" aria-hidden="true">
+                          {isShowPage("Landwirtschaft") &&
+                            <li><Link role="menuitem" to="/landwirtschaft">Landwirtschaft</Link></li>
+                          }
+                          {isShowPage("Landlädchen") &&
+                            <li><Link role="menuitem" to="/landlaedchen">Landlädchen</Link></li>
+                          }
+                        </ul>
+                      </li>
+                    }
                     <li><Link to="/contact">Kontakt</Link></li>
                   </ul>
                 </div>

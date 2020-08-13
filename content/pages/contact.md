@@ -24,12 +24,12 @@ email: info@sehrings-landlaedchen.de
 locations:
   - lat: "49.99753"
     lng: "8.73405"
-    mapLink: ""
+    mapLink: https://goo.gl/maps/kdoGyTj9zhBnR1d28
     title: Sehring`s Landlädchen
-  - mapLink: ""
-    lat: "49.997646"
-    lng: "8.743101"
-    title: Sehring`s Regionat
+  - mapLink: https://goo.gl/maps/LXRAj5FjuwKTcgD4A
+    lat: "49.9975"
+    lng: "8.74233"
+    title: Sehring`s Regiomat
 meta:
   description: This is a meta description.
   title: Contact Page

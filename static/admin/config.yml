@@ -43,6 +43,10 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown }
+          - { label: About Body, name: aboutBody, widget: markdown }
+          - { label: About Link, name: aboutLink, widget: relation, collection: pages, searchFields: ['title'], valueField: slug, displayFields: [title], required: false }
+          - { label: About Link Text, name: aboutLinkText, widget: string, required: false }
+          - { label: About Image, name: aboutImage, widget: image, required: false }
           - { label: Testimonial Text, name: testimonialText, widget: markdown, required: false }
           - name: testimonials
             label: Testimonials

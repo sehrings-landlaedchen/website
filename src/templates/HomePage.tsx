@@ -12,7 +12,11 @@ interface HomePageProps {
   title: string
   subtitle: string
   featuredImage: string
-  body: string
+  body: string;
+  aboutBody: string;
+  aboutLink: string;
+  aboutLinkText: string;
+  aboutImage: string;
   brandText: string
   brands: MarkdownRemarkFrontmatterBrands[];
   testimonialText: string;
@@ -20,8 +24,10 @@ interface HomePageProps {
 }
 
 // Export Template for use in CMS preview
-export const HomePageTemplate: FC<HomePageProps> = ({ title, subtitle, featuredImage, body, testimonialText, testimonials, brandText, brands }) => (
-  <main className="Home">
+export const HomePageTemplate: FC<HomePageProps> = (props) => {
+  const { title, subtitle, featuredImage, body, aboutBody, aboutLink, aboutLinkText, aboutImage, testimonialText, testimonials, brandText, brands } = props;
+
+  return <main className="Home">
     <PageHeader
       large
       title={title}
@@ -29,19 +35,30 @@ export const HomePageTemplate: FC<HomePageProps> = ({ title, subtitle, featuredI
       backgroundImage={featuredImage}
       slider
     />
+
+    <section className="section">
+      <div className="container section_title">
+        <Content source={body} />
+      </div>
+    </section>
+
     <div className="single_about_area">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-xl-5 col-lg-5">
             <div className="single_about_text">
-              <Content source={body} />
-              <Link to="/products/" className="boxed_btn">Produkte</Link>
+              <Content source={aboutBody} />
+              {(aboutLink && aboutLinkText) &&
+                <Link to={aboutLink} className="boxed_btn">{aboutLinkText}</Link>
+              }
             </div>
           </div>
           <div className="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1">
-            <div className="single_about_thumb thumb_n1">
-              <img src="img/555x764.png" alt="" />
-            </div>
+            {aboutImage &&
+              <div className="single_about_thumb thumb_n1">
+                <img src={aboutImage} alt="" />
+              </div>
+            }
           </div>
         </div>
       </div>
@@ -53,7 +70,7 @@ export const HomePageTemplate: FC<HomePageProps> = ({ title, subtitle, featuredI
       <Brand brandText={brandText} brands={brands} />
     }
   </main>
-)
+}
 
 // Export Default HomePage for front-end
 const HomePage: FC<{ data: HomePageQuery }> = ({ data: { page } }) => {
@@ -64,6 +81,10 @@ const HomePage: FC<{ data: HomePageQuery }> = ({ data: { page } }) => {
         subtitle={page.frontmatter.subtitle}
         featuredImage={page.frontmatter.featuredImage}
         body={page.html}
+        aboutBody={page.frontmatter.aboutBody}
+        aboutLink={page.frontmatter.aboutLink}
+        aboutLinkText={page.frontmatter.aboutLinkText}
+        aboutImage={page.frontmatter.aboutImage}
         testimonialText={page.frontmatter.testimonialText}
         testimonials={page.frontmatter.testimonials}
         brandText={page.frontmatter.brandText}
@@ -86,6 +107,10 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        aboutBody
+        aboutLink
+        aboutLinkText
+        aboutImage
         testimonialText
         testimonials {
           title
