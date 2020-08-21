@@ -17,6 +17,10 @@ interface HomePageProps {
   aboutLink: string;
   aboutLinkText: string;
   aboutImage: string;
+  contentTwoBody: string;
+  contentTwoLink: string;
+  contentTwoLinkText: string;
+  contentTwoImage: string;
   brandText: string
   brands: MarkdownRemarkFrontmatterBrands[];
   testimonialText: string;
@@ -25,7 +29,23 @@ interface HomePageProps {
 
 // Export Template for use in CMS preview
 export const HomePageTemplate: FC<HomePageProps> = (props) => {
-  const { title, subtitle, featuredImage, body, aboutBody, aboutLink, aboutLinkText, aboutImage, testimonialText, testimonials, brandText, brands } = props;
+  const { title,
+    subtitle,
+    featuredImage,
+    body,
+    aboutBody,
+    aboutLink,
+    aboutLinkText,
+    aboutImage,
+    contentTwoBody,
+    contentTwoLink,
+    contentTwoLinkText,
+    contentTwoImage,
+    testimonialText,
+    testimonials,
+    brandText,
+    brands
+  } = props;
 
   return <main className="Home">
     <PageHeader
@@ -42,27 +62,52 @@ export const HomePageTemplate: FC<HomePageProps> = (props) => {
       </div>
     </section>
 
-    <div className="single_about_area">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-xl-5 col-lg-5">
-            <div className="single_about_text">
-              <Content source={aboutBody} />
-              {(aboutLink && aboutLinkText) &&
-                <Link to={aboutLink} className="boxed_btn">{aboutLinkText}</Link>
+    {aboutBody &&
+      <div className="single_about_area">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xl-5 col-lg-5">
+              <div className="single_about_text">
+                <Content source={aboutBody} />
+                {(aboutLink && aboutLinkText) &&
+                  <Link to={aboutLink} className="boxed_btn">{aboutLinkText}</Link>
+                }
+              </div>
+            </div>
+            <div className="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1">
+              {aboutImage &&
+                <div className="single_about_thumb thumb_n1">
+                  <img src={aboutImage} alt="" />
+                </div>
               }
             </div>
           </div>
-          <div className="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1">
-            {aboutImage &&
-              <div className="single_about_thumb thumb_n1">
-                <img src={aboutImage} alt="" />
+        </div>
+      </div>
+    }
+    {contentTwoBody &&
+      <div className="single_about_area">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xl-6 col-lg-6">
+              {contentTwoImage &&
+                <div className="single_about_thumb thumb_n1">
+                  <img src={contentTwoImage} alt="" />
+                </div>
+              }
+            </div>
+            <div className="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1">
+              <div className="single_about_text">
+                <Content source={contentTwoBody} />
+                {(contentTwoLink && contentTwoLinkText) &&
+                  <Link to={contentTwoLink} className="boxed_btn">{contentTwoLinkText}</Link>
+                }
               </div>
-            }
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    }
     {testimonialText &&
       <Testimonial testimonialText={testimonialText} testimonials={testimonials} />
     }
@@ -85,6 +130,10 @@ const HomePage: FC<{ data: HomePageQuery }> = ({ data: { page } }) => {
         aboutLink={page.frontmatter.aboutLink}
         aboutLinkText={page.frontmatter.aboutLinkText}
         aboutImage={page.frontmatter.aboutImage}
+        contentTwoBody={page.frontmatter.contentTwoBody}
+        contentTwoLink={page.frontmatter.contentTwoLink}
+        contentTwoLinkText={page.frontmatter.contentTwoLinkText}
+        contentTwoImage={page.frontmatter.contentTwoImage}
         testimonialText={page.frontmatter.testimonialText}
         testimonials={page.frontmatter.testimonials}
         brandText={page.frontmatter.brandText}
@@ -111,6 +160,10 @@ export const pageQuery = graphql`
         aboutLink
         aboutLinkText
         aboutImage
+        contentTwoBody
+        contentTwoLink
+        contentTwoLinkText
+        contentTwoImage
         testimonialText
         testimonials {
           title

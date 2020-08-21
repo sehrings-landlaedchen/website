@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Sehrings Landlädchen`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Malte Arzt`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Sehrings Landlädche`,
+    siteUrl: `https://sehrings-landlaedchen.de/`,
     social: {
-      twitter: `kylemathews`,
+      instagram: ``,
+      facebook: ``
     },
   },
   plugins: [

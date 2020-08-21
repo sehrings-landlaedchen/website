@@ -18,8 +18,8 @@ const LeafletMap: FC<LeafletMapProps> = props => {
       ref.leafletElement.openPopup()
     }
   }
-
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  const isServer = typeof window === 'undefined';
+  const isIOS = isServer ? false : /iPad|iPhone|iPod/.test(window.navigator.platform) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)
 
   return (
     <Map

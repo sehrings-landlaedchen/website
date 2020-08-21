@@ -6,6 +6,8 @@ title: Produkte
 featuredImage: /img/1250x500.png
 subtitle: Proident consequat consequat ea est commodo aute voluptate ullamco
   dolor tempor est nostrud.
+meta:
+  noindex: true
 ---
 ### Unsere Produkte
 
