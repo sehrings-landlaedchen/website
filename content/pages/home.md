@@ -1,7 +1,8 @@
 ---
 meta:
-  description: This is a meta description.
-  title: The Ultimate Gatsby Starter
+  description: Sehrings Landlädchen hier finden Sie Regionale Produkte aus Unsere
+    Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
+  title: ""
 linkText: Kontakt
 template: HomePage
 slug: ""
@@ -18,6 +19,13 @@ aboutBody: |-
 aboutLink: contact
 aboutLinkText: Kontakt
 aboutImage: /img/regiomat.jpg
+contentTwoBody: |-
+  ### Unser Hofladen
+
+  Eine Karte mit dem Standort finden Sie auf unserer Kontakt Seite.
+contentTwoLink: ""
+contentTwoLinkText: ""
+contentTwoImage: /img/regiomat.jpg
 testimonialText: >-
   ### Kundenmeinungen
 

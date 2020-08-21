@@ -43,6 +43,7 @@ gallery:
 meta:
   description: This is a meta description.
   title: Components Page
+  noindex: true
 ---
 
 ---
