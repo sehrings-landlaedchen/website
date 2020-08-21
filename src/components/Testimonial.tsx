@@ -24,7 +24,7 @@ export const Testimonial: FC<OwnProps> = ({ testimonialText, testimonials }) => 
                 <div className="owl-stage-outer">
                   <div className="owl-stage row">
                     {testimonials?.map(testimonial =>
-                      <div className="owl-item cloned col-md-6">
+                      <div className="owl-item cloned col-md-6 mt-5">
                         <div className="single_testmonial d-flex">
                           <div className="testmonial_thumb">
                             <img src="img/testmonial/2.png" alt="" />
