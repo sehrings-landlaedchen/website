@@ -1,5 +1,5 @@
 .footer-bg{
-    background-image: url(../img/banner/footer-bg.png);
+    background-color: #b4a065;
 }
 .footer_area{
     padding-top: 150px;
@@ -81,13 +81,13 @@
         .copyright{
             .footer-text{
                 font-size: 16px;
-                color: #fefffe;
+                color: hsl(45deg, 34%, 20%);
                 font-weight: 300;
                 margin-bottom: 0;
                 a{
-                    color: #fafffe;
+                    color: hsl(45deg, 34%, 20%);
                     &:hover{
-                        color: #fff;
+                        color: #777777;
                     }
                 }
             }
@@ -118,7 +118,7 @@
                         text-align: center;
 
                         &:hover{
-                            background-color: rgb(120, 180, 84);
+                            background-color: hsl(45deg, 34%, 20%);
                             color: #fff;
                         }
 

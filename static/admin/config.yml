@@ -142,7 +142,7 @@ collections: # A list of collections the CMS should be able to edit
               default: ContactPage,
             }
           - { label: Slug, name: slug, widget: hidden, default: 'contact' }
-          - { label: Titel, name: title, widget: string }
+          - { label: Titel, name: title, widget: string, required: false }
           - {
               label: Featured Image,
               name: featuredImage,
@@ -150,11 +150,10 @@ collections: # A list of collections the CMS should be able to edit
               options:
                 { media_library: { config: { imageShrink: 2600x2600 } } },
             }
-          - { label: Untertitel, name: subtitle, widget: markdown }
+          - { label: Untertitel, name: subtitle, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown }
           - { label: Adresse, name: address, widget: markdown }
           - { label: Telefon, name: phone, widget: string }
-          - { label: Öffnugszeiten, name: openingHours, widget: markdown }
           - { label: Email Adresse, name: email, widget: string }
           - name: locations
             label: locations

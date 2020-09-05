@@ -18,7 +18,6 @@ interface ContactPageProps {
   featuredImage: string,
   address: string,
   phone: string,
-  openingHours: string,
   email: string,
   locations: MarkdownRemarkFrontmatterLocations[]
 }
@@ -30,7 +29,6 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
   featuredImage,
   address,
   phone,
-  openingHours,
   email,
   locations
 }) => (
@@ -80,7 +78,6 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
                       <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
                         <h3>{phone}</h3>
                       </a>
-                      <Content source={openingHours} />
                     </div>
                   </div>
                 }
@@ -112,11 +109,10 @@ const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
     >
       <ContactPageTemplate
         title={page.frontmatter.title}
-        subtitle={page.frontmatter.title}
+        subtitle={page.frontmatter.subtitle}
         featuredImage={page.frontmatter.featuredImage}
         address={page.frontmatter.address}
         phone={page.frontmatter.phone}
-        openingHours={page.frontmatter.openingHours}
         email={page.frontmatter.email}
         locations={page.frontmatter.locations}
         body={page.html} />
@@ -138,7 +134,6 @@ query ContactPage($id: String!) {
       featuredImage
       address
       phone
-      openingHours
       email
       locations {
         mapLink
