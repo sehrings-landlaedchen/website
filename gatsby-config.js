@@ -32,8 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -48,6 +47,18 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+              exclude: [
+                `/products`,
+                `/products/*`,
+                `/product-categories/*`,
+                `/landlaedchen/`,
+                `/landwirtschaft/`
+              ]
+            }
+          },
         ],
       },
     },
