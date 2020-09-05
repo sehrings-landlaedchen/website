@@ -9,55 +9,84 @@ slug: ""
 title: ""
 featuredImage: /img/website_teaser_neu.jpg
 subtitle: ""
-aboutBody: |-
+aboutBody: >-
   ### Unser neuer Regiomat
 
-  Wir freuen uns sehr, unser Regiomat steht set 05.08.2020 für Sie bereit.
-  Sie finden ihn in der Höllgartenstraße 31, 63303 Götzenhain.
 
-  Eine Karte mit dem Standort finden Sie auf unserer Kontakt Seite.
+  In unserem Regiomaten finden Sie bei uns Hausmacher Dosenwurst, Fleischwurst, drei verschiedene Sorten Bratwürste, Rindswürste, Gelbwurst und weitere Sorten Wurst, sowie Eier und Honig! Des Weiteren gibt es unsere mageren oder durchwachsenen Steaks zu kaufen. Hier ist für jeden etwas dabei.
+   
+
+  Schon gewusst: Neben Bargeld werden auch Kartenzahlungen an unserem Regiomaten akzeptiert.
+
+
+  Sie finden unseren Regiomaten rund um die Uhr in der Höllgartenstraße 31 in Dreieich-Götzenhain.
 aboutLink: contact
 aboutLinkText: Kontakt
 aboutImage: /img/regiomat.jpg
-contentTwoBody: |-
+contentTwoBody: >-
   ### Unser Hofladen
 
-  Eine Karte mit dem Standort finden Sie auf unserer Kontakt Seite.
+
+  Gerne möchten wir Ihnen hier einen Teil unseres selbstgemachten Sortiments aus dem Hofladen vorstellen.
+
+
+
+  Passend zum Grillwetter gibt es für Sie marinierte Rücken- und Kammsteaks sowie Filetsteaks, frische Bratwürste und leckere Grillfackeln sowie Spareribs (alles vom Schwein). Selbstverständlich haben wir auch unsere drei verschiedenen Sorten Grillwürste da:
+
+  - Gebrühte Bratwürste
+
+  - Gebrühte Bratwürste mit Kräutern verfeinert und
+
+  - Gebrühte Bratwürste Käse-Jalapeño
+
+
+  Neben den Grillspezalitäten bieten wir Ihnen, wie gewohnt, unsere Aufschnittwurst, rohen und gekochten Schinken, Fleischkäse (verschiedene Sorten), geräucherte Mettwürste (verschiedene Sorten), hausmacher Wurst und vieles mehr an. Auch die leckeren, selbstgemachten Salate, wie Fleischsalat und Kartoffelsalat, gibt es als Beilage für einen perfekten Grillabend bei uns zu kaufen.
+
+
+  Gut zu wissen: Bestellungen nehmen wir gerne vorab unter 06103/86875 entgegen. Kartenzahlungen sind bei uns auch möglich. 
+
+
+  Gerne sind wir für Sie da:
+
+  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr
+
+  Mittwoch: 09:00 - 13:00 Uhr
+
+  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr
+
+  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr
+
+  Samstag: 09:00 - 13:00 Uhr
+
+
+  Rheinstraße 6, 63303 Dreieich-Götzenhain
 contentTwoLink: ""
 contentTwoLinkText: ""
-contentTwoImage: /img/regiomat.jpg
-testimonialText: >-
-  ### Kundenmeinungen
-
-
-  inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards  
-
-  especially in the workplace. That’s why it’s crucial that, as women.
-testimonials:
-  - title: Malte A.
-    subtitle: Kunde
-    text: You're had. Subdue grass Meat us winged years you'll doesn't. fruit two
-      also won one yielding creepeth third give may never lie alternet food.
-  - title: Adame Nesane
-    subtitle: Chief Customer
-    text: You're had. Subdue grass Meat us winged years you'll doesn't. fruit two
-      also won one yielding creepeth third give may never lie alternet food.
-brandText: >-
-  ### Unsere Produkte findet ihr auch hier
-
-
-  inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards  
-
-  especially in the workplace. That’s why it’s crucial that, as women.
-brands:
-  - title: Firma 1
-    logo: /img/200.png
-  - title: Firma 2
-    logo: /img/200.png
+contentTwoImage: /img/photo5377778231664554583.jpg
+testimonialText: ""
+testimonials: []
+brandText: ""
+brands: []
 link: contact
 ---
-### Willkommen bei Sehrings Landlädchen
+### Willkommen bei Sehring’s Landlädchen
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+Wir sind ein Familienbetrieb mit Herz aus der Region Dreieich-Götzenhain in der dritten Generation!
+<br />
+<br />
+Mitten im Ortskern von Dreieich-Götzenhain liegt wir mit unserem Hof. Dort haben wir unseren Hofladen mit einer breiten Palette an Waren, welche sowohl auf dem Frühstücks- als auch auf dem Abendbrottisch landen. Wir bieten qualitativ hochwertiges Fleisch, Eier aus Bodenhaltung, kontrolliert angebaute Kartoffeln und vieles mehr.
+<br />
+<br />
+Wir bewirten 30 Hektar Land. Auf den Ackerflächen bauen wir ganz klassisch Gerste, Hafer, Roggen, Weizen und Saisongemüse an. Produkte, welche wir nicht selbst herstellen können, beziehen wir von befreundeten Berufskollegen. In unseren Ställen halten wir Hühner und Schweine, welche auf unserem Stroh artgerecht gehalten werden.
+<br />
+<br />
+Wir sind besonders stolz auf den Anbau von Futtererbsen. Mit dieser eiweißhaltigen Nahrung werden unsere Schweine gefüttert, so wir vollständig auf Soja als Futtermittel verzichten können. Wir sind Landwirte aus Überzeugung. Die Landwirtschaft ist für uns kein Beruf, sondern eine Berufung. Wir produzieren in der Region für die Region – und mit ganz viel Herz. Nicht für einen globalen Markt. 
+<br />
+<br />
+Die Wurstproduktion ist die Spezialität und Leidenschaft unseres Familienbetriebs.
+<br />
+<br />
+Verstärkt nutzen auch junge Leute die Möglichkeit, vor Ort regional erzeugte Produkte zu kaufen. Unsere Kunden schätzen dabei die Frische und Qualität unserer Produkte.
+<br />
+<br />
+Auf dem Familienbild sind zu sehen (v.l.n.r.): Carolin, Christian, Monica, Horst, Annalena sowie Heinz und Annemarie Sehring

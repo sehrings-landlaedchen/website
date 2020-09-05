@@ -9,6 +9,13 @@ gallery:
   - alt: ''
     image: ''
     title: ''
+brands:
+  - title: ''
+    logo: /img/200.png
+testimonials:
+  - title: ''
+    subtitle: ''
+    text: ''
 ---
 
 <!-- Use this to force Gatsby to correctly determine optional images/file schema -->

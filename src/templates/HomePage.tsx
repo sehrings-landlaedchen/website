@@ -89,20 +89,20 @@ export const HomePageTemplate: FC<HomePageProps> = (props) => {
       <div className="single_about_area">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-6 order-2">
-              {contentTwoImage &&
-                <div className="single_about_thumb thumb_n1">
-                  <img src={contentTwoImage} alt="" />
-                </div>
-              }
-            </div>
-            <div className="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 order-1">
+            <div className="col-xl-5 offset-xl-1 col-lg-5 offset-lg-1 order-lg-2">
               <div className="single_about_text">
                 <Content source={contentTwoBody} />
                 {(contentTwoLink && contentTwoLinkText) &&
                   <Link to={contentTwoLink} className="boxed_btn">{contentTwoLinkText}</Link>
                 }
               </div>
+            </div>
+            <div className="col-xl-6 col-lg-6 order-lg-1">
+              {contentTwoImage &&
+                <div className="single_about_thumb thumb_n1">
+                  <img src={contentTwoImage} alt="" />
+                </div>
+              }
             </div>
           </div>
         </div>

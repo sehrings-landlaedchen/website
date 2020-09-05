@@ -83,5 +83,19 @@
                 margin-bottom: 25px;
             }
         }
+        .Content {
+            ul {
+                padding-left: 16px;
+                margin-bottom: 25px;
+                li {
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-weight: 300;
+                    list-style: initial;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #777777;
+                }
+            }
+        }
     }
 }

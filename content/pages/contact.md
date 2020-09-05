@@ -1,16 +1,16 @@
 ---
 template: ContactPage
 slug: contact
-title: Kontakt
-featuredImage: /img/1250x500.png
-subtitle: Lorem magna ea dolore incididunt excepteur irure voluptate id dolore
-  occaecat id.
+title: ""
+featuredImage: /img/website_teaser_neu.jpg
+subtitle: ""
 address: |-
-  ### Sehring`s Landlädchen, Rheinstraße 6, 63303 Dreieich
-  &nbsp;
   ### Sehring`s Regiomat, Höllgartenstraße 31, 63303 Dreieich
-phone: +49 6103 86875
-openingHours: |-
+
+  24/7 geöffnet
+
+  ### Sehring`s Landlädchen, Rheinstraße 6, 63303 Dreieich
+
   |   |   |
   |---|---|
   |Montag|-
@@ -20,6 +20,7 @@ openingHours: |-
   |Freitag|09.00 - 13.00, 15-18.30|
   |Samstag|09.00 - 13.00
   |Sonntag|-
+phone: +49 6103 86875
 email: info@sehrings-landlaedchen.de
 locations:
   - lat: "49.99753"
@@ -32,7 +33,7 @@ locations:
     title: Sehring`s Regiomat
 meta:
   description: This is a meta description.
-  title: Contact Page
+  title: Kontakt
 ---
 
 # Kontakt

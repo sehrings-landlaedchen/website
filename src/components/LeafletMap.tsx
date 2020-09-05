@@ -35,7 +35,7 @@ const LeafletMap: FC<LeafletMapProps> = props => {
       {locations?.map(location => {
         const position: LatLngExpression = [parseFloat(location.lat), parseFloat(location.lng)];
         return (
-          <Marker position={position} ref={initMarker} >
+          <Marker position={position} ref={initMarker} key={location.title}>
             <Popup closeButton={false} closeOnClick={false} closeOnEscapeKey={false} onClose={() => { }} autoClose={false}>
               <p>
                 {location.title}
