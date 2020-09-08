@@ -14,13 +14,13 @@ address: |-
   |   |   |
   |---|---|
   |Montag|-
-  |Dienstag|09.00 - 13.00, 17-18.30|
+  |Dienstag|09.00 - 13.00, 17 - 18.30|
   |Mittwoch|09.00 - 13.00
-  |Donnerstag|09.00 - 13.00, 17-18.30|
-  |Freitag|09.00 - 13.00, 15-18.30|
+  |Donnerstag|09.00 - 13.00, 17 - 18.30|
+  |Freitag|09.00 - 13.00, 15 - 18.30|
   |Samstag|09.00 - 13.00
   |Sonntag|-
-phone: +49 6103 86875
+phone: 06103 86875
 email: info@sehrings-landlaedchen.de
 locations:
   - lat: "49.99753"
