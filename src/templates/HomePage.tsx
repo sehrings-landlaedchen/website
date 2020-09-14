@@ -12,6 +12,7 @@ interface HomePageProps {
   title: string
   subtitle: string
   featuredImage: string
+  newsBody: string;
   body: string;
   aboutBody: string;
   aboutLink: string;
@@ -32,6 +33,7 @@ export const HomePageTemplate: FC<HomePageProps> = (props) => {
   const { title,
     subtitle,
     featuredImage,
+    newsBody,
     body,
     aboutBody,
     aboutLink,
@@ -55,6 +57,16 @@ export const HomePageTemplate: FC<HomePageProps> = (props) => {
       backgroundImage={featuredImage}
       slider
     />
+
+    {newsBody &&
+      <section className="section-top-border">
+        <div className="container">
+          <div className="alert-banner">
+            <Content source={newsBody} />
+          </div>
+        </div>
+      </section>
+    }
 
     <section className="section">
       <div className="container section_title">
@@ -125,6 +137,7 @@ const HomePage: FC<{ data: HomePageQuery }> = ({ data: { page } }) => {
         title={page.frontmatter.title}
         subtitle={page.frontmatter.subtitle}
         featuredImage={page.frontmatter.featuredImage}
+        newsBody={page.frontmatter.newsBody}
         body={page.html}
         aboutBody={page.frontmatter.aboutBody}
         aboutLink={page.frontmatter.aboutLink}
@@ -156,6 +169,7 @@ export const pageQuery = graphql`
         title
         subtitle
         featuredImage
+        newsBody
         aboutBody
         aboutLink
         aboutLinkText

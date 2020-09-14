@@ -8,4 +8,10 @@ main {
   @media #{$extra_big_screen} {
     padding-top: 113px;
   }
+
+  .alert-banner {
+    background: hsl(44.8, 34.5%, 75%);
+    min-height: 125px;
+    padding: 25px;
+  }
 }

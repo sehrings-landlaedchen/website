@@ -2,10 +2,18 @@
   background-color: var(--darkGrey);
   color: white;
   padding: 15rem 0;
+
+  .BackgroundImage {
+    opacity: 0.8;
+  }
+
+  .container {
+    animation: fadeIn 0.5s ease-out;
+  }
 }
 
-.PageHeader .BackgroundImage {
-  opacity: 0.8;
+.slider_area .single_slider .slider_contant {
+  background-color: hsl(44.8, 34.5%, 75%);
 }
 
 .PageHeader-large {
@@ -20,10 +28,6 @@
 .PageHeader--Subtitle {
   font-weight: 400;
   font-size: 1.8rem;
-}
-
-.PageHeader .container {
-  animation: fadeIn 0.5s ease-out;
 }
 
 @media (max-width: 600px) {
