@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Image from './Image'
 import Content from './Content'
-import './PageHeader.css'
+import './PageHeader.scss'
 
 interface PageHeaderProps {
   title: string;

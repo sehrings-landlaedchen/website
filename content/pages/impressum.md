@@ -18,7 +18,7 @@ Höllgartenstraße 31\
 Telefon: 06103 86875\
 E-Mail: info@sehrings-landlaedchen.de
 
-## Verbraucherstreitbeilegung/Universalschlichtungsstelle
+## Verbraucherstreitbeilegung / Universalschlichtungsstelle
 
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
 

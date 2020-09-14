@@ -51,14 +51,7 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
               <div className="col-12">
                 <h2 className="contact-title"></h2>
               </div>
-              <div className="col-lg-8">
-                <FormSimpleAjax
-                  name="Kontaktanfrage"
-                  successMessage="Danke für Ihre Anfrage, wir werden uns schnellstmöglich bei Ihnen melden." />
-              </div>
-              <div className="col-lg-4">
-
-
+              <div className="col-lg-4 offset-2">
                 {address &&
                   <div className="media contact-info">
                     <span className="contact-info__icon">
@@ -69,30 +62,33 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
                     </div>
                   </div>
                 }
-                {phone &&
-                  <div className="media contact-info">
-                    <span className="contact-info__icon">
-                      <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
-                    </span>
-                    <div className="media-body">
-                      <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
-                        <h3>{phone}</h3>
-                      </a>
+                </div>
+
+                <div className="col-lg-4">
+                  {phone &&
+                    <div className="media contact-info">
+                      <span className="contact-info__icon">
+                        <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
+                      </span>
+                      <div className="media-body">
+                        <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
+                          <h3>{phone}</h3>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                }
-                {email &&
-                  <div className="media contact-info">
-                    <span className="contact-info__icon">
-                      <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
-                    </span>
-                    <div className="media-body">
-                      <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
-                        <h3>{email}</h3>
-                      </a>
+                  }
+                  {email &&
+                    <div className="media contact-info">
+                      <span className="contact-info__icon">
+                        <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
+                      </span>
+                      <div className="media-body">
+                        <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
+                          <h3>{email}</h3>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                }
+                  }
               </div>
             </div>
           </div>

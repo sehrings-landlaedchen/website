@@ -16,7 +16,7 @@
     }
     p{
         font-weight: 300;
-        color: #777777;
+        color: hsl(0, 0%, 30%);;
         margin-bottom: 0;
         br{
             @media #{$tablet_device} {

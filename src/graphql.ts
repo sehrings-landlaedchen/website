@@ -498,18 +498,19 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   meta?: Maybe<MarkdownRemarkFrontmatterMetaFilterInput>;
   featuredImage?: Maybe<StringQueryOperatorInput>;
   gallery?: Maybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
+  brands?: Maybe<MarkdownRemarkFrontmatterBrandsFilterListInput>;
+  testimonials?: Maybe<MarkdownRemarkFrontmatterTestimonialsFilterListInput>;
   template?: Maybe<StringQueryOperatorInput>;
   slug?: Maybe<StringQueryOperatorInput>;
   subtitle?: Maybe<StringQueryOperatorInput>;
   accordion?: Maybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
-  address?: Maybe<StringQueryOperatorInput>;
-  phone?: Maybe<StringQueryOperatorInput>;
-  openingHours?: Maybe<StringQueryOperatorInput>;
-  email?: Maybe<StringQueryOperatorInput>;
-  locations?: Maybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
   description?: Maybe<StringQueryOperatorInput>;
   price?: Maybe<FloatQueryOperatorInput>;
   categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
+  address?: Maybe<StringQueryOperatorInput>;
+  phone?: Maybe<StringQueryOperatorInput>;
+  email?: Maybe<StringQueryOperatorInput>;
+  locations?: Maybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
   hidePage?: Maybe<BooleanQueryOperatorInput>;
   section1?: Maybe<StringQueryOperatorInput>;
   section2?: Maybe<StringQueryOperatorInput>;
@@ -517,6 +518,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   videoPoster?: Maybe<StringQueryOperatorInput>;
   videoTitle?: Maybe<StringQueryOperatorInput>;
   linkText?: Maybe<StringQueryOperatorInput>;
+  newsBody?: Maybe<StringQueryOperatorInput>;
   aboutBody?: Maybe<StringQueryOperatorInput>;
   aboutLink?: Maybe<StringQueryOperatorInput>;
   aboutLinkText?: Maybe<StringQueryOperatorInput>;
@@ -526,9 +528,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   contentTwoLinkText?: Maybe<StringQueryOperatorInput>;
   contentTwoImage?: Maybe<StringQueryOperatorInput>;
   testimonialText?: Maybe<StringQueryOperatorInput>;
-  testimonials?: Maybe<MarkdownRemarkFrontmatterTestimonialsFilterListInput>;
   brandText?: Maybe<StringQueryOperatorInput>;
-  brands?: Maybe<MarkdownRemarkFrontmatterBrandsFilterListInput>;
   link?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -549,32 +549,13 @@ export type MarkdownRemarkFrontmatterGalleryFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
 };
 
-export type MarkdownRemarkFrontmatterAccordionFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterAccordionFilterInput>;
+export type MarkdownRemarkFrontmatterBrandsFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterBrandsFilterInput>;
 };
 
-export type MarkdownRemarkFrontmatterAccordionFilterInput = {
-  description?: Maybe<StringQueryOperatorInput>;
+export type MarkdownRemarkFrontmatterBrandsFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterLocationsFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFilterInput = {
-  lat?: Maybe<StringQueryOperatorInput>;
-  lng?: Maybe<StringQueryOperatorInput>;
-  mapLink?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterCategoriesFilterInput = {
-  category?: Maybe<StringQueryOperatorInput>;
+  logo?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterTestimonialsFilterListInput = {
@@ -587,13 +568,32 @@ export type MarkdownRemarkFrontmatterTestimonialsFilterInput = {
   text?: Maybe<StringQueryOperatorInput>;
 };
 
-export type MarkdownRemarkFrontmatterBrandsFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterBrandsFilterInput>;
+export type MarkdownRemarkFrontmatterAccordionFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterAccordionFilterInput>;
 };
 
-export type MarkdownRemarkFrontmatterBrandsFilterInput = {
+export type MarkdownRemarkFrontmatterAccordionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
-  logo?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterCategoriesFilterInput = {
+  category?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterLocationsFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsFilterInput = {
+  lat?: Maybe<StringQueryOperatorInput>;
+  lng?: Maybe<StringQueryOperatorInput>;
+  mapLink?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFieldsFilterInput = {
@@ -1101,18 +1101,19 @@ export type MarkdownRemarkFrontmatter = {
   meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
   featuredImage?: Maybe<Scalars['String']>;
   gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
+  brands?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterBrands>>>;
+  testimonials?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTestimonials>>>;
   template?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
   subtitle?: Maybe<Scalars['String']>;
   accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
-  address?: Maybe<Scalars['String']>;
-  phone?: Maybe<Scalars['String']>;
-  openingHours?: Maybe<Scalars['String']>;
-  email?: Maybe<Scalars['String']>;
-  locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
   description?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Float']>;
   categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
+  address?: Maybe<Scalars['String']>;
+  phone?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
   hidePage?: Maybe<Scalars['Boolean']>;
   section1?: Maybe<Scalars['String']>;
   section2?: Maybe<Scalars['String']>;
@@ -1120,6 +1121,7 @@ export type MarkdownRemarkFrontmatter = {
   videoPoster?: Maybe<Scalars['String']>;
   videoTitle?: Maybe<Scalars['String']>;
   linkText?: Maybe<Scalars['String']>;
+  newsBody?: Maybe<Scalars['String']>;
   aboutBody?: Maybe<Scalars['String']>;
   aboutLink?: Maybe<Scalars['String']>;
   aboutLinkText?: Maybe<Scalars['String']>;
@@ -1129,9 +1131,7 @@ export type MarkdownRemarkFrontmatter = {
   contentTwoLinkText?: Maybe<Scalars['String']>;
   contentTwoImage?: Maybe<Scalars['String']>;
   testimonialText?: Maybe<Scalars['String']>;
-  testimonials?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTestimonials>>>;
   brandText?: Maybe<Scalars['String']>;
-  brands?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterBrands>>>;
   link?: Maybe<Scalars['String']>;
 };
 
@@ -1150,23 +1150,10 @@ export type MarkdownRemarkFrontmatterGallery = {
   title?: Maybe<Scalars['String']>;
 };
 
-export type MarkdownRemarkFrontmatterAccordion = {
-  __typename?: 'MarkdownRemarkFrontmatterAccordion';
-  description?: Maybe<Scalars['String']>;
+export type MarkdownRemarkFrontmatterBrands = {
+  __typename?: 'MarkdownRemarkFrontmatterBrands';
   title?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterLocations = {
-  __typename?: 'MarkdownRemarkFrontmatterLocations';
-  lat?: Maybe<Scalars['String']>;
-  lng?: Maybe<Scalars['String']>;
-  mapLink?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterCategories = {
-  __typename?: 'MarkdownRemarkFrontmatterCategories';
-  category?: Maybe<Scalars['String']>;
+  logo?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterTestimonials = {
@@ -1176,10 +1163,23 @@ export type MarkdownRemarkFrontmatterTestimonials = {
   text?: Maybe<Scalars['String']>;
 };
 
-export type MarkdownRemarkFrontmatterBrands = {
-  __typename?: 'MarkdownRemarkFrontmatterBrands';
+export type MarkdownRemarkFrontmatterAccordion = {
+  __typename?: 'MarkdownRemarkFrontmatterAccordion';
+  description?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
-  logo?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterCategories = {
+  __typename?: 'MarkdownRemarkFrontmatterCategories';
+  category?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterLocations = {
+  __typename?: 'MarkdownRemarkFrontmatterLocations';
+  lat?: Maybe<Scalars['String']>;
+  lng?: Maybe<Scalars['String']>;
+  mapLink?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
 };
 
 export enum MarkdownExcerptFormats {
@@ -1518,25 +1518,31 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterGalleryAlt = 'childMarkdownRemark___frontmatter___gallery___alt',
   ChildMarkdownRemarkFrontmatterGalleryImage = 'childMarkdownRemark___frontmatter___gallery___image',
   ChildMarkdownRemarkFrontmatterGalleryTitle = 'childMarkdownRemark___frontmatter___gallery___title',
+  ChildMarkdownRemarkFrontmatterBrands = 'childMarkdownRemark___frontmatter___brands',
+  ChildMarkdownRemarkFrontmatterBrandsTitle = 'childMarkdownRemark___frontmatter___brands___title',
+  ChildMarkdownRemarkFrontmatterBrandsLogo = 'childMarkdownRemark___frontmatter___brands___logo',
+  ChildMarkdownRemarkFrontmatterTestimonials = 'childMarkdownRemark___frontmatter___testimonials',
+  ChildMarkdownRemarkFrontmatterTestimonialsTitle = 'childMarkdownRemark___frontmatter___testimonials___title',
+  ChildMarkdownRemarkFrontmatterTestimonialsSubtitle = 'childMarkdownRemark___frontmatter___testimonials___subtitle',
+  ChildMarkdownRemarkFrontmatterTestimonialsText = 'childMarkdownRemark___frontmatter___testimonials___text',
   ChildMarkdownRemarkFrontmatterTemplate = 'childMarkdownRemark___frontmatter___template',
   ChildMarkdownRemarkFrontmatterSlug = 'childMarkdownRemark___frontmatter___slug',
   ChildMarkdownRemarkFrontmatterSubtitle = 'childMarkdownRemark___frontmatter___subtitle',
   ChildMarkdownRemarkFrontmatterAccordion = 'childMarkdownRemark___frontmatter___accordion',
   ChildMarkdownRemarkFrontmatterAccordionDescription = 'childMarkdownRemark___frontmatter___accordion___description',
   ChildMarkdownRemarkFrontmatterAccordionTitle = 'childMarkdownRemark___frontmatter___accordion___title',
+  ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
+  ChildMarkdownRemarkFrontmatterPrice = 'childMarkdownRemark___frontmatter___price',
+  ChildMarkdownRemarkFrontmatterCategories = 'childMarkdownRemark___frontmatter___categories',
+  ChildMarkdownRemarkFrontmatterCategoriesCategory = 'childMarkdownRemark___frontmatter___categories___category',
   ChildMarkdownRemarkFrontmatterAddress = 'childMarkdownRemark___frontmatter___address',
   ChildMarkdownRemarkFrontmatterPhone = 'childMarkdownRemark___frontmatter___phone',
-  ChildMarkdownRemarkFrontmatterOpeningHours = 'childMarkdownRemark___frontmatter___openingHours',
   ChildMarkdownRemarkFrontmatterEmail = 'childMarkdownRemark___frontmatter___email',
   ChildMarkdownRemarkFrontmatterLocations = 'childMarkdownRemark___frontmatter___locations',
   ChildMarkdownRemarkFrontmatterLocationsLat = 'childMarkdownRemark___frontmatter___locations___lat',
   ChildMarkdownRemarkFrontmatterLocationsLng = 'childMarkdownRemark___frontmatter___locations___lng',
   ChildMarkdownRemarkFrontmatterLocationsMapLink = 'childMarkdownRemark___frontmatter___locations___mapLink',
   ChildMarkdownRemarkFrontmatterLocationsTitle = 'childMarkdownRemark___frontmatter___locations___title',
-  ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
-  ChildMarkdownRemarkFrontmatterPrice = 'childMarkdownRemark___frontmatter___price',
-  ChildMarkdownRemarkFrontmatterCategories = 'childMarkdownRemark___frontmatter___categories',
-  ChildMarkdownRemarkFrontmatterCategoriesCategory = 'childMarkdownRemark___frontmatter___categories___category',
   ChildMarkdownRemarkFrontmatterHidePage = 'childMarkdownRemark___frontmatter___hidePage',
   ChildMarkdownRemarkFrontmatterSection1 = 'childMarkdownRemark___frontmatter___section1',
   ChildMarkdownRemarkFrontmatterSection2 = 'childMarkdownRemark___frontmatter___section2',
@@ -1544,6 +1550,7 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterVideoPoster = 'childMarkdownRemark___frontmatter___videoPoster',
   ChildMarkdownRemarkFrontmatterVideoTitle = 'childMarkdownRemark___frontmatter___videoTitle',
   ChildMarkdownRemarkFrontmatterLinkText = 'childMarkdownRemark___frontmatter___linkText',
+  ChildMarkdownRemarkFrontmatterNewsBody = 'childMarkdownRemark___frontmatter___newsBody',
   ChildMarkdownRemarkFrontmatterAboutBody = 'childMarkdownRemark___frontmatter___aboutBody',
   ChildMarkdownRemarkFrontmatterAboutLink = 'childMarkdownRemark___frontmatter___aboutLink',
   ChildMarkdownRemarkFrontmatterAboutLinkText = 'childMarkdownRemark___frontmatter___aboutLinkText',
@@ -1553,14 +1560,7 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterContentTwoLinkText = 'childMarkdownRemark___frontmatter___contentTwoLinkText',
   ChildMarkdownRemarkFrontmatterContentTwoImage = 'childMarkdownRemark___frontmatter___contentTwoImage',
   ChildMarkdownRemarkFrontmatterTestimonialText = 'childMarkdownRemark___frontmatter___testimonialText',
-  ChildMarkdownRemarkFrontmatterTestimonials = 'childMarkdownRemark___frontmatter___testimonials',
-  ChildMarkdownRemarkFrontmatterTestimonialsTitle = 'childMarkdownRemark___frontmatter___testimonials___title',
-  ChildMarkdownRemarkFrontmatterTestimonialsSubtitle = 'childMarkdownRemark___frontmatter___testimonials___subtitle',
-  ChildMarkdownRemarkFrontmatterTestimonialsText = 'childMarkdownRemark___frontmatter___testimonials___text',
   ChildMarkdownRemarkFrontmatterBrandText = 'childMarkdownRemark___frontmatter___brandText',
-  ChildMarkdownRemarkFrontmatterBrands = 'childMarkdownRemark___frontmatter___brands',
-  ChildMarkdownRemarkFrontmatterBrandsTitle = 'childMarkdownRemark___frontmatter___brands___title',
-  ChildMarkdownRemarkFrontmatterBrandsLogo = 'childMarkdownRemark___frontmatter___brands___logo',
   ChildMarkdownRemarkFrontmatterLink = 'childMarkdownRemark___frontmatter___link',
   ChildMarkdownRemarkExcerpt = 'childMarkdownRemark___excerpt',
   ChildMarkdownRemarkRawMarkdownBody = 'childMarkdownRemark___rawMarkdownBody',
@@ -2064,6 +2064,8 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   maxWidth?: Maybe<IntQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  exclude?: Maybe<StringQueryOperatorInput>;
+  trackingId?: Maybe<StringQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
   background_color?: Maybe<StringQueryOperatorInput>;
@@ -2088,13 +2090,16 @@ export type SitePluginPluginOptionsPluginsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   version?: Maybe<StringQueryOperatorInput>;
   pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptionsFilterInput>;
+  nodeAPIs?: Maybe<StringQueryOperatorInput>;
   browserAPIs?: Maybe<StringQueryOperatorInput>;
+  ssrAPIs?: Maybe<StringQueryOperatorInput>;
   pluginFilepath?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  exclude?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginPackageJsonFilterInput = {
@@ -2184,6 +2189,8 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>;
   maxWidth?: Maybe<Scalars['Int']>;
   wrapperStyle?: Maybe<Scalars['String']>;
+  exclude?: Maybe<Array<Maybe<Scalars['String']>>>;
+  trackingId?: Maybe<Scalars['String']>;
   short_name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
   background_color?: Maybe<Scalars['String']>;
@@ -2205,7 +2212,9 @@ export type SitePluginPluginOptionsPlugins = {
   name?: Maybe<Scalars['String']>;
   version?: Maybe<Scalars['String']>;
   pluginOptions?: Maybe<SitePluginPluginOptionsPluginsPluginOptions>;
+  nodeAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
   browserAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
+  ssrAPIs?: Maybe<Array<Maybe<Scalars['String']>>>;
   pluginFilepath?: Maybe<Scalars['String']>;
 };
 
@@ -2213,6 +2222,7 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   __typename?: 'SitePluginPluginOptionsPluginsPluginOptions';
   maxWidth?: Maybe<Scalars['Int']>;
   wrapperStyle?: Maybe<Scalars['String']>;
+  exclude?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPackageJson = {
@@ -2323,12 +2333,16 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsPluginsId = 'pluginCreator___pluginOptions___plugins___id',
   PluginCreatorPluginOptionsPluginsName = 'pluginCreator___pluginOptions___plugins___name',
   PluginCreatorPluginOptionsPluginsVersion = 'pluginCreator___pluginOptions___plugins___version',
+  PluginCreatorPluginOptionsPluginsNodeApIs = 'pluginCreator___pluginOptions___plugins___nodeAPIs',
   PluginCreatorPluginOptionsPluginsBrowserApIs = 'pluginCreator___pluginOptions___plugins___browserAPIs',
+  PluginCreatorPluginOptionsPluginsSsrApIs = 'pluginCreator___pluginOptions___plugins___ssrAPIs',
   PluginCreatorPluginOptionsPluginsPluginFilepath = 'pluginCreator___pluginOptions___plugins___pluginFilepath',
   PluginCreatorPluginOptionsPath = 'pluginCreator___pluginOptions___path',
   PluginCreatorPluginOptionsName = 'pluginCreator___pluginOptions___name',
   PluginCreatorPluginOptionsMaxWidth = 'pluginCreator___pluginOptions___maxWidth',
   PluginCreatorPluginOptionsWrapperStyle = 'pluginCreator___pluginOptions___wrapperStyle',
+  PluginCreatorPluginOptionsExclude = 'pluginCreator___pluginOptions___exclude',
+  PluginCreatorPluginOptionsTrackingId = 'pluginCreator___pluginOptions___trackingId',
   PluginCreatorPluginOptionsShortName = 'pluginCreator___pluginOptions___short_name',
   PluginCreatorPluginOptionsStartUrl = 'pluginCreator___pluginOptions___start_url',
   PluginCreatorPluginOptionsBackgroundColor = 'pluginCreator___pluginOptions___background_color',
@@ -2723,25 +2737,31 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterGalleryAlt = 'frontmatter___gallery___alt',
   FrontmatterGalleryImage = 'frontmatter___gallery___image',
   FrontmatterGalleryTitle = 'frontmatter___gallery___title',
+  FrontmatterBrands = 'frontmatter___brands',
+  FrontmatterBrandsTitle = 'frontmatter___brands___title',
+  FrontmatterBrandsLogo = 'frontmatter___brands___logo',
+  FrontmatterTestimonials = 'frontmatter___testimonials',
+  FrontmatterTestimonialsTitle = 'frontmatter___testimonials___title',
+  FrontmatterTestimonialsSubtitle = 'frontmatter___testimonials___subtitle',
+  FrontmatterTestimonialsText = 'frontmatter___testimonials___text',
   FrontmatterTemplate = 'frontmatter___template',
   FrontmatterSlug = 'frontmatter___slug',
   FrontmatterSubtitle = 'frontmatter___subtitle',
   FrontmatterAccordion = 'frontmatter___accordion',
   FrontmatterAccordionDescription = 'frontmatter___accordion___description',
   FrontmatterAccordionTitle = 'frontmatter___accordion___title',
+  FrontmatterDescription = 'frontmatter___description',
+  FrontmatterPrice = 'frontmatter___price',
+  FrontmatterCategories = 'frontmatter___categories',
+  FrontmatterCategoriesCategory = 'frontmatter___categories___category',
   FrontmatterAddress = 'frontmatter___address',
   FrontmatterPhone = 'frontmatter___phone',
-  FrontmatterOpeningHours = 'frontmatter___openingHours',
   FrontmatterEmail = 'frontmatter___email',
   FrontmatterLocations = 'frontmatter___locations',
   FrontmatterLocationsLat = 'frontmatter___locations___lat',
   FrontmatterLocationsLng = 'frontmatter___locations___lng',
   FrontmatterLocationsMapLink = 'frontmatter___locations___mapLink',
   FrontmatterLocationsTitle = 'frontmatter___locations___title',
-  FrontmatterDescription = 'frontmatter___description',
-  FrontmatterPrice = 'frontmatter___price',
-  FrontmatterCategories = 'frontmatter___categories',
-  FrontmatterCategoriesCategory = 'frontmatter___categories___category',
   FrontmatterHidePage = 'frontmatter___hidePage',
   FrontmatterSection1 = 'frontmatter___section1',
   FrontmatterSection2 = 'frontmatter___section2',
@@ -2749,6 +2769,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterVideoPoster = 'frontmatter___videoPoster',
   FrontmatterVideoTitle = 'frontmatter___videoTitle',
   FrontmatterLinkText = 'frontmatter___linkText',
+  FrontmatterNewsBody = 'frontmatter___newsBody',
   FrontmatterAboutBody = 'frontmatter___aboutBody',
   FrontmatterAboutLink = 'frontmatter___aboutLink',
   FrontmatterAboutLinkText = 'frontmatter___aboutLinkText',
@@ -2758,14 +2779,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterContentTwoLinkText = 'frontmatter___contentTwoLinkText',
   FrontmatterContentTwoImage = 'frontmatter___contentTwoImage',
   FrontmatterTestimonialText = 'frontmatter___testimonialText',
-  FrontmatterTestimonials = 'frontmatter___testimonials',
-  FrontmatterTestimonialsTitle = 'frontmatter___testimonials___title',
-  FrontmatterTestimonialsSubtitle = 'frontmatter___testimonials___subtitle',
-  FrontmatterTestimonialsText = 'frontmatter___testimonials___text',
   FrontmatterBrandText = 'frontmatter___brandText',
-  FrontmatterBrands = 'frontmatter___brands',
-  FrontmatterBrandsTitle = 'frontmatter___brands___title',
-  FrontmatterBrandsLogo = 'frontmatter___brands___logo',
   FrontmatterLink = 'frontmatter___link',
   Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
@@ -3670,12 +3684,17 @@ export enum SitePluginFieldsEnum {
   PluginOptionsPluginsVersion = 'pluginOptions___plugins___version',
   PluginOptionsPluginsPluginOptionsMaxWidth = 'pluginOptions___plugins___pluginOptions___maxWidth',
   PluginOptionsPluginsPluginOptionsWrapperStyle = 'pluginOptions___plugins___pluginOptions___wrapperStyle',
+  PluginOptionsPluginsPluginOptionsExclude = 'pluginOptions___plugins___pluginOptions___exclude',
+  PluginOptionsPluginsNodeApIs = 'pluginOptions___plugins___nodeAPIs',
   PluginOptionsPluginsBrowserApIs = 'pluginOptions___plugins___browserAPIs',
+  PluginOptionsPluginsSsrApIs = 'pluginOptions___plugins___ssrAPIs',
   PluginOptionsPluginsPluginFilepath = 'pluginOptions___plugins___pluginFilepath',
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsMaxWidth = 'pluginOptions___maxWidth',
   PluginOptionsWrapperStyle = 'pluginOptions___wrapperStyle',
+  PluginOptionsExclude = 'pluginOptions___exclude',
+  PluginOptionsTrackingId = 'pluginOptions___trackingId',
   PluginOptionsShortName = 'pluginOptions___short_name',
   PluginOptionsStartUrl = 'pluginOptions___start_url',
   PluginOptionsBackgroundColor = 'pluginOptions___background_color',
@@ -3835,7 +3854,7 @@ export type ContactPageQuery = (
     & Pick<MarkdownRemark, 'html'>
     & { frontmatter?: Maybe<(
       { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'featuredImage' | 'address' | 'phone' | 'openingHours' | 'email'>
+      & Pick<MarkdownRemarkFrontmatter, 'title' | 'template' | 'subtitle' | 'featuredImage' | 'address' | 'phone' | 'email'>
       & { locations?: Maybe<Array<Maybe<(
         { __typename?: 'MarkdownRemarkFrontmatterLocations' }
         & Pick<MarkdownRemarkFrontmatterLocations, 'mapLink' | 'title' | 'lat' | 'lng'>
@@ -3879,7 +3898,7 @@ export type HomePageQuery = (
     & Pick<MarkdownRemark, 'html'>
     & { frontmatter?: Maybe<(
       { __typename?: 'MarkdownRemarkFrontmatter' }
-      & Pick<MarkdownRemarkFrontmatter, 'title' | 'subtitle' | 'featuredImage' | 'aboutBody' | 'aboutLink' | 'aboutLinkText' | 'aboutImage' | 'contentTwoBody' | 'contentTwoLink' | 'contentTwoLinkText' | 'contentTwoImage' | 'testimonialText' | 'brandText'>
+      & Pick<MarkdownRemarkFrontmatter, 'title' | 'subtitle' | 'featuredImage' | 'newsBody' | 'aboutBody' | 'aboutLink' | 'aboutLinkText' | 'aboutImage' | 'contentTwoBody' | 'contentTwoLink' | 'contentTwoLinkText' | 'contentTwoImage' | 'testimonialText' | 'brandText'>
       & { testimonials?: Maybe<Array<Maybe<(
         { __typename?: 'MarkdownRemarkFrontmatterTestimonials' }
         & Pick<MarkdownRemarkFrontmatterTestimonials, 'title' | 'subtitle' | 'text'>
