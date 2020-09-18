@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { FC } from 'react'
 import ReactDOMServer from 'react-dom/server'
 import Marked from 'react-markdown'
-import PropTypes from 'prop-types'
 import Image from './Image'
 
 import './Content.css'
+
+interface ContentProps {
+  source: string;
+  src?: string;
+  className?: string;
+}
 
 const encodeMarkdownURIs = (source = '') => {
   const markdownLinkRegex = /\[(.+)\]\((.+)(".+)\)/g
@@ -15,7 +20,7 @@ const encodeMarkdownURIs = (source = '') => {
   })
 }
 
-const withContentImages = source => {
+const withContentImages = (source: string) => {
   const images = source.match(/<img(.*?)\\?>/gim)
 
   for (let i in images) {
@@ -66,7 +71,7 @@ const HtmlBlock = ({ value }) => {
   )
 }
 
-const Content = ({ source, src, className = '' }) => {
+const Content: FC<ContentProps> = ({ source, src, className = '' }) => {
   // accepts either html or markdown
   source = source || src || ''
   if (source.match(/^</)) {
@@ -90,12 +95,6 @@ const Content = ({ source, src, className = '' }) => {
       }}
     />
   )
-}
-
-Content.propTypes = {
-  source: PropTypes.string,
-  src: PropTypes.string,
-  className: PropTypes.string
 }
 
 export default Content

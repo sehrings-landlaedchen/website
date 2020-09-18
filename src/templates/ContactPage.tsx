@@ -51,7 +51,7 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
               <div className="col-12">
                 <h2 className="contact-title"></h2>
               </div>
-              <div className="col-lg-4 offset-2">
+              <div className="col-lg-4">
                 {address &&
                   <div className="media contact-info">
                     <span className="contact-info__icon">
@@ -64,7 +64,7 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
                 }
                 </div>
 
-                <div className="col-lg-4">
+                <div className="col-lg-4 offset-lg-4">
                   {phone &&
                     <div className="media contact-info">
                       <span className="contact-info__icon">

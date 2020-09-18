@@ -1,8 +1,6 @@
 import React, { FC } from 'react'
-import PropTypes from 'prop-types'
 
 import Image from './Image'
-import Content from './Content'
 import './PageHeader.scss'
 
 interface PageHeaderProps {
@@ -57,11 +55,6 @@ const PageHeader: FC<PageHeaderProps> = ({
         :
         <div className="zigzag_bg_2 breadcam_area no-image"></div>
   )
-}
-
-PageHeader.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string
 }
 
 export default PageHeader

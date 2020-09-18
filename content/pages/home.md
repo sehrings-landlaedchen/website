@@ -9,17 +9,7 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/website_teaser_neu.jpg
-newsBody: >-
-  In der Zeit vom **15.09.2020** bis **17.09.2020** ist unser Landlädchen
-  geschlossen.
-
-
-  Ab **Freitag, 18.09.2020** sind wir in bester Qualität und neuer Frische wieder für Sie da.
-
-
-
-
-  Selbstverständlich erhalten Sie auch in dieser Zeit unsere leckeren und frischen Produkte in unserem Regiomaten rund im die Uhr in der Höllgartenstraße 31 in Dreieich-Götzenhain.
+newsBody: ""
 aboutBody: >-
   ### Unser neuer Regiomat
 
