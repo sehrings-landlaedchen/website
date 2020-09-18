@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Route } from 'react-router-dom'
 
-export default () => (
+const GoogleAnalytics: FC = () => (
   <Route
     path='/'
     render={({ location }) => {
@@ -14,3 +14,5 @@ export default () => (
     }}
   />
 )
+
+export default GoogleAnalytics
