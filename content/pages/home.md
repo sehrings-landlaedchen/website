@@ -9,7 +9,7 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/website_teaser_neu.jpg
-newsBody: ""
+newsBody: Test
 aboutBody: >-
   ### Unser neuer Regiomat
 
