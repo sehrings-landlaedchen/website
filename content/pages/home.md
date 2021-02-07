@@ -11,11 +11,11 @@ subtitle: ""
 featuredImage: /img/website_teaser_neu.jpg
 newsBody: Test
 aboutBody: >-
-  ### Unser neuer Regiomat
+  ### Unser Regiomat
 
 
   In unserem Regiomaten finden Sie Hausmacher Dosenwurst, Fleischwurst, drei verschiedene Sorten Bratwürste, Rindswürste, Gelbwurst und weitere Sorten Wurst, sowie Eier und Honig! Des Weiteren gibt es unsere mageren oder durchwachsenen Steaks zu kaufen. Hier ist für jeden etwas dabei.
-   
+
 
   Schon gewusst: Neben Bargeld werden auch Kartenzahlungen an unserem Regiomaten akzeptiert.
 
