@@ -42,7 +42,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Titel, name: title, widget: string, required: false }
           - { label: Subtitle, name: subtitle, widget: markdown, required: false }
           - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Inhalt News Text, name: newsBody, widget: markdown }
+          - { label: Inhalt News Text, name: newsBody, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown }
           - { label: Inhalt 1 Text, name: aboutBody, widget: markdown }
           - { label: Inhalt 1 Link, name: aboutLink, widget: relation, collection: pages, searchFields: ['title'], valueField: slug, displayFields: [title], required: false }
