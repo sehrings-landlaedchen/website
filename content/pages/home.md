@@ -10,23 +10,14 @@ title: ""
 subtitle: ""
 featuredImage: /img/website_teaser_neu.jpg
 newsBody: >-
-  Schon gewusst?\
+  Schon gewusst?
 
-  <br />\
 
-  <br />\
+  Dieses Jahr stehen zwei große Ereignisse an. 😊 Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6!
 
-  Dieses Jahr stehen zwei große Ereignisse an. 😊 Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6!\
 
-  <br />\
+  Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾
 
-  <br />\
-
-  Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾\
-
-  <br />\
-
-  <br />\
 
   Über das zweite Ereignis werden wir euch in Kürze berichten! Seid gespannt! 😉
 aboutBody: >-
