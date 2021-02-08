@@ -9,7 +9,16 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/website_teaser_neu.jpg
-newsBody: Test
+newsBody: >-
+  Schon gewusst?\
+
+  Dieses Jahr stehen zwei große Ereignisse an. 😊 Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6!\
+
+  Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾\
+
+  \
+
+  Über das zweite Ereignis werden wir euch in Kürze berichten! Seid gespannt! 😉
 aboutBody: >-
   ### Unser Regiomat
 
