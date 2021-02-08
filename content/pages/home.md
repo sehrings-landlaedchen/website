@@ -19,7 +19,13 @@ newsBody: >-
   Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾
 
 
+  Daher möchten wir euch heute einen kleinen Einblick aus 2003 geben. Hier seht ihr ein Zeitungsbild, das zeigt, dass wir bereits seit über 17 Jahren unsere Produkte sowie regionale Leckereien aus der Region anbieten. Getreu unserem Motto: Aus der Region - für die Region und mit ganz viel Herz. ♥️
+
+
   Über das zweite Ereignis werden wir euch in Kürze berichten! Seid gespannt! 😉
+
+
+  ![](/img/jubiläum.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
