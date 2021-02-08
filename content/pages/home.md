@@ -24,7 +24,7 @@ newsBody: >-
 
 
 
-  ![](/img/jubiläum.jpg)
+  ![](/img/jubiläum_zugeschnitten-2-.jpg)
 
 
   Über das zweite Ereignis werden wir euch in Kürze berichten! Seid gespannt! 😉
