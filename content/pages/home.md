@@ -43,6 +43,9 @@ aboutLink: contact
 aboutLinkText: Kontakt / Öffnungszeiten
 aboutImage: /img/regiomat.jpg
 contentTwoBody: >-
+  ![]()
+
+
   ### Unser Hofladen
 
 
@@ -52,11 +55,11 @@ contentTwoBody: >-
   Passend zum Grillwetter gibt es für Sie marinierte Rücken- und Kammsteaks sowie Filetsteaks, frische Bratwürste und leckere Grillfackeln sowie Spareribs (alles vom Schwein). Selbstverständlich haben wir auch unsere drei verschiedenen Sorten Grillwürste vorrätig:
 
 
-  - Gebrühte Bratwürste
+  * Gebrühte Bratwürste
 
-  - Gebrühte Bratwürste mit Kräutern verfeinert und
+  * Gebrühte Bratwürste mit Kräutern verfeinert und
 
-  - Gebrühte Bratwürste Käse-Jalapeño
+  * Gebrühte Bratwürste Käse-Jalapeño
 
 
   Neben den Grillspezalitäten bieten wir Ihnen, wie gewohnt, unsere Aufschnittwurst, rohen und gekochten Schinken, Fleischkäse (verschiedene Sorten), geräucherte Mettwürste (verschiedene Sorten), Hausmacher Wurst und vieles mehr an. Auch die leckeren, selbstgemachten Salate, wie Fleischsalat und Kartoffelsalat, gibt es als Beilage für einen perfekten Grillabend bei uns zu kaufen.
@@ -71,18 +74,23 @@ contentTwoBody: >-
   Gerne sind wir für Sie da:
 
 
-  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
+  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
 
-  Mittwoch: 09:00 - 13:00 Uhr  
+  Mittwoch: 09:00 - 13:00 Uhr\
 
-  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
+  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
 
-  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr  
+  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr\
 
   Samstag: 09:00 - 13:00 Uhr  
 
 
   Rheinstraße 6, 63303 Dreieich-Götzenhain
+
+
+
+
+  ![](/img/laden.jpg)
 contentTwoLink: contact
 contentTwoLinkText: Kontakt / Öffnungszeiten
 contentTwoImage: /img/photo5377778231664554583.jpg
