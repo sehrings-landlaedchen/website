@@ -32,7 +32,7 @@ aboutBody: >-
   ### Unser Regiomat
 
 
-  In unserem Regiomaten finden Sie Hausmacher Dosenwurst, Fleischwurst, drei verschiedene Sorten Bratwürste, Rindswürste, Gelbwurst und weitere Sorten Wurst, sowie Eier und Honig! Des Weiteren gibt es unsere mageren oder durchwachsenen Steaks zu kaufen. Hier ist für jeden etwas dabei.
+  In unserem Regiomaten finden Sie Hausmacher Dosenwurst, Fleischwurst, drei verschiedene Sorten Bratwürste, Rindswürste, Gelbwurst und weitere Sorten Wurst, sowie eigene Eier aus Bodenhaltung und verschiedene Salate! Unser Sortiment wechselt je nach Saison. Passend zum Grillwetter gibt es unsere mageren oder durchwachsenen Steaks zu kaufen. Für die kälteren Monate gibt es unsere Stiel- und Kammrippchen und Sauerkraut (500g Beutel). Hier ist für jeden etwas dabei.
 
 
   Schon gewusst: Neben Bargeld werden auch Kartenzahlungen an unserem Regiomaten akzeptiert.
@@ -41,9 +41,9 @@ aboutBody: >-
   Unser Regiomat ist für Sie rund um die Uhr in der Höllgartenstraße 31 in Dreieich-Götzenhain geöffnet.
 aboutLink: contact
 aboutLinkText: Kontakt / Öffnungszeiten
-aboutImage: /img/regiomat.jpg
+aboutImage: /img/regiomat-außen_winter.jpg
 contentTwoBody: >-
-  ![]()
+  ![](/img/regiomat-innen-winter.jpg)
 
 
   ### Unser Hofladen
@@ -88,9 +88,7 @@ contentTwoBody: >-
   Rheinstraße 6, 63303 Dreieich-Götzenhain
 
 
-
-
-  ![](/img/laden.jpg)
+  ![](/img/ladenbild_heller.jpg)
 contentTwoLink: contact
 contentTwoLinkText: Kontakt / Öffnungszeiten
 contentTwoImage: /img/photo5377778231664554583.jpg
