@@ -39,7 +39,7 @@ aboutBody: >-
 
 
   Unser Regiomat ist für Sie rund um die Uhr in der Höllgartenstraße 31 in Dreieich-Götzenhain geöffnet.
-aboutLink: contact
+aboutLink: kontakt
 aboutLinkText: Kontakt / Öffnungszeiten
 aboutImage: /img/regiomat-außen_winter.jpg
 contentTwoBody: >-
@@ -74,13 +74,13 @@ contentTwoBody: >-
   Gerne sind wir für Sie da:
 
 
-  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
+  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
 
-  Mittwoch: 09:00 - 13:00 Uhr\
+  Mittwoch: 09:00 - 13:00 Uhr  
 
-  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
+  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
 
-  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr\
+  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr  
 
   Samstag: 09:00 - 13:00 Uhr  
 
@@ -89,14 +89,14 @@ contentTwoBody: >-
 
 
   ![](/img/ladenbild_heller.jpg)
-contentTwoLink: contact
+contentTwoLink: kontakt
 contentTwoLinkText: Kontakt / Öffnungszeiten
 contentTwoImage: /img/photo5377778231664554583.jpg
 testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
-link: contact
+link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
 

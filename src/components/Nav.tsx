@@ -49,6 +49,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
             frontmatter {
               title
               hidePage
+              slug
             }
           }
         }
@@ -58,8 +59,8 @@ export const Navigation: FC<NavigationProps> = (props) => {
 
   const { pages } = data;
 
-  const isShowPage = (title: string) => {
-    return !pages.edges?.find(x => x.node.frontmatter.title.toLowerCase() === title.toLowerCase())?.node.frontmatter.hidePage ?? false;
+  const isShowPage = (slug: string) => {
+    return !pages.edges?.find(x => x.node.frontmatter.slug?.toLowerCase() === slug.toLowerCase())?.node.frontmatter.hidePage ?? false;
   }
 
   return (
@@ -76,12 +77,12 @@ export const Navigation: FC<NavigationProps> = (props) => {
                         <img src="/img/logo.png" alt="" />
                       </Link>
                     </div>
-                    {isShowPage("Produkte") &&
+                    {isShowPage("produkte") &&
                       <li>
-                        <Link to="/products/">Produkte</Link>
+                        <Link to="/produkte/">Produkte</Link>
                       </li>
                     }
-                    {(isShowPage("Landwirtschaft") || isShowPage("Landlädchen")) &&
+                    {(isShowPage("landwirtschaft") || isShowPage("landlaedchen")) &&
                       <li>
                         <a>Über uns</a>
                         <ul className="submenu">
@@ -99,7 +100,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
                       </li>
                     }
                     <li>
-                      <Link to="/contact">Kontakt</Link>
+                      <Link to="/kontakt">Kontakt</Link>
                     </li>
                   </ul>
                 </nav>
@@ -115,8 +116,8 @@ export const Navigation: FC<NavigationProps> = (props) => {
                   </button>
                   <ul className={`slicknav_nav ${mobileNavigation || "slicknav_hidden"}`} aria-hidden="true" role="menu">
                     <li><Link to="/">Startseite</Link></li>
-                    {isShowPage("Produkte") &&
-                      <li><Link to="/products/">Produkte</Link></li>
+                    {isShowPage("produkte") &&
+                      <li><Link to="/produkte/">Produkte</Link></li>
                     }
 
                     {(isShowPage("Landwirtschaft") || isShowPage("Landlädchen")) &&
@@ -127,16 +128,16 @@ export const Navigation: FC<NavigationProps> = (props) => {
                         </a>
 
                         <ul className={`submenu ${!subNavActive && "slicknav_hidden"}`} role="menu" aria-hidden="true">
-                          {isShowPage("Landwirtschaft") &&
+                          {isShowPage("landwirtschaft") &&
                             <li><Link role="menuitem" to="/landwirtschaft">Landwirtschaft</Link></li>
                           }
-                          {isShowPage("Landlädchen") &&
+                          {isShowPage("landlaedchen") &&
                             <li><Link role="menuitem" to="/landlaedchen">Landlädchen</Link></li>
                           }
                         </ul>
                       </li>
                     }
-                    <li><Link to="/contact">Kontakt</Link></li>
+                    <li><Link to="/kontakt">Kontakt</Link></li>
                   </ul>
                 </div>
               </div>

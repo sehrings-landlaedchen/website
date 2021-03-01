@@ -1,6 +1,6 @@
 ---
 template: ContactPage
-slug: contact
+slug: kontakt
 title: ""
 featuredImage: /img/website_teaser_neu.jpg
 subtitle: ""
