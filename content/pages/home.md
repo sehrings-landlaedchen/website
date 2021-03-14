@@ -40,7 +40,7 @@ newsBody: >-
   ***Bitte beachtet, dass ab Dienstag, den 23. März bis einschließlich Donnerstag, den 25. März. 2021 unser Landlädchen geschlossen ist. Hier bereiten wir euch etwas Tolles vor. Seid gespannt!***
 
 
-  ***Am Freitag, den 26. März 2021 freuen wir uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen in der Höllgartenstraße 31 begrüßen zu dürfen!***
+  ***Am Freitag, den 26. März 2021 freuen wir uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen in der Höllgartenstraße 31, 63303 Dreieich Götzenhain begrüßen zu dürfen! Hier stehen Euch Parkplätze direkt vor unserem Laden zur Verfügung.***
 
 
   Am Samstag, 27. März sind wir von 09:00 bis 13:00 Uhr für euch da.
@@ -82,13 +82,13 @@ newsBody: >-
   Schon gewusst?
 
 
-  Dieses Jahr stehen zwei große Ereignisse an. 😊 Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6!
+  Dieses Jahr stehen zwei große Ereignisse an. 😊 Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6, zum Anderen eröffnen wir unseren neuen Hofladen in der Höllgartenstraße 31 am 26. März 2021.
 
 
   Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾
 
 
-  Daher möchten wir euch heute einen kleinen Einblick aus 2003 geben. Hier seht ihr ein Zeitungsbild, das zeigt, dass wir bereits seit über 17 Jahren unsere Produkte sowie regionale Leckereien aus der Region anbieten. Getreu unserem Motto: Aus der Region - für die Region und mit ganz viel Herz. ♥️
+  Daher möchten wir euch heute einen kleinen Einblick aus 2003 geben. Hier seht ihr ein Zeitungsbild, das zeigt, dass wir bereits seit über 17 Jahren unsere Produkte, sowie regionale Leckereien aus der Region anbieten. Getreu unserem Motto: Aus der Region - für die Region und mit ganz viel Herz. ♥️
 
 
   ![](/img/jubiläum_zugeschnitten-2-.jpg)
@@ -96,7 +96,7 @@ aboutBody: >-
   ### Unser Regiomat
 
 
-  In unserem Regiomaten finden Sie Hausmacher Dosenwurst, Fleischwurst, drei verschiedene Sorten Bratwürste, Rindswürste, Gelbwurst und weitere Sorten Wurst, sowie eigene Eier aus Bodenhaltung und verschiedene Salate! Unser Sortiment wechselt je nach Saison. Passend zum Grillwetter gibt es unsere mageren oder durchwachsenen Steaks zu kaufen. Für die kälteren Monate gibt es unsere Stiel- und Kammrippchen und Sauerkraut (500g Beutel). Hier ist für jeden etwas dabei.
+  In unserem Regiomaten finden Sie Hausmacher Dosenwurst, Fleischwurst, drei verschiedene Sorten Bratwürste, Rindswürste, Gelbwurst und weitere Sorten Wurst, sowie Eier aus Bodenhaltung und verschiedene Salate! Unser Sortiment wechselt je nach Saison. Passend zum Grillwetter gibt es unsere mageren oder durchwachsenen Steaks zu kaufen. Für die kälteren Monate gibt es unsere Stiel- und Kammrippchen und Sauerkraut (500g Beutel). Hier ist für jeden etwas dabei.
 
 
   Schon gewusst: Neben Bargeld werden auch Kartenzahlungen an unserem Regiomaten akzeptiert.
