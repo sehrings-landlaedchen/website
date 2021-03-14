@@ -50,9 +50,10 @@ meta:
 * Dörrfleisch
 * Speck
 
-**Gekochter Schinken**
+
 **(Aufschnitts-)Wurst**
 
+* Gekochter Schinken
 * Lyoner
 * Bierschinken
 * Jagdwurst
@@ -66,7 +67,6 @@ meta:
 * Fleischwurst
 * Weißwürstchen
 * Kalbsleberwurst
-* Leberwurst (fein)
 * Teewurst
 * Wiener Würstchen
 * Sülzwurst
@@ -76,7 +76,7 @@ meta:
 * Pizzafleischkäse
 * Zwiebelfleischkäse
 * Frühstücksmettwurst
-* Frisches Tatar
+* Frisches Tatar (Rind)
 
 **Luftgetrocknete Wurst**
 
