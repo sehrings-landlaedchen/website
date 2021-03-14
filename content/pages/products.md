@@ -162,6 +162,8 @@ meta:
   * Vollkornweizenbrot
   * Bauernbrot (500g oder 750g)
   * Baguette
+
+    ![](/img/condit_couture-bild_zugeschnitten.jpg)
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
 * Dreieicher Honig
