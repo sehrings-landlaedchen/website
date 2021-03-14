@@ -164,7 +164,6 @@ meta:
       * Baguette
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
+* Dreieicher Honig
 
-  * Dreieicher Honig
-
-    ![](/img/honig_logo.jpeg)
+  ![](/img/honig_logo.jpeg)
