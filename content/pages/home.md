@@ -13,37 +13,43 @@ newsBody: >-
   Wichtige Informationen: 
 
 
-  Am Samstag, den 20. März 2021 geht eine Ära zu Ende: Unser Landlädchen in der Rheinstraße 6 schließt nach 25 Jahren um 13:00 Uhr.\
+  Am Samstag, den 20. März 2021 geht eine Ära zu Ende: Unser Landlädchen in der Rheinstraße 6 schließt nach 25 Jahren um 13:00 Uhr. 
 
-  Das Gute: Unser neues Landlädchen eröffnet am Freitag, den 26. März 2021 in der Höllgartenstraße 31 in Dreieich-Götzenhain.\
 
-  \
+  Das Gute: Unser neues Landlädchen eröffnet am Freitag, den 26. März 2021 in der Höllgartenstraße 31 in Dreieich-Götzenhain.
 
-  ***Unsere regulären Öffnungszeiten sind bis einschließlich 20. März 2021 wie folgt:***Dienstag: 09:00 bis 13:00 und 17:00 bis 18:30 Uhr\
 
-  Mittwoch: 09:00 bis 13:00 Uhr\
+  ***Unsere regulären Öffnungszeiten sind bis einschließlich 20. März 2021 wie folgt:***
 
-  Donnerstag 09:00 bis 13:00 und 17:00 bis 18:30 Uhr\
 
-  Freitag: 09:00 bis 13:00 und 15:00 bis 18:30 Uhr\
+  Dienstag: 09:00 bis 13:00 und 17:00 bis 18:30 Uhr
 
-  Samstag: 09:00 bis 13:00 Uhr\
 
-  \
+  Mittwoch: 09:00 bis 13:00 Uhr
 
-  Bitte beachtet, dass ab Dienstag, den 23. März bis einschließlich Donnerstag, den 25. März. 2021 unser Landlädchen geschlossen ist. Hier bereiten wir euch etwas Tolles vor. Seid gespannt!\
 
-  \
+  Donnerstag 09:00 bis 13:00 und 17:00 bis 18:30 Uhr
 
-  Am Freitag, den 26. März 2021 freuen wir uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen in der Höllgartenstraße 31 begrüßen zu dürfen!\
 
-  \
+  Freitag: 09:00 bis 13:00 und 15:00 bis 18:30 Uhr
 
-  Am Samstag, 27. März sind wir von 09:00 bis 13:00 Uhr für euch da.\
 
-  \
+  Samstag: 09:00 bis 13:00 Uhr
 
-  ***Unsere Öffnungszeiten in der darauffolgenden Osterwoche:***Montag, 29.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr\
+
+  Bitte beachtet, dass ab Dienstag, den 23. März bis einschließlich Donnerstag, den 25. März. 2021 unser Landlädchen geschlossen ist. Hier bereiten wir euch etwas Tolles vor. Seid gespannt!
+
+
+  Am Freitag, den 26. März 2021 freuen wir uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen in der Höllgartenstraße 31 begrüßen zu dürfen!
+
+
+  Am Samstag, 27. März sind wir von 09:00 bis 13:00 Uhr für euch da.
+
+
+  ***Unsere Öffnungszeiten in der darauffolgenden Osterwoche:***
+
+
+  Montag, 29.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr \
 
   Dienstag, 30.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr\
 
@@ -56,15 +62,16 @@ newsBody: >-
   Ostersamstag, 03.04.2021: 09:00 Uhr bis 13:00 Uhr
 
 
-  Ab dem Dienstag, 06. April 2021 gelten wieder unsere regulären Öffnungszeiten.\
+  Ab dem Dienstag, 06. April 2021 gelten wieder unsere regulären Öffnungszeiten.
+
 
   Wir freuen uns auf Euch!  
 
 
-  Familie Sehring
+  Familie Sehring 
 
 
-  <!--EndFragment-->
+  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
 
 
   Schon gewusst?
@@ -80,9 +87,6 @@ newsBody: >-
 
 
   ![](/img/jubiläum_zugeschnitten-2-.jpg)
-
-
-  Über das zweite Ereignis werden wir euch in Kürze berichten! Seid gespannt! 😉
 aboutBody: >-
   ### Unser Regiomat
 
