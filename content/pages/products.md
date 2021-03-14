@@ -155,13 +155,13 @@ meta:
 
 * Brot von CONDIT COUTURE aus traditionellen Bäckerhandwerk aus Langen –
   freitags und samstags bei uns im Hofladen erhältlich
-       *Urroggen (500g oder 1kg)*
-       Dinkelbrot
-       *Dinkelbrot mit Sonnenblumenkernen*
-       Vollkornweizenbrot
-       *Bauernbrot (500g oder 750g)*
-       Kartoffelbrot
-      * Baguette
+
+  * Urroggen (500g oder 1kg)
+  * Dinkelbrot
+  * Dinkelbrot mit Sonnenblumenkernen
+  * Vollkornweizenbrot
+  * Bauernbrot (500g oder 750g)
+  * Baguette
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
 * Dreieicher Honig
