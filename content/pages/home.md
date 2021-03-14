@@ -37,10 +37,10 @@ newsBody: >-
   Samstag: 09:00 bis 13:00 Uhr
 
 
-  Bitte beachtet, dass ab Dienstag, den 23. März bis einschließlich Donnerstag, den 25. März. 2021 unser Landlädchen geschlossen ist. Hier bereiten wir euch etwas Tolles vor. Seid gespannt!
+  ***Bitte beachtet, dass ab Dienstag, den 23. März bis einschließlich Donnerstag, den 25. März. 2021 unser Landlädchen geschlossen ist. Hier bereiten wir euch etwas Tolles vor. Seid gespannt!***
 
 
-  Am Freitag, den 26. März 2021 freuen wir uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen in der Höllgartenstraße 31 begrüßen zu dürfen!
+  ***Am Freitag, den 26. März 2021 freuen wir uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen in der Höllgartenstraße 31 begrüßen zu dürfen!***
 
 
   Am Samstag, 27. März sind wir von 09:00 bis 13:00 Uhr für euch da.
@@ -49,15 +49,20 @@ newsBody: >-
   ***Unsere Öffnungszeiten in der darauffolgenden Osterwoche:***
 
 
-  Montag, 29.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr \
+  Montag, 29.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr 
 
-  Dienstag, 30.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr\
 
-  Mittwoch, 31.03.2021: 09:00 Uhr bis 13:00 Uhr\
+  Dienstag, 30.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr
 
-  Gründonnerstag, 01.04.2021: 09:00 Uhr bis 13:00 und 16:00 bis 18:30 Uhr\
 
-  Karfreitag, 02.04.2021: geschlossen\
+  Mittwoch, 31.03.2021: 09:00 Uhr bis 13:00 Uhr
+
+
+  Gründonnerstag, 01.04.2021: 09:00 Uhr bis 13:00 und 16:00 bis 18:30 Uhr
+
+
+  Karfreitag, 02.04.2021: geschlossen
+
 
   Ostersamstag, 03.04.2021: 09:00 Uhr bis 13:00 Uhr
 
