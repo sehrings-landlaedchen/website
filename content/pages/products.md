@@ -166,3 +166,5 @@ meta:
 * Eingelegtes Gemüse von Barthmann
 
   * Dreieicher Honig
+
+    ![](/img/honig_logo.jpeg)
