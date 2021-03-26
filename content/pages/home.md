@@ -8,7 +8,7 @@ newsBody: >-
   Wichtige Informationen: 
 
 
-  Heute am Freitag, den 26. März 202 eröffnet unser neues Landlädchen in der Höllgartenstraße 31 in Dreieich-Götzenhain.
+  Heute am Freitag, den 26. März 2021 eröffnet unser neues Landlädchen in der Höllgartenstraße 31 in Dreieich-Götzenhain.
 
 
   ***Wir freuen uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen begrüßen zu dürfen! Hier stehen Euch Parkplätze direkt vor unserem Laden zur Verfügung.***
@@ -109,13 +109,13 @@ contentTwoBody: >-
   Gerne sind wir für Sie da:
 
 
-  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
+  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
 
-  Mittwoch: 09:00 - 13:00 Uhr\
+  Mittwoch: 09:00 - 13:00 Uhr  
 
-  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
+  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
 
-  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr\
+  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr  
 
   Samstag: 09:00 - 13:00 Uhr  
 
