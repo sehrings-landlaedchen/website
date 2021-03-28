@@ -1,23 +1,20 @@
 ---
+meta:
+  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
+    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
+  title: ""
+linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/website_teaser_neu.jpg
 newsBody: >-
-  Wichtige Informationen: 
+  Wichtige Informationen: Seit dem 26. März 2021 sind wir in unserem neuen
+  Landlädchen: Höllgartenstraße 31, 63303 Dreieich-Götzenhain.
 
 
-  Heute am Freitag, den 26. März 2021 eröffnet unser neues Landlädchen in der Höllgartenstraße 31 in Dreieich-Götzenhain.
-
-
-  ***Wir freuen uns euch von 10:00 bis 18:00 Uhr im neuen Landlädchen begrüßen zu dürfen! Hier stehen Euch Parkplätze direkt vor unserem Laden zur Verfügung.***
-
-
-  Am Samstag, 27. März sind wir von 09:00 bis 13:00 Uhr für euch da.
-
-
-  ***Unsere Öffnungszeiten in der darauffolgenden Osterwoche:***
+  ***Unsere Öffnungszeiten in der Osterwoche:***
 
 
   Montag, 29.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr 
@@ -38,7 +35,7 @@ newsBody: >-
   Ostersamstag, 03.04.2021: 09:00 Uhr bis 13:00 Uhr
 
 
-  Ab dem Dienstag, 06. April 2021 gelten wieder unsere regulären Öffnungszeiten.
+  Ab dem Dienstag, 06. April 2021 gelten wieder unsere regulären Öffnungszeiten (siehe "Kontakt").
 
 
   Wir freuen uns auf Euch!  
@@ -131,11 +128,6 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
-meta:
-  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
-    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
-  title: ""
-linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
