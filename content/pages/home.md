@@ -64,7 +64,15 @@ contentTwoBody: >-
   Neben den Grillspezalitäten bieten wir Ihnen, wie gewohnt, unsere Aufschnittwurst, rohen und gekochten Schinken, Fleischkäse (verschiedene Sorten), geräucherte Mettwürste (verschiedene Sorten), Hausmacher Wurst und vieles mehr an. Auch die leckeren, selbstgemachten Salate, wie Fleischsalat und Kartoffelsalat, gibt es als Beilage für einen perfekten Grillabend bei uns zu kaufen.
 
 
-  Dazu  führen wir Backwaren von einem Bäcker der Region, sowie saisonales Obst und Gemüse.
+  Dazu führen wir Backwaren von einem Bäcker der Region, sowie saisonales Obst und Gemüse.
+
+
+  ![](/img/img_3013.jpg)
+
+
+
+
+  ![](/img/img_3034.jpg)
 
 
   Gut zu wissen: Bestellungen nehmen wir gerne vorab unter 06103/86875 entgegen. Kartenzahlungen sind bei uns auch möglich.
@@ -73,13 +81,13 @@ contentTwoBody: >-
   Gerne sind wir für Sie da:
 
 
-  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
+  Dienstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
 
-  Mittwoch: 09:00 - 13:00 Uhr  
+  Mittwoch: 09:00 - 13:00 Uhr\
 
-  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr  
+  Donnerstag: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
 
-  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr  
+  Freitag: 09:00 - 13:00 Uhr und 15:00 - 18:30 Uhr\
 
   Samstag: 09:00 - 13:00 Uhr  
 
@@ -87,10 +95,13 @@ contentTwoBody: >-
   Höllgartenstraße 31, 63303 Dreieich-Götzenhain
 
 
-  ![](/img/ladenbild_heller.jpg)
+  ![](/img/img_3025.jpg)
+
+
+  ![](/img/img_3016.jpg)
 contentTwoLink: kontakt
 contentTwoLinkText: Kontakt / Öffnungszeiten
-contentTwoImage: /img/photo5377778231664554583.jpg
+contentTwoImage: /img/img_3011-2-.jpg
 testimonialText: ""
 testimonials: []
 brandText: ""
