@@ -14,43 +14,10 @@ newsBody: >-
   Landlädchen: Höllgartenstraße 31, 63303 Dreieich-Götzenhain.
 
 
-  ***Unsere Öffnungszeiten in der Osterwoche:***
-
-
-  Montag, 29.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr 
-
-
-  Dienstag, 30.03.2021: 09:00 Uhr bis 13:00 und 17:00 bis 18:30 Uhr
-
-
-  Mittwoch, 31.03.2021: 09:00 Uhr bis 13:00 Uhr
-
-
-  Gründonnerstag, 01.04.2021: 09:00 Uhr bis 13:00 und 16:00 bis 18:30 Uhr
-
-
-  Karfreitag, 02.04.2021: geschlossen
-
-
-  Ostersamstag, 03.04.2021: 09:00 Uhr bis 13:00 Uhr
-
-
-  Ab dem Dienstag, 06. April 2021 gelten wieder unsere regulären Öffnungszeiten (siehe "Kontakt").
-
-
-  Wir freuen uns auf Euch!  
-
-
-  Familie Sehring 
-
-
   \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\__
 
 
-  Schon gewusst?
-
-
-  Dieses Jahr stehen zwei große Ereignisse an. 😊 Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6, zum Anderen eröffnen wir unseren neuen Hofladen in der Höllgartenstraße 31 am 26. März 2021.
+  2021 ist ein ganz besonderes Jahr: Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6, zum Anderen haben wir unseren neuen Hofladen in der Höllgartenstraße 31 am 26. März 2021 eröffnet.
 
 
   Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾
