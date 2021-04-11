@@ -116,4 +116,8 @@ Wir sind Landwirte aus Überzeugung. Die Landwirtschaft ist für uns kein Beruf,
 Verstärkt nutzen auch junge Leute die Möglichkeit, vor Ort regional erzeugte Produkte zu kaufen. Unsere Kunden schätzen dabei die Frische und Qualität unserer Produkte.
 <br />
 <br />
+
+![](/img/website_teaser_neu.jpg)
+
+
 *Auf dem Familienbild sind zu sehen hintere Reihe v.l.n.r.: Carolin, Christian, Monica, Horst, Annalena  sowie im Vordergrund Heinz und Annemarie Sehring*
