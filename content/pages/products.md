@@ -3,7 +3,7 @@ template: ProductsPage
 slug: produkte
 hidePage: false
 title: ""
-featuredImage: /img/ladenbild_heller.jpg
+featuredImage: /img/img-20210326-wa0014.jpg
 subtitle: ""
 hideProductList: true
 meta:
