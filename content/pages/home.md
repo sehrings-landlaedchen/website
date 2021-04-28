@@ -135,5 +135,14 @@ Verstärkt nutzen auch junge Leute die Möglichkeit, vor Ort regional erzeugte P
 
 ![](/img/website_teaser_neu.jpg)
 
-
 *Auf dem Familienbild sind zu sehen hintere Reihe v.l.n.r.: Carolin, Christian, Monica, Horst, Annalena  sowie im Vordergrund Heinz und Annemarie Sehring*
+
+
+
+2021 ist ein ganz besonderes Jahr: Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6, zum Anderen haben wir unseren neuen Hofladen in der Höllgartenstraße 31 am 26. März 2021 eröffnet.
+
+Ein viertel Jahrhundert Liebe ❤️ und vollen Einsatz für unseren mehrgenerationen-Familienbetrieb. 🚜🌾
+
+Daher möchten wir euch heute einen kleinen Einblick aus 2003 geben. Hier seht ihr ein Zeitungsbild, das zeigt, dass wir bereits seit über 17 Jahren unsere Produkte, sowie regionale Leckereien aus der Region anbieten. Getreu unserem Motto: Aus der Region - für die Region und mit ganz viel Herz. ♥️
+
+![](/img/jubiläum.jpg)
