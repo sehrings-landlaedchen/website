@@ -9,12 +9,8 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: >-
-  **Wichtige Informationen: Seit dem 26. März 2021 sind wir in unserem neuen
-  Landlädchen: Höllgartenstraße 31, 63303 Dreieich-Götzenhain.**
-
-
-  **Bitte beachten Sie zudem, dass am Dienstag, 04. Mai 2021 und Mittwoch, 05. Mai 2021 unser Landlädchen geschlossen ist. Ab Donnerstag, 06. Mai 2021 sind wir wieder in bester Qualität und neuer Frische für Sie da! Vielen Dank für Ihr Verständnis! Ihr Sehring's Landlädchen Team**
+newsBody: "**Wichtige Informationen: Seit dem 26. März 2021 sind wir in unserem
+  neuen Landlädchen: Höllgartenstraße 31, 63303 Dreieich-Götzenhain.**"
 aboutBody: >-
   ### Unser Regiomat
 
