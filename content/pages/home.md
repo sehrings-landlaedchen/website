@@ -5,13 +5,10 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: >-
-  **Wichtige Informationen:** 
+  **Wichtige Information:** 
 
 
   **Seit dem 26. März 2021 sind wir in unserem neuen Landlädchen: Höllgartenstraße 31, 63303 Dreieich-Götzenhain.**
-
-
-  **Am Mittwoch, den 02. Juni 2021 haben wir neben unseren regulären Öfffnungszeiten (9:00 - 13:00 Uhr) ebenfalls am Nachmittag von 17:00 - 18:30 Uhr geöffnet.**
 aboutBody: >-
   ### Unser Regiomat
 
@@ -103,7 +100,7 @@ link: kontakt
 Wir sind ein Familienbetrieb mit Herz in der dritten Generation aus der Region Dreieich.
 <br />
 <br />
-Mitten im Ortskern von Dreieich-Götzenhain liegt unser Hof. Dort haben wir unseren Hofladen mit einer breiten Palette an selbst erzeugten Waren, welche sowohl auf dem Frühstücks- als auch auf dem Abendbrottisch landen können. Wir bieten qualitativ hochwertiges Fleisch, Eier aus Bodenhaltung, kontrolliert angebaute Kartoffeln und vieles mehr.
+Mitten im Ortskern von Dreieich-Götzenhain liegt unser Bauernhof. Seit dem 26. März 2021 ist unser Landlädchen von der Rheinstraße 6 in die Höllgartenstraße 31 umgezogen. Hier  haben wir unseren neuen Hofladen mit einer breiten Palette an selbst erzeugten Waren, welche sowohl auf dem Frühstücks- als auch auf dem Abendbrottisch landen können. Wir bieten qualitativ hochwertiges Fleisch, Eier aus Bodenhaltung, kontrolliert angebaute Kartoffeln und vieles mehr.
 <br />
 <br />
 Wir bewirten 30 Hektar Land. Auf den Ackerflächen bauen wir ganz klassisch Gerste, Hafer, Roggen, Weizen und Saisongemüse an. Produkte, welche wir nicht selbst herstellen können, beziehen wir von befreundeten Berufskollegen. In unseren Ställen halten wir Hühner und Schweine artgerecht auf eigenem Stroh. Besonders stolz sind wir auf den Anbau von Futtererbsen. Mit dieser eiweißhaltigen Nahrung werden unsere Schweine gefüttert, so dass wir vollständig auf Soja als Futtermittel verzichten können.
@@ -121,8 +118,6 @@ Verstärkt nutzen auch junge Leute die Möglichkeit, vor Ort regional erzeugte P
 ![](/img/website_teaser_neu.jpg)
 
 *Auf dem Familienbild sind zu sehen hintere Reihe v.l.n.r.: Carolin, Christian, Monica, Horst, Annalena  sowie im Vordergrund Heinz und Annemarie Sehring*
-
-
 
 2021 ist ein ganz besonderes Jahr: Zum einen feiert unser Landlädchen dieses Jahr 25 jähriges Bestehen in der Rheinstraße 6, zum Anderen haben wir unseren neuen Hofladen in der Höllgartenstraße 31 am 26. März 2021 eröffnet.
 
