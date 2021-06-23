@@ -16,3 +16,12 @@
     }
   }
 }
+.ProductsPage .list-indentation {
+  ul, li {
+    list-style: circle;
+    margin-left: 15px;
+    font-size: 18px;
+    font-family: Josefin Sans,sans-serif;
+    font-weight: 300;
+  }
+}

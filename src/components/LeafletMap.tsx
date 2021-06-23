@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Map, TileLayer, Popup, Marker } from 'react-leaflet'
+import { MapContainer, TileLayer, Popup, Marker, useMap } from 'react-leaflet'
 import { LatLngExpression } from 'leaflet';
 import "./LeafletMap.scss"
 import { MarkdownRemarkFrontmatterLocations } from '../graphql';
@@ -13,16 +13,11 @@ const LeafletMap: FC<LeafletMapProps> = props => {
   const { locations } = props;
   const mapPosition: LatLngExpression = [parseFloat(props.locations[0].lat), parseFloat(props.locations[0].lng)];
 
-  const initMarker = (ref: { leafletElement: { openPopup: () => void } }) => {
-    if (ref) {
-      ref.leafletElement.openPopup()
-    }
-  }
   const isServer = typeof window === 'undefined';
   const isIOS = isServer ? false : /iPad|iPhone|iPod/.test(window.navigator.platform) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)
 
   return (
-    <Map
+    <MapContainer
       center={mapPosition}
       zoom={props.zoom}
       style={{ height: '50vh', width: '100%', zIndex: 10 }}
@@ -35,7 +30,7 @@ const LeafletMap: FC<LeafletMapProps> = props => {
       {locations?.map(location => {
         const position: LatLngExpression = [parseFloat(location.lat), parseFloat(location.lng)];
         return (
-          <Marker position={position} ref={initMarker} key={location.title}>
+          <Marker position={position} key={location.title}>
             <Popup closeButton={false} closeOnClick={false} closeOnEscapeKey={false} onClose={() => { }} autoClose={false}>
               <p>
                 {location.title}
@@ -53,7 +48,7 @@ const LeafletMap: FC<LeafletMapProps> = props => {
           </Marker>
         )
       })}
-    </Map>
+    </MapContainer>
   )
 }
 LeafletMap.defaultProps = {

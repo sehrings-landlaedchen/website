@@ -3,7 +3,7 @@ template: DefaultPage
 title: Kartoffel
 description: Beste Kartoffeln aus der Umgebung
 price: 1.01
-featuredImage: /img/340x370.png
+featuredImage: /img/img_1789.jpg
 categories:
   - category: Gemüse
 ---
