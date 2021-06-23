@@ -37,7 +37,7 @@ const Footer: FC<FooterProps> = (props) => {
             </div>
             {props.socialMediaLinks && props.socialMediaLinks.length > 0 &&
               <div className="col-xl-3 col-md-12 col-lg-4">
-                <div className="social_links text-left">
+                <div className="social_links text-start">
                   <ul>
                     {props.socialMediaLinks.map((socialLink, i) =>
                       <li key={i}>

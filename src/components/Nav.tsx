@@ -120,7 +120,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
                       <li><Link to="/produkte/">Produkte</Link></li>
                     }
 
-                    {(isShowPage("Landwirtschaft") || isShowPage("Landlädchen")) &&
+                    {(isShowPage("Landwirtschaft") || isShowPage("Landlaedchen")) &&
                       <li className="slicknav_collapsed slicknav_parent">
                         <a href="#" role="menuitem" aria-haspopup="true" tabIndex={-1} className="slicknav_item slicknav_row" onClick={() => setSubNavActive(!subNavActive)}>
                           <span tabIndex={-1}>Über uns <i className="ti-angle-down"></i></span>
@@ -131,7 +131,7 @@ export const Navigation: FC<NavigationProps> = (props) => {
                           {isShowPage("landwirtschaft") &&
                             <li><Link role="menuitem" to="/landwirtschaft">Landwirtschaft</Link></li>
                           }
-                          {isShowPage("landlaedchen") &&
+                          {isShowPage("Landlaedchen") &&
                             <li><Link role="menuitem" to="/landlaedchen">Landlädchen</Link></li>
                           }
                         </ul>

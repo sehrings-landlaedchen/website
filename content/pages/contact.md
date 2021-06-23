@@ -11,15 +11,15 @@ address: |-
 
   ### Sehring`s Landlädchen, Höllgartenstraße 31, 63303 Dreieich
 
-  |            |                           |
-  | ---------- | ------------------------- |
-  | Montag     | \-                        |
-  | Dienstag   | 09.00 - 13.00, 17 - 18.30 |
-  | Mittwoch   | 09.00 - 13.00             |
-  | Donnerstag | 09.00 - 13.00, 17 - 18.30 |
-  | Freitag    | 09.00 - 13.00, 15 - 18.30 |
-  | Samstag    | 09.00 - 13.00             |
-  | Sonntag    | \-                        |
+  |  |  |
+  | - | - |
+  |Montag     | \-                        |  
+  |Dienstag   | 09.00 - 13.00, 17 - 18.30 |  
+  |Mittwoch   | 09.00 - 13.00             |  
+  |Donnerstag | 09.00 - 13.00, 17 - 18.30 |  
+  |Freitag    | 09.00 - 13.00, 15 - 18.30 |  
+  |Samstag    | 09.00 - 13.00             |  
+  |Sonntag    | \-                        |  
 phone: 06103 86875
 email: info@sehrings-landlaedchen.de
 locations:
@@ -35,4 +35,5 @@ meta:
   description: This is a meta description.
   title: Kontakt
 ---
+
 # Kontakt

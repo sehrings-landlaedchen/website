@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import ReactDOMServer from 'react-dom/server'
-import Marked from 'react-markdown'
+import ReactMarkdown from 'react-markdown'
 import Image from './Image'
+import gfm from "remark-gfm"
 
 import './Content.css'
 
@@ -86,13 +87,13 @@ const Content: FC<ContentProps> = ({ source, src, className = '' }) => {
   }
 
   return (
-    <Marked
+    <ReactMarkdown
       className={`Content ${className}`}
-      source={encodeMarkdownURIs(source)}
-      renderers={{
-        image: MyImage,
-        html: HtmlBlock
+      components={{
+        img: MyImage
       }}
+      remarkPlugins={[gfm]}
+      children={encodeMarkdownURIs(source)}
     />
   )
 }

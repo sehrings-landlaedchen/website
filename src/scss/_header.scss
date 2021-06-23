@@ -10,6 +10,7 @@
         margin-left: auto;
         margin-right: auto;
         z-index: 99999;
+        width: 100px;
         img{
             width: 100px;
         }
@@ -63,6 +64,7 @@
                         padding: 35px 10px 35px 10px;
                         font-family: $font1;
                         position: relative;
+                        text-decoration: none;
                         @media #{$mid_device} {
                             padding: 35px 8px 35px 8px;
                         }
