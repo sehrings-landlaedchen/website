@@ -50,7 +50,7 @@ module.exports = {
           {
             resolve: `gatsby-plugin-sitemap`,
             options: {
-              exclude: [
+              excludes: [
                 `/products`,
                 `/products/*`,
                 `/product-categories/*`,
