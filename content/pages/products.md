@@ -95,13 +95,16 @@ meta:
 
   * Frische Bratwürste
   * Gebrühte Bratwürste
-* Zur Grillsaison:
+  * Gebrühte Bratwürste mit Kräutern verfeinert
+  * Gebühte Jalapeno-Bratwürste mit Käse
 
-  * marinierte Kammsteaks (durchwachsen)
-  * marinierte Rückensteaks (mager)
-  * marinierte Grillfackeln
-  * marinierte Lendenspieße
-  * Schaschlik-Spieße
+**Zur Grillsaison und anderen Anlässen:**
+
+* marinierte Kammsteaks (durchwachsen)
+* marinierte Rückensteaks (mager)
+* marinierte Grillfackeln
+* marinierte Lendenspieße
+* Schaschlik-Spieße
 * Gyros
 * Hackfleisch
 * Spareribs
@@ -129,9 +132,15 @@ meta:
 * Wurstfett
 * Schweineschmalz
 
-**Suppenhühner**
+**Heißtheke:** 
 
-* Bestellungen werden im Herbst bis Frühjahr gerne entgegengenommen. Wir informieren Sie telefonisch, wenn diese zur Abholung bereitstehen.
+* In unserer Heißtheke bieten wir täglich von 9:00 bis 13:00 Uhr verschiedene hausgemachte Produkte an (wechselndes Angebot):
+
+  * Feiner Fleischkäse
+  * Pizzafleischkäse
+  * Zwiebelfleischkäse
+  * Panierte Schweineschnitzel
+  * Frikadellen  
 
 **Eier aus Bodenhaltung**
 
