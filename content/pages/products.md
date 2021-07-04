@@ -117,8 +117,6 @@ meta:
 * RinderHaftstrafe (natur oder mariniert)
 * Rindfleischspieße
 
-
-
 **Sonstiges:**
 
 * Fleischsalat – hausgemacht
@@ -140,10 +138,9 @@ meta:
 * Klasse XL
 * Klasse L
 * Klasse M
-* Klasse S
-* Gefärbte Eier Klasse M
+* Gefärbte Eier Klasse M (zur Osterzeit)
 
-**Kartoffeln (mehlig- oder festkochende, aus eigenem Anbau)**
+**Kartoffeln (mehlig- oder festkochende, u.a. aus eigenem Anbau)**
 
 **Obst**
 
@@ -163,7 +160,7 @@ meta:
 **Sonstige Produkte:**
 
 * Brot von CONDIT COUTURE aus traditionellen Bäckerhandwerk aus Langen –
-  freitags und samstags bei uns im Hofladen erhältlich
+  dienstags bis samstags bei uns im Hofladen erhältlich
 
   * Urroggen (500g oder 1kg)
   * Dinkelbrot
@@ -171,8 +168,10 @@ meta:
   * Vollkornweizenbrot
   * Bauernbrot (500g oder 750g)
   * Baguette
+  * Pfeffer-Salz-Baguette
+  * Wasserweck, Körner- und Roggenbrötchen 
 
-    ![]()
+  ![]()
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
 * Dreieicher Honig
