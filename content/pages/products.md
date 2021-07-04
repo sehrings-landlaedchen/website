@@ -134,7 +134,7 @@ meta:
 
 **Heißtheke:** 
 
-* In unserer Heißtheke bieten wir täglich von 9:00 bis 13:00 Uhr verschiedene hausgemachte Produkte an (wechselndes Angebot):
+* In unserer Heißtheke bieten wir täglich von 9:00 bis 13:00 Uhr verschiedene hausgemachte Produkte an, welche mit Brötchen gekauft werden können (wechselndes Angebot):
 
   * Feiner Fleischkäse
   * Pizzafleischkäse
