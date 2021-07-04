@@ -50,10 +50,10 @@ meta:
 * Dörrfleisch
 * Speck
 
-
 **(Aufschnitts-)Wurst**
 
 * Gekochter Schinken
+* Schwarze Nuss
 * Lyoner
 * Bierschinken
 * Jagdwurst
@@ -80,8 +80,7 @@ meta:
 
 **Luftgetrocknete Wurst**
 
-* Chorizo (Würzige Paprikawurst)
-* Mediterraneo (Eine Art Ahle Wurst)
+* Chorizo (Würzige hausgemachte Paprikawurst)
 
 **Fleischwaren vom Schwein:**
 
@@ -101,7 +100,8 @@ meta:
   * marinierte Kammsteaks (durchwachsen)
   * marinierte Rückensteaks (mager)
   * marinierte Grillfackeln
-  * marinierte Filetsteaks
+  * marinierte Lendenspieße
+  * Schaschlik-Spieße
 * Gyros
 * Hackfleisch
 * Spareribs
@@ -109,6 +109,15 @@ meta:
 * Bratwurst
 * Haspel/Schäufelchen
 * Stich
+
+**Fleischwaren vom Rind:**
+
+* Rinderfilet-Medaillons (natur oder mariniert)
+* Rumpsteaks (natur oder mariniert)
+* RinderHaftstrafe (natur oder mariniert)
+* Rindfleischspieße
+
+
 
 **Sonstiges:**
 
