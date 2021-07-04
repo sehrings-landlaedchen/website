@@ -8,7 +8,7 @@ newsBody: >-
   **Wichtige Information:** 
 
 
-  **Seit dem 26. März 2021 befindet sich unser neues Landlädchen in der Höllgartenstraße 31, 63303 Dreieich-Götzenhain.**
+  **Seit dem 26. März 2021 befindet sich unser neues Landlädchen in der Höllgartenstraße 31, 63303 Dreieich-Götzenhain!**
 aboutBody: >-
   ### Unser Regiomat
 
