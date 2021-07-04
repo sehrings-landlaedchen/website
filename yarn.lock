@@ -6048,7 +6048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
+"chalk@npm:^4.0, chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.1
   resolution: "chalk@npm:4.1.1"
   dependencies:
@@ -7598,7 +7598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:4.2.2, deepmerge@npm:^4.0.0, deepmerge@npm:^4.2.2":
+"deepmerge@npm:4.2.2, deepmerge@npm:^4.0, deepmerge@npm:^4.0.0, deepmerge@npm:^4.2.2":
   version: 4.2.2
   resolution: "deepmerge@npm:4.2.2"
   checksum: 85abf8e0045ee280996e7d2396979c877ef0741e413b716e42441110e0a83ac08098b2a49cea035510060bf667c0eae3189b2a52349f5fa4b000c211041637b1
@@ -10225,6 +10225,21 @@ fsevents@~2.3.2:
     react: ^16.9.0 || ^17.0.0
     react-dom: ^16.9.0 || ^17.0.0
   checksum: 143dfb3da4338837604239be8449a33e2e984d5ccaa86b991a70c683d8cc2c0f3cd7cee085f45703ea0361a89ef3334815bf42928c8f359659c0d67c5f804e86
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-netlify@npm:3.8.0":
+  version: 3.8.0
+  resolution: "gatsby-plugin-netlify@npm:3.8.0"
+  dependencies:
+    "@babel/runtime": ^7.14.0
+    fs-extra: ^8.1.0
+    kebab-hash: ^0.1.2
+    lodash: ^4.17.21
+    webpack-assets-manifest: ^5.0.5
+  peerDependencies:
+    gatsby: ^3.0.0-next.0
+  checksum: b308c4006606353c80c9f1cfbe84d3acb095ffd32027efc2598e062fadf411abeb97609e5b37111655fb862bf14d510d2cba2857d0b78e6ffb3b44f88af2022e
   languageName: node
   linkType: hard
 
@@ -13820,6 +13835,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"kebab-hash@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "kebab-hash@npm:0.1.2"
+  dependencies:
+    lodash.kebabcase: ^4.1.1
+  checksum: 645e336f9d4443da15152d03fc4b339273a127984633e49d91b5885923cbcc4d4fa8b11180f579499fdf2181f71ff2e74f56ff9770cd7919a5968245c6e9ac0a
+  languageName: node
+  linkType: hard
+
 "keyv@npm:3.0.0":
   version: 3.0.0
   resolution: "keyv@npm:3.0.0"
@@ -14138,6 +14162,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"lockfile@npm:^1.0":
+  version: 1.0.4
+  resolution: "lockfile@npm:1.0.4"
+  dependencies:
+    signal-exit: ^3.0.2
+  checksum: b7e33be9777cf6fd8a2f9771ee7621bb6d091c4e076f51459e42a2c6a21837bdea9fe0a248e73334ed80fbd9aaade929d5fbd8d9a0315a91a38374d0d48e29dd
+  languageName: node
+  linkType: hard
+
 "lodash-es@npm:^4.17.15":
   version: 4.17.21
   resolution: "lodash-es@npm:4.17.21"
@@ -14201,10 +14234,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lodash.get@npm:^4":
+"lodash.get@npm:^4, lodash.get@npm:^4.0":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
   checksum: 447e575e3caa5131ef44e5a0c135b1614f3c937d86b3be0568f9da7b0fd015010af3b6b4e41edf6e2698c9ce2dcc061ca71b31f274f799c991dceb018be16e4f
+  languageName: node
+  linkType: hard
+
+"lodash.has@npm:^4.0":
+  version: 4.5.2
+  resolution: "lodash.has@npm:4.5.2"
+  checksum: ed2cbed6f3f06fe2ae0a604464208a758197624810e58c4928de3ab9a00d2ac736ade10f49b6ea77f96c702f9d104189a57a7af0bfa1725e8554524aa9466f41
   languageName: node
   linkType: hard
 
@@ -14254,6 +14294,13 @@ fsevents@~2.3.2:
   version: 4.0.1
   resolution: "lodash.isstring@npm:4.0.1"
   checksum: 20c46960b74fd63c27b534f1725cd4141ac19b35c7250affee37c8b7899b1a4c5e9820becfafe571a4d48cd4c86206ee03c2e93fe943dbeab82ddd5cab710540
+  languageName: node
+  linkType: hard
+
+"lodash.kebabcase@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "lodash.kebabcase@npm:4.1.1"
+  checksum: cee7b365bf62c9ae357d8c5cbd1dc767ce626fecea31b8ff7919cb15adaf2c36652fb07688bf8d55e71c456ac8e5dc7c85bf12f88716114bde232645714d538f
   languageName: node
   linkType: hard
 
@@ -20834,7 +20881,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^3.0.0":
+"schema-utils@npm:^3.0, schema-utils@npm:^3.0.0":
   version: 3.0.0
   resolution: "schema-utils@npm:3.0.0"
   dependencies:
@@ -20904,6 +20951,7 @@ resolve@^2.0.0-next.3:
     gatsby-plugin-google-analytics: 3.8.0
     gatsby-plugin-image: 1.8.0
     gatsby-plugin-manifest: 3.8.0
+    gatsby-plugin-netlify: 3.8.0
     gatsby-plugin-netlify-cms: 5.8.0
     gatsby-plugin-offline: 4.8.0
     gatsby-plugin-react-helmet: 4.8.0
@@ -22462,7 +22510,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tapable@npm:^2.0.0, tapable@npm:^2.1.1, tapable@npm:^2.2.0":
+"tapable@npm:^2.0, tapable@npm:^2.0.0, tapable@npm:^2.1.1, tapable@npm:^2.2.0":
   version: 2.2.0
   resolution: "tapable@npm:2.2.0"
   checksum: f8ed725aedb3d777bf908ff06c02d1a2108667d3e64af87dd45354ac8de67e7e4fe1a567e215057fb1a2a5437b31d80cc5e5ddbb8327f7280afd4494967a9a93
@@ -24023,6 +24071,23 @@ resolve@^2.0.0-next.3:
   version: 1.1.2
   resolution: "web-vitals@npm:1.1.2"
   checksum: 76b4979a8d786201ac5c165ddea67a1076c07565e823f0d77aa3a3678e9ba6d2856ce14a89af30efe302960e3310c1972a1bbccab2b5bad61eb62a1a33e11f4f
+  languageName: node
+  linkType: hard
+
+"webpack-assets-manifest@npm:^5.0.5":
+  version: 5.0.6
+  resolution: "webpack-assets-manifest@npm:5.0.6"
+  dependencies:
+    chalk: ^4.0
+    deepmerge: ^4.0
+    lockfile: ^1.0
+    lodash.get: ^4.0
+    lodash.has: ^4.0
+    schema-utils: ^3.0
+    tapable: ^2.0
+  peerDependencies:
+    webpack: ^5.2.0
+  checksum: 7a45137d9065b55b417495d734c9d6231ca65b93dee4f9456e51c5e8a546c8cac14fe90b85d15f8db061ddefa9d51d775cd24c5981b2e52f01e6fc7f42401faa
   languageName: node
   linkType: hard
 
