@@ -94,13 +94,5 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-leaflet',
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: `${__dirname}/src/svg`
-        }
-      }
-    }
   ],
 }

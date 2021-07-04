@@ -5391,13 +5391,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"big.js@npm:^3.1.3":
-  version: 3.2.0
-  resolution: "big.js@npm:3.2.0"
-  checksum: 6f08a28dd4501758ec069301182763f847633c6bc63b04714547c8b85b4b6e1d5772901370a8fca1f7d82f1ca9b2b9165ebbf397b46d9e05fbd84b9b06556999
-  languageName: node
-  linkType: hard
-
 "big.js@npm:^5.2.2":
   version: 5.2.2
   resolution: "big.js@npm:5.2.2"
@@ -7252,7 +7245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css@npm:2.2.4, css@npm:^2.0.0":
+"css@npm:^2.0.0":
   version: 2.2.4
   resolution: "css@npm:2.2.4"
   dependencies:
@@ -10308,17 +10301,6 @@ fsevents@~2.3.2:
     leaflet: ^1.7.1
     react-leaflet: ^3.0.0
   checksum: 75f67fa0463283fec32e6a8b2d0fa7250fa08f32c96fe3f3e33643b3578627107259b96245951abf3c8e98f5e46a826b7cb281fd6b2fdbab89a49cafaba86369
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-react-svg@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "gatsby-plugin-react-svg@npm:3.0.1"
-  dependencies:
-    svg-react-loader: ^0.4.4
-  peerDependencies:
-    gatsby: ^3.0.0 || ^2.0.0
-  checksum: f828e895c8365aa71a5879ba853592d62be93f8ae3ec87660e53476d44cd85118f84c8947ec61202452d494d67c0d957d5582ba46986360904ec25b1454876ed
   languageName: node
   linkType: hard
 
@@ -13724,15 +13706,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"json5@npm:^0.5.0":
-  version: 0.5.1
-  resolution: "json5@npm:0.5.1"
-  bin:
-    json5: lib/cli.js
-  checksum: 002ce9e56c4159e5a62fc4891dc2fba1fdc077fba417042e9dd54f8c37da80c0274feb5fa4c0acb3efbc8906d5763b4ff292d512269e1951967d530130bd80b8
-  languageName: node
-  linkType: hard
-
 "json5@npm:^1.0.1":
   version: 1.0.1
   resolution: "json5@npm:1.0.1"
@@ -14111,17 +14084,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:1.1.0":
-  version: 1.1.0
-  resolution: "loader-utils@npm:1.1.0"
-  dependencies:
-    big.js: ^3.1.3
-    emojis-list: ^2.0.0
-    json5: ^0.5.0
-  checksum: 5f19ed9ae13476eae41745d6da0d4b265a9148f6f03ed8b2b8c562516c2879281fda8957f8859309f00c4b3e107b3f0db6e5c727513ac75063bfb496e93e1fb0
-  languageName: node
-  linkType: hard
-
 "loader-utils@npm:1.2.3":
   version: 1.2.3
   resolution: "loader-utils@npm:1.2.3"
@@ -14438,7 +14400,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.21, lodash@npm:^4.0.0, lodash@npm:^4.0.1, lodash@npm:^4.1.1, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
+"lodash@npm:4.17.21, lodash@npm:^4.0.1, lodash@npm:^4.1.1, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 4983720b9abca930a4a46f18db163d7dad8dd00dbed6db0cc7b499b33b717cce69f80928b27bbb1ff2cbd3b19d251ee90669a8b5ea466072ca81c2ebe91e7468
@@ -18825,13 +18787,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ramda@npm:0.21.0":
-  version: 0.21.0
-  resolution: "ramda@npm:0.21.0"
-  checksum: 55aafeed7e42871dfac86dbfdb5b91668629b454ca50249361e75f084ca7bc9272b5734ef7c0f66cd2b41ff531f8a2c8874f8797f685d512307211829dce9834
-  languageName: node
-  linkType: hard
-
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -20781,13 +20736,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"rx@npm:4.1.0":
-  version: 4.1.0
-  resolution: "rx@npm:4.1.0"
-  checksum: 2f8818608864d0a3fcaf8210f4dcc9a8acef2ad041c6b9478bbf2059d1b1efe289226d436a05dfb9038996b833529c28e69eab0f10f26baf3fadc1e5fb8f24bd
-  languageName: node
-  linkType: hard
-
 "rxjs@npm:^6.3.3, rxjs@npm:^6.5.2, rxjs@npm:^6.5.3, rxjs@npm:^6.6.0":
   version: 6.6.7
   resolution: "rxjs@npm:6.6.7"
@@ -21008,7 +20956,6 @@ resolve@^2.0.0-next.3:
     gatsby-plugin-offline: 4.8.0
     gatsby-plugin-react-helmet: 4.8.0
     gatsby-plugin-react-leaflet: 3.0.2
-    gatsby-plugin-react-svg: ^3.0.1
     gatsby-plugin-sass: 4.8.0
     gatsby-plugin-sharp: 3.8.0
     gatsby-plugin-sitemap: 4.4.0
@@ -22478,20 +22425,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"svg-react-loader@npm:^0.4.4":
-  version: 0.4.6
-  resolution: "svg-react-loader@npm:0.4.6"
-  dependencies:
-    css: 2.2.4
-    loader-utils: 1.1.0
-    ramda: 0.21.0
-    rx: 4.1.0
-    traverse: 0.6.6
-    xml2js: 0.4.17
-  checksum: c284c42263e6dfe738d74c799f983142f02cce11fed7e63f859d753eb34330d34001e08971b020e71cc7646f97eb868c68f991b516b02e38e62c3588c658d189
-  languageName: node
-  linkType: hard
-
 "svgo@npm:1.3.2":
   version: 1.3.2
   resolution: "svgo@npm:1.3.2"
@@ -22952,13 +22885,6 @@ resolve@^2.0.0-next.3:
     psl: ^1.1.28
     punycode: ^2.1.1
   checksum: bf5d6fac5ce0bebc5876cb9b9a79d3d9ea21c9e4099f3d3e64701d6ba170a052cb88cece6737ec2473bac4f0a4f6c75d46ec17985be8587c6bbdd38d91625cb4
-  languageName: node
-  linkType: hard
-
-"traverse@npm:0.6.6":
-  version: 0.6.6
-  resolution: "traverse@npm:0.6.6"
-  checksum: f2bfaae69246bc1b630ad51d44be0a2a953be1650f754c299e5a05e4f00e4b493aa6c37a98410f9c2c902a21bef7f1ab10a9cdb9b9e8ee8813e1a9e95074dafd
   languageName: node
   linkType: hard
 
@@ -24777,16 +24703,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"xml2js@npm:0.4.17":
-  version: 0.4.17
-  resolution: "xml2js@npm:0.4.17"
-  dependencies:
-    sax: ">=0.6.0"
-    xmlbuilder: ^4.1.0
-  checksum: 522e1f2c2a7509d6abc2c0aa23c02a2a59d846eee26cbd67f32b0dd96da06dbb002b71809434f1ea14e05ebe2a7551336bf59a70dc796d5ecf33a0e479f241de
-  languageName: node
-  linkType: hard
-
 "xml2js@npm:^0.4.5":
   version: 0.4.23
   resolution: "xml2js@npm:0.4.23"
@@ -24801,15 +24717,6 @@ resolve@^2.0.0-next.3:
   version: 1.0.1
   resolution: "xml@npm:1.0.1"
   checksum: adde7652a6f6010d28079586e7f608d616138bcb6c44bbc9174292b5cc2fab09b351d6c5f009e9304df2e0030888198225dd2e9ccbf51b776c8928479bfea4cb
-  languageName: node
-  linkType: hard
-
-"xmlbuilder@npm:^4.1.0":
-  version: 4.2.1
-  resolution: "xmlbuilder@npm:4.2.1"
-  dependencies:
-    lodash: ^4.0.0
-  checksum: 2af8ba7958b6634c866295eef1a18a4c4ab95e27724d304249f1868231f805d77f2fa1056463c89997dbe17728684157f2ff1c7be15eeefae8925f49e57a1f48
   languageName: node
   linkType: hard
 
