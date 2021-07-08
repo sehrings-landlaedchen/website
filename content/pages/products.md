@@ -117,7 +117,7 @@ meta:
 
 * Rinderfilet-Medaillons (natur oder mariniert)
 * Rumpsteaks (natur oder mariniert)
-* RinderHaftstrafe (natur oder mariniert)
+* Rinderhüftsteaks (natur oder mariniert)
 * Rindfleischspieße
 
 **Sonstiges:**
