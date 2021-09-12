@@ -22,7 +22,6 @@ newsBody: >-
   Unser Regiomat steht wie gewohnt rund um die Uhr zur Verfügung.
 
 
-
   Wir bedanken uns vorab für Ihr Verständnis
 
 
@@ -31,13 +30,13 @@ newsBody: >-
   **V**
 
 
-  **Am**
+  **A**
 
 
   **W**
 
 
-  **Bleiben**
+  **B**
 
 
   ***I***
