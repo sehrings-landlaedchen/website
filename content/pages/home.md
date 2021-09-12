@@ -13,23 +13,34 @@ newsBody: >-
   **Wichtige Information:** 
 
 
-  \
-
-  **Von Dienstag, 07.09.2021 bis Donnerstag, 09.09.2021 ist unser Landlädchen geschlossen.**
+  Am Mittwoch, 15.09.2021 haben wir geänderte Öffnungszeiten: 
 
 
-  **Am Freitag, 10. September 2021 sind wir wieder in bester Qualität und neuer Frische für Sie da.**
+  Wir sind gerne von 09:00 bis 11:30 Uhr für Sie in unserem Landlädchen da. 
 
 
-  **Wir bedanken uns für Ihr Verständnis.**
+  Unser Regiomat steht wie gewohnt rund um die Uhr zur Verfügung.
 
 
-  **Bleiben Sie gesund!**
+
+  Wir bedanken uns vorab für Ihr Verständnis
 
 
-  ***Ihr Sehring’s Landlädchen Team***
+  Ihr Sehring's Landlädchen Team \
+
+  **V**
 
 
+  **Am**
+
+
+  **W**
+
+
+  **Bleiben**
+
+
+  ***I***
 
 
   **Seit dem 26. März 2021 befindet sich unser neues Landlädchen in der Höllgartenstraße 31, 63303 Dreieich-Götzenhain!**
