@@ -22,7 +22,7 @@ newsBody: >-
   Unser Regiomat steht wie gewohnt rund um die Uhr zur Verfügung.
 
 
-  Wir bedanken uns vorab für Ihr Verständnis
+  Wir bedanken uns vorab für Ihr Verständnis! 
 
 
   Ihr Sehring's Landlädchen Team \
