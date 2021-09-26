@@ -1,9 +1,4 @@
 ---
-meta:
-  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
-    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
-  title: ""
-linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
@@ -11,35 +6,6 @@ subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: >-
   **Wichtige Information:** 
-
-
-  Am Mittwoch, 15.09.2021 haben wir geänderte Öffnungszeiten: 
-
-
-  Wir sind gerne von 09:00 bis 11:30 Uhr für Sie in unserem Landlädchen da. 
-
-
-  Unser Regiomat steht wie gewohnt rund um die Uhr zur Verfügung.
-
-
-  Wir bedanken uns vorab für Ihr Verständnis! 
-
-
-  Ihr Sehring's Landlädchen Team \
-
-  **V**
-
-
-  **A**
-
-
-  **W**
-
-
-  **B**
-
-
-  ***I***
 
 
   **Seit dem 26. März 2021 befindet sich unser neues Landlädchen in der Höllgartenstraße 31, 63303 Dreieich-Götzenhain!**
@@ -122,6 +88,11 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
+meta:
+  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
+    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
+  title: ""
+linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
