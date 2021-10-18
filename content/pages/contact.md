@@ -21,7 +21,7 @@ address: |-
   |Samstag    | 09.00 - 13.00             |  
   |Sonntag    | \-                        |  
 phone: 06103 86875
-email: info@sehrings-landlaedchen.de
+email: info(at)sehrings-landlaedchen.de
 locations:
   - lat: "49.9974"
     lng: "8.74237"
@@ -32,7 +32,7 @@ locations:
     lng: "8.74233"
     title: Sehring`s Regiomat
 meta:
-  description: This is a meta description.
+  description: ""
   title: Kontakt
 ---
 
