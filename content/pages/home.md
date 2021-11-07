@@ -1,7 +1,6 @@
 ---
 meta:
-  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
-    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
+  description: ""
   title: ""
 linkText: Kontakt
 template: HomePage
@@ -29,7 +28,7 @@ aboutLink: kontakt
 aboutLinkText: Kontakt / Öffnungszeiten
 aboutImage: /img/regiomat-außen_winter.jpg
 contentTwoBody: >-
-  ![](/img/regiomat-innen-winter.jpg)
+  ![](/img/regiomat-suppe.jpg)
 
 
   ### Unser Hofladen
