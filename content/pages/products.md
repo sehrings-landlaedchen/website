@@ -78,10 +78,6 @@ meta:
 * Frühstücksmettwurst
 * Frisches Tatar (Rind)
 
-**Luftgetrocknete Wurst**
-
-* Chorizo (Würzige hausgemachte Paprikawurst)
-
 **Fleischwaren vom Schwein:**
 
 * Schnitzel
@@ -132,6 +128,17 @@ meta:
 * Wurstfett
 * Schweineschmalz
 
+
+
+##### Neu im Glas:
+
+* Hausgemachte Currywurst
+* Hausgemachte Kürbissuppe
+* Hausgemachte Bolognese
+* Hausgemachte Kartoffelsuppe
+
+
+
 **Heißtheke:** 
 
 * In unserer Heißtheke bieten wir täglich von 9:00 bis 13:00 Uhr verschiedene hausgemachte Produkte an, welche mit Brötchen gekauft werden können (wechselndes Angebot):
@@ -141,6 +148,8 @@ meta:
   * Zwiebelfleischkäse
   * Panierte Schweineschnitzel
   * Frikadellen  
+  * Gegrillter Schweinebauch
+  * Gebackener Zwiebelrollbraten
 
 **Eier aus Bodenhaltung**
 
