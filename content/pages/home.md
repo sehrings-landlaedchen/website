@@ -1,4 +1,9 @@
 ---
+meta:
+  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
+    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
+  title: ""
+linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
@@ -46,12 +51,13 @@ contentTwoBody: >-
   Neben den Grillspezalitäten bieten wir Ihnen, wie gewohnt, unsere Aufschnittwurst, rohen und gekochten Schinken, Fleischkäse (verschiedene Sorten), geräucherte Mettwürste (verschiedene Sorten), Hausmacher Wurst und vieles mehr an. Auch die leckeren, selbstgemachten Salate, wie Fleischsalat und Kartoffelsalat, gibt es als Beilage für einen perfekten Grillabend bei uns zu kaufen.
 
 
-  Dazu führen wir Backwaren von einem Bäcker der Region, sowie saisonales Obst und Gemüse.
+  Seit kurzer Zeit bieten wir zudem hausgemachte Bolognese, Currywurst, Kürbis- und Kartoffelsuppe im Glas.
+
+
+  Dazu führen wir Backwaren von Condit Couture, einem Bäcker der Region, sowie saisonales Obst und Gemüse.
 
 
   ![](/img/img_3013.jpg)
-
-
 
 
   ![](/img/img_3034.jpg)
@@ -88,11 +94,6 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
-meta:
-  description: Sehrings Landlädchen, hier finden Sie regionale Produkte aus
-    unserer Metzgerei wie auch eigene Kartoffeln, Eier und Gemüse.
-  title: ""
-linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
