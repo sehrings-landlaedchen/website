@@ -128,16 +128,12 @@ meta:
 * Wurstfett
 * Schweineschmalz
 
-
-
-##### Neu im Glas:
+### **Neu im Glas:**
 
 * Hausgemachte Currywurst
 * Hausgemachte Kürbissuppe
 * Hausgemachte Bolognese
 * Hausgemachte Kartoffelsuppe
-
-
 
 **Heißtheke:** 
 
