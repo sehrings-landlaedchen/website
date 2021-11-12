@@ -36,7 +36,7 @@ const Gallery: FC<GalleryProps> = props => {
 
   useEffect(() => {
     props.images && setSliderImages(props.images.map(image => ({
-      source: image.image
+      source: image.image?.replace("..\\..\\static\\img\\", "/img/")
     })))
   }, [])
 
@@ -53,7 +53,7 @@ const Gallery: FC<GalleryProps> = props => {
               <a href={image.image} onClick={evt => handleOpen(evt, true, index)}>
                 <Image
                   resolutions="small"
-                  src={image.image}
+                  src={image.image?.replace("..\\..\\static\\img\\", "/img/")}
                   alt={image.alt}
                   lazy={false}
                   className="single-gallery-image"
