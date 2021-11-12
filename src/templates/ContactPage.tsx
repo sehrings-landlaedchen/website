@@ -32,70 +32,68 @@ export const ContactPageTemplate: FC<ContactPageProps> = ({
   email,
   locations
 }) => (
-    <main className="Contact">
-      <PageHeader
-        title={title}
-        subtitle={subtitle}
-        backgroundImage={featuredImage}
-      />
-      <section className="contact-section">
-        <div className="container">
-          <div className="d-sm-block mb-5 pb-4">
-            {locations && locations.length > 0 &&
-              <LeafletMap locations={locations} />
-            }
-            <div id="map" >
+  <main className="Contact">
+    <PageHeader
+      title={title}
+      subtitle={subtitle}
+      backgroundImage={featuredImage}
+    />
+    <section className="contact-section">
+      <div className="container">
+        <div className="d-sm-block mb-5 pb-4">
+          {locations && locations.length > 0 &&
+            <LeafletMap locations={locations} />
+          }
+          <div id="map" >
 
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <h2 className="contact-title"></h2>
             </div>
-            <div className="row">
-              <div className="col-12">
-                <h2 className="contact-title"></h2>
-              </div>
-              <div className="col-lg-4">
-                {address &&
-                  <div className="media contact-info">
-                    <span className="contact-info__icon">
-                      <FontAwesomeIcon icon={faMap} style={{ fontSize: '27px' }} />
-                    </span>
-                    <div className="media-body">
-                      <Content source={address} />
-                    </div>
+            <div className="col-lg-4">
+              {address &&
+                <div className="media contact-info">
+                  <span className="contact-info__icon">
+                    <FontAwesomeIcon icon={faMap} style={{ fontSize: '27px' }} />
+                  </span>
+                  <div className="media-body">
+                    <Content source={address} />
                   </div>
-                }
                 </div>
+              }
+            </div>
 
-                <div className="col-lg-4 offset-lg-4">
-                  {phone &&
-                    <div className="media contact-info">
-                      <span className="contact-info__icon">
-                        <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
-                      </span>
-                      <div className="media-body">
-                        <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
-                          <h3>{phone}</h3>
-                        </a>
-                      </div>
-                    </div>
-                  }
-                  {email &&
-                    <div className="media contact-info">
-                      <span className="contact-info__icon">
-                        <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
-                      </span>
-                      <div className="media-body">
-                        <a className="Contact--Details--Item" href={`mailto:${email}`} style={{ padding: 0 }}>
-                          <h3>{email}</h3>
-                        </a>
-                      </div>
-                    </div>
-                  }
-              </div>
+            <div className="col-lg-4 offset-lg-4">
+              {phone &&
+                <div className="media contact-info">
+                  <span className="contact-info__icon">
+                    <FontAwesomeIcon icon={faIdCard} style={{ fontSize: '27px' }} />
+                  </span>
+                  <div className="media-body">
+                    <a className="Contact--Details--Item" href={`tel:${phone}`} style={{ padding: 0 }}>
+                      <h3>{phone}</h3>
+                    </a>
+                  </div>
+                </div>
+              }
+              {email &&
+                <div className="media contact-info">
+                  <span className="contact-info__icon">
+                    <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '27px' }} />
+                  </span>
+                  <div className="media-body">
+                    <h3>{email}</h3>
+                  </div>
+                </div>
+              }
             </div>
           </div>
         </div>
-      </section>
-    </main>
-  )
+      </div>
+    </section>
+  </main>
+)
 
 const ContactPage: FC<{ data: ContactPageQuery }> = ({ data: { page } }) => {
   return (
