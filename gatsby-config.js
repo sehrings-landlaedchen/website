@@ -12,6 +12,15 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/img`,
+        name: `img`,
+      },
+    },
     'gatsby-plugin-typescript',
     `gatsby-plugin-react-helmet`,
     'gatsby-transformer-yaml',
@@ -62,14 +71,12 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-176052378-1`,
-      },
-    },
+    //{
+    //  resolve: `gatsby-plugin-google-analytics`,
+    //  options: {
+    //    trackingId: `UA-176052378-1`,
+    //  },
+    //},
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -90,9 +97,15 @@ module.exports = {
     // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-leaflet',
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `./src/graphql.ts`,
+      }
+    }
   ],
 }

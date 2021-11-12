@@ -31,7 +31,7 @@ const Footer: FC<FooterProps> = (props) => {
             <div className={`${props.socialMediaLinks ? "col-xl-8 col-lg-6" : "col-xl-8 col-lg-7"} col-md-12`}>
               <div className="copyright">
                 <p className="footer-text">
-                  © {new Date().getFullYear()} | This template is made with <FontAwesomeIcon icon={faHeart} /> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  © {new Date().getFullYear()} | This template is made with <FontAwesomeIcon icon={faHeart} /> by <a href="https://colorlib.com" rel="noopener noreferrer" target="_blank">Colorlib</a>
                 </p>
               </div>
             </div>
