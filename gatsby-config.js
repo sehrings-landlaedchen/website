@@ -12,16 +12,18 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-sass',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/static/img`,
-        name: `uploads`,
+        name: `img`,
       },
     },
+    'gatsby-plugin-typescript',
+    `gatsby-plugin-react-helmet`,
+    'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -39,18 +41,10 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-relative-images",
-            options: {
-              name: "uploads",
-              staticFolderName: 'static',
-            },
-          },
-          {
+        plugins: [{
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 2048,
+              maxWidth: 590,
             },
           },
           {
@@ -103,11 +97,9 @@ module.exports = {
     // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-typescript',
-    `gatsby-plugin-react-helmet`,
-    'gatsby-transformer-yaml',
     `gatsby-plugin-offline`,
     'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-sass',
     'gatsby-plugin-react-leaflet',
     {
       resolve: `gatsby-plugin-graphql-codegen`,
