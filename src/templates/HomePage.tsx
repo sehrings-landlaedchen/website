@@ -89,7 +89,7 @@ export const HomePageTemplate: FC<HomePageProps> = (props) => {
             <div className="col-xl-6 offset-xl-1 col-lg-6 offset-lg-1">
               {aboutImage &&
                 <div className="single_about_thumb thumb_n1">
-                  <img src={aboutImage} alt="" />
+                  <img src={aboutImage?.replace("..\\..\\static\\img\\", "/img/")} alt="" />
                 </div>
               }
             </div>
@@ -112,7 +112,7 @@ export const HomePageTemplate: FC<HomePageProps> = (props) => {
             <div className="col-xl-6 col-lg-6 order-lg-1">
               {contentTwoImage &&
                 <div className="single_about_thumb thumb_n1">
-                  <img src={contentTwoImage} alt="" />
+                  <img src={contentTwoImage?.replace("..\\..\\static\\img\\", "/img/")} alt="" />
                 </div>
               }
             </div>
