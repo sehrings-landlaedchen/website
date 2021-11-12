@@ -28,7 +28,7 @@ aboutLink: kontakt
 aboutLinkText: Kontakt / Öffnungszeiten
 aboutImage: /img/regiomat-außen_winter.jpg
 contentTwoBody: >-
-  ![](/img/regiomat-suppe.jpg)
+  ![](/img/regiomat-suppe-min.jpg)
 
 
   ### Unser Hofladen
