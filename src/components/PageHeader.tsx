@@ -28,7 +28,7 @@ const PageHeader: FC<PageHeaderProps> = ({
           <div className="owl-stage-outer">
             <div className="owl-stage">
               <div className="owl-item active">
-                <div className="single_slider slider_img_1" style={{ backgroundImage: `url(${backgroundImage?.replace("..\\..\\static\\img\\", "/img/")}` }}>
+                <div className="single_slider slider_img_1" style={{ backgroundImage: `url(${backgroundImage}` }}>
                   <div className="single_slider-iner">
                     {(title || subtitle) &&
                       <div className="slider_contant text-center">
@@ -44,7 +44,7 @@ const PageHeader: FC<PageHeaderProps> = ({
         </div>
       </div> :
       backgroundImage ?
-        <Image background lazy={false} src={backgroundImage?.replace("..\\..\\static\\img\\", "/img/")} className="breadcam_area breadcam_bg_1 zigzag_bg_2" alt="background">
+        <Image background lazy={false} src={backgroundImage} className="breadcam_area breadcam_bg_1 zigzag_bg_2" alt="background">
           <div className="breadcam_inner">
             <div className="breadcam_text">
               <h3>{title}</h3>
