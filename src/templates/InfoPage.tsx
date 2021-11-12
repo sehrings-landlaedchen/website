@@ -22,6 +22,7 @@ interface ComponentsPageProps {
   accordion: MarkdownRemarkFrontmatterAccordion[],
   body: string,
   gallery: MarkdownRemarkFrontmatterGallery[]
+  gallery2: MarkdownRemarkFrontmatterGallery[]
 }
 
 // Export Template for use in CMS preview
@@ -36,7 +37,8 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
   videoTitle,
   accordion,
   body,
-  gallery
+  gallery,
+  gallery2
 }) => (
   <main>
     <PageHeader
@@ -45,6 +47,11 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
       backgroundImage={featuredImage}
     />
     <section className="section">
+      <div className="container section_title">
+        <Content source={body} />
+      </div>
+    </section>
+    <section className="section">
       <div className="container">
         <Content source={section1} />
       </div>
@@ -52,7 +59,6 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
 
     <section className="section">
       <div className="container">
-        <h2>Our gallery component</h2>
         <Gallery images={gallery} />
       </div>
     </section>
@@ -63,11 +69,19 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
       </div>
     </section>
 
-    <section className="BackgroundVideo-section section">
-      <BackgroundVideo poster={videoPoster} videoTitle={videoTitle}>
-        {video && <source src={video} type="video/mp4" />}
-      </BackgroundVideo>
+    <section className="section">
+      <div className="container">
+        <Gallery images={gallery2} />
+      </div>
     </section>
+
+    {videoPoster &&
+      <section className="BackgroundVideo-section section">
+        <BackgroundVideo poster={videoPoster} videoTitle={videoTitle}>
+          {video && <source src={video} type="video/mp4" />}
+        </BackgroundVideo>
+      </section>
+    }
 
     <section className="section">
       <div className="container">
@@ -77,7 +91,7 @@ export const InfoPageTemplate: FC<ComponentsPageProps> = ({
   </main>
 )
 
-const InfoPage: FC<{ data: InfoPageQuery}> = ({ data: { page } }) => (
+const InfoPage: FC<{ data: InfoPageQuery }> = ({ data: { page } }) => (
   <Layout
     meta={page.frontmatter.meta}
     title={page.frontmatter.title}
@@ -93,6 +107,7 @@ const InfoPage: FC<{ data: InfoPageQuery}> = ({ data: { page } }) => (
       videoTitle={page.frontmatter.videoTitle}
       accordion={page.frontmatter.accordion}
       gallery={page.frontmatter.gallery}
+      gallery2={page.frontmatter.gallery2}
       body={page.html} />
   </Layout>
 )
@@ -115,6 +130,11 @@ export const pageQuery = graphql`
           video
           videoPoster
           videoTitle
+          gallery2 {
+            alt
+            image
+            title
+          }
           accordion {
             title
             description

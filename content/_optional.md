@@ -9,6 +9,10 @@ gallery:
   - alt: ''
     image: ''
     title: ''
+gallery2:
+  - alt: ''
+    image: ''
+    title: ''
 brands:
   - title: ''
     logo: /img/200.png
