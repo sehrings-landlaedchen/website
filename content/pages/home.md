@@ -15,7 +15,20 @@ newsBody: >-
   **Seit dem 26. März 2021 befindet sich unser neues Landlädchen in der Höllgartenstraße 31, 63303 Dreieich-Götzenhain!**
 
 
-  ![](/img/img_20211220_224609.jpg)
+  **Unsere Öffnungszeiten zwischen den Jahren:**\
+
+  **Dienstag, 28.12: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr**\
+
+  **Mittwoch, 29.12: 09:00 - 13:00 Uhr**\
+
+  **Donnerstag 30.12: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr**\
+
+  **Freitag, 31.12: 09:00 - 12:00 Uhr**\
+
+  **Samstag: 09:00 - 13:00 Uhr**  
+
+
+  ![]()
 aboutBody: >-
   ### Unser Regiomat
 
