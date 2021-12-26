@@ -23,9 +23,7 @@ newsBody: >-
 
   **Donnerstag 30.12: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr**\
 
-  **Freitag, 31.12: 09:00 - 12:00 Uhr**\
-
-  **Samstag: 09:00 - 13:00 Uhr**  
+  **Freitag, 31.12: 09:00 - 12:00 Uhr**
 
 
   ![]()
