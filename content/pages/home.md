@@ -1,8 +1,4 @@
 ---
-meta:
-  description: ""
-  title: ""
-linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
@@ -13,17 +9,6 @@ newsBody: >-
 
 
   **Seit dem 26. März 2021 befindet sich unser neues Landlädchen in der Höllgartenstraße 31, 63303 Dreieich-Götzenhain!**
-
-
-  **Unsere Öffnungszeiten zwischen den Jahren:**\
-
-  **Dienstag, 28.12: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr**\
-
-  **Mittwoch, 29.12: 09:00 - 13:00 Uhr**\
-
-  **Donnerstag 30.12: 09:00 - 13:00 Uhr und 17:00 - 18:30 Uhr**\
-
-  **Freitag, 31.12: 09:00 - 12:00 Uhr**
 
 
   ![]()
@@ -107,6 +92,10 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
+meta:
+  description: ""
+  title: ""
+linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
