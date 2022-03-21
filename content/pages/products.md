@@ -173,17 +173,7 @@ meta:
 
 **Sonstige Produkte:**
 
-* Brot von CONDIT COUTURE aus traditionellen Bäckerhandwerk aus Langen –
-  dienstags bis samstags bei uns im Hofladen erhältlich
-
-  * Urroggen (500g oder 1kg)
-  * Dinkelbrot
-  * Dinkelbrot mit Sonnenblumenkernen
-  * Vollkornweizenbrot
-  * Bauernbrot (500g oder 750g)
-  * Baguette
-  * Pfeffer-Salz-Baguette
-  * Wasserweck, Körner- und Roggenbrötchen 
+* Brot und Backwaren von Cafe Ernst – dienstags bis samstags bei uns im Hofladen erhältlich
 
   ![]()
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
