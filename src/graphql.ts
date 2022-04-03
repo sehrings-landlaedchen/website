@@ -255,6 +255,7 @@ export type Site = Node & {
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
+  trailingSlash?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -687,7 +688,6 @@ export type MarkdownRemarkFrontmatter = {
   description?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Float']>;
   categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
-  linkText?: Maybe<Scalars['String']>;
   newsBody?: Maybe<Scalars['String']>;
   aboutBody?: Maybe<Scalars['String']>;
   aboutLink?: Maybe<Scalars['String']>;
@@ -701,6 +701,7 @@ export type MarkdownRemarkFrontmatter = {
   testimonials?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTestimonials>>>;
   brandText?: Maybe<Scalars['String']>;
   brands?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterBrands>>>;
+  linkText?: Maybe<Scalars['String']>;
   link?: Maybe<Scalars['String']>;
   gallery2?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery2>>>;
   hideProductList?: Maybe<Scalars['Boolean']>;
@@ -920,6 +921,7 @@ export type QuerySiteArgs = {
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   jsxRuntime?: Maybe<StringQueryOperatorInput>;
+  trailingSlash?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -1295,7 +1297,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   price?: Maybe<FloatQueryOperatorInput>;
   categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
-  linkText?: Maybe<StringQueryOperatorInput>;
   newsBody?: Maybe<StringQueryOperatorInput>;
   aboutBody?: Maybe<StringQueryOperatorInput>;
   aboutLink?: Maybe<StringQueryOperatorInput>;
@@ -1309,6 +1310,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   testimonials?: Maybe<MarkdownRemarkFrontmatterTestimonialsFilterListInput>;
   brandText?: Maybe<StringQueryOperatorInput>;
   brands?: Maybe<MarkdownRemarkFrontmatterBrandsFilterListInput>;
+  linkText?: Maybe<StringQueryOperatorInput>;
   link?: Maybe<StringQueryOperatorInput>;
   gallery2?: Maybe<MarkdownRemarkFrontmatterGallery2FilterListInput>;
   hideProductList?: Maybe<BooleanQueryOperatorInput>;
@@ -1710,7 +1712,6 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___price'
   | 'childrenMarkdownRemark___frontmatter___categories'
   | 'childrenMarkdownRemark___frontmatter___categories___category'
-  | 'childrenMarkdownRemark___frontmatter___linkText'
   | 'childrenMarkdownRemark___frontmatter___newsBody'
   | 'childrenMarkdownRemark___frontmatter___aboutBody'
   | 'childrenMarkdownRemark___frontmatter___aboutLink'
@@ -1729,6 +1730,7 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___brands'
   | 'childrenMarkdownRemark___frontmatter___brands___title'
   | 'childrenMarkdownRemark___frontmatter___brands___logo'
+  | 'childrenMarkdownRemark___frontmatter___linkText'
   | 'childrenMarkdownRemark___frontmatter___link'
   | 'childrenMarkdownRemark___frontmatter___gallery2'
   | 'childrenMarkdownRemark___frontmatter___gallery2___alt'
@@ -1824,7 +1826,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___price'
   | 'childMarkdownRemark___frontmatter___categories'
   | 'childMarkdownRemark___frontmatter___categories___category'
-  | 'childMarkdownRemark___frontmatter___linkText'
   | 'childMarkdownRemark___frontmatter___newsBody'
   | 'childMarkdownRemark___frontmatter___aboutBody'
   | 'childMarkdownRemark___frontmatter___aboutLink'
@@ -1843,6 +1844,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___brands'
   | 'childMarkdownRemark___frontmatter___brands___title'
   | 'childMarkdownRemark___frontmatter___brands___logo'
+  | 'childMarkdownRemark___frontmatter___linkText'
   | 'childMarkdownRemark___frontmatter___link'
   | 'childMarkdownRemark___frontmatter___gallery2'
   | 'childMarkdownRemark___frontmatter___gallery2___alt'
@@ -2531,6 +2533,7 @@ export type SiteFieldsEnum =
   | 'polyfill'
   | 'pathPrefix'
   | 'jsxRuntime'
+  | 'trailingSlash'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2667,6 +2670,7 @@ export type SiteFilterInput = {
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   jsxRuntime?: Maybe<StringQueryOperatorInput>;
+  trailingSlash?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -3808,7 +3812,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___price'
   | 'frontmatter___categories'
   | 'frontmatter___categories___category'
-  | 'frontmatter___linkText'
   | 'frontmatter___newsBody'
   | 'frontmatter___aboutBody'
   | 'frontmatter___aboutLink'
@@ -3827,6 +3830,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___brands'
   | 'frontmatter___brands___title'
   | 'frontmatter___brands___logo'
+  | 'frontmatter___linkText'
   | 'frontmatter___link'
   | 'frontmatter___gallery2'
   | 'frontmatter___gallery2___alt'
