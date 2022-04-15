@@ -25,7 +25,7 @@ newsBody: |-
 
 
 
-  ![](/img/4891b6f9-c223-4448-8548-7c8d89e3251d.jpeg)
+  ![]()
 aboutBody: >-
   ### Unser Regiomat
 
