@@ -178,6 +178,9 @@ meta:
   ![]()
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
+* Weine und Traubensäfte vom St. Michaels Hof aus Worms-Abenheim
+* Schnäpse und Liköre von der Obstbrennerei Göbel aus Reinheim
 * Dreieicher Honig
 
   ![](/img/honig_logo.jpeg)
+*
