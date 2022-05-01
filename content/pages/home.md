@@ -11,21 +11,17 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  **Von Dienstag, 19.04.2022 bis Donnerstag, 21.04.2022**
+  **Von Dienstag, 19.04.2022 bis Donnerst**
 
-  **macht unser Landlädchenteam eine Verschnaufspause!**
+  **macht unser Landlädchenteam** 
 
+  **Ab Freitag, 22.04.2022 sind wir wie**
 
-
-  **Ab Freitag, 22.04.2022 sind wir wieder in**
-
-  **neuer Frische und bester Qualität zurück!**
+  **neuer Frische** 
 
   **Danke für Ihr Verständnis!**
 
-
-
-  ![]()
+  ![](/img/img-20220428-wa0002.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
