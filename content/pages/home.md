@@ -1,25 +1,11 @@
 ---
-meta:
-  description: ""
-  title: ""
-linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
-  **Wichtige Information:** 
-
-  **Von Dienstag, 19.04.2022 bis Donn**
-
-  **macht**  
-
-  **Ab Freitag, 22.04.2022 sind wir wie**
-
-  **neuer Frische** 
-
-  **Danke für Ihr Verständnis!**
+  
 
   ![](/img/img-20220428-wa0002.jpg)
 aboutBody: >-
@@ -102,6 +88,10 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
+meta:
+  description: ""
+  title: ""
+linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
