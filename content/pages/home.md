@@ -11,9 +11,9 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  **Von Dienstag, 19.04.2022 bis Donnerst**
+  **Von Dienstag, 19.04.2022 bis Donn**
 
-  **macht unser Landlädchenteam** 
+  **macht**  
 
   **Ab Freitag, 22.04.2022 sind wir wie**
 
