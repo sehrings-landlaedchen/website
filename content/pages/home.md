@@ -1,14 +1,10 @@
 ---
-meta:
-  description: ""
-  title: ""
-linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: "![](/img/img-20220523-wa0040.jpg)"
+newsBody: "![]()"
 aboutBody: >-
   ### Unser Regiomat
 
@@ -89,6 +85,10 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
+meta:
+  description: ""
+  title: ""
+linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
