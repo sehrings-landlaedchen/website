@@ -8,7 +8,7 @@ slug: ""
 title: ""
 subtitle: "![]()"
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: "![](/img/screenshot_20220724-163853_instagram.jpg)"
+newsBody: "![]()"
 aboutBody: >-
   ### Unser Regiomat
 
