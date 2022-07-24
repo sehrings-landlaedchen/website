@@ -1,8 +1,12 @@
 ---
+meta:
+  description: ""
+  title: ""
+linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
-subtitle: ""
+subtitle: "![](/img/screenshot_20220724-163853_instagram.jpg)"
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: "![]()"
 aboutBody: >-
@@ -85,10 +89,6 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
-meta:
-  description: ""
-  title: ""
-linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen
