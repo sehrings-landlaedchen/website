@@ -6,9 +6,9 @@ linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
-subtitle: "![](/img/screenshot_20220724-163853_instagram.jpg)"
+subtitle: "![]()"
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: "![]()"
+newsBody: "![](/img/screenshot_20220724-163853_instagram.jpg)"
 aboutBody: >-
   ### Unser Regiomat
 
