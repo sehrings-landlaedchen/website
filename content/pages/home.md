@@ -99,7 +99,7 @@ Wir sind ein Familienbetrieb mit Herz in der dritten Generation aus der Region D
 Mitten im Ortskern von Dreieich-Götzenhain liegt unser Bauernhof. Seit dem 26. März 2021 ist unser Landlädchen von der Rheinstraße 6 in die Höllgartenstraße 31 umgezogen. Hier  haben wir unseren neuen Hofladen mit einer breiten Palette an selbst erzeugten Waren, welche sowohl auf dem Frühstücks- als auch auf dem Abendbrottisch landen können. Wir bieten qualitativ hochwertiges Fleisch, Eier aus Bodenhaltung, kontrolliert angebaute Kartoffeln und vieles mehr.
 <br />
 <br />
-Wir bewirten 30 Hektar Land. Auf den Ackerflächen bauen wir ganz klassisch Gerste, Hafer, Roggen und Weizen an. Produkte, welche wir nicht selbst herstellen können, beziehen wir von befreundeten Berufskollegen. In unseren Ställen halten wir Hühner und Schweine artgerecht auf eigenem Stroh. Besonders stolz sind wir auf den Anbau von Futtererbsen. Mit dieser eiweißhaltigen Nahrung werden unsere Schweine gefüttert, so dass wir vollständig auf Soja als Futtermittel verzichten können.
+Wir bewirten 30 Hektar Land. Auf den Ackerflächen bauen wir ganz klassisch Gerste, Hafer, Roggen und Weizen an. Produkte, welche wir nicht selbst herstellen können, beziehen wir von befreundeten Berufskollegen. In unseren Ställen halten wir unsere Schweine artgerecht auf eigenem Stroh. Besonders stolz sind wir auf den Anbau von Futtererbsen. Mit dieser eiweißhaltigen Nahrung werden unsere Schweine gefüttert, so dass wir vollständig auf Soja als Futtermittel verzichten können.
 <br />
 <br />
 Die eigene Wurstproduktion ist die Spezialität und Leidenschaft unseres Familienbetriebs.
