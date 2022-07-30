@@ -101,7 +101,7 @@ meta:
 * marinierte Grillfackeln
 * marinierte Lendenspieße
 * Schaschlik-Spieße
-* Gyros
+* Gyros(-spieße)
 * Hackfleisch
 * Spareribs
 * Krustenbraten
