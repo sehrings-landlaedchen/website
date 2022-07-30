@@ -134,6 +134,7 @@ meta:
 * Hausgemachte Kürbissuppe
 * Hausgemachte Bolognese
 * Hausgemachte Kartoffelsuppe
+* Hausgemachte Spargelcremesuppe
 
 **Heißtheke:** 
 
@@ -151,10 +152,9 @@ meta:
 
 * Klasse XL
 * Klasse L
-* Klasse M
 * Gefärbte Eier Klasse M (zur Osterzeit)
 
-**Kartoffeln (mehlig- oder festkochende, u.a. aus eigenem Anbau)**
+**Kartoffeln (mehlig- oder festkochende)**
 
 **Obst**
 
