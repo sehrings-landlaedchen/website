@@ -49,7 +49,12 @@ contentTwoBody: >-
   Seit kurzer Zeit bieten wir zudem hausgemachte Bolognese, Currywurst, Kürbis- und Kartoffelsuppe im Glas.
 
 
-  Dazu führen wir Backwaren von Condit Couture, einem Bäcker der Region, sowie saisonales Obst und Gemüse.
+  Dazu führen wir Backwaren von Cafe Ernst, einem Bäcker der Region, sowie saisonales Obst und Gemüse. 
+
+
+
+
+  Nähere Informationen erhalten Sie unter "Produkte".
 
 
   ![](/img/img_3013.jpg)
