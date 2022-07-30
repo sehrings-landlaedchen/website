@@ -91,7 +91,7 @@ brandText: ""
 brands: []
 link: kontakt
 ---
-### Willkommen bei Sehring’s Landlädchen
+### Willkommen bei Sehring’s Landlädchen 
 
 Wir sind ein Familienbetrieb mit Herz in der dritten Generation aus der Region Dreieich.
 <br />
