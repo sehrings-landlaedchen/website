@@ -18,6 +18,7 @@ export type Scalars = {
   Date: any;
   /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
   JSON: any;
+  GatsbyImageData: any;
 };
 
 export type File = Node & {
@@ -256,6 +257,7 @@ export type Site = Node & {
   pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
   trailingSlash?: Maybe<Scalars['String']>;
+  graphqlTypegen?: Maybe<Scalars['Boolean']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -409,7 +411,7 @@ export type Potrace = {
 export type ImageSharp = Node & {
   fixed?: Maybe<ImageSharpFixed>;
   fluid?: Maybe<ImageSharpFluid>;
-  gatsbyImageData: Scalars['JSON'];
+  gatsbyImageData: Scalars['GatsbyImageData'];
   original?: Maybe<ImageSharpOriginal>;
   resize?: Maybe<ImageSharpResize>;
   id: Scalars['ID'];
@@ -669,25 +671,14 @@ export type MarkdownRemarkTableOfContentsArgs = {
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   template?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
-  hidePage?: Maybe<Scalars['Boolean']>;
-  featuredImage?: Maybe<Scalars['String']>;
-  subtitle?: Maybe<Scalars['String']>;
-  section1?: Maybe<Scalars['String']>;
-  section2?: Maybe<Scalars['String']>;
-  video?: Maybe<Scalars['String']>;
-  videoPoster?: Maybe<Scalars['String']>;
-  videoTitle?: Maybe<Scalars['String']>;
-  accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
-  gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
-  meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
-  address?: Maybe<Scalars['String']>;
-  phone?: Maybe<Scalars['String']>;
-  email?: Maybe<Scalars['String']>;
-  locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
   description?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Float']>;
+  featuredImage?: Maybe<Scalars['String']>;
   categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
+  meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
+  linkText?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  subtitle?: Maybe<Scalars['String']>;
   newsBody?: Maybe<Scalars['String']>;
   aboutBody?: Maybe<Scalars['String']>;
   aboutLink?: Maybe<Scalars['String']>;
@@ -701,21 +692,25 @@ export type MarkdownRemarkFrontmatter = {
   testimonials?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTestimonials>>>;
   brandText?: Maybe<Scalars['String']>;
   brands?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterBrands>>>;
-  linkText?: Maybe<Scalars['String']>;
   link?: Maybe<Scalars['String']>;
-  gallery2?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery2>>>;
+  address?: Maybe<Scalars['String']>;
+  phone?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
+  accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
+  hidePage?: Maybe<Scalars['Boolean']>;
   hideProductList?: Maybe<Scalars['Boolean']>;
+  section1?: Maybe<Scalars['String']>;
+  section2?: Maybe<Scalars['String']>;
+  video?: Maybe<Scalars['String']>;
+  videoPoster?: Maybe<Scalars['String']>;
+  videoTitle?: Maybe<Scalars['String']>;
+  gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
+  gallery2?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery2>>>;
 };
 
-export type MarkdownRemarkFrontmatterAccordion = {
-  description?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterGallery = {
-  alt?: Maybe<Scalars['String']>;
-  image?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
+export type MarkdownRemarkFrontmatterCategories = {
+  category?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterMeta = {
@@ -723,17 +718,6 @@ export type MarkdownRemarkFrontmatterMeta = {
   title?: Maybe<Scalars['String']>;
   noindex?: Maybe<Scalars['Boolean']>;
   canonicalLink?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterLocations = {
-  lat?: Maybe<Scalars['String']>;
-  lng?: Maybe<Scalars['String']>;
-  mapLink?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterCategories = {
-  category?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterTestimonials = {
@@ -747,9 +731,27 @@ export type MarkdownRemarkFrontmatterBrands = {
   logo?: Maybe<Scalars['String']>;
 };
 
-export type MarkdownRemarkFrontmatterGallery2 = {
-  alt?: Maybe<Scalars['String']>;
+export type MarkdownRemarkFrontmatterLocations = {
+  lat?: Maybe<Scalars['String']>;
+  lng?: Maybe<Scalars['String']>;
+  mapLink?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterAccordion = {
+  description?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterGallery = {
   image?: Maybe<Scalars['String']>;
+  alt?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterGallery2 = {
+  image?: Maybe<Scalars['String']>;
+  alt?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
 };
 
@@ -922,6 +924,7 @@ export type QuerySiteArgs = {
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   jsxRuntime?: Maybe<StringQueryOperatorInput>;
   trailingSlash?: Maybe<StringQueryOperatorInput>;
+  graphqlTypegen?: Maybe<BooleanQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -1028,7 +1031,7 @@ export type QueryAllSiteBuildMetadataArgs = {
 export type QueryImageSharpArgs = {
   fixed?: Maybe<ImageSharpFixedFilterInput>;
   fluid?: Maybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: Maybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: Maybe<GatsbyImageDataQueryOperatorInput>;
   original?: Maybe<ImageSharpOriginalFilterInput>;
   resize?: Maybe<ImageSharpResizeFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -1162,7 +1165,7 @@ export type ImageSharpFilterListInput = {
 export type ImageSharpFilterInput = {
   fixed?: Maybe<ImageSharpFixedFilterInput>;
   fluid?: Maybe<ImageSharpFluidFilterInput>;
-  gatsbyImageData?: Maybe<JsonQueryOperatorInput>;
+  gatsbyImageData?: Maybe<GatsbyImageDataQueryOperatorInput>;
   original?: Maybe<ImageSharpOriginalFilterInput>;
   resize?: Maybe<ImageSharpResizeFilterInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -1199,13 +1202,11 @@ export type ImageSharpFluidFilterInput = {
   presentationHeight?: Maybe<IntQueryOperatorInput>;
 };
 
-export type JsonQueryOperatorInput = {
-  eq?: Maybe<Scalars['JSON']>;
-  ne?: Maybe<Scalars['JSON']>;
-  in?: Maybe<Array<Maybe<Scalars['JSON']>>>;
-  nin?: Maybe<Array<Maybe<Scalars['JSON']>>>;
-  regex?: Maybe<Scalars['JSON']>;
-  glob?: Maybe<Scalars['JSON']>;
+export type GatsbyImageDataQueryOperatorInput = {
+  eq?: Maybe<Scalars['GatsbyImageData']>;
+  ne?: Maybe<Scalars['GatsbyImageData']>;
+  in?: Maybe<Array<Maybe<Scalars['GatsbyImageData']>>>;
+  nin?: Maybe<Array<Maybe<Scalars['GatsbyImageData']>>>;
 };
 
 export type ImageSharpOriginalFilterInput = {
@@ -1278,25 +1279,14 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   template?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  hidePage?: Maybe<BooleanQueryOperatorInput>;
-  featuredImage?: Maybe<StringQueryOperatorInput>;
-  subtitle?: Maybe<StringQueryOperatorInput>;
-  section1?: Maybe<StringQueryOperatorInput>;
-  section2?: Maybe<StringQueryOperatorInput>;
-  video?: Maybe<StringQueryOperatorInput>;
-  videoPoster?: Maybe<StringQueryOperatorInput>;
-  videoTitle?: Maybe<StringQueryOperatorInput>;
-  accordion?: Maybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
-  gallery?: Maybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
-  meta?: Maybe<MarkdownRemarkFrontmatterMetaFilterInput>;
-  address?: Maybe<StringQueryOperatorInput>;
-  phone?: Maybe<StringQueryOperatorInput>;
-  email?: Maybe<StringQueryOperatorInput>;
-  locations?: Maybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
   description?: Maybe<StringQueryOperatorInput>;
   price?: Maybe<FloatQueryOperatorInput>;
+  featuredImage?: Maybe<StringQueryOperatorInput>;
   categories?: Maybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
+  meta?: Maybe<MarkdownRemarkFrontmatterMetaFilterInput>;
+  linkText?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  subtitle?: Maybe<StringQueryOperatorInput>;
   newsBody?: Maybe<StringQueryOperatorInput>;
   aboutBody?: Maybe<StringQueryOperatorInput>;
   aboutLink?: Maybe<StringQueryOperatorInput>;
@@ -1310,47 +1300,21 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   testimonials?: Maybe<MarkdownRemarkFrontmatterTestimonialsFilterListInput>;
   brandText?: Maybe<StringQueryOperatorInput>;
   brands?: Maybe<MarkdownRemarkFrontmatterBrandsFilterListInput>;
-  linkText?: Maybe<StringQueryOperatorInput>;
   link?: Maybe<StringQueryOperatorInput>;
-  gallery2?: Maybe<MarkdownRemarkFrontmatterGallery2FilterListInput>;
+  address?: Maybe<StringQueryOperatorInput>;
+  phone?: Maybe<StringQueryOperatorInput>;
+  email?: Maybe<StringQueryOperatorInput>;
+  locations?: Maybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
+  accordion?: Maybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
+  hidePage?: Maybe<BooleanQueryOperatorInput>;
   hideProductList?: Maybe<BooleanQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterAccordionFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterAccordionFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterAccordionFilterInput = {
-  description?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterGalleryFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterGalleryFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterGalleryFilterInput = {
-  alt?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterMetaFilterInput = {
-  description?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
-  noindex?: Maybe<BooleanQueryOperatorInput>;
-  canonicalLink?: Maybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterLocationsFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFilterInput = {
-  lat?: Maybe<StringQueryOperatorInput>;
-  lng?: Maybe<StringQueryOperatorInput>;
-  mapLink?: Maybe<StringQueryOperatorInput>;
-  title?: Maybe<StringQueryOperatorInput>;
+  section1?: Maybe<StringQueryOperatorInput>;
+  section2?: Maybe<StringQueryOperatorInput>;
+  video?: Maybe<StringQueryOperatorInput>;
+  videoPoster?: Maybe<StringQueryOperatorInput>;
+  videoTitle?: Maybe<StringQueryOperatorInput>;
+  gallery?: Maybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
+  gallery2?: Maybe<MarkdownRemarkFrontmatterGallery2FilterListInput>;
 };
 
 export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
@@ -1359,6 +1323,13 @@ export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
 
 export type MarkdownRemarkFrontmatterCategoriesFilterInput = {
   category?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterMetaFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  noindex?: Maybe<BooleanQueryOperatorInput>;
+  canonicalLink?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterTestimonialsFilterListInput = {
@@ -1380,19 +1351,58 @@ export type MarkdownRemarkFrontmatterBrandsFilterInput = {
   logo?: Maybe<StringQueryOperatorInput>;
 };
 
+export type MarkdownRemarkFrontmatterLocationsFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterLocationsFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsFilterInput = {
+  lat?: Maybe<StringQueryOperatorInput>;
+  lng?: Maybe<StringQueryOperatorInput>;
+  mapLink?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterAccordionFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterAccordionFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterAccordionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterGalleryFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterGalleryFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterGalleryFilterInput = {
+  image?: Maybe<StringQueryOperatorInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+};
+
 export type MarkdownRemarkFrontmatterGallery2FilterListInput = {
   elemMatch?: Maybe<MarkdownRemarkFrontmatterGallery2FilterInput>;
 };
 
 export type MarkdownRemarkFrontmatterGallery2FilterInput = {
-  alt?: Maybe<StringQueryOperatorInput>;
   image?: Maybe<StringQueryOperatorInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
   title?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFieldsFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
   contentType?: Maybe<StringQueryOperatorInput>;
+};
+
+export type JsonQueryOperatorInput = {
+  eq?: Maybe<Scalars['JSON']>;
+  ne?: Maybe<Scalars['JSON']>;
+  in?: Maybe<Array<Maybe<Scalars['JSON']>>>;
+  nin?: Maybe<Array<Maybe<Scalars['JSON']>>>;
+  regex?: Maybe<Scalars['JSON']>;
+  glob?: Maybe<Scalars['JSON']>;
 };
 
 export type MarkdownHeadingFilterListInput = {
@@ -1680,38 +1690,18 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___id'
   | 'childrenMarkdownRemark___frontmatter___title'
   | 'childrenMarkdownRemark___frontmatter___template'
-  | 'childrenMarkdownRemark___frontmatter___slug'
-  | 'childrenMarkdownRemark___frontmatter___hidePage'
+  | 'childrenMarkdownRemark___frontmatter___description'
+  | 'childrenMarkdownRemark___frontmatter___price'
   | 'childrenMarkdownRemark___frontmatter___featuredImage'
-  | 'childrenMarkdownRemark___frontmatter___subtitle'
-  | 'childrenMarkdownRemark___frontmatter___section1'
-  | 'childrenMarkdownRemark___frontmatter___section2'
-  | 'childrenMarkdownRemark___frontmatter___video'
-  | 'childrenMarkdownRemark___frontmatter___videoPoster'
-  | 'childrenMarkdownRemark___frontmatter___videoTitle'
-  | 'childrenMarkdownRemark___frontmatter___accordion'
-  | 'childrenMarkdownRemark___frontmatter___accordion___description'
-  | 'childrenMarkdownRemark___frontmatter___accordion___title'
-  | 'childrenMarkdownRemark___frontmatter___gallery'
-  | 'childrenMarkdownRemark___frontmatter___gallery___alt'
-  | 'childrenMarkdownRemark___frontmatter___gallery___image'
-  | 'childrenMarkdownRemark___frontmatter___gallery___title'
+  | 'childrenMarkdownRemark___frontmatter___categories'
+  | 'childrenMarkdownRemark___frontmatter___categories___category'
   | 'childrenMarkdownRemark___frontmatter___meta___description'
   | 'childrenMarkdownRemark___frontmatter___meta___title'
   | 'childrenMarkdownRemark___frontmatter___meta___noindex'
   | 'childrenMarkdownRemark___frontmatter___meta___canonicalLink'
-  | 'childrenMarkdownRemark___frontmatter___address'
-  | 'childrenMarkdownRemark___frontmatter___phone'
-  | 'childrenMarkdownRemark___frontmatter___email'
-  | 'childrenMarkdownRemark___frontmatter___locations'
-  | 'childrenMarkdownRemark___frontmatter___locations___lat'
-  | 'childrenMarkdownRemark___frontmatter___locations___lng'
-  | 'childrenMarkdownRemark___frontmatter___locations___mapLink'
-  | 'childrenMarkdownRemark___frontmatter___locations___title'
-  | 'childrenMarkdownRemark___frontmatter___description'
-  | 'childrenMarkdownRemark___frontmatter___price'
-  | 'childrenMarkdownRemark___frontmatter___categories'
-  | 'childrenMarkdownRemark___frontmatter___categories___category'
+  | 'childrenMarkdownRemark___frontmatter___linkText'
+  | 'childrenMarkdownRemark___frontmatter___slug'
+  | 'childrenMarkdownRemark___frontmatter___subtitle'
   | 'childrenMarkdownRemark___frontmatter___newsBody'
   | 'childrenMarkdownRemark___frontmatter___aboutBody'
   | 'childrenMarkdownRemark___frontmatter___aboutLink'
@@ -1730,13 +1720,33 @@ export type FileFieldsEnum =
   | 'childrenMarkdownRemark___frontmatter___brands'
   | 'childrenMarkdownRemark___frontmatter___brands___title'
   | 'childrenMarkdownRemark___frontmatter___brands___logo'
-  | 'childrenMarkdownRemark___frontmatter___linkText'
   | 'childrenMarkdownRemark___frontmatter___link'
-  | 'childrenMarkdownRemark___frontmatter___gallery2'
-  | 'childrenMarkdownRemark___frontmatter___gallery2___alt'
-  | 'childrenMarkdownRemark___frontmatter___gallery2___image'
-  | 'childrenMarkdownRemark___frontmatter___gallery2___title'
+  | 'childrenMarkdownRemark___frontmatter___address'
+  | 'childrenMarkdownRemark___frontmatter___phone'
+  | 'childrenMarkdownRemark___frontmatter___email'
+  | 'childrenMarkdownRemark___frontmatter___locations'
+  | 'childrenMarkdownRemark___frontmatter___locations___lat'
+  | 'childrenMarkdownRemark___frontmatter___locations___lng'
+  | 'childrenMarkdownRemark___frontmatter___locations___mapLink'
+  | 'childrenMarkdownRemark___frontmatter___locations___title'
+  | 'childrenMarkdownRemark___frontmatter___accordion'
+  | 'childrenMarkdownRemark___frontmatter___accordion___description'
+  | 'childrenMarkdownRemark___frontmatter___accordion___title'
+  | 'childrenMarkdownRemark___frontmatter___hidePage'
   | 'childrenMarkdownRemark___frontmatter___hideProductList'
+  | 'childrenMarkdownRemark___frontmatter___section1'
+  | 'childrenMarkdownRemark___frontmatter___section2'
+  | 'childrenMarkdownRemark___frontmatter___video'
+  | 'childrenMarkdownRemark___frontmatter___videoPoster'
+  | 'childrenMarkdownRemark___frontmatter___videoTitle'
+  | 'childrenMarkdownRemark___frontmatter___gallery'
+  | 'childrenMarkdownRemark___frontmatter___gallery___image'
+  | 'childrenMarkdownRemark___frontmatter___gallery___alt'
+  | 'childrenMarkdownRemark___frontmatter___gallery___title'
+  | 'childrenMarkdownRemark___frontmatter___gallery2'
+  | 'childrenMarkdownRemark___frontmatter___gallery2___image'
+  | 'childrenMarkdownRemark___frontmatter___gallery2___alt'
+  | 'childrenMarkdownRemark___frontmatter___gallery2___title'
   | 'childrenMarkdownRemark___excerpt'
   | 'childrenMarkdownRemark___rawMarkdownBody'
   | 'childrenMarkdownRemark___fileAbsolutePath'
@@ -1794,38 +1804,18 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___id'
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___template'
-  | 'childMarkdownRemark___frontmatter___slug'
-  | 'childMarkdownRemark___frontmatter___hidePage'
+  | 'childMarkdownRemark___frontmatter___description'
+  | 'childMarkdownRemark___frontmatter___price'
   | 'childMarkdownRemark___frontmatter___featuredImage'
-  | 'childMarkdownRemark___frontmatter___subtitle'
-  | 'childMarkdownRemark___frontmatter___section1'
-  | 'childMarkdownRemark___frontmatter___section2'
-  | 'childMarkdownRemark___frontmatter___video'
-  | 'childMarkdownRemark___frontmatter___videoPoster'
-  | 'childMarkdownRemark___frontmatter___videoTitle'
-  | 'childMarkdownRemark___frontmatter___accordion'
-  | 'childMarkdownRemark___frontmatter___accordion___description'
-  | 'childMarkdownRemark___frontmatter___accordion___title'
-  | 'childMarkdownRemark___frontmatter___gallery'
-  | 'childMarkdownRemark___frontmatter___gallery___alt'
-  | 'childMarkdownRemark___frontmatter___gallery___image'
-  | 'childMarkdownRemark___frontmatter___gallery___title'
+  | 'childMarkdownRemark___frontmatter___categories'
+  | 'childMarkdownRemark___frontmatter___categories___category'
   | 'childMarkdownRemark___frontmatter___meta___description'
   | 'childMarkdownRemark___frontmatter___meta___title'
   | 'childMarkdownRemark___frontmatter___meta___noindex'
   | 'childMarkdownRemark___frontmatter___meta___canonicalLink'
-  | 'childMarkdownRemark___frontmatter___address'
-  | 'childMarkdownRemark___frontmatter___phone'
-  | 'childMarkdownRemark___frontmatter___email'
-  | 'childMarkdownRemark___frontmatter___locations'
-  | 'childMarkdownRemark___frontmatter___locations___lat'
-  | 'childMarkdownRemark___frontmatter___locations___lng'
-  | 'childMarkdownRemark___frontmatter___locations___mapLink'
-  | 'childMarkdownRemark___frontmatter___locations___title'
-  | 'childMarkdownRemark___frontmatter___description'
-  | 'childMarkdownRemark___frontmatter___price'
-  | 'childMarkdownRemark___frontmatter___categories'
-  | 'childMarkdownRemark___frontmatter___categories___category'
+  | 'childMarkdownRemark___frontmatter___linkText'
+  | 'childMarkdownRemark___frontmatter___slug'
+  | 'childMarkdownRemark___frontmatter___subtitle'
   | 'childMarkdownRemark___frontmatter___newsBody'
   | 'childMarkdownRemark___frontmatter___aboutBody'
   | 'childMarkdownRemark___frontmatter___aboutLink'
@@ -1844,13 +1834,33 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___brands'
   | 'childMarkdownRemark___frontmatter___brands___title'
   | 'childMarkdownRemark___frontmatter___brands___logo'
-  | 'childMarkdownRemark___frontmatter___linkText'
   | 'childMarkdownRemark___frontmatter___link'
-  | 'childMarkdownRemark___frontmatter___gallery2'
-  | 'childMarkdownRemark___frontmatter___gallery2___alt'
-  | 'childMarkdownRemark___frontmatter___gallery2___image'
-  | 'childMarkdownRemark___frontmatter___gallery2___title'
+  | 'childMarkdownRemark___frontmatter___address'
+  | 'childMarkdownRemark___frontmatter___phone'
+  | 'childMarkdownRemark___frontmatter___email'
+  | 'childMarkdownRemark___frontmatter___locations'
+  | 'childMarkdownRemark___frontmatter___locations___lat'
+  | 'childMarkdownRemark___frontmatter___locations___lng'
+  | 'childMarkdownRemark___frontmatter___locations___mapLink'
+  | 'childMarkdownRemark___frontmatter___locations___title'
+  | 'childMarkdownRemark___frontmatter___accordion'
+  | 'childMarkdownRemark___frontmatter___accordion___description'
+  | 'childMarkdownRemark___frontmatter___accordion___title'
+  | 'childMarkdownRemark___frontmatter___hidePage'
   | 'childMarkdownRemark___frontmatter___hideProductList'
+  | 'childMarkdownRemark___frontmatter___section1'
+  | 'childMarkdownRemark___frontmatter___section2'
+  | 'childMarkdownRemark___frontmatter___video'
+  | 'childMarkdownRemark___frontmatter___videoPoster'
+  | 'childMarkdownRemark___frontmatter___videoTitle'
+  | 'childMarkdownRemark___frontmatter___gallery'
+  | 'childMarkdownRemark___frontmatter___gallery___image'
+  | 'childMarkdownRemark___frontmatter___gallery___alt'
+  | 'childMarkdownRemark___frontmatter___gallery___title'
+  | 'childMarkdownRemark___frontmatter___gallery2'
+  | 'childMarkdownRemark___frontmatter___gallery2___image'
+  | 'childMarkdownRemark___frontmatter___gallery2___alt'
+  | 'childMarkdownRemark___frontmatter___gallery2___title'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -2534,6 +2544,7 @@ export type SiteFieldsEnum =
   | 'pathPrefix'
   | 'jsxRuntime'
   | 'trailingSlash'
+  | 'graphqlTypegen'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2671,6 +2682,7 @@ export type SiteFilterInput = {
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   jsxRuntime?: Maybe<StringQueryOperatorInput>;
   trailingSlash?: Maybe<StringQueryOperatorInput>;
+  graphqlTypegen?: Maybe<BooleanQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -3780,38 +3792,18 @@ export type MarkdownRemarkFieldsEnum =
   | 'id'
   | 'frontmatter___title'
   | 'frontmatter___template'
-  | 'frontmatter___slug'
-  | 'frontmatter___hidePage'
+  | 'frontmatter___description'
+  | 'frontmatter___price'
   | 'frontmatter___featuredImage'
-  | 'frontmatter___subtitle'
-  | 'frontmatter___section1'
-  | 'frontmatter___section2'
-  | 'frontmatter___video'
-  | 'frontmatter___videoPoster'
-  | 'frontmatter___videoTitle'
-  | 'frontmatter___accordion'
-  | 'frontmatter___accordion___description'
-  | 'frontmatter___accordion___title'
-  | 'frontmatter___gallery'
-  | 'frontmatter___gallery___alt'
-  | 'frontmatter___gallery___image'
-  | 'frontmatter___gallery___title'
+  | 'frontmatter___categories'
+  | 'frontmatter___categories___category'
   | 'frontmatter___meta___description'
   | 'frontmatter___meta___title'
   | 'frontmatter___meta___noindex'
   | 'frontmatter___meta___canonicalLink'
-  | 'frontmatter___address'
-  | 'frontmatter___phone'
-  | 'frontmatter___email'
-  | 'frontmatter___locations'
-  | 'frontmatter___locations___lat'
-  | 'frontmatter___locations___lng'
-  | 'frontmatter___locations___mapLink'
-  | 'frontmatter___locations___title'
-  | 'frontmatter___description'
-  | 'frontmatter___price'
-  | 'frontmatter___categories'
-  | 'frontmatter___categories___category'
+  | 'frontmatter___linkText'
+  | 'frontmatter___slug'
+  | 'frontmatter___subtitle'
   | 'frontmatter___newsBody'
   | 'frontmatter___aboutBody'
   | 'frontmatter___aboutLink'
@@ -3830,13 +3822,33 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___brands'
   | 'frontmatter___brands___title'
   | 'frontmatter___brands___logo'
-  | 'frontmatter___linkText'
   | 'frontmatter___link'
-  | 'frontmatter___gallery2'
-  | 'frontmatter___gallery2___alt'
-  | 'frontmatter___gallery2___image'
-  | 'frontmatter___gallery2___title'
+  | 'frontmatter___address'
+  | 'frontmatter___phone'
+  | 'frontmatter___email'
+  | 'frontmatter___locations'
+  | 'frontmatter___locations___lat'
+  | 'frontmatter___locations___lng'
+  | 'frontmatter___locations___mapLink'
+  | 'frontmatter___locations___title'
+  | 'frontmatter___accordion'
+  | 'frontmatter___accordion___description'
+  | 'frontmatter___accordion___title'
+  | 'frontmatter___hidePage'
   | 'frontmatter___hideProductList'
+  | 'frontmatter___section1'
+  | 'frontmatter___section2'
+  | 'frontmatter___video'
+  | 'frontmatter___videoPoster'
+  | 'frontmatter___videoTitle'
+  | 'frontmatter___gallery'
+  | 'frontmatter___gallery___image'
+  | 'frontmatter___gallery___alt'
+  | 'frontmatter___gallery___title'
+  | 'frontmatter___gallery2'
+  | 'frontmatter___gallery2___image'
+  | 'frontmatter___gallery2___alt'
+  | 'frontmatter___gallery2___title'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
