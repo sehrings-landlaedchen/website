@@ -7,15 +7,19 @@ template: HomePage
 slug: ""
 title: ""
 subtitle: >-
-  
+  **Wichtige Information:** 
+
+
+  **Von Dienstag, 06. September 2022 bis Donnerstag, 08.September 2022 macht unser Landlädchenteam eine Verschnaufspause.**
+
 
   **Ab Freitag, 09. September 2022 sind wir wieder in neuer Frische und bester Qualität zurück!** 
 
 
+  **Unser Regiomat steht Ihnen weiterhin 24/7 zur Verfügung!**
+
+
   **Vielen Dank für Ihr Verständnis!**
-
-
-  ![]()
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: ""
 aboutBody: >-
