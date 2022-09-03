@@ -7,7 +7,7 @@ template: HomePage
 slug: ""
 title: ""
 subtitle: |-
-  **[INFO](<>)**
+  Wichtige Information:
 
   **Von Dienstag, 06.09.2022 bis Donnerstag, 08.09.2022**
 
