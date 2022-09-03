@@ -7,16 +7,12 @@ template: HomePage
 slug: ""
 title: ""
 subtitle: >-
-  **Wichtige Information:[](<>)**
+  
+
+  **Ab Freitag, 09. September 2022 sind wir wieder in neuer Frische und bester Qualität zurück!** 
 
 
-  **Von Dienstag, 06.09.2022 bis Donnerstag, 08.09.2022 macht unser Landlädchenteam eine Verschnaufpause!**
-
-
-  **Ab Freitag, 09.09.2022 sind wir wieder in neuer Frische und bester Qualität zurück!**
-
-
-  **Danke für Ihr Verständnis!**
+  **Vielen Dank für Ihr Verständnis!**
 
 
   ![]()
