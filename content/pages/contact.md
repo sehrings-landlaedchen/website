@@ -5,7 +5,7 @@ title: ""
 featuredImage: /img/website_teaser_neu.jpg
 subtitle: ""
 address: |-
-  ### Sehring`s Regiomat, Höllgartenstraße 31, 63303 Dreieich
+  ### Sehring's Regiomat, Höllgartenstraße 31, 63303 Dreieich
 
   24/7 geöffnet
 
