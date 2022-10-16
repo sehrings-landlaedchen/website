@@ -99,7 +99,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-netlify',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-leaflet',
     {
@@ -107,6 +106,7 @@ module.exports = {
       options: {
         fileName: `./src/graphql.ts`,
       }
-    }
+    },
+    'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
