@@ -2,10 +2,10 @@
   "name": "sehrings-landlaedchen",
   "private": true,
   "description": "Sehrings Landlädchen Website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Malte Arzt",
   "bugs": {
-    "url": "https://github.com/malteA/sehrings_landlaedchen/issues"
+    "url": "https://github.com/sehrings-landlaedchen/website/issues"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "6.2.0",
@@ -78,7 +78,7 @@
     "graphql": "15.8.0",
     "prettier": "^2.7.1"
   },
-  "homepage": "https://github.com/malteA/sehrings_landlaedchen#readme",
+  "homepage": "https://github.com/sehrings-landlaedchen/website#readme",
   "keywords": [
     "gatsby"
   ],
@@ -86,7 +86,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+github.com/malteA/sehrings_landlaedchen.git"
+    "url": "git+github.com/sehrings-landlaedchen/website.git"
   },
   "scripts": {
     "build": "gatsby build",
