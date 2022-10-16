@@ -6,7 +6,8 @@ linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
-subtitle: ""
+subtitle: >-
+  **Wichtige Information:** 
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: ""
 aboutBody: >-
