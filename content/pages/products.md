@@ -182,8 +182,6 @@ meta:
 **Sonstige Produkte:**
 
 * Brot und Backwaren von Cafe Ernst – dienstags bis samstags bei uns im Hofladen erhältlich
-
-  ![]()
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
 * Weine und Traubensäfte vom St. Michaels Hof aus Worms-Abenheim
