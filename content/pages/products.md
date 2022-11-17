@@ -133,7 +133,7 @@ meta:
 * Wurstfett
 * Schweineschmalz
 
-### **Neu im Glas:**
+##### **Neu im Glas:**
 
 * Hausgemachte Currywurst
 * Hausgemachte Kürbissuppe
