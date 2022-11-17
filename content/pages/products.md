@@ -115,6 +115,14 @@ meta:
 * Rumpsteaks (natur oder mariniert)
 * Rinderhüftsteaks (natur oder mariniert)
 * Rindfleischspieße
+*
+
+
+
+**Geflügel vom** **Familienunternehmen Borgmeier Frischgeflügel** 
+
+* Genaue Auflistung erfolgt in Kürze
+*
 
 **Sonstiges:**
 
@@ -138,12 +146,12 @@ meta:
 
 **Heißtheke:** 
 
-* In unserer Heißtheke bieten wir täglich von 9:00 bis 13:00 Uhr verschiedene hausgemachte Produkte an, welche mit Brötchen gekauft werden können (wechselndes Angebot):
+* In unserer Heißtheke bieten wir täglich (Dienstag bis Freitag 8:00 bis 13:00 Uhr und Samstag 8:30 bis 13:00 Uhr) verschiedene hausgemachte Produkte an, welche mit Brötchen gekauft werden können (wechselndes Angebot)
 
   * Feiner Fleischkäse
   * Pizzafleischkäse
   * Zwiebelfleischkäse
-  * Panierte Schweineschnitzel
+  * Panierte Schweine-/ Putenschnitzel
   * Frikadellen  
   * Gegrillter Schweinebauch
   * Gebackener Zwiebelrollbraten
