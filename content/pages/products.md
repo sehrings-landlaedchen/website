@@ -115,14 +115,11 @@ meta:
 * Rumpsteaks (natur oder mariniert)
 * Rinderhüftsteaks (natur oder mariniert)
 * Rindfleischspieße
-*
-
-
+* S﻿uppenfleisch
 
 **Geflügel vom** **Familienunternehmen Borgmeier Frischgeflügel** 
 
 * Genaue Auflistung erfolgt in Kürze
-*
 
 **Sonstiges:**
 
