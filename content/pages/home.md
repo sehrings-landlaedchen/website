@@ -8,10 +8,12 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: |-
-  **Wichtige Information:** 
+newsBody: >-
+  **Wichtige Information:** Gerne nehmen wir Ihre Weihnachtsbestellungen bis
+  Freitag, 09. Dezember 2022 entgeben. 
 
-  ![](/img/flyer-website-weihnachtsmarkt.jpg)
+
+  ![]()
 aboutBody: >-
   ### Unser Regiomat
 
