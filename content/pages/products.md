@@ -119,7 +119,12 @@ meta:
 
 **Geflügel vom** **Familienunternehmen Borgmeier Frischgeflügel** 
 
-* Genaue Auflistung erfolgt in Kürze
+* Hähnchenflügel (während der Grillsaison)
+* B﻿rathähnchen
+* H﻿ähnchenbrust und Hähnchen(innen-)filet
+* H﻿ähnchenschenkel
+* P﻿utenschnitzel
+* P﻿utensteaks
 
 **Sonstiges:**
 
