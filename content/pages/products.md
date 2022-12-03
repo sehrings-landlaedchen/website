@@ -186,6 +186,7 @@ meta:
 * Brot und Backwaren von Cafe Ernst – dienstags bis samstags bei uns im Hofladen erhältlich
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
 * Eingelegtes Gemüse von Barthmann
+* A﻿pfelwein und Apfelsaft vom Wingerthof
 * Weine und Traubensäfte vom St. Michaels Hof aus Worms-Abenheim
 * Schnäpse und Liköre von der Obstbrennerei Göbel aus Reinheim
 * Dreieicher Honig
