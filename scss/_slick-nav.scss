@@ -1,0 +1,157 @@
+
+
+// slick-nav
+.mobile_menu{
+    @media #{$mobile_device} {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        z-index: 9;
+    }
+    @media #{$tablet_device} {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        z-index: 9;
+    }
+}
+.sticky .slicknav_menu {
+    .hamburger, .hamburger.is-active {
+        .hamburger-inner {
+            &,
+            &:before,
+            &:after {
+                background-color: #000;
+            }
+        }
+    }
+}
+.slicknav_menu {
+    font-size: 16px;
+    .hamburger, .hamburger.is-active {
+        float: right;
+        .hamburger-inner {
+            &,
+            &:before,
+            &:after {
+                background-color: #191d34;
+            }
+        }
+    }
+    .slicknav_btn {
+        display: block;
+        float: right;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 99;
+        border: none;
+        border-radius: 3px;
+        top: 5px;
+        padding: 5px;
+        right: 5px;
+        margin-top: -5px;
+        .slicknav_menutxt {
+            display: none;
+        }
+        .slicknav_icon{
+            margin-right: 6px;
+            margin-top: 3px;
+            position: relative;
+            right: 5px;
+            top: -5px;
+            padding-bottom: 3px;
+            float: left;
+            width: 1.125em;
+            height: 0.875em;
+            margin: 0.188em 0 0 0.438em;
+            .slicknav_icon-bar {
+                display: block;
+                height: 3px;
+                width: 30px;
+                margin: 5px 0;
+                -webkit-transition: all 0.3s ease 0s;
+                -o-transition: all 0.3s ease 0s;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+    .slicknav_nav {
+        background: #fff;
+        float: right;
+        margin-top: 0;
+        padding: 0;
+        width: 95%;
+        padding: 0;
+        border-radius: 0px;
+        margin-top: 5px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 45px;
+        &.slicknav_hidden {
+            display: none;
+        }
+        @media #{$tablet_device} {
+            padding: 10px;
+        }
+        a{
+            font-size: 16px;
+            font-weight: 400;
+            color: #000;
+            padding: 12px 10px;
+            margin: 2px 5px;
+            text-decoration: none;
+            line-height: 21px;
+            display: block;
+            font-family: $font1;
+
+            &:hover{
+                background: transparent;
+                color: #78b454;
+            }
+            &.active{
+                color:#78b454;
+            }
+            i{
+                @media #{$mobile_device} {
+                    display: none;
+                }
+                @media #{$tablet_device} {
+                    display: none;
+                }
+            }
+        }
+        .slicknav_hidden {
+            display: none;
+        }
+        .submenu li {
+            margin-left: 10px;
+        }
+    }
+    @media #{$mobile_device} {
+        margin-right: 12px;
+    }
+}
+
+.home-6{
+    .slicknav_menu{
+        .slicknav_icon {
+            margin-right: 6px;
+            margin-top: 3px;
+            right: -5px;
+            padding-bottom: 3px;
+            position: absolute;
+            top: 3px;
+        }
+    }
+}
+
+// slick-nav
+.slicknav_nav .slicknav_arrow {
+    float: right;
+    font-size: 22px;
+    position: relative;
+}
