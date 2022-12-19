@@ -69,7 +69,6 @@
     "@graphql-codegen/introspection": "1.18.2",
     "@graphql-codegen/typescript": "1.23.0",
     "@graphql-codegen/typescript-operations": "1.18.4",
-    "@netlify/plugin-gatsby": "^3.5.0",
     "@types/leaflet": "^1.9.0",
     "@types/react-helmet": "^6.1.6",
     "@types/react-router-dom": "^5.3.3",
