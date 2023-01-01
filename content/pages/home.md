@@ -13,7 +13,7 @@ newsBody: >-
   Freitag, 09. Dezember 2022 entgegen. 
 
 
-  ![]()
+  ![](/img/img-20230101-wa0039.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
