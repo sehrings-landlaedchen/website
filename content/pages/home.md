@@ -1,17 +1,11 @@
 ---
-meta:
-  description: ""
-  title: ""
-linkText: Kontakt
 template: HomePage
 slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: >-
-  **Wichtige Information:** Gerne nehmen wir Ihre Weihnachtsbestellungen bis
-  Freitag, 09. Dezember 2022 entgegen. 
-
+newsBody: |-
+  **Wichtige Information:** 
 
   ![](/img/img-20230101-wa0039.jpg)
 aboutBody: >-
@@ -97,6 +91,10 @@ testimonialText: ""
 testimonials: []
 brandText: ""
 brands: []
+meta:
+  description: ""
+  title: ""
+linkText: Kontakt
 link: kontakt
 ---
 ### Willkommen bei Sehring’s Landlädchen 
