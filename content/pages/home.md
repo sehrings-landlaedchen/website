@@ -11,7 +11,7 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  ![]()
+  ![](/img/360_f_187221401_prnl5nkldpdjbguuouevmm2hegmutk3i.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
