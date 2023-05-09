@@ -157,6 +157,7 @@ meta:
   * Frikadellen  
   * Gegrillter Schweinebauch
   * Gebackener Zwiebelrollbraten
+  * Gegrillte Hähnchenschenkel
 
 **Eier aus Bodenhaltung**
 
