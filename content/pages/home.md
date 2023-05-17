@@ -11,7 +11,7 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  ![](/img/img-20230423-wa0010.jpg)
+  ![](/img/sehrings-landlädchen-feiertag-christi-himmelfahrt-2023.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
