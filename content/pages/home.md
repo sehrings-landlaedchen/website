@@ -11,7 +11,7 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  ![](/img/sehrings-landlädchen-feiertag-fronleichnahm-2023.jpg)
+  ![](/img/img-20230620-wa0014.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
