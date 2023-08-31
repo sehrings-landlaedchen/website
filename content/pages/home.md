@@ -11,7 +11,7 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  ![]()
+  ![](/img/polterabend-öffnungszeiten.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
