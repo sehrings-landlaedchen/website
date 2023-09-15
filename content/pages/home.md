@@ -9,9 +9,9 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
-  **Wichtige Information:** 
+  **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
-  ![]()
+  ![](/img/öffnungszeiten-website.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
