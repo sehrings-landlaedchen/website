@@ -70,15 +70,15 @@ contentTwoBody: >-
   Gerne sind wir für Sie da:
 
 
-  Dienstag: 08:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
+  Dienstag: 08:00 - 13:00 Uhr und 17:00 - 18:00 Uhr\
 
   Mittwoch: 08:00 - 13:00 Uhr\
 
-  Donnerstag: 08:00 - 13:00 Uhr und 17:00 - 18:30 Uhr\
+  Donnerstag: 08:00 - 13:00 Uhr und 17:00 - 18:00 Uhr\
 
-  Freitag: 08:00 - 13:00 Uhr und 15:00 - 18:30 Uhr\
+  Freitag: 08:00 - 13:00 Uhr und 15:00 - 18:00 Uhr\
 
-  Samstag: 08:30 - 13:00 Uhr  
+  Samstag: 08:00 - 12:30 Uhr  
 
 
   Höllgartenstraße 31, 63303 Dreieich-Götzenhain
