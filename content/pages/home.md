@@ -11,7 +11,7 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
-  ![](/img/herbst-urlaub_sehrings-landlädchen.png)
+  ![](/img/unbenannt.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
