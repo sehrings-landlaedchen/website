@@ -13,7 +13,7 @@ newsBody: |-
 
   ![](/img/unbenannt.jpg)
 
-  S﻿chon gewusst? 
+  **S﻿chon gewusst?** 
 
   ![](/img/weihnachtsmarktflyer-2023-für-social-media.jpg)
 aboutBody: >-
