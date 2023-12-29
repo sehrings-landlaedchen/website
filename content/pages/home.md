@@ -13,7 +13,7 @@ newsBody: |-
 
   ![]()
 
-  **S﻿chon gewusst?** 
+  **S** 
 
   ![]()
 aboutBody: >-
