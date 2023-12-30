@@ -11,11 +11,11 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
-  ![]()
+  ![](/img/öffnungszeiten-landlädchen-ab-01.10.2023.jpg)
 
-  **S** 
+  S﻿chon gewusst? 
 
-  ![]()
+  ![](/img/urlaub-januar-2024.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
