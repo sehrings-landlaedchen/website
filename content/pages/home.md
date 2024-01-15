@@ -15,7 +15,7 @@ newsBody: |-
 
   S﻿chon gewusst? 
 
-  ![](/img/urlaub-januar-2024.jpg)
+  ![](/img/img-20240115-wa0027.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
