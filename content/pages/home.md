@@ -12,10 +12,6 @@ newsBody: |-
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
   ![](/img/öffnungszeiten-landlädchen-ab-01.10.2023.jpg)
-
-  S﻿chon gewusst? 
-
-  ![](/img/img-20240115-wa0027.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
