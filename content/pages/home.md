@@ -9,6 +9,8 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
+  ![](/img/img-20240203-wa0008.jpg)
+
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
   ![](/img/öffnungszeiten-landlädchen-ab-01.10.2023.jpg)
