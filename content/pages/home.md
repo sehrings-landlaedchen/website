@@ -13,7 +13,7 @@ newsBody: |-
 
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
-  ![](/img/fb_img_1711997433237.jpg)
+  ![](/img/fb_img_1712411888745.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
