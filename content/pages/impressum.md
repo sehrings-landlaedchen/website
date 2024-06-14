@@ -12,11 +12,10 @@ Monica Sehring und Christian Sehring GbR\
 Höllgartenstraße 31\
 63303 Dreieich-Götzenhain
 
-
 ## Kontakt
 
 Telefon: 06103 86875\
-E-Mail: info@sehrings-landlaedchen.de
+E-Mail: info(at)sehrings-landlaedchen.de
 
 ## Verbraucherstreitbeilegung / Universalschlichtungsstelle
 
