@@ -9,7 +9,11 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
-  ![]()
+  **W﻿ichtige Information:** 
+
+  ![](/img/öffnungszeiten-weihnachten-silvester-2024-und-neujahr-2025.jpg)
+
+
 
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
