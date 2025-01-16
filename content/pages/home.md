@@ -9,10 +9,6 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
-  **W﻿ichtige Information:**   
-
-  ![](/img/januar-2025-urlaub-social-media.jpg)
-
   **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
 
   ![](/img/fb_img_1712411888745.jpg)
