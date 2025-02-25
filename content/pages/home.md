@@ -9,9 +9,9 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
-  **Wichtige Information:** **Neue Öffnungszeiten ab 01. Oktober 2023**
+  **Wichtige Information:** 
 
-  ![](/img/fb_img_1712411888745.jpg)
+  ![](/img/fastnachtsdienstag-2025-social-media-bild.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
