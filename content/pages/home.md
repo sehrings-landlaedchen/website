@@ -11,7 +11,7 @@ featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
   **Wichtige Information:** 
 
-  ![](/img/fastnachtsdienstag-2025-social-media-bild.jpg)
+  ![](/img/img-20250404-wa0005.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
