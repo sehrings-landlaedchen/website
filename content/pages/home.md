@@ -8,10 +8,12 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: |-
-  **Wichtige Information:** 
+newsBody: >-
+  **Stellenausschreibung: Freundliche und engagierte Verkaufsfachkraft (m/w/d)
+  in Teilzeit** 
 
-  ![](/img/img-20250404-wa0005.jpg)
+
+  ![](/img/website-stellenausschreibung.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
