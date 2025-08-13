@@ -144,7 +144,8 @@ meta:
 * Hausgemachte Kürbissuppe
 * Hausgemachte Bolognese
 * Hausgemachte Kartoffelsuppe
-* Hausgemachte Spargelcremesuppe
+
+
 
 **Heißtheke:** 
 
@@ -163,7 +164,7 @@ meta:
 
 * Klasse XL
 * Klasse L
-* Gefärbte Eier Klasse M (zur Osterzeit)
+* Gefärbte Eier Klasse M 
 
 **Kartoffeln (mehlig- oder festkochende)**
 
@@ -186,10 +187,8 @@ meta:
 
 * Brot und Backwaren von Cafe Ernst – dienstags bis samstags bei uns im Hofladen erhältlich
 * Nudeln des schwäbischen Familienbetriebes ALB-GOLD
-* Eingelegtes Gemüse von Barthmann
-* A﻿pfelwein und Apfelsaft vom Wingerthof
+* Eingelegtes Gemüse von Austermann
 * Weine und Traubensäfte vom St. Michaels Hof aus Worms-Abenheim
-* Schnäpse und Liköre von der Obstbrennerei Göbel aus Reinheim
 * Dreieicher Honig
 
   ![](/img/honig_logo.jpeg)
