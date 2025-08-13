@@ -9,11 +9,14 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: >-
-  **Stellenausschreibung: Freundliche und engagierte Verkaufsfachkraft (m/w/d)
-  in Teilzeit** 
+  **Wichtige Information: Von Dienstag, 09. September 2025 bis Donnerstag, 11.
+  September 2025 macht unser Landlädchen eine Verschnaufpause! Ab Freitag, 12.
+  September 2025 sind wir wieder in neuer Frische und bester Qualität zurück!**
 
 
-  ![](/img/website-stellenausschreibung.jpg)
+
+
+  ![]()
 aboutBody: >-
   ### Unser Regiomat
 
