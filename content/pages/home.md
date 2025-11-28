@@ -14,9 +14,7 @@ newsBody: >-
   September 2025 sind wir wieder in neuer Frische und bester Qualität zurück!**
 
 
-
-
-  ![]()
+  ![](/img/img-20251118-wa0022.jpg)
 aboutBody: >-
   ### Unser Regiomat
 
