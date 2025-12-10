@@ -1,25 +1,9 @@
-# backend:
-#   name: github
-#   repo: malteA/gatsby
-
 backend:
   name: git-gateway
 local_backend: true
 
 media_folder: static/img
 public_folder: /img
-
-# display_url: https://gatsbro.netlify.com # This url will display in the top-right of the CMS
-# media_library:
-#   name: uploadcare
-#   config:
-#     publicKey: a73a170cb5cdef662983
-#     multiple: false
-#     tabs: 'file camera url facebook gdrive'
-#     effects: 'crop,rotate,enhance,grayscale'
-#     imageShrink: '2000x2000'
-#     previewStep: true
-#     clearable: true
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'

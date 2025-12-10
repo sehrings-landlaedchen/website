@@ -9,9 +9,8 @@ interface LeafletMapProps {
   zoom?: number;
 }
 
-const LeafletMap: FC<LeafletMapProps> = props => {
-  const { locations } = props;
-  const mapPosition: LatLngExpression = [parseFloat(props.locations[0].lat), parseFloat(props.locations[0].lng)];
+const LeafletMap: FC<LeafletMapProps> = ({locations, zoom = 15}) => {
+  const mapPosition: LatLngExpression = [parseFloat(locations[0].lat), parseFloat(locations[0].lng)];
 
   const isServer = typeof window === 'undefined';
   const isIOS = isServer ? false : /iPad|iPhone|iPod/.test(window.navigator.platform) || (window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1)
@@ -19,7 +18,7 @@ const LeafletMap: FC<LeafletMapProps> = props => {
   return (
     <MapContainer
       center={mapPosition}
-      zoom={props.zoom}
+      zoom={zoom}
       style={{ height: '50vh', width: '100%', zIndex: 10 }}
       scrollWheelZoom={false}
     >
@@ -50,9 +49,6 @@ const LeafletMap: FC<LeafletMapProps> = props => {
       })}
     </MapContainer>
   )
-}
-LeafletMap.defaultProps = {
-  zoom: 15
 }
 
 export default LeafletMap

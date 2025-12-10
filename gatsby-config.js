@@ -22,7 +22,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-typescript',
-    `gatsby-plugin-react-helmet`,
     'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
@@ -92,7 +91,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-plugin-react-leaflet',
     {
@@ -101,6 +99,7 @@ module.exports = {
         fileName: `./src/graphql.ts`,
       }
     },
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
+    'gatsby-plugin-decap-cms',
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 }

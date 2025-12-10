@@ -5,15 +5,10 @@ export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: 
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
-  /** The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `"4"`) or integer (such as `4`) input value will be accepted as an ID. */
   ID: string;
-  /** The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text. */
   String: string;
-  /** The `Boolean` scalar type represents `true` or `false`. */
   Boolean: boolean;
-  /** The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. */
   Int: number;
-  /** The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point). */
   Float: number;
   /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard for representation of dates and times using the Gregorian calendar. */
   Date: any;
@@ -253,6 +248,8 @@ export type DirectoryCtimeArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
@@ -671,14 +668,30 @@ export type MarkdownRemarkTableOfContentsArgs = {
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   template?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  hidePage?: Maybe<Scalars['Boolean']>;
+  featuredImage?: Maybe<Scalars['String']>;
+  subtitle?: Maybe<Scalars['String']>;
+  hideProductList?: Maybe<Scalars['Boolean']>;
+  meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
   description?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Float']>;
-  featuredImage?: Maybe<Scalars['String']>;
   categories?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCategories>>>;
-  meta?: Maybe<MarkdownRemarkFrontmatterMeta>;
+  section1?: Maybe<Scalars['String']>;
+  section2?: Maybe<Scalars['String']>;
+  video?: Maybe<Scalars['String']>;
+  videoPoster?: Maybe<Scalars['String']>;
+  videoTitle?: Maybe<Scalars['String']>;
+  accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
+  gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
+  gallery2?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery2>>>;
+  brands?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterBrands>>>;
+  testimonials?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTestimonials>>>;
+  address?: Maybe<Scalars['String']>;
+  phone?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
   linkText?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
-  subtitle?: Maybe<Scalars['String']>;
   newsBody?: Maybe<Scalars['String']>;
   aboutBody?: Maybe<Scalars['String']>;
   aboutLink?: Maybe<Scalars['String']>;
@@ -689,53 +702,19 @@ export type MarkdownRemarkFrontmatter = {
   contentTwoLinkText?: Maybe<Scalars['String']>;
   contentTwoImage?: Maybe<Scalars['String']>;
   testimonialText?: Maybe<Scalars['String']>;
-  testimonials?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTestimonials>>>;
   brandText?: Maybe<Scalars['String']>;
-  brands?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterBrands>>>;
   link?: Maybe<Scalars['String']>;
-  address?: Maybe<Scalars['String']>;
-  phone?: Maybe<Scalars['String']>;
-  email?: Maybe<Scalars['String']>;
-  locations?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLocations>>>;
-  accordion?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterAccordion>>>;
-  hidePage?: Maybe<Scalars['Boolean']>;
-  hideProductList?: Maybe<Scalars['Boolean']>;
-  section1?: Maybe<Scalars['String']>;
-  section2?: Maybe<Scalars['String']>;
-  video?: Maybe<Scalars['String']>;
-  videoPoster?: Maybe<Scalars['String']>;
-  videoTitle?: Maybe<Scalars['String']>;
-  gallery?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery>>>;
-  gallery2?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterGallery2>>>;
+};
+
+export type MarkdownRemarkFrontmatterMeta = {
+  noindex?: Maybe<Scalars['Boolean']>;
+  description?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+  canonicalLink?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterCategories = {
   category?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterMeta = {
-  description?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
-  noindex?: Maybe<Scalars['Boolean']>;
-  canonicalLink?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterTestimonials = {
-  title?: Maybe<Scalars['String']>;
-  subtitle?: Maybe<Scalars['String']>;
-  text?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterBrands = {
-  title?: Maybe<Scalars['String']>;
-  logo?: Maybe<Scalars['String']>;
-};
-
-export type MarkdownRemarkFrontmatterLocations = {
-  lat?: Maybe<Scalars['String']>;
-  lng?: Maybe<Scalars['String']>;
-  mapLink?: Maybe<Scalars['String']>;
-  title?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterAccordion = {
@@ -744,14 +723,32 @@ export type MarkdownRemarkFrontmatterAccordion = {
 };
 
 export type MarkdownRemarkFrontmatterGallery = {
-  image?: Maybe<Scalars['String']>;
   alt?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterGallery2 = {
-  image?: Maybe<Scalars['String']>;
   alt?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
+  title?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterBrands = {
+  title?: Maybe<Scalars['String']>;
+  logo?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterTestimonials = {
+  title?: Maybe<Scalars['String']>;
+  subtitle?: Maybe<Scalars['String']>;
+  text?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterLocations = {
+  lat?: Maybe<Scalars['String']>;
+  lng?: Maybe<Scalars['String']>;
+  mapLink?: Maybe<Scalars['String']>;
   title?: Maybe<Scalars['String']>;
 };
 
@@ -918,6 +915,8 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
+  port?: InputMaybe<IntQueryOperatorInput>;
+  host?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -1278,14 +1277,30 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
   template?: InputMaybe<StringQueryOperatorInput>;
+  slug?: InputMaybe<StringQueryOperatorInput>;
+  hidePage?: InputMaybe<BooleanQueryOperatorInput>;
+  featuredImage?: InputMaybe<StringQueryOperatorInput>;
+  subtitle?: InputMaybe<StringQueryOperatorInput>;
+  hideProductList?: InputMaybe<BooleanQueryOperatorInput>;
+  meta?: InputMaybe<MarkdownRemarkFrontmatterMetaFilterInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   price?: InputMaybe<FloatQueryOperatorInput>;
-  featuredImage?: InputMaybe<StringQueryOperatorInput>;
   categories?: InputMaybe<MarkdownRemarkFrontmatterCategoriesFilterListInput>;
-  meta?: InputMaybe<MarkdownRemarkFrontmatterMetaFilterInput>;
+  section1?: InputMaybe<StringQueryOperatorInput>;
+  section2?: InputMaybe<StringQueryOperatorInput>;
+  video?: InputMaybe<StringQueryOperatorInput>;
+  videoPoster?: InputMaybe<StringQueryOperatorInput>;
+  videoTitle?: InputMaybe<StringQueryOperatorInput>;
+  accordion?: InputMaybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
+  gallery?: InputMaybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
+  gallery2?: InputMaybe<MarkdownRemarkFrontmatterGallery2FilterListInput>;
+  brands?: InputMaybe<MarkdownRemarkFrontmatterBrandsFilterListInput>;
+  testimonials?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsFilterListInput>;
+  address?: InputMaybe<StringQueryOperatorInput>;
+  phone?: InputMaybe<StringQueryOperatorInput>;
+  email?: InputMaybe<StringQueryOperatorInput>;
+  locations?: InputMaybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
   linkText?: InputMaybe<StringQueryOperatorInput>;
-  slug?: InputMaybe<StringQueryOperatorInput>;
-  subtitle?: InputMaybe<StringQueryOperatorInput>;
   newsBody?: InputMaybe<StringQueryOperatorInput>;
   aboutBody?: InputMaybe<StringQueryOperatorInput>;
   aboutLink?: InputMaybe<StringQueryOperatorInput>;
@@ -1296,24 +1311,15 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   contentTwoLinkText?: InputMaybe<StringQueryOperatorInput>;
   contentTwoImage?: InputMaybe<StringQueryOperatorInput>;
   testimonialText?: InputMaybe<StringQueryOperatorInput>;
-  testimonials?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsFilterListInput>;
   brandText?: InputMaybe<StringQueryOperatorInput>;
-  brands?: InputMaybe<MarkdownRemarkFrontmatterBrandsFilterListInput>;
   link?: InputMaybe<StringQueryOperatorInput>;
-  address?: InputMaybe<StringQueryOperatorInput>;
-  phone?: InputMaybe<StringQueryOperatorInput>;
-  email?: InputMaybe<StringQueryOperatorInput>;
-  locations?: InputMaybe<MarkdownRemarkFrontmatterLocationsFilterListInput>;
-  accordion?: InputMaybe<MarkdownRemarkFrontmatterAccordionFilterListInput>;
-  hidePage?: InputMaybe<BooleanQueryOperatorInput>;
-  hideProductList?: InputMaybe<BooleanQueryOperatorInput>;
-  section1?: InputMaybe<StringQueryOperatorInput>;
-  section2?: InputMaybe<StringQueryOperatorInput>;
-  video?: InputMaybe<StringQueryOperatorInput>;
-  videoPoster?: InputMaybe<StringQueryOperatorInput>;
-  videoTitle?: InputMaybe<StringQueryOperatorInput>;
-  gallery?: InputMaybe<MarkdownRemarkFrontmatterGalleryFilterListInput>;
-  gallery2?: InputMaybe<MarkdownRemarkFrontmatterGallery2FilterListInput>;
+};
+
+export type MarkdownRemarkFrontmatterMetaFilterInput = {
+  noindex?: InputMaybe<BooleanQueryOperatorInput>;
+  description?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+  canonicalLink?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
@@ -1322,43 +1328,6 @@ export type MarkdownRemarkFrontmatterCategoriesFilterListInput = {
 
 export type MarkdownRemarkFrontmatterCategoriesFilterInput = {
   category?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterMetaFilterInput = {
-  description?: InputMaybe<StringQueryOperatorInput>;
-  title?: InputMaybe<StringQueryOperatorInput>;
-  noindex?: InputMaybe<BooleanQueryOperatorInput>;
-  canonicalLink?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterTestimonialsFilterListInput = {
-  elemMatch?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterTestimonialsFilterInput = {
-  title?: InputMaybe<StringQueryOperatorInput>;
-  subtitle?: InputMaybe<StringQueryOperatorInput>;
-  text?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterBrandsFilterListInput = {
-  elemMatch?: InputMaybe<MarkdownRemarkFrontmatterBrandsFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterBrandsFilterInput = {
-  title?: InputMaybe<StringQueryOperatorInput>;
-  logo?: InputMaybe<StringQueryOperatorInput>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFilterListInput = {
-  elemMatch?: InputMaybe<MarkdownRemarkFrontmatterLocationsFilterInput>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFilterInput = {
-  lat?: InputMaybe<StringQueryOperatorInput>;
-  lng?: InputMaybe<StringQueryOperatorInput>;
-  mapLink?: InputMaybe<StringQueryOperatorInput>;
-  title?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterAccordionFilterListInput = {
@@ -1375,8 +1344,8 @@ export type MarkdownRemarkFrontmatterGalleryFilterListInput = {
 };
 
 export type MarkdownRemarkFrontmatterGalleryFilterInput = {
-  image?: InputMaybe<StringQueryOperatorInput>;
   alt?: InputMaybe<StringQueryOperatorInput>;
+  image?: InputMaybe<StringQueryOperatorInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -1385,8 +1354,38 @@ export type MarkdownRemarkFrontmatterGallery2FilterListInput = {
 };
 
 export type MarkdownRemarkFrontmatterGallery2FilterInput = {
-  image?: InputMaybe<StringQueryOperatorInput>;
   alt?: InputMaybe<StringQueryOperatorInput>;
+  image?: InputMaybe<StringQueryOperatorInput>;
+  title?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterBrandsFilterListInput = {
+  elemMatch?: InputMaybe<MarkdownRemarkFrontmatterBrandsFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterBrandsFilterInput = {
+  title?: InputMaybe<StringQueryOperatorInput>;
+  logo?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterTestimonialsFilterListInput = {
+  elemMatch?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterTestimonialsFilterInput = {
+  title?: InputMaybe<StringQueryOperatorInput>;
+  subtitle?: InputMaybe<StringQueryOperatorInput>;
+  text?: InputMaybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsFilterListInput = {
+  elemMatch?: InputMaybe<MarkdownRemarkFrontmatterLocationsFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsFilterInput = {
+  lat?: InputMaybe<StringQueryOperatorInput>;
+  lng?: InputMaybe<StringQueryOperatorInput>;
+  mapLink?: InputMaybe<StringQueryOperatorInput>;
   title?: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -1655,14 +1654,30 @@ export type MarkdownRemarkFieldSelector = {
 export type MarkdownRemarkFrontmatterFieldSelector = {
   title?: InputMaybe<FieldSelectorEnum>;
   template?: InputMaybe<FieldSelectorEnum>;
+  slug?: InputMaybe<FieldSelectorEnum>;
+  hidePage?: InputMaybe<FieldSelectorEnum>;
+  featuredImage?: InputMaybe<FieldSelectorEnum>;
+  subtitle?: InputMaybe<FieldSelectorEnum>;
+  hideProductList?: InputMaybe<FieldSelectorEnum>;
+  meta?: InputMaybe<MarkdownRemarkFrontmatterMetaFieldSelector>;
   description?: InputMaybe<FieldSelectorEnum>;
   price?: InputMaybe<FieldSelectorEnum>;
-  featuredImage?: InputMaybe<FieldSelectorEnum>;
   categories?: InputMaybe<MarkdownRemarkFrontmatterCategoriesFieldSelector>;
-  meta?: InputMaybe<MarkdownRemarkFrontmatterMetaFieldSelector>;
+  section1?: InputMaybe<FieldSelectorEnum>;
+  section2?: InputMaybe<FieldSelectorEnum>;
+  video?: InputMaybe<FieldSelectorEnum>;
+  videoPoster?: InputMaybe<FieldSelectorEnum>;
+  videoTitle?: InputMaybe<FieldSelectorEnum>;
+  accordion?: InputMaybe<MarkdownRemarkFrontmatterAccordionFieldSelector>;
+  gallery?: InputMaybe<MarkdownRemarkFrontmatterGalleryFieldSelector>;
+  gallery2?: InputMaybe<MarkdownRemarkFrontmatterGallery2FieldSelector>;
+  brands?: InputMaybe<MarkdownRemarkFrontmatterBrandsFieldSelector>;
+  testimonials?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsFieldSelector>;
+  address?: InputMaybe<FieldSelectorEnum>;
+  phone?: InputMaybe<FieldSelectorEnum>;
+  email?: InputMaybe<FieldSelectorEnum>;
+  locations?: InputMaybe<MarkdownRemarkFrontmatterLocationsFieldSelector>;
   linkText?: InputMaybe<FieldSelectorEnum>;
-  slug?: InputMaybe<FieldSelectorEnum>;
-  subtitle?: InputMaybe<FieldSelectorEnum>;
   newsBody?: InputMaybe<FieldSelectorEnum>;
   aboutBody?: InputMaybe<FieldSelectorEnum>;
   aboutLink?: InputMaybe<FieldSelectorEnum>;
@@ -1673,53 +1688,19 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   contentTwoLinkText?: InputMaybe<FieldSelectorEnum>;
   contentTwoImage?: InputMaybe<FieldSelectorEnum>;
   testimonialText?: InputMaybe<FieldSelectorEnum>;
-  testimonials?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsFieldSelector>;
   brandText?: InputMaybe<FieldSelectorEnum>;
-  brands?: InputMaybe<MarkdownRemarkFrontmatterBrandsFieldSelector>;
   link?: InputMaybe<FieldSelectorEnum>;
-  address?: InputMaybe<FieldSelectorEnum>;
-  phone?: InputMaybe<FieldSelectorEnum>;
-  email?: InputMaybe<FieldSelectorEnum>;
-  locations?: InputMaybe<MarkdownRemarkFrontmatterLocationsFieldSelector>;
-  accordion?: InputMaybe<MarkdownRemarkFrontmatterAccordionFieldSelector>;
-  hidePage?: InputMaybe<FieldSelectorEnum>;
-  hideProductList?: InputMaybe<FieldSelectorEnum>;
-  section1?: InputMaybe<FieldSelectorEnum>;
-  section2?: InputMaybe<FieldSelectorEnum>;
-  video?: InputMaybe<FieldSelectorEnum>;
-  videoPoster?: InputMaybe<FieldSelectorEnum>;
-  videoTitle?: InputMaybe<FieldSelectorEnum>;
-  gallery?: InputMaybe<MarkdownRemarkFrontmatterGalleryFieldSelector>;
-  gallery2?: InputMaybe<MarkdownRemarkFrontmatterGallery2FieldSelector>;
+};
+
+export type MarkdownRemarkFrontmatterMetaFieldSelector = {
+  noindex?: InputMaybe<FieldSelectorEnum>;
+  description?: InputMaybe<FieldSelectorEnum>;
+  title?: InputMaybe<FieldSelectorEnum>;
+  canonicalLink?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFrontmatterCategoriesFieldSelector = {
   category?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type MarkdownRemarkFrontmatterMetaFieldSelector = {
-  description?: InputMaybe<FieldSelectorEnum>;
-  title?: InputMaybe<FieldSelectorEnum>;
-  noindex?: InputMaybe<FieldSelectorEnum>;
-  canonicalLink?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type MarkdownRemarkFrontmatterTestimonialsFieldSelector = {
-  title?: InputMaybe<FieldSelectorEnum>;
-  subtitle?: InputMaybe<FieldSelectorEnum>;
-  text?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type MarkdownRemarkFrontmatterBrandsFieldSelector = {
-  title?: InputMaybe<FieldSelectorEnum>;
-  logo?: InputMaybe<FieldSelectorEnum>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsFieldSelector = {
-  lat?: InputMaybe<FieldSelectorEnum>;
-  lng?: InputMaybe<FieldSelectorEnum>;
-  mapLink?: InputMaybe<FieldSelectorEnum>;
-  title?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFrontmatterAccordionFieldSelector = {
@@ -1728,14 +1709,32 @@ export type MarkdownRemarkFrontmatterAccordionFieldSelector = {
 };
 
 export type MarkdownRemarkFrontmatterGalleryFieldSelector = {
-  image?: InputMaybe<FieldSelectorEnum>;
   alt?: InputMaybe<FieldSelectorEnum>;
+  image?: InputMaybe<FieldSelectorEnum>;
   title?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownRemarkFrontmatterGallery2FieldSelector = {
-  image?: InputMaybe<FieldSelectorEnum>;
   alt?: InputMaybe<FieldSelectorEnum>;
+  image?: InputMaybe<FieldSelectorEnum>;
+  title?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type MarkdownRemarkFrontmatterBrandsFieldSelector = {
+  title?: InputMaybe<FieldSelectorEnum>;
+  logo?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type MarkdownRemarkFrontmatterTestimonialsFieldSelector = {
+  title?: InputMaybe<FieldSelectorEnum>;
+  subtitle?: InputMaybe<FieldSelectorEnum>;
+  text?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsFieldSelector = {
+  lat?: InputMaybe<FieldSelectorEnum>;
+  lng?: InputMaybe<FieldSelectorEnum>;
+  mapLink?: InputMaybe<FieldSelectorEnum>;
   title?: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -2017,14 +2016,30 @@ export type MarkdownRemarkSortInput = {
 export type MarkdownRemarkFrontmatterSortInput = {
   title?: InputMaybe<SortOrderEnum>;
   template?: InputMaybe<SortOrderEnum>;
+  slug?: InputMaybe<SortOrderEnum>;
+  hidePage?: InputMaybe<SortOrderEnum>;
+  featuredImage?: InputMaybe<SortOrderEnum>;
+  subtitle?: InputMaybe<SortOrderEnum>;
+  hideProductList?: InputMaybe<SortOrderEnum>;
+  meta?: InputMaybe<MarkdownRemarkFrontmatterMetaSortInput>;
   description?: InputMaybe<SortOrderEnum>;
   price?: InputMaybe<SortOrderEnum>;
-  featuredImage?: InputMaybe<SortOrderEnum>;
   categories?: InputMaybe<MarkdownRemarkFrontmatterCategoriesSortInput>;
-  meta?: InputMaybe<MarkdownRemarkFrontmatterMetaSortInput>;
+  section1?: InputMaybe<SortOrderEnum>;
+  section2?: InputMaybe<SortOrderEnum>;
+  video?: InputMaybe<SortOrderEnum>;
+  videoPoster?: InputMaybe<SortOrderEnum>;
+  videoTitle?: InputMaybe<SortOrderEnum>;
+  accordion?: InputMaybe<MarkdownRemarkFrontmatterAccordionSortInput>;
+  gallery?: InputMaybe<MarkdownRemarkFrontmatterGallerySortInput>;
+  gallery2?: InputMaybe<MarkdownRemarkFrontmatterGallery2SortInput>;
+  brands?: InputMaybe<MarkdownRemarkFrontmatterBrandsSortInput>;
+  testimonials?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsSortInput>;
+  address?: InputMaybe<SortOrderEnum>;
+  phone?: InputMaybe<SortOrderEnum>;
+  email?: InputMaybe<SortOrderEnum>;
+  locations?: InputMaybe<MarkdownRemarkFrontmatterLocationsSortInput>;
   linkText?: InputMaybe<SortOrderEnum>;
-  slug?: InputMaybe<SortOrderEnum>;
-  subtitle?: InputMaybe<SortOrderEnum>;
   newsBody?: InputMaybe<SortOrderEnum>;
   aboutBody?: InputMaybe<SortOrderEnum>;
   aboutLink?: InputMaybe<SortOrderEnum>;
@@ -2035,53 +2050,19 @@ export type MarkdownRemarkFrontmatterSortInput = {
   contentTwoLinkText?: InputMaybe<SortOrderEnum>;
   contentTwoImage?: InputMaybe<SortOrderEnum>;
   testimonialText?: InputMaybe<SortOrderEnum>;
-  testimonials?: InputMaybe<MarkdownRemarkFrontmatterTestimonialsSortInput>;
   brandText?: InputMaybe<SortOrderEnum>;
-  brands?: InputMaybe<MarkdownRemarkFrontmatterBrandsSortInput>;
   link?: InputMaybe<SortOrderEnum>;
-  address?: InputMaybe<SortOrderEnum>;
-  phone?: InputMaybe<SortOrderEnum>;
-  email?: InputMaybe<SortOrderEnum>;
-  locations?: InputMaybe<MarkdownRemarkFrontmatterLocationsSortInput>;
-  accordion?: InputMaybe<MarkdownRemarkFrontmatterAccordionSortInput>;
-  hidePage?: InputMaybe<SortOrderEnum>;
-  hideProductList?: InputMaybe<SortOrderEnum>;
-  section1?: InputMaybe<SortOrderEnum>;
-  section2?: InputMaybe<SortOrderEnum>;
-  video?: InputMaybe<SortOrderEnum>;
-  videoPoster?: InputMaybe<SortOrderEnum>;
-  videoTitle?: InputMaybe<SortOrderEnum>;
-  gallery?: InputMaybe<MarkdownRemarkFrontmatterGallerySortInput>;
-  gallery2?: InputMaybe<MarkdownRemarkFrontmatterGallery2SortInput>;
+};
+
+export type MarkdownRemarkFrontmatterMetaSortInput = {
+  noindex?: InputMaybe<SortOrderEnum>;
+  description?: InputMaybe<SortOrderEnum>;
+  title?: InputMaybe<SortOrderEnum>;
+  canonicalLink?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFrontmatterCategoriesSortInput = {
   category?: InputMaybe<SortOrderEnum>;
-};
-
-export type MarkdownRemarkFrontmatterMetaSortInput = {
-  description?: InputMaybe<SortOrderEnum>;
-  title?: InputMaybe<SortOrderEnum>;
-  noindex?: InputMaybe<SortOrderEnum>;
-  canonicalLink?: InputMaybe<SortOrderEnum>;
-};
-
-export type MarkdownRemarkFrontmatterTestimonialsSortInput = {
-  title?: InputMaybe<SortOrderEnum>;
-  subtitle?: InputMaybe<SortOrderEnum>;
-  text?: InputMaybe<SortOrderEnum>;
-};
-
-export type MarkdownRemarkFrontmatterBrandsSortInput = {
-  title?: InputMaybe<SortOrderEnum>;
-  logo?: InputMaybe<SortOrderEnum>;
-};
-
-export type MarkdownRemarkFrontmatterLocationsSortInput = {
-  lat?: InputMaybe<SortOrderEnum>;
-  lng?: InputMaybe<SortOrderEnum>;
-  mapLink?: InputMaybe<SortOrderEnum>;
-  title?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFrontmatterAccordionSortInput = {
@@ -2090,14 +2071,32 @@ export type MarkdownRemarkFrontmatterAccordionSortInput = {
 };
 
 export type MarkdownRemarkFrontmatterGallerySortInput = {
-  image?: InputMaybe<SortOrderEnum>;
   alt?: InputMaybe<SortOrderEnum>;
+  image?: InputMaybe<SortOrderEnum>;
   title?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownRemarkFrontmatterGallery2SortInput = {
-  image?: InputMaybe<SortOrderEnum>;
   alt?: InputMaybe<SortOrderEnum>;
+  image?: InputMaybe<SortOrderEnum>;
+  title?: InputMaybe<SortOrderEnum>;
+};
+
+export type MarkdownRemarkFrontmatterBrandsSortInput = {
+  title?: InputMaybe<SortOrderEnum>;
+  logo?: InputMaybe<SortOrderEnum>;
+};
+
+export type MarkdownRemarkFrontmatterTestimonialsSortInput = {
+  title?: InputMaybe<SortOrderEnum>;
+  subtitle?: InputMaybe<SortOrderEnum>;
+  text?: InputMaybe<SortOrderEnum>;
+};
+
+export type MarkdownRemarkFrontmatterLocationsSortInput = {
+  lat?: InputMaybe<SortOrderEnum>;
+  lng?: InputMaybe<SortOrderEnum>;
+  mapLink?: InputMaybe<SortOrderEnum>;
   title?: InputMaybe<SortOrderEnum>;
 };
 
@@ -2409,6 +2408,8 @@ export type SiteEdge = {
 export type SiteFieldSelector = {
   buildTime?: InputMaybe<FieldSelectorEnum>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFieldSelector>;
+  port?: InputMaybe<FieldSelectorEnum>;
+  host?: InputMaybe<FieldSelectorEnum>;
   polyfill?: InputMaybe<FieldSelectorEnum>;
   pathPrefix?: InputMaybe<FieldSelectorEnum>;
   jsxRuntime?: InputMaybe<FieldSelectorEnum>;
@@ -2481,6 +2482,8 @@ export type SiteGroupConnectionGroupArgs = {
 export type SiteFilterInput = {
   buildTime?: InputMaybe<DateQueryOperatorInput>;
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
+  port?: InputMaybe<IntQueryOperatorInput>;
+  host?: InputMaybe<StringQueryOperatorInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -2495,6 +2498,8 @@ export type SiteFilterInput = {
 export type SiteSortInput = {
   buildTime?: InputMaybe<SortOrderEnum>;
   siteMetadata?: InputMaybe<SiteSiteMetadataSortInput>;
+  port?: InputMaybe<SortOrderEnum>;
+  host?: InputMaybe<SortOrderEnum>;
   polyfill?: InputMaybe<SortOrderEnum>;
   pathPrefix?: InputMaybe<SortOrderEnum>;
   jsxRuntime?: InputMaybe<SortOrderEnum>;
