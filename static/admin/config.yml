@@ -3,7 +3,7 @@
 #   repo: malteA/gatsby
 
 backend:
-  name: github
+  name: git-gateway
 local_backend: true
 
 media_folder: static/img
