@@ -8,44 +8,8 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: >-
+newsBody: |-
   **Wichtige Information:** 
-
-
-  Schon gewusst?
-
-  Das sind unsere Öffnungszeiten vor Weihnachten, zwischen den Jahren & im neuen Jahr:
-
-
-  Samstag, 20.12.2025: 	08:00 bis 12:30 Uhr \
-
-  Dienstag, 23.12.2025: 	08:00 bis 13:00 Uhr und 15:00 bis 18:00 Uhr
-
-
-  Mittwoch, 24.12.2025:	geschlossen\
-
-  Samstag, 27.12.2025:	geschlossen
-
-
-  Dienstag, 30.12.2025: 	08:00 bis 13:00 Uhr und 16:00 bis 18:00 Uhr\
-
-  Mittwoch, 31.12.2025:	geschlossen
-
-
-  Von Freitag, 02.01.2026 bis Samstag, 10.01.2026 macht unser Landlädchen-Team eine Verschnaufpause!
-
-  Am Dienstag, 13.01.2026 sind wir wieder in neuer Frische und bester Qualität zurück!
-
-
-  Unser Sehring’s Regiomat steht euch 24/7 zur Verfügung. 
-
-
-  Wir wünschen euch schöne, erholsame Weihnachtsfeiertage, 
-
-  einen guten Rutsch & alles Gute sowie viel Gesundheit für das Jahr 2026.\
-
-  Ihr Sehring’s Landlädchen Team – Höllgartenstr. 31 – 63303 Dreieich-Götzenhain – 06103/8687
-
 
   ![](/img/1000112493.jpg)
 aboutBody: >-
