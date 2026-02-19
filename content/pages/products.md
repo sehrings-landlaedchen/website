@@ -92,7 +92,7 @@ meta:
   * Frische Bratwürste
   * Gebrühte Bratwürste
   * Gebrühte Bratwürste mit Kräutern verfeinert
-  * Gebühte Jalapeno-Bratwürste mit Käse
+  * Gebrühte Jalapeno-Bratwürste mit Käse
 
 **Zur Grillsaison und anderen Anlässen:**
 
@@ -144,8 +144,6 @@ meta:
 * Hausgemachte Kürbissuppe
 * Hausgemachte Bolognese
 * Hausgemachte Kartoffelsuppe
-
-
 
 **Heißtheke:** 
 
