@@ -8,10 +8,20 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: |-
+newsBody: >-
   **Wichtige Information:** 
 
-  ![](/img/1000117512.jpg)
+
+  Von Dienstag, 07.04.2026 bis Donnerstag, 09.04.2026 macht unser Landlädchen-Team eine Verschnaufpause!
+
+
+  Ab Freitag, 10.04.2026 sind wir wieder in neuer Frische und bester Qualität zurück!
+
+
+  Wir wünschen Ihnen schöne Osterfeiertage!
+
+
+  ![]()
 aboutBody: >-
   ### Unser Regiomat
 
