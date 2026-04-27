@@ -12,13 +12,16 @@ newsBody: >-
   **Wichtige Information:** 
 
 
-  Von Dienstag, 07.04.2026 bis Donnerstag, 09.04.2026 macht unser Landlädchen-Team eine Verschnaufpause!
+  Am Donnerstag, 30. Mai 2026 haben wir von 8:00 bis 13:00 Uhr, sowie von 16:30 bis 18:00 Uhr geöffnet.
 
 
-  Ab Freitag, 10.04.2026 sind wir wieder in neuer Frische und bester Qualität zurück!
+  Am Samstag, 02. Mai 2026 macht unser Landlädchen-Team eine Verschnaufpause!
 
 
-  Wir wünschen Ihnen schöne Osterfeiertage!
+  Ab Dienstag, 05.05. 2026 sind wir wieder in neuer Frische und bester Qualität zurück!
+
+
+  Wir wünschen Ihnen einen schönen Tag!
 
 
   ![]()
