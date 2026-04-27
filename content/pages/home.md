@@ -18,7 +18,7 @@ newsBody: >-
   Am Samstag, 02. Mai 2026 macht unser Landlädchen-Team eine Verschnaufpause!
 
 
-  Ab Dienstag, 05.05. 2026 sind wir wieder in neuer Frische und bester Qualität zurück!
+  Ab Dienstag, 05. Mai 2026 sind wir wieder in neuer Frische und bester Qualität zurück!
 
 
   Wir wünschen Ihnen einen schönen Tag!
