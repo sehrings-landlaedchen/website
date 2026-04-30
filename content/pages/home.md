@@ -12,9 +12,6 @@ newsBody: >-
   **Wichtige Information:** 
 
 
-  Am Donnerstag, 30. April 2026 haben wir von 8:00 bis 13:00 Uhr, sowie von 16:30 bis 18:00 Uhr geöffnet.
-
-
   Am Samstag, 02. Mai 2026 macht unser Landlädchen-Team eine Verschnaufpause!
 
 
