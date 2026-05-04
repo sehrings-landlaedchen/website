@@ -151,7 +151,7 @@ meta:
   * Feiner Fleischkäse
   * Pizzafleischkäse
   * Zwiebelfleischkäse
-  * Panierte Schweine-/ Putenschnitzel
+  * Panierte Schweine-/ Hähnchenschnitzel
   * Frikadellen  
   * Gegrillter Schweinebauch
   * Gebackener Zwiebelrollbraten
