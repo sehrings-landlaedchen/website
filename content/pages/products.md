@@ -123,8 +123,7 @@ meta:
 * B﻿rathähnchen
 * H﻿ähnchenbrust und Hähnchen(innen-)filet
 * H﻿ähnchenschenkel
-* P﻿utenschnitzel
-* P﻿utensteaks
+* Kikok Hähnchen 
 
 **Sonstiges:**
 
@@ -147,7 +146,7 @@ meta:
 
 **Heißtheke:** 
 
-* In unserer Heißtheke bieten wir täglich (Dienstag bis Freitag 8:00 bis 13:00 Uhr und Samstag 8:30 bis 13:00 Uhr) verschiedene hausgemachte Produkte an, welche mit Brötchen gekauft werden können (wechselndes Angebot)
+* In unserer Heißtheke bieten wir täglich (Dienstag bis Freitag 8:00 bis 13:00 Uhr und Samstag 8:00 bis 13:00 Uhr) verschiedene hausgemachte Produkte an, welche mit Brötchen gekauft werden können (wechselndes Angebot)
 
   * Feiner Fleischkäse
   * Pizzafleischkäse
@@ -160,7 +159,6 @@ meta:
 
 **Eier aus Bodenhaltung**
 
-* Klasse XL
 * Klasse L
 * Gefärbte Eier Klasse M 
 
