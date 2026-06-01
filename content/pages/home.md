@@ -8,19 +8,9 @@ slug: ""
 title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
-newsBody: >-
+newsBody: |-
   **Wichtige Information:** 
 
-
-  Von Dienstag, 12.05.2026 bis Dienstag,19.05.2026 macht unser Landlädchen-Team eine Verschnaufpause!
-
-
-
-  Am Mittwoch, 20.05.2026 sind wir wieder in neuer Frische und bester Qualität zurück!
-
-
-
-  Euer Sehring’s Landlädchen Team
 
 
   ![]()
