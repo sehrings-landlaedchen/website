@@ -9,7 +9,7 @@ title: ""
 subtitle: ""
 featuredImage: /img/img-20210326-wa0014.jpg
 newsBody: |-
-  **Herblich Willkommen ♥️**
+  **Herzlich Willkommen ♥️**
 
 
 
