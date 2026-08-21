@@ -12,12 +12,12 @@ newsBody: >-
   **Herzlich Willkommen ♥️**
 
 
-  Schon gewusst? \
+  ### Schon gewusst? \
 
   Ab Dienstag, 08.09.2026 bis Mittwoch, 16.09.2026 macht unser Landlädchen-Team eine Verschnaufpause!
 
 
-  Ab Donnerstag,17.09.2026 sind wir wieder in neuer Frische und bester Qualität zurück!\
+  ### Ab Donnerstag,17.09.2026 sind wir wieder in neuer Frische und bester Qualität zurück!\
 
 
   *Ihr Sehring’s Landlädchen Team
