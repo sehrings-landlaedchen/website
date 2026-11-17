@@ -14,7 +14,7 @@ newsBody: |-
   *Ihr Sehring’s Landlädchen Team
   Höllgartenstraße 31 – 63303 Dreieich-Götzenhain   Sehring’s Regiomat 24/7*
 
-  ![]()
+  ![](/img/file_00000000939481f484e34570e5e92e76.png)
 aboutBody: >-
   ### Unser Regiomat
 
